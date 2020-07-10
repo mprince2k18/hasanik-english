@@ -1,0 +1,286 @@
+<template>
+  <div>
+    <!-- Page Heading -->
+         <div class="page-heading">
+           <div class="container">
+             <div class="row">
+               <div class="col-lg-12">
+                 <h1>Our Team</h1>
+                 <span><a href="index.html">Home</a>Our Team</span>
+               </div>
+             </div>
+           </div>
+         </div>
+
+
+         <!-- Steps -->
+         <section class="steps">
+           <div class="container">
+             <div class="row">
+               <div class="col-lg-4">
+                 <div class="step-item">
+                   <div class="item-number">
+                     <h6>01</h6>
+                   </div>
+                   <div class="item-content">
+                     <h4>First Step</h4>
+                     <p>Shaman synthes retro slow carb vape twee, put a bird.</p>
+                   </div>
+                   <div class="item-arrow">
+                     <i class="fa fa-angle-right"></i>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-lg-4">
+                 <div class="step-item">
+                   <div class="item-number">
+                     <h6>02</h6>
+                   </div>
+                   <div class="item-content">
+                     <h4>Second Step</h4>
+                     <p>Shaman synthes retro slow carb vape twee, put a bird.</p>
+                   </div>
+                   <div class="item-arrow">
+                     <i class="fa fa-angle-right"></i>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-lg-4">
+                 <div class="step-item">
+                   <div class="item-number">
+                     <h6>03</h6>
+                   </div>
+                   <div class="item-content">
+                     <h4>Third Step</h4>
+                     <p>Shaman synthes retro slow carb vape twee, put a bird.</p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </section>
+
+
+         <!-- About Tips -->
+         <section class="about-tips our-team-page">
+           <div class="container">
+             <div class="row">
+               <div class="col-lg-6 align-self-center">
+                 <div class="video-thumb">
+                   <a href="http://youtube.com/"><i class="fa fa-play"></i></a>
+                   <img src="https://buttoncreative.agency/html/oxana/images/video-thumb.jpg" alt="">
+                 </div>
+               </div>
+               <div class="col-lg-6">
+                 <div class="section-heading">
+                   <h6>TIPS FOR YOU!</h6>
+                   <h2>Get Tips &amp; Tricks About How To Grow Your Business!</h2>
+                 </div>
+                 <p>Taiyaki single-origin coffee iceland, skateboard chambray 3 wolf moon vice marfa hammock. Man braid prism post-ironic kickstarter affogato. 3 wolf moon succulents quinoa, keffiyeh keytar swag woke cliche cold-pressed drinking vinegar. Squid blue bottle farm-to-table hammock palo santo pug. Banjo af affogato, typewriter franzen biodiesel bitters poke  bespoke.<br><br>Cronut chillwave dreamcatcher, franzen lomo poutine gluten-free four loko. Offal locavore selvage scenester fixie crucifix tbh DIY mlkshk vice iceland meh taxidermy. Fixie hell of ethical air plant aesthetic.</p>
+                 <div class="main-pink-button">
+                   <a href="services.html">All Our Services</a>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </section>
+
+
+         <!-- Our Team -->
+         <section class="our-team">
+           <div class="container">
+             <div class="row">
+               <div class="col-lg-12">
+                 <div class="section-heading">
+                   <h6>Our Team</h6>
+                   <h2>Meet Our Members</h2>
+                 </div>
+               </div>
+               <div class="col-lg-3">
+                 <div class="team-item">
+                   <div class="team-thumb">
+                     <div class="hover-effect">
+                       <ul>
+                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                       </ul>
+                     </div>
+                     <img src="https://buttoncreative.agency/html/oxana/images/about-me.jpg" alt="">
+                   </div>
+                   <div class="down-content">
+                     <h4>Donald K. Huff</h4>
+                     <span>Main Director</span>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-lg-3">
+                 <div class="team-item">
+                   <div class="team-thumb">
+                     <div class="hover-effect">
+                       <ul>
+                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                       </ul>
+                     </div>
+                     <img src="https://buttoncreative.agency/html/oxana/images/about-me.jpg" alt="">
+                   </div>
+                   <div class="down-content">
+                     <h4>Linda D. Bellows</h4>
+                     <span>Web Developer</span>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-lg-3">
+                 <div class="team-item">
+                   <div class="team-thumb">
+                     <div class="hover-effect">
+                       <ul>
+                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                       </ul>
+                     </div>
+                     <img src="https://buttoncreative.agency/html/oxana/images/about-me.jpg" alt="">
+                   </div>
+                   <div class="down-content">
+                     <h4>Catherine M. Cole</h4>
+                     <span>Creative Director</span>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-lg-3">
+                 <div class="team-item">
+                   <div class="team-thumb">
+                     <div class="hover-effect">
+                       <ul>
+                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                       </ul>
+                     </div>
+                     <img src="https://buttoncreative.agency/html/oxana/images/about-me.jpg" alt="">
+                   </div>
+                   <div class="down-content">
+                     <h4>David S. Scott</h4>
+                     <span>General Manager</span>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-lg-3">
+                 <div class="team-item">
+                   <div class="team-thumb">
+                     <div class="hover-effect">
+                       <ul>
+                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                       </ul>
+                     </div>
+                     <img src="https://buttoncreative.agency/html/oxana/images/about-me.jpg" alt="">
+                   </div>
+                   <div class="down-content">
+                     <h4>Linda D. Bellows</h4>
+                     <span>Web Developer</span>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-lg-3">
+                 <div class="team-item">
+                   <div class="team-thumb">
+                     <div class="hover-effect">
+                       <ul>
+                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                       </ul>
+                     </div>
+                     <img src="https://buttoncreative.agency/html/oxana/images/about-me.jpg" alt="">
+                   </div>
+                   <div class="down-content">
+                     <h4>Catherine M. Cole</h4>
+                     <span>Creative Director</span>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-lg-3">
+                 <div class="team-item">
+                   <div class="team-thumb">
+                     <div class="hover-effect">
+                       <ul>
+                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                       </ul>
+                     </div>
+                     <img src="https://buttoncreative.agency/html/oxana/images/about-me.jpg" alt="">
+                   </div>
+                   <div class="down-content">
+                     <h4>Donald K. Huff</h4>
+                     <span>Main Director</span>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-lg-3">
+                 <div class="hiring-space">
+                   <h2>We Are Hiring!<br>Join Us!</h2>
+                   <div class="main-white-button">
+                     <a href="#">Submit Resume Now</a>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </section>
+
+
+         <!-- Fun Facts -->
+         <section class="fun-facts">
+           <div class="container">
+             <div class="row">
+               <div class="col-lg-3 col-sm-6">
+                 <div class="count-area-content">
+                   <div class="count-digit first-digit">4860</div>
+                   <div class="count-title">Hours Worked</div>
+                 </div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                 <div class="count-area-content">
+                   <div class="count-digit second-digit">120</div>
+                   <div class="count-title">Projects completed</div>
+                 </div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                 <div class="count-area-content">
+                   <div class="count-digit third-digit">460</div>
+                   <div class="count-title">happy clients</div>
+                 </div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                 <div class="count-area-content">
+                   <div class="count-digit fourth-digit">11</div>
+                   <div class="count-title">awards won</div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </section>
+
+      </div>
+</template>
+
+<script>
+    export default {
+        mounted() {
+            console.log('Component mounted.')
+        }
+    }
+</script>

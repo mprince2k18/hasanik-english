@@ -1,0 +1,17 @@
+.main-menu > li > a{
+  padding: 0 !important;
+}
+
+.site-header.fixed-header .main-menu li a{
+  padding: 0 !important;
+  color: #000;
+}
+
+.site-header.fixed-header {
+  background-color: #fff;
+}
+
+.header-widgets .right-menu .menu-search a {
+  background-color: #000;
+  color: #fff;
+}
