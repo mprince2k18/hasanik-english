@@ -14,36 +14,44 @@ Vue.use(VueRouter)
 export default new VueRouter({
   routes:[
     {
-      path:'/',
-      component: HomeComponent
+      path:'/page',
+      component: HomeComponent,
+      name: 'home'
     },
     {
-      path:'/about-us',
-      component: AboutComponent
+      path:'/page/about-us',
+      component: AboutComponent,
+      name: 'about-us'
     },
     {
-      path:'/contact-us',
-      component: ContactComponent
+      path:'/page/contact-us',
+      component: ContactComponent,
+      name: 'contact-us'
     },
     {
-      path:'/our-team',
-      component: TeamComponent
+      path:'/page/our-team',
+      component: TeamComponent,
+      name: 'our-team'
     },
     {
-      path:'/blog',
-      component: BlogComponent
+      path:'/page/blog',
+      component: BlogComponent,
+      name: 'blog'
     },
     {
       path:'/single-blog',
-      component: SingleBlogComponent
+      component: SingleBlogComponent,
+      name: 'single-blog'
     },
     {
-      path:'/courses',
-      component: CourseComponent
+      path:'/page/courses',
+      component: CourseComponent,
+      name: 'courses'
     },
     {
-      path:'/single-course',
-      component: SingleCourseComponent
+      path:'/page/single-course',
+      component: SingleCourseComponent,
+      name: 'single-course'
     },
   ],
   mode: 'history'

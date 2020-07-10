@@ -56,12 +56,12 @@
           </div>
           <div class="header-nav">
               <ul class="main-menu">
-                <li><router-link to="/">Home</router-link></li>
-                <li><router-link to="about-us">About Us</router-link></li>
-                <li><router-link to="contact-us">Contact Us</router-link></li>
-                <li><router-link to="our-team">Our Team</router-link></li>
-                <li><router-link to="blog">Blog</router-link></li>
-                <li><router-link to="courses">Courses</router-link></li>
+                <li><router-link :to="{ name: 'home' }">Home</router-link></li>
+                <li><router-link :to="{ name: 'about-us' }">About Us</router-link></li>
+                <li><router-link :to="{ name: 'contact-us' }">Contact Us</router-link></li>
+                <li><router-link :to="{ name: 'our-team' }">Our Team</router-link></li>
+                <li><router-link :to="{ name: 'blog' }">Blog</router-link></li>
+                <li><router-link :to="{ name: 'courses' }">Courses</router-link></li>
               </ul>
           </div>
           <div class="header-widgets">

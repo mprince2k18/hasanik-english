@@ -57959,29 +57959,37 @@ __webpack_require__.r(__webpack_exports__);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: [{
-    path: '/',
-    component: _components_HomeComponent__WEBPACK_IMPORTED_MODULE_2__["default"]
+    path: '/page',
+    component: _components_HomeComponent__WEBPACK_IMPORTED_MODULE_2__["default"],
+    name: 'home'
   }, {
-    path: '/about-us',
-    component: _components_AboutComponent__WEBPACK_IMPORTED_MODULE_3__["default"]
+    path: '/page/about-us',
+    component: _components_AboutComponent__WEBPACK_IMPORTED_MODULE_3__["default"],
+    name: 'about-us'
   }, {
-    path: '/contact-us',
-    component: _components_ContactComponent__WEBPACK_IMPORTED_MODULE_4__["default"]
+    path: '/page/contact-us',
+    component: _components_ContactComponent__WEBPACK_IMPORTED_MODULE_4__["default"],
+    name: 'contact-us'
   }, {
-    path: '/our-team',
-    component: _components_TeamComponent__WEBPACK_IMPORTED_MODULE_5__["default"]
+    path: '/page/our-team',
+    component: _components_TeamComponent__WEBPACK_IMPORTED_MODULE_5__["default"],
+    name: 'our-team'
   }, {
-    path: '/blog',
-    component: _components_BlogComponent__WEBPACK_IMPORTED_MODULE_6__["default"]
+    path: '/page/blog',
+    component: _components_BlogComponent__WEBPACK_IMPORTED_MODULE_6__["default"],
+    name: 'blog'
   }, {
     path: '/single-blog',
-    component: _components_SingleBlogComponent__WEBPACK_IMPORTED_MODULE_7__["default"]
+    component: _components_SingleBlogComponent__WEBPACK_IMPORTED_MODULE_7__["default"],
+    name: 'single-blog'
   }, {
-    path: '/courses',
-    component: _components_CourseComponent__WEBPACK_IMPORTED_MODULE_8__["default"]
+    path: '/page/courses',
+    component: _components_CourseComponent__WEBPACK_IMPORTED_MODULE_8__["default"],
+    name: 'courses'
   }, {
-    path: '/single-course',
-    component: _components_SingleCourseComponent__WEBPACK_IMPORTED_MODULE_9__["default"]
+    path: '/page/single-course',
+    component: _components_SingleCourseComponent__WEBPACK_IMPORTED_MODULE_9__["default"],
+    name: 'single-course'
   }],
   mode: 'history'
 }));
