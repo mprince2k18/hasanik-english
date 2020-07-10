@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeComponent from './components/HomeComponent'
 import AboutComponent from './components/AboutComponent'
 import ContactComponent from './components/ContactComponent'
 import TeamComponent from './components/TeamComponent'
@@ -13,11 +12,7 @@ Vue.use(VueRouter)
 
 export default new VueRouter({
   routes:[
-    {
-      path:'/page',
-      component: HomeComponent,
-      name: 'home'
-    },
+
     {
       path:'/page/about-us',
       component: AboutComponent,
