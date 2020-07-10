@@ -10,12 +10,12 @@
         <meta name="keywords" content=""/>
         <meta name="description" content=""/>
         <!--=============== css  ===============-->
-        <link type="text/css" rel="stylesheet" href="{{ asset('frontend/homepage/css/reset.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('frontend/homepage/css/plugins.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('frontend/homepage/css/style.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('frontend/homepage/css/yourstyle.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('homepage/css/reset.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('homepage/css/plugins.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('homepage/css/style.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('homepage/css/yourstyle.css') }}">
         <!--=============== favicons ===============-->
-        <link rel="shortcut icon" href="{{ asset('frontend/homepage/images/favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ asset('homepage/images/favicon.ico') }}">
     </head>
     <body>
       <div class="loader">
@@ -45,13 +45,13 @@
                          <div class="hero-grid big-column">
                              <div class="hero-slider synkslider owl-carousel" data-attime="3220" data-rtlt="false">
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('frontend/homepage/images/bg/2.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/2.jpg')}})"></div>
                                  </div>
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('frontend/homepage/images/bg/2.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/2.jpg')}})"></div>
                                  </div>
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('frontend/homepage/images/bg/2.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/2.jpg')}})"></div>
                                  </div>
                              </div>
                          </div>
@@ -60,13 +60,13 @@
                          <div class="hero-grid small-column">
                              <div class="hero-slider owl-carousel" data-attime="3220" data-rtlt="false">
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('frontend/homepage/images/bg/1.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/1.jpg')}})"></div>
                                  </div>
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('frontend/homepage/images/bg/1.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/1.jpg')}})"></div>
                                  </div>
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('frontend/homepage/images/bg/1.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/1.jpg')}})"></div>
                                  </div>
                              </div>
                          </div>
@@ -75,13 +75,13 @@
                          <div class="hero-grid small-column">
                              <div class="hero-slider owl-carousel"  data-attime="3220" data-rtlt="true">
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('frontend/homepage/images/bg/1.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/1.jpg')}})"></div>
                                  </div>
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('frontend/homepage/images/bg/1.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/1.jpg')}})"></div>
                                  </div>
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('frontend/homepage/images/bg/1.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/1.jpg')}})"></div>
                                  </div>
                              </div>
                          </div>
@@ -114,9 +114,9 @@
         <!--=============== google map ===============-->
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" type="text/javascript"></script>
         <!--=============== scripts  ===============-->
-        <script type="text/javascript" src="{{ asset('frontend/homepage/js/jquery.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/homepage/js/plugins.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/homepage/js/core.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('frontend/homepage/js/scripts.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('homepage/js/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('homepage/js/plugins.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('homepage/js/core.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('homepage/js/scripts.js') }}"></script>
     </body>
 </html>

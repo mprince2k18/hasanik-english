@@ -36,23 +36,68 @@
     <div class="mobile-nav-wrapper">
       <div class="mobile-menu-inner">
         <ul class="mobile-menu">
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="about">Services</router-link></li>
-          <li><router-link to="contact.html">Contact Us</router-link></li>
+          <li><a href="{{ url('/') }}">Home</router-link></li>
+          <li><router-link :to="{ name: 'about-us' }">About Us</router-link></li>
+          <li><router-link :to="{ name: 'contact-us' }">Contact Us</router-link></li>
+          <li><router-link :to="{ name: 'our-team' }">Our Team</router-link></li>
+          <li><router-link :to="{ name: 'blog' }">Blog</router-link></li>
+          <li><router-link :to="{ name: 'courses' }">Courses</router-link></li>
         </ul>
       </div>
     </div>
     <div class="mobile-menu-overlay"></div>
 
-    <!-- Header -->
     <header class="site-header fixed-header">
       <div class="container expanded">
         <div class="header-wrap">
           <div class="fixed-header-logo">
-            <router-link to="/"><img src="https://buttoncreative.agency/html/oxana/images/logo-white.png" alt=""></router-link>
+            <a href="{{ url('/') }}"><img src="https://buttoncreative.agency/html/oxana/images/logo-white.png" alt=""></router-link>
           </div>
           <div class="is-fixed-header-logo">
-            <router-link to="/"><img src="https://buttoncreative.agency/html/oxana/images/logo-white.png" alt=""></router-link>
+            <a href="{{ url('/') }}"><img src="https://buttoncreative.agency/html/oxana/images/logo-white.png" alt=""></router-link>
+          </div>
+          <div class="header-nav">
+              <ul class="main-menu">
+                <li><a href="{{ url('/') }}">Home</a></li>
+                <li><router-link :to="{ name : 'about-us' }">About Us</a></li>
+                <li><router-link :to="{ name : 'contact-us' }">Contact Us</a></li>
+                <li><router-link :to="{ name : 'our-team' }">Our Team</a></li>
+                <li><router-link :to="{ name : 'blog' }">Blog</a></li>
+                <li><router-link :to="{ name : 'courses' }">Courses</a></li>
+              </ul>
+          </div>
+          <div class="header-widgets">
+            <ul class="right-menu">
+              <li class="menu-item menu-search">
+                <a href="#search" id="menu-search-btn">
+                  <i class="fa fa-search"></i>
+                </a>
+              </li>
+              <li class="menu-item free-quote">
+                <div class="main-pink-button">
+                  <a href="#">Get Free Quote</a>
+                </div>
+              </li>
+              <li class="menu-item menu-mobile-nav">
+                <a href="#" class="menu-bar" id="menu-show-mobile-nav">
+                  <span class="hamburger"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Header -->
+    {{-- <header class="site-header fixed-header">
+      <div class="container expanded">
+        <div class="header-wrap">
+          <div class="fixed-header-logo">
+            <a href="{{ url('/') }}"><img src="https://buttoncreative.agency/html/oxana/images/logo-white.png" alt=""></router-link>
+          </div>
+          <div class="is-fixed-header-logo">
+            <a href="{{ url('/') }}"><img src="https://buttoncreative.agency/html/oxana/images/logo-white.png" alt=""></router-link>
           </div>
           <div class="header-nav">
               <ul class="main-menu">
@@ -100,7 +145,7 @@
             <input type="search" value="" placeholder="Type to search..." required="">
             <button type="submit" class="primary-button"><i class="fa fa-search"></i></button>
         </form>
-    </div>
+    </div> --}}
 
 
     <div class="main-content">
