@@ -75,7 +75,7 @@
               </li>
               <li class="menu-item free-quote">
                 <div class="main-pink-button">
-                  <a href="#">Get Free Quote</a>
+                  <a href="javascript:void()">Enroll Course</a>
                 </div>
               </li>
               <li class="menu-item menu-mobile-nav">
@@ -88,55 +88,6 @@
         </div>
       </div>
     </header>
-
-    <!-- Header -->
-    {{-- <header class="site-header fixed-header">
-      <div class="container expanded">
-        <div class="header-wrap">
-          <div class="fixed-header-logo">
-            <a href="{{ url('/') }}"><img src="https://buttoncreative.agency/html/oxana/images/logo-white.png" alt=""></router-link>
-          </div>
-          <div class="is-fixed-header-logo">
-            <a href="{{ url('/') }}"><img src="https://buttoncreative.agency/html/oxana/images/logo-white.png" alt=""></router-link>
-          </div>
-          <div class="header-nav">
-              <ul class="main-menu">
-                <li><a href="{{ url('/') }}">Home</router-link></li>
-                <li><router-link :to="{ name: 'about-us' }">About Us</router-link></li>
-                <li><router-link :to="{ name: 'contact-us' }">Contact Us</router-link></li>
-                <li><router-link :to="{ name: 'our-team' }">Our Team</router-link></li>
-                <li><router-link :to="{ name: 'blog' }">Blog</router-link></li>
-                <li><router-link :to="{ name: 'courses' }">Courses</router-link></li>
-              </ul>
-          </div>
-          <div class="header-widgets">
-            <ul class="right-menu">
-              <li class="menu-item menu-search">
-                <a href="#search" id="menu-search-btn">
-                  <i class="fa fa-search"></i>
-                </a>
-              </li>
-              <li class="menu-item free-quote">
-                <div class="main-pink-button">
-                  <a href="{{ route('login') }}">Login</a>
-                </div>
-              </li>
-              <li class="menu-item free-quote">
-                <div class="main-pink-button">
-                  <a href="{{ route('register') }}">Register</a>
-                </div>
-              </li>
-              <li class="menu-item menu-mobile-nav">
-                <a href="#" class="menu-bar" id="menu-show-mobile-nav">
-                  <span class="hamburger"></span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- Header -->
 
     <!-- Search -->
     <div id="search">
@@ -145,7 +96,7 @@
             <input type="search" value="" placeholder="Type to search..." required="">
             <button type="submit" class="primary-button"><i class="fa fa-search"></i></button>
         </form>
-    </div> --}}
+    </div>
 
 
     <div class="main-content">
