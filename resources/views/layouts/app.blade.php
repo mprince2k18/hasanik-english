@@ -75,7 +75,7 @@
               </li>
               <li class="menu-item free-quote">
                 <div class="main-pink-button">
-                  <a href="javascript:void()">Enroll Course</a>
+                  <a href="{{route('enroll.index')}}">Enroll Course</a>
                 </div>
               </li>
               <li class="menu-item menu-mobile-nav">

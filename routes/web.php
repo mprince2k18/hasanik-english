@@ -23,4 +23,6 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/enroll/course','EnrollController@index')->name('enroll.index');
+
 Route::get('/home', 'HomeController@index')->name('home');
