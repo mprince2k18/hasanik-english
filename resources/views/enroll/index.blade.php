@@ -46,12 +46,12 @@
 
 	<nav>
 		<ul class="cd-primary-nav">
-			<li><a href="index.html" class="animated_link">Home</a></li>
-			<li><a href="quotation-wizard-version.html" class="animated_link">Quote Version</a></li>
-			<li><a href="review-wizard-version.html" class="animated_link">Review Version</a></li>
-			<li><a href="registration-wizard-version.html" class="animated_link">Registration Version</a></li>
-			<li><a href="about.html" class="animated_link">About Us</a></li>
-			<li><a href="contacts.html" class="animated_link">Contact Us</a></li>
+			<li><a href="{{ url('/') }}" class="animated_link">Home</a></li>
+			<li><a href="{{ url('/page/about-us') }}" class="animated_link">About Us</a></li>
+			<li><a href="{{ url('/page/contact-us') }}" class="animated_link">Contact Us</a></li>
+			<li><a href="{{ url('/page/our-team') }}" class="animated_link">Our Team</a></li>
+			<li><a href="{{ url('/page/blog') }}" class="animated_link">Blog</a></li>
+			<li><a href="{{ url('/page/courses') }}" class="animated_link">Courses</a></li>
 		</ul>
 	</nav>
 	<!-- /menu -->
@@ -60,7 +60,7 @@
 		<div class="row row-height">
 			<div class="col-lg-6 content-left">
 				<div class="content-left-wrapper">
-					<a href="index.html" id="logo"><img src="img/logo.png" alt="" width="49" height="35"></a>
+					<a href="{{ url('/') }}" id="logo"><img src="img/logo.png" alt="" width="49" height="35"></a>
 					<div id="social">
 						<ul>
 							<li><a href="#0"><i class="icon-facebook"></i></a></li>

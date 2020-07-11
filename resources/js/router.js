@@ -34,7 +34,7 @@ export default new VueRouter({
       name: 'blog'
     },
     {
-      path:'/single-blog',
+      path:'/page/single-blog',
       component: SingleBlogComponent,
       name: 'single-blog'
     },
