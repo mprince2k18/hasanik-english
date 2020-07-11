@@ -2179,6 +2179,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -3068,47 +3082,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -38973,62 +38946,12 @@ var staticRenderFns = [
       _c("section", { staticClass: "steps" }, [
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "col-lg-12" }, [
               _c("div", { staticClass: "step-item" }, [
-                _c("div", { staticClass: "item-number" }, [
-                  _c("h6", [_vm._v("01")])
-                ]),
-                _vm._v(" "),
                 _c("div", { staticClass: "item-content" }, [
-                  _c("h4", [_vm._v("First Step")]),
-                  _vm._v(" "),
-                  _c("p", [
+                  _c("p", { staticClass: "desc" }, [
                     _vm._v(
-                      "Shaman synthes retro slow carb vape twee, put a bird."
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "item-arrow" }, [
-                  _c("i", { staticClass: "fa fa-angle-right" })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-4" }, [
-              _c("div", { staticClass: "step-item" }, [
-                _c("div", { staticClass: "item-number" }, [
-                  _c("h6", [_vm._v("02")])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "item-content" }, [
-                  _c("h4", [_vm._v("Second Step")]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Shaman synthes retro slow carb vape twee, put a bird."
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "item-arrow" }, [
-                  _c("i", { staticClass: "fa fa-angle-right" })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-4" }, [
-              _c("div", { staticClass: "step-item" }, [
-                _c("div", { staticClass: "item-number" }, [
-                  _c("h6", [_vm._v("03")])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "item-content" }, [
-                  _c("h4", [_vm._v("Third Step")]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Shaman synthes retro slow carb vape twee, put a bird."
+                      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\n                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\n                  '
                     )
                   ])
                 ])
@@ -39081,6 +39004,75 @@ var staticRenderFns = [
                     alt: ""
                   }
                 })
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "about-tips" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-6 align-self-center" }, [
+              _c("div", { staticClass: "video-thumb" }, [
+                _c("a", { attrs: { href: "http://youtube.com/" } }, [
+                  _c("i", { staticClass: "fa fa-play" })
+                ]),
+                _vm._v(" "),
+                _c("img", {
+                  attrs: {
+                    src:
+                      "https://buttoncreative.agency/html/oxana/images/video-thumb.jpg",
+                    alt: ""
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-6" }, [
+              _c("div", { staticClass: "section-heading" }, [
+                _c("h6", [_vm._v("TIPS FOR YOU!")]),
+                _vm._v(" "),
+                _c("h2", [
+                  _vm._v("Get Tips & Tricks About How To Grow Your Business!")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "Taiyaki single-origin coffee iceland, skateboard chambray 3 wolf moon vice marfa hammock. Man braid prism post-ironic kickstarter affogato. 3 wolf moon succulents quinoa, keffiyeh keytar swag woke cliche cold-pressed drinking vinegar. Squid blue bottle farm-to-table hammock palo santo pug. Banjo af affogato, typewriter franzen biodiesel bitters poke  bespoke."
+                ),
+                _c("br"),
+                _c("br"),
+                _vm._v(
+                  "Cronut chillwave dreamcatcher, franzen lomo poutine gluten-free four loko. Offal locavore selvage scenester fixie crucifix tbh DIY mlkshk vice iceland meh taxidermy. Fixie hell of ethical air plant aesthetic."
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "main-pink-button" }, [
+                _c("a", { attrs: { href: "services.html" } }, [
+                  _vm._v("All Our Services")
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("section", { staticClass: "steps" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-12" }, [
+              _c("div", { staticClass: "step-item" }, [
+                _c("h3", { staticClass: "center" }, [_vm._v("Our Mission")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "item-content" }, [
+                  _c("p", { staticClass: "desc" }, [
+                    _vm._v(
+                      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\n                    very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\n                  '
+                    )
+                  ])
+                ])
               ])
             ])
           ])
@@ -41389,123 +41381,6 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("section", { staticClass: "steps" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-4" }, [
-              _c("div", { staticClass: "step-item" }, [
-                _c("div", { staticClass: "item-number" }, [
-                  _c("h6", [_vm._v("01")])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "item-content" }, [
-                  _c("h4", [_vm._v("First Step")]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Shaman synthes retro slow carb vape twee, put a bird."
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "item-arrow" }, [
-                  _c("i", { staticClass: "fa fa-angle-right" })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-4" }, [
-              _c("div", { staticClass: "step-item" }, [
-                _c("div", { staticClass: "item-number" }, [
-                  _c("h6", [_vm._v("02")])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "item-content" }, [
-                  _c("h4", [_vm._v("Second Step")]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Shaman synthes retro slow carb vape twee, put a bird."
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "item-arrow" }, [
-                  _c("i", { staticClass: "fa fa-angle-right" })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-4" }, [
-              _c("div", { staticClass: "step-item" }, [
-                _c("div", { staticClass: "item-number" }, [
-                  _c("h6", [_vm._v("03")])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "item-content" }, [
-                  _c("h4", [_vm._v("Third Step")]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "Shaman synthes retro slow carb vape twee, put a bird."
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "about-tips our-team-page" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-6 align-self-center" }, [
-              _c("div", { staticClass: "video-thumb" }, [
-                _c("a", { attrs: { href: "http://youtube.com/" } }, [
-                  _c("i", { staticClass: "fa fa-play" })
-                ]),
-                _vm._v(" "),
-                _c("img", {
-                  attrs: {
-                    src:
-                      "https://buttoncreative.agency/html/oxana/images/video-thumb.jpg",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-6" }, [
-              _c("div", { staticClass: "section-heading" }, [
-                _c("h6", [_vm._v("TIPS FOR YOU!")]),
-                _vm._v(" "),
-                _c("h2", [
-                  _vm._v("Get Tips & Tricks About How To Grow Your Business!")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Taiyaki single-origin coffee iceland, skateboard chambray 3 wolf moon vice marfa hammock. Man braid prism post-ironic kickstarter affogato. 3 wolf moon succulents quinoa, keffiyeh keytar swag woke cliche cold-pressed drinking vinegar. Squid blue bottle farm-to-table hammock palo santo pug. Banjo af affogato, typewriter franzen biodiesel bitters poke  bespoke."
-                ),
-                _c("br"),
-                _c("br"),
-                _vm._v(
-                  "Cronut chillwave dreamcatcher, franzen lomo poutine gluten-free four loko. Offal locavore selvage scenester fixie crucifix tbh DIY mlkshk vice iceland meh taxidermy. Fixie hell of ethical air plant aesthetic."
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "main-pink-button" }, [
-                _c("a", { attrs: { href: "services.html" } }, [
-                  _vm._v("All Our Services")
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
       _c("section", { staticClass: "our-team" }, [
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "row" }, [
@@ -41849,6 +41724,70 @@ var staticRenderFns = [
                   _c("h4", [_vm._v("Donald K. Huff")]),
                   _vm._v(" "),
                   _c("span", [_vm._v("Main Director")])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-3" }, [
+              _c("div", { staticClass: "hiring-space" }, [
+                _c("h2", [
+                  _vm._v("We Are Hiring!"),
+                  _c("br"),
+                  _vm._v("Join Us!")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "main-white-button" }, [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _vm._v("Submit Resume Now")
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-3" }, [
+              _c("div", { staticClass: "hiring-space" }, [
+                _c("h2", [
+                  _vm._v("We Are Hiring!"),
+                  _c("br"),
+                  _vm._v("Join Us!")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "main-white-button" }, [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _vm._v("Submit Resume Now")
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-3" }, [
+              _c("div", { staticClass: "hiring-space" }, [
+                _c("h2", [
+                  _vm._v("We Are Hiring!"),
+                  _c("br"),
+                  _vm._v("Join Us!")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "main-white-button" }, [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _vm._v("Submit Resume Now")
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-lg-3" }, [
+              _c("div", { staticClass: "hiring-space" }, [
+                _c("h2", [
+                  _vm._v("We Are Hiring!"),
+                  _c("br"),
+                  _vm._v("Join Us!")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "main-white-button" }, [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _vm._v("Submit Resume Now")
+                  ])
                 ])
               ])
             ]),
@@ -57724,7 +57663,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     component: _components_BlogComponent__WEBPACK_IMPORTED_MODULE_5__["default"],
     name: 'blog'
   }, {
-    path: '/single-blog',
+    path: '/page/single-blog',
     component: _components_SingleBlogComponent__WEBPACK_IMPORTED_MODULE_6__["default"],
     name: 'single-blog'
   }, {

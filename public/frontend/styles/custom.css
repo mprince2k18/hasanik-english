@@ -15,3 +15,12 @@
   background-color: #000;
   color: #fff;
 }
+
+.desc{
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+}
+.center{
+  text-align: center;
+}
