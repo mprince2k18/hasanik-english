@@ -3441,7 +3441,7 @@ a {
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease; }
     .fixed-header .menu-bar .hamburger {
-      background-color: #ffffff; }
+      background-color: #000 !important; }
     .is-fixed .menu-bar .hamburger {
       background-color: #fd658f; }
     .menu-bar .hamburger:before, .menu-bar .hamburger:after {
@@ -3455,7 +3455,7 @@ a {
       -webkit-transition: all 300ms ease;
       transition: all 300ms ease; }
       .fixed-header .menu-bar .hamburger:before, .fixed-header .menu-bar .hamburger:after {
-        background-color: #ffffff; }
+        background-color: #000; }
       .is-fixed .menu-bar .hamburger:before, .is-fixed .menu-bar .hamburger:after {
         background-color: #fd658f; }
     .menu-bar .hamburger:before {

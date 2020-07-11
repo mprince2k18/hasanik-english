@@ -24,3 +24,12 @@
 .center{
   text-align: center;
 }
+
+.mobile-menu li a{
+  margin: 0 30px !important;
+  color: #36334c !important;
+}
+
+.mobile-menu > li > a{
+  padding: 0 !important;
+}

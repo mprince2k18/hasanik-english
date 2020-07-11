@@ -42,6 +42,7 @@
           <li><router-link :to="{ name: 'our-team' }">Our Team</router-link></li>
           <li><router-link :to="{ name: 'blog' }">Blog</router-link></li>
           <li><router-link :to="{ name: 'courses' }">Courses</router-link></li>
+          <li><a href="{{ url('/enroll/course') }}">Enroll Course</router-link></li>
         </ul>
       </div>
     </div>
