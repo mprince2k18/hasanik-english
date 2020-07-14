@@ -90,8 +90,9 @@
 							<div id="progressbar"></div>
 						</div>
 						<!-- /top-wizard -->
-						<form id="wrapped" method="POST">
-							<input id="website" name="website" type="text" value="">
+						<form action="{{ route('enroll.store') }}" method="POST" enctype="multipart/form-data">
+              @csrf
+              <input id="website" name="website" type="text" value="">
 							<!-- Leave for security protection, read docs for details -->
 							<div id="middle-wizard">
 								<div class="step">
@@ -103,16 +104,16 @@
 										<input type="email" name="email" class="form-control required" placeholder="Your Email">
 									</div>
 									<div class="form-group">
-										<input type="number" name="number" class="form-control required" placeholder="Contact Number">
+										<input type="number" name="phone" class="form-control required" placeholder="Contact Number">
 									</div>
 									<div class="form-group">
 										<div class="styled-select clearfix">
-											<select class="wide required" name="country">
+											<select class="wide required" name="occupation_id">
 												<option value="">Your Occupation</option>
-												<option value="Europe">Student</option>
-												<option value="Asia">Job Holder</option>
-												<option value="North America">Housewive</option>
-												<option value="South America">Nothing</option>
+												<option value="1">Student</option>
+												<option value="2">Job Holder</option>
+												<option value="3">Housewive</option>
+												<option value="4">Nothing</option>
 											</select>
 										</div>
 									</div>
@@ -151,12 +152,12 @@
                   </h3>
                   <div class="form-group">
 										<div class="styled-select clearfix">
-											<select class="wide required" name="country">
-												<option value="">English</option>
-												<option value="Europe">English two</option>
-												<option value="Asia">English Three</option>
-												<option value="North America">English Four</option>
-												<option value="South America">English Five</option>
+											<select class="wide required" name="course_id">
+												<option value="">Select Course</option>
+												<option value="1">English two</option>
+												<option value="2">English Three</option>
+												<option value="3">English Four</option>
+												<option value="4">English Five</option>
 											</select>
 										</div>
 									</div>
@@ -165,25 +166,25 @@
                   </h3>
 									<div class="form-group">
 										<label class="container_radio version_2">Morning 9 o'clock
-											<input type="radio" name="question_1" value="Not Satisfied" class="required" onchange="getVals(this, 'question_1');">
+											<input type="radio" name="schedule_id" value="1" class="required" onchange="getVals(this, 'question_1');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_radio version_2">Night 9 o'clock
-											<input type="radio" name="question_1" value="Quite Satisfied" class="required" onchange="getVals(this, 'question_1');">
+											<input type="radio" name="schedule_id" value="2" class="required" onchange="getVals(this, 'question_1');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_radio version_2">Evening
-											<input type="radio" name="question_1" value="Satisfied" class="required" onchange="getVals(this, 'question_1');">
+											<input type="radio" name="schedule_id" value="3" class="required" onchange="getVals(this, 'question_1');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_radio version_2">Other
-											<input type="radio" name="question_1" value="Completely Satisfied" class="required" onchange="getVals(this, 'question_1');">
+											<input type="radio" name="schedule_id" value="4" class="required" onchange="getVals(this, 'question_1');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -196,25 +197,25 @@
                   </h3>
                   <div class="form-group">
 										<label class="container_radio version_2">Bkash
-											<input type="radio" name="question_1" value="Not Satisfied" class="required" onchange="getVals(this, 'question_1');">
+											<input type="radio" name="payment_id" value="1" class="required" onchange="getVals(this, 'question_1');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_radio version_2">Rocket
-											<input type="radio" name="question_1" value="Quite Satisfied" class="required" onchange="getVals(this, 'question_1');">
+											<input type="radio" name="payment_id" value="2" class="required" onchange="getVals(this, 'question_1');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_radio version_2">Nagad
-											<input type="radio" name="question_1" value="Satisfied" class="required" onchange="getVals(this, 'question_1');">
+											<input type="radio" name="payment_id" value="3" class="required" onchange="getVals(this, 'question_1');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
 									<div class="form-group">
 										<label class="container_radio version_2">Bank Deposit
-											<input type="radio" name="question_1" value="Completely Satisfied" class="required" onchange="getVals(this, 'question_1');">
+											<input type="radio" name="payment_id" value="4" class="required" onchange="getVals(this, 'question_1');">
 											<span class="checkmark"></span>
 										</label>
 									</div>
@@ -224,7 +225,7 @@
 									<h3 class="main_question"><strong>4/5</strong>
                     Write about yourself and why you want to do the course?(Write as much as possible.)</h3>
                     <div class="form-group">
-                      <textarea name="name" class="form-control required" rows="10" placeholder="Write about yourself and why you want to do the course?"></textarea>
+                      <textarea name="description" class="form-control required" rows="10" placeholder="Write about yourself and why you want to do the course?"></textarea>
                     </div>
 								</div>
 								<!-- /step-->

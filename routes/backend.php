@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Backend Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -13,15 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/page/{any}', function () {
-    return view('welcome');
-})->where('any','.*');
 
-Auth::routes();
-
-Route::get('/', function () {
-    return view('index');
+Route::prefix('dashboard')->group(function () {
+  Route::get('/', 'HomeController@index')->name('dashboard');
 });
-
-Route::get('/enroll/course','EnrollController@index')->name('enroll.index');
-Route::post('/enroll/course/store','EnrollController@store')->name('enroll.store');

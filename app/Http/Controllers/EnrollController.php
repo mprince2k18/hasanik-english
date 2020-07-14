@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Enroll;
 
 class EnrollController extends Controller
 {
@@ -34,7 +35,8 @@ class EnrollController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Enroll::create($request->except('_token','website','terms','process'));
+        return back();
     }
 
     /**
