@@ -14,7 +14,13 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        // $this->middleware('auth');
+        $this->middleware('auth');
+    }
+
+    // index
+    public function login_page()
+    {
+        return view('backend.auth.login');
     }
 
     // index
