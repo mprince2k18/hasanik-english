@@ -33,6 +33,8 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        '38ea50801e981fa2297115e1c44a148b' => __DIR__ . '/..' . '/mckenziearts/laravel-notify/src/helpers.php',
+        '2678778370ecbdd62f0e4fc70eb072ea' => __DIR__ . '/../..' . '/app/Helper/Helper.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -114,6 +116,7 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Mckenziearts\\Notify\\' => 20,
         ),
         'L' => 
         array (
@@ -357,6 +360,10 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Mckenziearts\\Notify\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mckenziearts/laravel-notify/src',
+        ),
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
@@ -506,6 +513,7 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Enroll' => __DIR__ . '/../..' . '/app/Models/Enroll.php',
+        'App\\Models\\SystemSetting' => __DIR__ . '/../..' . '/app/Models/SystemSetting.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -2657,6 +2665,11 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         'League\\Flysystem\\Util\\ContentListingFormatter' => __DIR__ . '/..' . '/league/flysystem/src/Util/ContentListingFormatter.php',
         'League\\Flysystem\\Util\\MimeType' => __DIR__ . '/..' . '/league/flysystem/src/Util/MimeType.php',
         'League\\Flysystem\\Util\\StreamHasher' => __DIR__ . '/..' . '/league/flysystem/src/Util/StreamHasher.php',
+        'Mckenziearts\\Notify\\Exceptions\\MissingPresetNotificationException' => __DIR__ . '/..' . '/mckenziearts/laravel-notify/src/Exceptions/MissingPresetNotificationException.php',
+        'Mckenziearts\\Notify\\Facades\\LaravelNotify' => __DIR__ . '/..' . '/mckenziearts/laravel-notify/src/Facades/LaravelNotify.php',
+        'Mckenziearts\\Notify\\LaravelNotify' => __DIR__ . '/..' . '/mckenziearts/laravel-notify/src/LaravelNotify.php',
+        'Mckenziearts\\Notify\\LaravelNotifyServiceProvider' => __DIR__ . '/..' . '/mckenziearts/laravel-notify/src/LaravelNotifyServiceProvider.php',
+        'Mckenziearts\\Notify\\Storage\\Session' => __DIR__ . '/..' . '/mckenziearts/laravel-notify/src/Storage/Session.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegration.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegrationAssertPostConditions' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegrationAssertPostConditions.php',

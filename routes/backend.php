@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('dashboard')->group(function () {
   Route::get('/', 'HomeController@index')->name('dashboard');
+  Route::get('/enrollments', 'HomeController@enroll_index')->name('enroll.index');
 });
