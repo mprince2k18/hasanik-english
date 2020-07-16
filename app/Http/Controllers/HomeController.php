@@ -18,15 +18,10 @@ class HomeController extends Controller
     }
 
     // index
-    public function login_page()
-    {
-        return view('backend.auth.login');
-    }
-
-    // index
     public function index()
     {
-        return view('backend.dashboard.index');
+        $enroll_count = Enroll::count();
+        return view('backend.dashboard.index',compact('enroll_count'));
     }
 
     // enroll_index

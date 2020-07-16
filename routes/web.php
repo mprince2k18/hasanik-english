@@ -21,9 +21,11 @@ Auth::routes();
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('homepage');
 
-Route::get('/v1/login','HomeController@login_page')->name('v1.login');
+Route::get('/v1/login',function(){
+    return view('backend.auth.login');
+})->name('v1.login');
 
 Route::get('/enroll/course','EnrollController@index')->name('enroll.index');
 Route::post('/enroll/course/store','EnrollController@store')->name('enroll.store');

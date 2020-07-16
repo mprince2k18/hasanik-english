@@ -1,5 +1,11 @@
 $( document ).ready(function() {
-    
-    // Write your custom Javascript codes here...
-    
+
+
 });
+
+
+  //show the modal in this function
+    function quickView(url) {
+      $('#product-quickview').modal('show');
+      $('#product-quickview').load(url);
+    }

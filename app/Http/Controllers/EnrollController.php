@@ -47,7 +47,8 @@ class EnrollController extends Controller
      */
     public function show($id)
     {
-        //
+        $student = Enroll::findOrFail($id);
+        return view('backend.enrollments.show',compact('student'));
     }
 
     /**
