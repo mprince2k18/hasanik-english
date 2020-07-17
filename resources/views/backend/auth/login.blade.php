@@ -61,7 +61,7 @@
                                             <p class="text-center m-t-xs text-sm">Do not have an account?</p>
                                             <a href="register.html" class="btn btn-default btn-block m-t-md">Create an account</a>
                                         </form>
-                                        <p class="text-center m-t-xs text-sm">{{ Carbon::now()->year }} &copy; {{ env('APP_NAME') }}</p>
+                                        <p class="text-center m-t-xs text-sm">{{ Carbon\Carbon::now()->year }} &copy; {{ env('APP_NAME') }}</p>
                                     </div>
                                 </div>
                             </div>
