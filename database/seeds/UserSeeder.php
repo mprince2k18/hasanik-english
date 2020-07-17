@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Hash;
 
 class UserSeeder extends Seeder
 {
@@ -14,11 +13,11 @@ class UserSeeder extends Seeder
     {
 
       User::create([
-          'name' => 'admin',
-          'email' => 'admin@mail.com',
+          'name'              => 'admin',
+          'email'             => 'admin@mail.com',
           'email_verified_at' => now(),
-          'password' => Hash::make('12345678'), // password
-          'remember_token' => Str::random(10),
+          'password'          => bcrypt('12345678'), // password
+          'remember_token'    => Str::random(10),
         ]);
 
     }
