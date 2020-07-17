@@ -9,6 +9,7 @@
         <meta charset="UTF-8">
         <meta name="description" content="Admin Dashboard Template" />
         <meta name="keywords" content="admin,dashboard" />
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="author" content="stacks" />
 
         <!-- Styles -->
@@ -112,17 +113,6 @@
           @include('backend.include.sidebar')
           @yield('content')
         </main><!-- Page Content -->
-
-        {{-- <div class="modal fade" id="product-quickview" tabindex="-1" role="dialog" aria-labelledby="product-quickview" aria-hidden="true">
-  	    <div class="modal-dialog modal-dialog-centered" role="document">
-           <div class="modal-content">
-
-         <span class="modal-close" data-dismiss="modal">
-      	   <i class="icon-cross2"></i>
-      	 </span>
-           </div>
-        </div>
-     </div> --}}
 
      <div class="modal fade" id="product-quickview" tabindex="-1" role="dialog" aria-labelledby="product-quickview" aria-hidden="true">
        <div class="modal-dialog" role="document">

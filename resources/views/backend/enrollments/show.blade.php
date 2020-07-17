@@ -1,12 +1,4 @@
-  {{-- <div class="card" style="width: 50%; margin: 0 auto; background: #fff;">
-    <div class="card-body">
-      <h5 class="card-title">{{ $student->name }}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div> --}}
+
   <div class="modal-header"
       style="
       width: 75%;
@@ -14,7 +6,7 @@
       background: #fff;
       margin-top: 5%;
       ">
-          <h5 class="modal-title" id="product-quickview">{{ $student->name }}</h5>
+          <h3 class="modal-title" id="product-quickview">{{ $student->name }}</h3>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -27,7 +19,7 @@
         ">
           <div class="card">
              <div class="card-header">
-               <h5>Student Informations</h5>
+               <h5>Student Information</h5>
              </div>
              <div class="card-body">
                {{-- ----------------------------- --}}
@@ -60,7 +52,7 @@
                   <h5>Occupation</h5>
                  </div>
                  <div class="col-md-10">
-                   {{ $student->occupation_id }}
+                   {{ $student->occupation->name }}
                  </div>
                </div>
                <div class="row">
@@ -85,6 +77,22 @@
                  </div>
                  <div class="col-md-10">
                    {{ $student->course_id }}
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="col-md-2">
+                  <h5>Schedule</h5>
+                 </div>
+                 <div class="col-md-10">
+                   {{ $student->schedule->name }}
+                 </div>
+               </div>
+               <div class="row">
+                 <div class="col-md-2">
+                  <h5>Payment</h5>
+                 </div>
+                 <div class="col-md-10">
+                   {{ $student->payment->name }}
                  </div>
                </div>
                <div class="row">

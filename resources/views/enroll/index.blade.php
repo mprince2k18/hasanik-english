@@ -110,10 +110,10 @@
 										<div class="styled-select clearfix">
 											<select class="wide required" name="occupation_id">
 												<option value="">Your Occupation</option>
-												<option value="1">Student</option>
-												<option value="2">Job Holder</option>
-												<option value="3">Housewive</option>
-												<option value="4">Nothing</option>
+                        @foreach ($occupations as $occupation)
+                          <option value="{{ $occupation->id }}">{{ $occupation->name }}</option>
+                        @endforeach
+
 											</select>
 										</div>
 									</div>
@@ -164,30 +164,15 @@
 									<h3 class="main_question">
                     What is your preferable time schedule?
                   </h3>
-									<div class="form-group">
-										<label class="container_radio version_2">Morning 9 o'clock
-											<input type="radio" name="schedule_id" value="1" class="required" onchange="getVals(this, 'question_1');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Night 9 o'clock
-											<input type="radio" name="schedule_id" value="2" class="required" onchange="getVals(this, 'question_1');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Evening
-											<input type="radio" name="schedule_id" value="3" class="required" onchange="getVals(this, 'question_1');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Other
-											<input type="radio" name="schedule_id" value="4" class="required" onchange="getVals(this, 'question_1');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
+                  @foreach ($schedules as $schedule)
+                    <div class="form-group">
+                      <label class="container_radio version_2">{{ $schedule->name }}
+                        <input type="radio" name="schedule_id" value="{{ $schedule->id }}" class="required" onchange="getVals(this, 'question_{{$schedule->id}}');">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  @endforeach
+
 
 								</div>
 								<!-- /step-->
@@ -195,30 +180,15 @@
 									<h3 class="main_question"><strong>3/5</strong>
                     How do you want to pay for the course?
                   </h3>
-                  <div class="form-group">
-										<label class="container_radio version_2">Bkash
-											<input type="radio" name="payment_id" value="1" class="required" onchange="getVals(this, 'question_1');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Rocket
-											<input type="radio" name="payment_id" value="2" class="required" onchange="getVals(this, 'question_1');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Nagad
-											<input type="radio" name="payment_id" value="3" class="required" onchange="getVals(this, 'question_1');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="form-group">
-										<label class="container_radio version_2">Bank Deposit
-											<input type="radio" name="payment_id" value="4" class="required" onchange="getVals(this, 'question_1');">
-											<span class="checkmark"></span>
-										</label>
-									</div>
+                  @foreach ($payments as $payment)
+                    <div class="form-group">
+                      <label class="container_radio version_2">{{ $payment->name }}
+                        <input type="radio" name="payment_id" value="{{ $payment->id }}" class="required" onchange="getVals(this, 'question_{{ $payment->id }}');">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  @endforeach
+
 								</div>
 								<!-- /step-->
 								<div class="step">

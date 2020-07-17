@@ -21,7 +21,9 @@ class HomeController extends Controller
     public function index()
     {
         $enroll_count = Enroll::count();
-        return view('backend.dashboard.index',compact('enroll_count'));
+        $male = Enroll::where('gender','Male')->count();
+        $female = Enroll::where('gender','Female')->count();
+        return view('backend.dashboard.index',compact('enroll_count','male','female'));
     }
 
     // enroll_index

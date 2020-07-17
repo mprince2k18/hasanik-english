@@ -26,22 +26,22 @@
                                           <tr>
                                               <th>S/L</th>
                                               <th>Name</th>
-                                              <th>Position</th>
-                                              <th>Office</th>
-                                              <th>Age</th>
-                                              <th>Start date</th>
-                                              <th>Salary</th>
+                                              <th>Email</th>
+                                              <th>Phone</th>
+                                              <th>Gender</th>
+                                              <th>Created At</th>
+                                              <th>Action</th>
                                           </tr>
                                       </thead>
                                       <tfoot>
                                           <tr>
-                                              <th>S/L</th>
-                                              <th>Name</th>
-                                              <th>Position</th>
-                                              <th>Office</th>
-                                              <th>Age</th>
-                                              <th>Start date</th>
-                                              <th>Salary</th>
+                                            <th>S/L</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>Gender</th>
+                                            <th>Created At</th>
+                                            <th>Action</th>
                                           </tr>
                                       </tfoot>
                                       <tbody>
@@ -55,8 +55,8 @@
                                             <td>
                                               <a href="tel:{{ $enroll->phone }}">{{ $enroll->phone }}</a>
                                             </td>
-                                            <td>{{ $enroll->age }}</td>
                                             <td>{{ $enroll->gender }}</td>
+                                            <td>{{ $enroll->created_at->diffForHumans() }}</td>
                                             <td>
                                               <a href="#!" onclick="quickView('{{ route('quick.view',$enroll->id) }}')">VIEW</a>
                                             </td>

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Enroll;
+use App\Models\Occupation;
+use App\Models\Schedule;
+use App\Models\Payment;
 
 class EnrollController extends Controller
 {
@@ -14,17 +17,10 @@ class EnrollController extends Controller
      */
     public function index()
     {
-        return view('enroll.index');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $occupations = Occupation::all();
+        $schedules = Schedule::all();
+        $payments = Payment::all();
+        return view('enroll.index',compact('occupations','schedules','payments'));
     }
 
     /**
@@ -51,37 +47,35 @@ class EnrollController extends Controller
         return view('backend.enrollments.show',compact('student'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    // form_data
+    public function form_data()
     {
-        //
+        $occupations = Occupation::all();
+        $schedules = Schedule::all();
+        $payments = Payment::all();
+        return view('backend.form_data.index',compact('occupations','schedules','payments'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    // occupation_store
+    public function occupation_store(Request $request)
     {
-        //
+      Occupation::create($request->except('_token'));
+      return back();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    // occupation_store
+    public function schedule_store(Request $request)
     {
-        //
+      Schedule::create($request->except('_token'));
+      return back();
     }
+
+    // payment_store
+    public function payment_store(Request $request)
+    {
+      Payment::create($request->except('_token'));
+      return back();
+    }
+
+
 }

@@ -25,23 +25,24 @@
         <div class="col-md-2">
           <div class="panel panel-purple">
             <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
+              <h3 class="panel-title">Male Student</h3>
             </div>
             <div class="panel-body">
-              <code>.panel-purple</code>
+              <h2>{{ $male }}</h2>
             </div>
           </div>
         </div>
         <div class="col-md-2">
           <div class="panel panel-purple">
             <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
+              <h3 class="panel-title">Female Student</h3>
             </div>
             <div class="panel-body">
-              <code>.panel-purple</code>
+              <h2>{{ $female }}</h2>
             </div>
           </div>
         </div>
+
         <div class="col-md-2">
           <div class="panel panel-purple">
             <div class="panel-heading">
