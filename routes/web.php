@@ -17,7 +17,7 @@ Route::get('/page/{any}', function () {
     return view('welcome');
 })->where('any','.*');
 
-Auth::routes();
+Auth::routes(['login'=> false]);
 
 Route::get('/', function () {
     return view('index');
