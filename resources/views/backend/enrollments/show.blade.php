@@ -99,7 +99,7 @@
                  <div class="col-md-2">
                   <h5>Description</h5>
                  </div>
-                 <div class="col-md-10">
+                 <div class="col-md-10 text-justify">
                    {{ $student->description }}
                  </div>
                </div>
