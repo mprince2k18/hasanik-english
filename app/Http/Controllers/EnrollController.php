@@ -7,6 +7,7 @@ use App\Models\Enroll;
 use App\Models\Occupation;
 use App\Models\Schedule;
 use App\Models\Payment;
+use App\Models\FormQuestion;
 
 class EnrollController extends Controller
 {
@@ -74,6 +75,20 @@ class EnrollController extends Controller
     public function payment_store(Request $request)
     {
       Payment::create($request->except('_token'));
+      return back();
+    }
+
+    // form_question
+    public function form_question()
+    {
+      $questions = FormQuestion::first();
+      return view('backend.form_question.index',compact('questions'));
+    }
+
+    // form_question_store
+    public function form_question_store(Request $request)
+    {
+      FormQuestion::where('id',$request->id)->update($request->except('_token'));
       return back();
     }
 
