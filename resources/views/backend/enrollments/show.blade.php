@@ -4,7 +4,7 @@
       width: 75%;
       margin: 0 auto;
       background: #fff;
-      margin-top: 5%;
+      margin-top: 2%;
       ">
           <h3 class="modal-title" id="product-quickview">{{ $student->name }}</h3>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
