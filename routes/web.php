@@ -29,6 +29,7 @@ Route::get('/v1/login',function(){
 
 Route::get('/migrate', function(){
   Artisan::call('migrate');
+  Artisan::call('db:seed');
   return 'migrated';
 });
 
