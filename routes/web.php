@@ -27,5 +27,11 @@ Route::get('/v1/login',function(){
     return view('backend.auth.login');
 })->name('v1.login');
 
+Route::get('/migrate', function(){
+  Artisan::call('migrate');
+  return 'migrated';
+});
+
+
 Route::get('/enroll/course','EnrollController@index')->name('enroll.index');
 Route::post('/enroll/course/store','EnrollController@store')->name('enroll.store');
