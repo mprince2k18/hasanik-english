@@ -4,7 +4,7 @@
     <head>
 
         <!-- Title -->
-        <title>Meteor | Login - Sign in</title>
+        <title>{{ env('APP_NAME') }} | Login - Sign in</title>
 
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta charset="UTF-8">
@@ -61,7 +61,7 @@
                                             <p class="text-center m-t-xs text-sm">Do not have an account?</p>
                                             <a href="register.html" class="btn btn-default btn-block m-t-md">Create an account</a>
                                         </form>
-                                        <p class="text-center m-t-xs text-sm">2016 &copy; stacks</p>
+                                        <p class="text-center m-t-xs text-sm">{{ Carbon::now()->year }} &copy; {{ env('APP_NAME') }}</p>
                                     </div>
                                 </div>
                             </div>

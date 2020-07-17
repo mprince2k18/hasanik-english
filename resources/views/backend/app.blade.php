@@ -113,43 +113,24 @@
           @yield('content')
         </main><!-- Page Content -->
 
-        <div class="modal fade" id="product-quickview" tabindex="-1" role="dialog" aria-labelledby="product-quickview" aria-hidden="true">
+        {{-- <div class="modal fade" id="product-quickview" tabindex="-1" role="dialog" aria-labelledby="product-quickview" aria-hidden="true">
   	    <div class="modal-dialog modal-dialog-centered" role="document">
            <div class="modal-content">
-             
+
          <span class="modal-close" data-dismiss="modal">
       	   <i class="icon-cross2"></i>
       	 </span>
            </div>
         </div>
+     </div> --}}
+
+     <div class="modal fade" id="product-quickview" tabindex="-1" role="dialog" aria-labelledby="product-quickview" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            {{-- Modal goes here --}}
+         </div>
+       </div>
      </div>
-
-
-        <nav class="cd-nav-container" id="cd-nav">
-            <header>
-                <h3>DEMOS</h3>
-            </header>
-            <div class="col-md-6 demo-block demo-selected demo-active">
-                <p>Dark<br>Design</p>
-            </div>
-            <div class="col-md-6 demo-block">
-                <a href="../admin2/index.html"><p>Light<br>Design</p></a>
-            </div>
-            <div class="col-md-6 demo-block">
-                <a href="../admin3/index.html"><p>Material<br>Design</p></a>
-            </div>
-            <div class="col-md-6 demo-block demo-coming-soon">
-                <p>Horizontal<br>(Coming)</p>
-            </div>
-            <div class="col-md-6 demo-block demo-coming-soon">
-                <p>Coming<br>Soon</p>
-            </div>
-            <div class="col-md-6 demo-block demo-coming-soon">
-                <p>Coming<br>Soon</p>
-            </div>
-        </nav>
-        <div class="cd-overlay"></div>
-
 
         <!-- Javascripts -->
         <script src="{{ asset('/backend/assets/plugins/jquery/jquery-3.1.0.min.js') }}"></script>
