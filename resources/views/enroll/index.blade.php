@@ -96,7 +96,7 @@
 							<!-- Leave for security protection, read docs for details -->
 							<div id="middle-wizard">
 								<div class="step">
-									<h3 class="main_question"><strong>1/5</strong>Please fill with your details</h3>
+									<h3 class="main_question"><strong>1/5</strong>{{ $questions->question_en_1 ?? '' }}[ {{ $questions->question_bn_1 ?? '' }} ]</h3>
 									<div class="form-group">
 										<input type="text" name="name" class="form-control required" placeholder="Full Name">
 									</div>
@@ -148,7 +148,7 @@
 								<div class="step">
 									<h3 class="main_question">
                     <strong>2/5</strong>
-                    What course do you want to do?
+                    {{ $questions->question_en_2 ?? ''}} [ {{ $questions->question_bn_2 ?? ''}} ]
                   </h3>
                   <div class="form-group">
 										<div class="styled-select clearfix">
@@ -162,7 +162,7 @@
 										</div>
 									</div>
 									<h3 class="main_question">
-                    What is your preferable time schedule?
+                    {{ $questions->question_en_3 ?? ''}} [ {{ $questions->question_bn_3 ?? ''}} ]
                   </h3>
                   @foreach ($schedules as $schedule)
                     <div class="form-group">
@@ -178,7 +178,7 @@
 								<!-- /step-->
 								<div class="step">
 									<h3 class="main_question"><strong>3/5</strong>
-                    How do you want to pay for the course?
+                    {{ $questions->question_en_4 ?? ''}} [ {{ $questions->question_bn_4 ?? ''}} ]
                   </h3>
                   @foreach ($payments as $payment)
                     <div class="form-group">
@@ -193,7 +193,8 @@
 								<!-- /step-->
 								<div class="step">
 									<h3 class="main_question"><strong>4/5</strong>
-                    Write about yourself and why you want to do the course?(Write as much as possible.)</h3>
+                    {{ $questions->question_en_5 ?? ''}} [ {{ $questions->question_bn_5 ?? ''}} ]
+                    </h3>
                     <div class="form-group">
                       <textarea name="description" class="form-control required" rows="10" placeholder="Write about yourself and why you want to do the course?"></textarea>
                     </div>
