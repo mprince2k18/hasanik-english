@@ -23,8 +23,8 @@
                 <div class="step-item">
 
                   <div class="item-content">
-                    <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    <p class="desc">
+                      {{ abouts.desc }}
                     </p>
                   </div>
 
@@ -34,55 +34,6 @@
           </div>
         </section>
 
-
-        <!-- About Tips -->
-        <section class="about-tips">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="section-heading">
-                  <h6>TIPS FOR YOU!</h6>
-                  <h2>Get Tips &amp; Tricks About How To Grow Your Business!</h2>
-                </div>
-                <p>Taiyaki single-origin coffee iceland, skateboard chambray 3 wolf moon vice marfa hammock. Man braid prism post-ironic kickstarter affogato. 3 wolf moon succulents quinoa, keffiyeh keytar swag woke cliche cold-pressed drinking vinegar. Squid blue bottle farm-to-table hammock palo santo pug. Banjo af affogato, typewriter franzen biodiesel bitters poke  bespoke.<br><br>Cronut chillwave dreamcatcher, franzen lomo poutine gluten-free four loko. Offal locavore selvage scenester fixie crucifix tbh DIY mlkshk vice iceland meh taxidermy. Fixie hell of ethical air plant aesthetic.</p>
-                <div class="main-pink-button">
-                  <a href="services.html">All Our Services</a>
-                </div>
-              </div>
-              <div class="col-lg-6 align-self-center">
-                <div class="video-thumb">
-                  <a href="http://youtube.com/"><i class="fa fa-play"></i></a>
-                  <img src="https://buttoncreative.agency/html/oxana/images/video-thumb.jpg" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- About Tips -->
-        <section class="about-tips">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6 align-self-center">
-                <div class="video-thumb">
-                  <a href="http://youtube.com/"><i class="fa fa-play"></i></a>
-                  <img src="https://buttoncreative.agency/html/oxana/images/video-thumb.jpg" alt="">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="section-heading">
-                  <h6>TIPS FOR YOU!</h6>
-                  <h2>Get Tips &amp; Tricks About How To Grow Your Business!</h2>
-                </div>
-                <p>Taiyaki single-origin coffee iceland, skateboard chambray 3 wolf moon vice marfa hammock. Man braid prism post-ironic kickstarter affogato. 3 wolf moon succulents quinoa, keffiyeh keytar swag woke cliche cold-pressed drinking vinegar. Squid blue bottle farm-to-table hammock palo santo pug. Banjo af affogato, typewriter franzen biodiesel bitters poke  bespoke.<br><br>Cronut chillwave dreamcatcher, franzen lomo poutine gluten-free four loko. Offal locavore selvage scenester fixie crucifix tbh DIY mlkshk vice iceland meh taxidermy. Fixie hell of ethical air plant aesthetic.</p>
-                <div class="main-pink-button">
-                  <a href="services.html">All Our Services</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
         <!-- Steps -->
         <section class="steps">
           <div class="container">
@@ -91,8 +42,8 @@
                 <div class="step-item">
                     <h3 class="center">Our Mission</h3>
                   <div class="item-content">
-                    <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                      very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    <p class="desc">
+                      {{ missions.desc }}
                     </p>
                   </div>
 
@@ -287,6 +238,27 @@
     export default {
         mounted() {
             console.log('Component mounted.')
+        },
+        data(){
+          return{
+            abouts:[],
+            missions:[],
+          }
+        },
+        methods:{
+          getAbout(){
+            axios.get('http://localhost/hasanik/public/api/about')
+            .then(response => this.abouts = response.data);
+          },
+          getMission(){
+            axios.get('http://localhost/hasanik/public/api/mission')
+            .then(response => this.missions = response.data);
+          }
+        },
+        created(){
+          this.getAbout();
+          this.getMission();
         }
+        // END
     }
 </script>

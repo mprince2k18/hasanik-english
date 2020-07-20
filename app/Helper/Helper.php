@@ -181,6 +181,12 @@ function categories(){
   return  Category::where('parent_category_id' ,0)->with('child')->Published()->get();
 }
 
+/*page*/
+function page($type){
+
+  return  App\Models\Page::where('type' ,$type)->first();
+}
+
 /*duration*/
 function duration($value){
     $init = $value;

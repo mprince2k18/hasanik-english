@@ -31,6 +31,7 @@
 
 	<!-- MODERNIZR MENU -->
 	<script src="{{asset('enroll/js/modernizr.js')}}"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
 
 </head>
 
@@ -96,7 +97,9 @@
 							<!-- Leave for security protection, read docs for details -->
 							<div id="middle-wizard">
 								<div class="step">
-									<h3 class="main_question"><strong>1/5</strong>{{ $questions->question_en_1 ?? '' }}[ {{ $questions->question_bn_1 ?? '' }} ]</h3>
+									<h3 class="main_question"><strong>1/5</strong>
+                    {{ $questions->question_en_1 ?? '' }}[ {{ $questions->question_bn_1 ?? '' }} ]
+                  </h3>
 									<div class="form-group">
 										<input type="text" name="name" class="form-control required" placeholder="Full Name">
 									</div>
@@ -269,6 +272,9 @@
 
 	<!-- Wizard script -->
 	<script src="{{asset('enroll/js/survey_func.js')}}"></script>
+  <script>
+      feather.replace()
+    </script>
 
 </body>
 </html>

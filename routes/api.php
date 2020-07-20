@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/about','PageController@getAbout')->name('get.about');
+Route::get('/mission','PageController@getMission')->name('get.mission');

@@ -2144,59 +2144,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
-  }
+  },
+  data: function data() {
+    return {
+      abouts: [],
+      missions: []
+    };
+  },
+  methods: {
+    getAbout: function getAbout() {
+      var _this = this;
+
+      axios.get('http://localhost/hasanik/public/api/about').then(function (response) {
+        return _this.abouts = response.data;
+      });
+    },
+    getMission: function getMission() {
+      var _this2 = this;
+
+      axios.get('http://localhost/hasanik/public/api/mission').then(function (response) {
+        return _this2.missions = response.data;
+      });
+    }
+  },
+  created: function created() {
+    this.getAbout();
+    this.getMission();
+  } // END
+
 });
 
 /***/ }),
@@ -38920,516 +38898,438 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("section", { staticClass: "steps" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-12" }, [
+            _c("div", { staticClass: "step-item" }, [
+              _c("div", { staticClass: "item-content" }, [
+                _c("p", { staticClass: "desc" }, [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(_vm.abouts.desc) +
+                      "\n                  "
+                  )
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("section", { staticClass: "steps" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-12" }, [
+            _c("div", { staticClass: "step-item" }, [
+              _c("h3", { staticClass: "center" }, [_vm._v("Our Mission")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "item-content" }, [
+                _c("p", { staticClass: "desc" }, [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(_vm.missions.desc) +
+                      "\n                  "
+                  )
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _vm._m(2),
+    _vm._v(" "),
+    _vm._m(3)
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "page-heading" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-12" }, [
-              _c("h1", [_vm._v("About Us")]),
-              _vm._v(" "),
-              _c("span", [
-                _c("a", { attrs: { href: "index.html" } }, [_vm._v("Home")]),
-                _vm._v("About Us")
-              ])
+    return _c("div", { staticClass: "page-heading" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-12" }, [
+            _c("h1", [_vm._v("About Us")]),
+            _vm._v(" "),
+            _c("span", [
+              _c("a", { attrs: { href: "index.html" } }, [_vm._v("Home")]),
+              _vm._v("About Us")
             ])
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "steps" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-12" }, [
-              _c("div", { staticClass: "step-item" }, [
-                _c("div", { staticClass: "item-content" }, [
-                  _c("p", { staticClass: "desc" }, [
-                    _vm._v(
-                      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\n                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\n                  '
-                    )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "our-skills" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-12" }, [
+            _c("div", { staticClass: "section-heading" }, [
+              _c("h6", [_vm._v("Our Skills")]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("Why Choose Us?")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6 align-self-center" }, [
+            _c("div", { staticClass: "left-image" }, [
+              _c("img", {
+                attrs: {
+                  src:
+                    "https://buttoncreative.agency/html/oxana/images/skills-left-image.png",
+                  alt: ""
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-6" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-5" }, [
+                _c("div", { staticClass: "skill-item" }, [
+                  _c("div", { staticClass: "skill-box" }, [
+                    _c("div", { staticClass: "skills-circle" }, [
+                      _c("ul", [
+                        _c("li", { attrs: { "data-percent": "80" } }, [
+                          _c("span", { staticClass: "bar-circle-right" }),
+                          _c("span", { staticClass: "bar-circle-left" }),
+                          _c("span", { staticClass: "bar-circle-cover" }),
+                          _c("b")
+                        ]),
+                        _vm._v(" "),
+                        _c("li", { attrs: { "data-percent": "94" } }, [
+                          _c("span", { staticClass: "bar-circle-right" }),
+                          _c("span", { staticClass: "bar-circle-left" }),
+                          _c("span", { staticClass: "bar-circle-cover" }),
+                          _c("b")
+                        ]),
+                        _vm._v(" "),
+                        _c("li", { attrs: { "data-percent": "76" } }, [
+                          _c("span", { staticClass: "bar-circle-right" }),
+                          _c("span", { staticClass: "bar-circle-left" }),
+                          _c("span", { staticClass: "bar-circle-cover" }),
+                          _c("b")
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-7" }, [
+                _c("div", { staticClass: "skills-info" }, [
+                  _c("ul", [
+                    _c("li", [
+                      _c("h4", [_vm._v("Drawing Scatch Ideas")]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Shaman synth retro slow-carb vape  dermy twee, put a bird jean shorts franzen."
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("h4", [_vm._v("Creating Actual View")]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Shaman synth retro slow-carb vape  dermy twee, put a bird jean shorts franzen."
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("h4", [_vm._v("Developing Functinal")]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "Shaman synth retro slow-carb vape  dermy twee, put a bird jean shorts franzen."
+                        )
+                      ])
+                    ])
                   ])
                 ])
               ])
             ])
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "about-tips" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-6" }, [
-              _c("div", { staticClass: "section-heading" }, [
-                _c("h6", [_vm._v("TIPS FOR YOU!")]),
-                _vm._v(" "),
-                _c("h2", [
-                  _vm._v("Get Tips & Tricks About How To Grow Your Business!")
-                ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "fun-facts" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-3" }, [
+            _c("div", { staticClass: "count-area-content" }, [
+              _c("div", { staticClass: "count-digit first-digit" }, [
+                _vm._v("4860")
               ]),
               _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Taiyaki single-origin coffee iceland, skateboard chambray 3 wolf moon vice marfa hammock. Man braid prism post-ironic kickstarter affogato. 3 wolf moon succulents quinoa, keffiyeh keytar swag woke cliche cold-pressed drinking vinegar. Squid blue bottle farm-to-table hammock palo santo pug. Banjo af affogato, typewriter franzen biodiesel bitters poke  bespoke."
-                ),
-                _c("br"),
-                _c("br"),
-                _vm._v(
-                  "Cronut chillwave dreamcatcher, franzen lomo poutine gluten-free four loko. Offal locavore selvage scenester fixie crucifix tbh DIY mlkshk vice iceland meh taxidermy. Fixie hell of ethical air plant aesthetic."
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "main-pink-button" }, [
-                _c("a", { attrs: { href: "services.html" } }, [
-                  _vm._v("All Our Services")
-                ])
+              _c("div", { staticClass: "count-title" }, [
+                _vm._v("Hours Worked")
               ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-6 align-self-center" }, [
-              _c("div", { staticClass: "video-thumb" }, [
-                _c("a", { attrs: { href: "http://youtube.com/" } }, [
-                  _c("i", { staticClass: "fa fa-play" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-3" }, [
+            _c("div", { staticClass: "count-area-content" }, [
+              _c("div", { staticClass: "count-digit second-digit" }, [
+                _vm._v("120")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "count-title" }, [
+                _vm._v("Projects completed")
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-3" }, [
+            _c("div", { staticClass: "count-area-content" }, [
+              _c("div", { staticClass: "count-digit third-digit" }, [
+                _vm._v("460")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "count-title" }, [
+                _vm._v("happy clients")
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-3" }, [
+            _c("div", { staticClass: "count-area-content" }, [
+              _c("div", { staticClass: "count-digit fourth-digit" }, [
+                _vm._v("11")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "count-title" }, [_vm._v("awards won")])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "our-team" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-12" }, [
+            _c("div", { staticClass: "section-heading" }, [
+              _c("h6", [_vm._v("Our Team")]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("Meet Our Members")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-3" }, [
+            _c("div", { staticClass: "team-item" }, [
+              _c("div", { staticClass: "team-thumb" }, [
+                _c("div", { staticClass: "hover-effect" }, [
+                  _c("ul", [
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-facebook" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-twitter" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-behance" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-dribbble" })
+                      ])
+                    ])
+                  ])
                 ]),
                 _vm._v(" "),
                 _c("img", {
                   attrs: {
                     src:
-                      "https://buttoncreative.agency/html/oxana/images/video-thumb.jpg",
+                      "https://buttoncreative.agency/html/oxana/images/about-me.jpg",
                     alt: ""
                   }
                 })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "down-content" }, [
+                _c("h4", [_vm._v("Donald K. Huff")]),
+                _vm._v(" "),
+                _c("span", [_vm._v("Main Director")])
               ])
             ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "about-tips" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-6 align-self-center" }, [
-              _c("div", { staticClass: "video-thumb" }, [
-                _c("a", { attrs: { href: "http://youtube.com/" } }, [
-                  _c("i", { staticClass: "fa fa-play" })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-3" }, [
+            _c("div", { staticClass: "team-item" }, [
+              _c("div", { staticClass: "team-thumb" }, [
+                _c("div", { staticClass: "hover-effect" }, [
+                  _c("ul", [
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-facebook" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-twitter" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-behance" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-dribbble" })
+                      ])
+                    ])
+                  ])
                 ]),
                 _vm._v(" "),
                 _c("img", {
                   attrs: {
                     src:
-                      "https://buttoncreative.agency/html/oxana/images/video-thumb.jpg",
+                      "https://buttoncreative.agency/html/oxana/images/about-me.jpg",
                     alt: ""
                   }
                 })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-6" }, [
-              _c("div", { staticClass: "section-heading" }, [
-                _c("h6", [_vm._v("TIPS FOR YOU!")]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "down-content" }, [
+                _c("h4", [_vm._v("Linda D. Bellows")]),
                 _vm._v(" "),
-                _c("h2", [
-                  _vm._v("Get Tips & Tricks About How To Grow Your Business!")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "Taiyaki single-origin coffee iceland, skateboard chambray 3 wolf moon vice marfa hammock. Man braid prism post-ironic kickstarter affogato. 3 wolf moon succulents quinoa, keffiyeh keytar swag woke cliche cold-pressed drinking vinegar. Squid blue bottle farm-to-table hammock palo santo pug. Banjo af affogato, typewriter franzen biodiesel bitters poke  bespoke."
-                ),
-                _c("br"),
-                _c("br"),
-                _vm._v(
-                  "Cronut chillwave dreamcatcher, franzen lomo poutine gluten-free four loko. Offal locavore selvage scenester fixie crucifix tbh DIY mlkshk vice iceland meh taxidermy. Fixie hell of ethical air plant aesthetic."
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "main-pink-button" }, [
-                _c("a", { attrs: { href: "services.html" } }, [
-                  _vm._v("All Our Services")
-                ])
+                _c("span", [_vm._v("Web Developer")])
               ])
             ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "steps" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-12" }, [
-              _c("div", { staticClass: "step-item" }, [
-                _c("h3", { staticClass: "center" }, [_vm._v("Our Mission")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "item-content" }, [
-                  _c("p", { staticClass: "desc" }, [
-                    _vm._v(
-                      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\n                    very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\n                  '
-                    )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-3" }, [
+            _c("div", { staticClass: "team-item" }, [
+              _c("div", { staticClass: "team-thumb" }, [
+                _c("div", { staticClass: "hover-effect" }, [
+                  _c("ul", [
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-facebook" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-twitter" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-behance" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-dribbble" })
+                      ])
+                    ])
                   ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "our-skills" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-12" }, [
-              _c("div", { staticClass: "section-heading" }, [
-                _c("h6", [_vm._v("Our Skills")]),
+                ]),
                 _vm._v(" "),
-                _c("h2", [_vm._v("Why Choose Us?")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-6 align-self-center" }, [
-              _c("div", { staticClass: "left-image" }, [
                 _c("img", {
                   attrs: {
                     src:
-                      "https://buttoncreative.agency/html/oxana/images/skills-left-image.png",
+                      "https://buttoncreative.agency/html/oxana/images/about-me.jpg",
                     alt: ""
                   }
                 })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "down-content" }, [
+                _c("h4", [_vm._v("Catherine M. Cole")]),
+                _vm._v(" "),
+                _c("span", [_vm._v("Creative Director")])
               ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-6" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-5" }, [
-                  _c("div", { staticClass: "skill-item" }, [
-                    _c("div", { staticClass: "skill-box" }, [
-                      _c("div", { staticClass: "skills-circle" }, [
-                        _c("ul", [
-                          _c("li", { attrs: { "data-percent": "80" } }, [
-                            _c("span", { staticClass: "bar-circle-right" }),
-                            _c("span", { staticClass: "bar-circle-left" }),
-                            _c("span", { staticClass: "bar-circle-cover" }),
-                            _c("b")
-                          ]),
-                          _vm._v(" "),
-                          _c("li", { attrs: { "data-percent": "94" } }, [
-                            _c("span", { staticClass: "bar-circle-right" }),
-                            _c("span", { staticClass: "bar-circle-left" }),
-                            _c("span", { staticClass: "bar-circle-cover" }),
-                            _c("b")
-                          ]),
-                          _vm._v(" "),
-                          _c("li", { attrs: { "data-percent": "76" } }, [
-                            _c("span", { staticClass: "bar-circle-right" }),
-                            _c("span", { staticClass: "bar-circle-left" }),
-                            _c("span", { staticClass: "bar-circle-cover" }),
-                            _c("b")
-                          ])
-                        ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-3" }, [
+            _c("div", { staticClass: "team-item" }, [
+              _c("div", { staticClass: "team-thumb" }, [
+                _c("div", { staticClass: "hover-effect" }, [
+                  _c("ul", [
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-facebook" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-twitter" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-behance" })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("i", { staticClass: "fa fa-dribbble" })
                       ])
                     ])
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "col-7" }, [
-                  _c("div", { staticClass: "skills-info" }, [
-                    _c("ul", [
-                      _c("li", [
-                        _c("h4", [_vm._v("Drawing Scatch Ideas")]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v(
-                            "Shaman synth retro slow-carb vape  dermy twee, put a bird jean shorts franzen."
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("h4", [_vm._v("Creating Actual View")]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v(
-                            "Shaman synth retro slow-carb vape  dermy twee, put a bird jean shorts franzen."
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("h4", [_vm._v("Developing Functinal")]),
-                        _vm._v(" "),
-                        _c("p", [
-                          _vm._v(
-                            "Shaman synth retro slow-carb vape  dermy twee, put a bird jean shorts franzen."
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "fun-facts" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-3" }, [
-              _c("div", { staticClass: "count-area-content" }, [
-                _c("div", { staticClass: "count-digit first-digit" }, [
-                  _vm._v("4860")
-                ]),
+                _c("img", {
+                  attrs: {
+                    src:
+                      "https://buttoncreative.agency/html/oxana/images/about-me.jpg",
+                    alt: ""
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "down-content" }, [
+                _c("h4", [_vm._v("David S. Scott")]),
                 _vm._v(" "),
-                _c("div", { staticClass: "count-title" }, [
-                  _vm._v("Hours Worked")
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-3" }, [
-              _c("div", { staticClass: "count-area-content" }, [
-                _c("div", { staticClass: "count-digit second-digit" }, [
-                  _vm._v("120")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "count-title" }, [
-                  _vm._v("Projects completed")
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-3" }, [
-              _c("div", { staticClass: "count-area-content" }, [
-                _c("div", { staticClass: "count-digit third-digit" }, [
-                  _vm._v("460")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "count-title" }, [
-                  _vm._v("happy clients")
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-3" }, [
-              _c("div", { staticClass: "count-area-content" }, [
-                _c("div", { staticClass: "count-digit fourth-digit" }, [
-                  _vm._v("11")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "count-title" }, [
-                  _vm._v("awards won")
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "our-team" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-12" }, [
-              _c("div", { staticClass: "section-heading" }, [
-                _c("h6", [_vm._v("Our Team")]),
-                _vm._v(" "),
-                _c("h2", [_vm._v("Meet Our Members")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-3" }, [
-              _c("div", { staticClass: "team-item" }, [
-                _c("div", { staticClass: "team-thumb" }, [
-                  _c("div", { staticClass: "hover-effect" }, [
-                    _c("ul", [
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-facebook" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-twitter" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-behance" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-dribbble" })
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "https://buttoncreative.agency/html/oxana/images/about-me.jpg",
-                      alt: ""
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "down-content" }, [
-                  _c("h4", [_vm._v("Donald K. Huff")]),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Main Director")])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-3" }, [
-              _c("div", { staticClass: "team-item" }, [
-                _c("div", { staticClass: "team-thumb" }, [
-                  _c("div", { staticClass: "hover-effect" }, [
-                    _c("ul", [
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-facebook" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-twitter" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-behance" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-dribbble" })
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "https://buttoncreative.agency/html/oxana/images/about-me.jpg",
-                      alt: ""
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "down-content" }, [
-                  _c("h4", [_vm._v("Linda D. Bellows")]),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Web Developer")])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-3" }, [
-              _c("div", { staticClass: "team-item" }, [
-                _c("div", { staticClass: "team-thumb" }, [
-                  _c("div", { staticClass: "hover-effect" }, [
-                    _c("ul", [
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-facebook" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-twitter" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-behance" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-dribbble" })
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "https://buttoncreative.agency/html/oxana/images/about-me.jpg",
-                      alt: ""
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "down-content" }, [
-                  _c("h4", [_vm._v("Catherine M. Cole")]),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("Creative Director")])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-3" }, [
-              _c("div", { staticClass: "team-item" }, [
-                _c("div", { staticClass: "team-thumb" }, [
-                  _c("div", { staticClass: "hover-effect" }, [
-                    _c("ul", [
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-facebook" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-twitter" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-behance" })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c("a", { attrs: { href: "#" } }, [
-                          _c("i", { staticClass: "fa fa-dribbble" })
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "https://buttoncreative.agency/html/oxana/images/about-me.jpg",
-                      alt: ""
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "down-content" }, [
-                  _c("h4", [_vm._v("David S. Scott")]),
-                  _vm._v(" "),
-                  _c("span", [_vm._v("General Manager")])
-                ])
+                _c("span", [_vm._v("General Manager")])
               ])
             ])
           ])
