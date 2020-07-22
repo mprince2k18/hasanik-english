@@ -2158,7 +2158,8 @@ __webpack_require__.r(__webpack_exports__);
     getAbout: function getAbout() {
       var _this = this;
 
-      axios.get('http://localhost/hasanik/public/api/about') //base_url
+      // axios.get('http://localhost/hasanik/public/api/about') //base_url
+      axios.get('https://app.hasanikenglish.com/api/about') //base_url
       .then(function (response) {
         return _this.abouts = response.data;
       });
@@ -2166,7 +2167,8 @@ __webpack_require__.r(__webpack_exports__);
     getMission: function getMission() {
       var _this2 = this;
 
-      axios.get('http://localhost/hasanik/public/api/mission') //base_url
+      // axios.get('http://localhost/hasanik/public/api/mission') //base_url
+      axios.get('https://app.hasanikenglish.com/api/about') //base_url
       .then(function (response) {
         return _this2.missions = response.data;
       });
@@ -3161,7 +3163,8 @@ __webpack_require__.r(__webpack_exports__);
     getTeam: function getTeam() {
       var _this = this;
 
-      axios.get('http://localhost/hasanik/public/api/team') //base_url
+      // axios.get('http://localhost/hasanik/public/api/team') //base_url
+      axios.get('https://app.hasanikenglish.com/api/team') //base_url
       .then(function (response) {
         return _this.teams = response.data;
       });

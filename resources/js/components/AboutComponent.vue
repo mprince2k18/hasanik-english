@@ -247,11 +247,13 @@
         },
         methods:{
           getAbout(){
-            axios.get('http://localhost/hasanik/public/api/about') //base_url
+            // axios.get('http://localhost/hasanik/public/api/about') //base_url
+            axios.get('https://app.hasanikenglish.com/api/about') //base_url
             .then(response => this.abouts = response.data);
           },
           getMission(){
-            axios.get('http://localhost/hasanik/public/api/mission') //base_url
+            // axios.get('http://localhost/hasanik/public/api/mission') //base_url
+            axios.get('https://app.hasanikenglish.com/api/about') //base_url
             .then(response => this.missions = response.data);
           }
         },
