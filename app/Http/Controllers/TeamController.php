@@ -24,7 +24,7 @@ class TeamController extends Controller
         $team->position = $request->position;
         
         if ($request->hasFile('photo')) {
-            $team->photo = fileUpload($request->photo,'teams');
+            $team->photo = env('APP_URL') . '/' . fileUpload($request->photo,'teams');
         }
 
         $team->fb = $request->fb;

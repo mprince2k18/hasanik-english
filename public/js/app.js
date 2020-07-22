@@ -41143,7 +41143,7 @@ var render = function() {
                   _c("div", { staticClass: "team-thumb" }, [
                     _vm._m(2, true),
                     _vm._v(" "),
-                    _c("img", { attrs: { src: "" + team.photo, alt: "#" } })
+                    _c("img", { attrs: { src: team.photo, alt: "#" } })
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "down-content" }, [
