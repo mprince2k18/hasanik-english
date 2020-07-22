@@ -41143,11 +41143,7 @@ var render = function() {
             _vm._l(_vm.teams, function(team) {
               return _c("div", { key: team.id, staticClass: "col-lg-3" }, [
                 _c("div", { staticClass: "team-item" }, [
-                  _c("div", { staticClass: "team-thumb" }, [
-                    _vm._m(2, true),
-                    _vm._v(" "),
-                    _c("img", { attrs: { src: team.photo, alt: "#" } })
-                  ]),
+                  _vm._m(2, true),
                   _vm._v(" "),
                   _c("div", { staticClass: "down-content" }, [
                     _c("h4", [_vm._v(_vm._s(team.name))]),
@@ -41202,32 +41198,36 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "hover-effect" }, [
-      _c("ul", [
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fa fa-facebook" })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fa fa-twitter" })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fa fa-behance" })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fa fa-dribbble" })
+    return _c("div", { staticClass: "team-thumb" }, [
+      _c("div", { staticClass: "hover-effect" }, [
+        _c("ul", [
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fa fa-facebook" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fa fa-twitter" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fa fa-behance" })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("i", { staticClass: "fa fa-dribbble" })
+            ])
           ])
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _c("img", { attrs: { src: "team.photo", alt: "#" } })
     ])
   },
   function() {
