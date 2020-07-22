@@ -521,6 +521,7 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         'App\\Models\\Payment' => __DIR__ . '/../..' . '/app/Models/Payment.php',
         'App\\Models\\Schedule' => __DIR__ . '/../..' . '/app/Models/Schedule.php',
         'App\\Models\\SystemSetting' => __DIR__ . '/../..' . '/app/Models/SystemSetting.php',
+        'App\\Models\\Team' => __DIR__ . '/../..' . '/app/Models/Team.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

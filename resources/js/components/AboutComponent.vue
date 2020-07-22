@@ -247,11 +247,11 @@
         },
         methods:{
           getAbout(){
-            axios.get('http://localhost/hasanik/public/api/about')
+            axios.get('http://localhost/hasanik/public/api/about') //base_url
             .then(response => this.abouts = response.data);
           },
           getMission(){
-            axios.get('http://localhost/hasanik/public/api/mission')
+            axios.get('http://localhost/hasanik/public/api/mission') //base_url
             .then(response => this.missions = response.data);
           }
         },

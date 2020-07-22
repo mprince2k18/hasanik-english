@@ -6,6 +6,7 @@
             <li class="{{ Route::currentRouteNamed('form.data') ? 'active' : '' }}"><a href="{{ route('form.data') }}" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Form Data</p></a></li>
             <li class="{{ Route::currentRouteNamed('form.question') ? 'active' : '' }}"><a href="{{ route('form.question') }}" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Form Question</p></a></li>
             <li class="{{ Route::currentRouteNamed('about') ? 'active' : '' }}"><a href="{{ route('about') }}" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>About</p></a></li>
+            <li class="{{ Route::currentRouteNamed('team.index') ? 'active' : '' }}"><a href="{{ route('team.index') }}" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Team</p></a></li>
         </ul>
     </div><!-- Page Sidebar Inner -->
 </div><!-- Page Sidebar -->

@@ -35,6 +35,7 @@ return array(
     'App\\Models\\Payment' => $baseDir . '/app/Models/Payment.php',
     'App\\Models\\Schedule' => $baseDir . '/app/Models/Schedule.php',
     'App\\Models\\SystemSetting' => $baseDir . '/app/Models/SystemSetting.php',
+    'App\\Models\\Team' => $baseDir . '/app/Models/Team.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',

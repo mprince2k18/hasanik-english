@@ -23,7 +23,8 @@
                    <h2>Meet Our Members</h2>
                  </div>
                </div>
-               <div class="col-lg-3">
+
+               <div class="col-lg-3" v-for="team in teams" :key="team.id">
                  <div class="team-item">
                    <div class="team-thumb">
                      <div class="hover-effect">
@@ -34,168 +35,15 @@
                          <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                        </ul>
                      </div>
-                     <img src="https://buttoncreative.agency/html/oxana/images/about-me.jpg" alt="">
+                     <img :src="'' + team.photo" alt="#">
                    </div>
                    <div class="down-content">
-                     <h4>Donald K. Huff</h4>
-                     <span>Main Director</span>
+                     <h4>{{ team.name }}</h4>
+                     <span>{{ team.position }}</span>
                    </div>
                  </div>
                </div>
-               <div class="col-lg-3">
-                 <div class="team-item">
-                   <div class="team-thumb">
-                     <div class="hover-effect">
-                       <ul>
-                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                       </ul>
-                     </div>
-                     <img src="https://buttoncreative.agency/html/oxana/images/about-me.jpg" alt="">
-                   </div>
-                   <div class="down-content">
-                     <h4>Linda D. Bellows</h4>
-                     <span>Web Developer</span>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-lg-3">
-                 <div class="team-item">
-                   <div class="team-thumb">
-                     <div class="hover-effect">
-                       <ul>
-                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                       </ul>
-                     </div>
-                     <img src="https://buttoncreative.agency/html/oxana/images/about-me.jpg" alt="">
-                   </div>
-                   <div class="down-content">
-                     <h4>Catherine M. Cole</h4>
-                     <span>Creative Director</span>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-lg-3">
-                 <div class="team-item">
-                   <div class="team-thumb">
-                     <div class="hover-effect">
-                       <ul>
-                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                       </ul>
-                     </div>
-                     <img src="https://buttoncreative.agency/html/oxana/images/about-me.jpg" alt="">
-                   </div>
-                   <div class="down-content">
-                     <h4>David S. Scott</h4>
-                     <span>General Manager</span>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-lg-3">
-                 <div class="team-item">
-                   <div class="team-thumb">
-                     <div class="hover-effect">
-                       <ul>
-                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                       </ul>
-                     </div>
-                     <img src="https://buttoncreative.agency/html/oxana/images/about-me.jpg" alt="">
-                   </div>
-                   <div class="down-content">
-                     <h4>Linda D. Bellows</h4>
-                     <span>Web Developer</span>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-lg-3">
-                 <div class="team-item">
-                   <div class="team-thumb">
-                     <div class="hover-effect">
-                       <ul>
-                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                       </ul>
-                     </div>
-                     <img src="https://buttoncreative.agency/html/oxana/images/about-me.jpg" alt="">
-                   </div>
-                   <div class="down-content">
-                     <h4>Catherine M. Cole</h4>
-                     <span>Creative Director</span>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-lg-3">
-                 <div class="team-item">
-                   <div class="team-thumb">
-                     <div class="hover-effect">
-                       <ul>
-                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                       </ul>
-                     </div>
-                     <img src="https://buttoncreative.agency/html/oxana/images/about-me.jpg" alt="">
-                   </div>
-                   <div class="down-content">
-                     <h4>Donald K. Huff</h4>
-                     <span>Main Director</span>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-lg-3">
-                 <div class="hiring-space">
-                   <h2>We Are Hiring!<br>Join Us!</h2>
-                   <div class="main-white-button">
-                     <a href="#">Submit Resume Now</a>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-lg-3">
-                 <div class="hiring-space">
-                   <h2>We Are Hiring!<br>Join Us!</h2>
-                   <div class="main-white-button">
-                     <a href="#">Submit Resume Now</a>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-lg-3">
-                 <div class="hiring-space">
-                   <h2>We Are Hiring!<br>Join Us!</h2>
-                   <div class="main-white-button">
-                     <a href="#">Submit Resume Now</a>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-lg-3">
-                 <div class="hiring-space">
-                   <h2>We Are Hiring!<br>Join Us!</h2>
-                   <div class="main-white-button">
-                     <a href="#">Submit Resume Now</a>
-                   </div>
-                 </div>
-               </div>
-               <div class="col-lg-3">
-                 <div class="hiring-space">
-                   <h2>We Are Hiring!<br>Join Us!</h2>
-                   <div class="main-white-button">
-                     <a href="#">Submit Resume Now</a>
-                   </div>
-                 </div>
-               </div>
+
              </div>
            </div>
          </section>
@@ -239,7 +87,21 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+            console.log('Component mounted.');
+        },
+        data(){
+          return{
+            teams:[]
+          }
+        },
+        methods:{
+          getTeam(){
+            axios.get('http://localhost/hasanik/public/api/team') //base_url
+            .then(response => this.teams = response.data);
+          }
+        },
+        created(){
+          this.getTeam();
         }
     }
 </script>

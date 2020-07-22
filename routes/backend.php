@@ -16,17 +16,35 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('dashboard')->group(function () {
   Route::get('/', 'HomeController@index')->name('dashboard');
+  
+  /**
+   * Enrollments
+   */
   Route::get('/enrollments', 'HomeController@enroll_index')->name('enrollment.index');
   Route::get('/quick/view/{id}', 'EnrollController@show')->name('quick.view');
   Route::get('/form/data', 'EnrollController@form_data')->name('form.data');
   Route::get('/form/questions', 'EnrollController@form_question')->name('form.question');
   Route::post('/form/question/store', 'EnrollController@form_question_store')->name('form.question.store');
   
+  /**
+   * Form Data
+   */
   Route::post('/form/data/occupation/store', 'EnrollController@occupation_store')->name('occupation.store');
   Route::post('/form/data/schedule/store', 'EnrollController@schedule_store')->name('schedule.store');
   Route::post('/form/data/payment/store', 'EnrollController@payment_store')->name('payment.store');
 
+  /**
+   * About us
+   */
   Route::get('/about', 'PageController@about')->name('about');
   Route::post('/about/store', 'PageController@about_store')->name('about.store');
   Route::post('/mission/store', 'PageController@mission_store')->name('mission.store');
+
+  /**
+   * Team
+   */
+  Route::get('/team','TeamController@index')->name('team.index');
+  Route::post('/team/store','TeamController@store')->name('team.store');
+
+
 });

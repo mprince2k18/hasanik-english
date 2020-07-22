@@ -18,5 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+/**
+ * ABOUT
+ */
 Route::get('/about','PageController@getAbout')->name('get.about');
 Route::get('/mission','PageController@getMission')->name('get.mission');
+
+/**
+ * TEAM
+ */
+Route::get('/team','TeamController@getTeam')->name('get.team');
