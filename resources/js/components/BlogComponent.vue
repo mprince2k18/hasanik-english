@@ -21,71 +21,33 @@
                 <div class="col-lg-8">
                   <div class="blog-posts">
                     <div class="row">
-                      <div class="col-lg-12">
+
+                      <div class="col-lg-12" v-for="blog in blogs.data" :key="blog.id">
                         <div class="blog-post">
                           <div class="blog-thumb">
-                            <router-link to="single-blog"><img src="https://buttoncreative.agency/html/oxana/images/blog-item-03.jpg" alt=""></router-link>
+                            <router-link to="single-blog">
+                              <img :src="blog.thumbnail" :alt="blog.title"></router-link>
                           </div>
                           <div class="down-content">
                             <ul>
-                              <li><a href="#">Admin</a></li>
-                              <li><a href="#">Febuary 15, 2020</a></li>
+                              <li><a href="#">{{ blog.user.name }}</a></li>
+                              <li>
+                                  <timeago :datetime="blog.created_at" :auto-update="15"></timeago>
+                              </li>
                               <li><a href="#">8 Comments</a></li>
                             </ul>
-                            <h4>15 SEO Best Practices: Website Architecture</h4>
-                            <p>Cold-pressed affogato pork belly lomo, leggings butcher hell of keffiyeh ethical austin disrupt. Sartorial tacos intelligentsia knausgaard, unicorn kale chips brooklyn cardigan four dollar toast microdosing bespoke. Mumblecore fanny pack tousled tumeric yuccie health....</p>
+                            <h4>{{ blog.title }}</h4>
+                            <p>{{ blog.description }}</p>
                             <div class="main-purple-button">
                               <router-link to="single-blog">Continue Reading</router-link>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-12">
-                        <div class="blog-post">
-                          <div class="blog-thumb">
-                            <a href="single-post.html"><img src="https://buttoncreative.agency/html/oxana/images/blog-item-03.jpg" alt=""></a>
-                          </div>
-                          <div class="down-content">
-                            <ul>
-                              <li><a href="#">Admin</a></li>
-                              <li><a href="#">Febuary 15, 2020</a></li>
-                              <li><a href="#">8 Comments</a></li>
-                            </ul>
-                            <h4>Few Easy Steps To Reach Huge Audience</h4>
-                            <p>Cold-pressed affogato pork belly lomo, leggings butcher hell of keffiyeh ethical austin disrupt. Sartorial tacos intelligentsia knausgaard, unicorn kale chips brooklyn cardigan four dollar toast microdosing bespoke. Mumblecore fanny pack tousled tumeric yuccie health....</p>
-                            <div class="main-purple-button">
-                              <router-link to="single-blog">Continue Reading</router-link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="blog-post">
-                          <div class="blog-thumb">
-                            <a href="single-post.html"><img src="https://buttoncreative.agency/html/oxana/images/blog-item-03.jpg" alt=""></a>
-                          </div>
-                          <div class="down-content">
-                            <ul>
-                              <li><a href="#">Admin</a></li>
-                              <li><a href="#">Febuary 15, 2020</a></li>
-                              <li><a href="#">8 Comments</a></li>
-                            </ul>
-                            <h4>What's Best Resolution For Social Media Posts</h4>
-                            <p>Cold-pressed affogato pork belly lomo, leggings butcher hell of keffiyeh ethical austin disrupt. Sartorial tacos intelligentsia knausgaard, unicorn kale chips brooklyn cardigan four dollar toast microdosing bespoke. Mumblecore fanny pack tousled tumeric yuccie health....</p>
-                            <div class="main-purple-button">
-                              <router-link to="single-blog">Continue Reading</router-link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                     
                       <div class="col-lg-12">
                         <div class="blog-pagination">
-                          <ul>
-                            <li><a href="#">1</a></li>
-                            <li class="active"><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-                          </ul>
+                          <pagination :data="blogs" @pagination-change-page="getResults"></pagination>
                         </div>
                       </div>
                     </div>
@@ -174,21 +136,6 @@
                           </ul>
                         </div>
                       </div>
-                      <div class="col-lg-12">
-                        <div class="blog-widget tags">
-                          <div class="blog-heading">
-                            <h4>Tag Clouds</h4>
-                          </div>
-                          <ul>
-                            <li><a href="#">Web Analysis</a></li>
-                            <li><a href="#">SEO</a></li>
-                            <li><a href="#">Branding</a></li>
-                            <li><a href="#">Digital Agency</a></li>
-                            <li><a href="#">Optimize</a></li>
-                            <li><a href="#">Marketing</a></li>
-                          </ul>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -202,6 +149,31 @@
     export default {
         mounted() {
             console.log('Component mounted.')
+        },
+        data(){
+          return{
+            blogs:[],
+          }
+        },
+        methods:{
+          getBlogs(){
+            // axios.get('http://localhost/hasanik/public/api/blogs') //base_url
+            axios.get('https://app.hasanikenglish.com/api/blogs') //base_url
+            .then(response => this.blogs = response.data);
+          },
+          getResults(page) {
+                if (typeof page === 'undefined') {
+                    page = 1;
+                }
+
+                // axios.get('http://localhost/hasanik/public/api/blogs?page=' + page) //base_url
+             axios.get('https://app.hasanikenglish.com/api/blogs?page=' + page) //base_url
+            .then(response => this.blogs = response.data);
+            }
+        },
+        created(){
+          this.getBlogs();
+          this.getResults();
         }
     }
 </script>

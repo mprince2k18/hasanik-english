@@ -46,5 +46,19 @@ Route::prefix('dashboard')->group(function () {
   Route::get('/team','TeamController@index')->name('team.index');
   Route::post('/team/store','TeamController@store')->name('team.store');
 
+  /**
+   * Category
+   */
+
+  Route::post('/category/store','CategoryController@store')->name('category.store');
+
+  /**
+   * BLOG
+   */
+
+  Route::get('/blog','BlogController@index')->name('blog.index');
+  Route::post('/blog/store','BlogController@store')->name('blog.store');
+
+
 
 });

@@ -28,3 +28,8 @@ Route::get('/mission','PageController@getMission')->name('get.mission');
  * TEAM
  */
 Route::get('/team','TeamController@getTeam')->name('get.team');
+
+/**
+ * BLOG
+ */
+Route::get('/blogs','BlogController@getBlogs')->name('get.blogs');

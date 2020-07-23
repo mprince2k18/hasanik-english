@@ -23,5 +23,7 @@ class Enroll extends Model
       return $this->hasOne('App\Models\Payment','id','payment_id');
     }
 
+    
+
 
 }

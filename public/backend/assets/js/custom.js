@@ -12,6 +12,10 @@ $( document ).ready(function() {
     $('#payment_form').submit();
   });
 
+  $('.categoryBtn').on('click', function () {
+      $('#categoryForm').submit();
+  });
+
 });
 
 
