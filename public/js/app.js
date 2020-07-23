@@ -41166,7 +41166,7 @@ var render = function() {
                         _vm._v(" "),
                         _c("li", [
                           _c("a", { attrs: { href: team.linked } }, [
-                            _c("i", { staticClass: "fa fa-linked" })
+                            _c("i", { staticClass: "fa fa-linkedin" })
                           ])
                         ])
                       ])
