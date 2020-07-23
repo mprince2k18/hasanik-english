@@ -41144,7 +41144,33 @@ var render = function() {
               return _c("div", { key: team.id, staticClass: "col-lg-3" }, [
                 _c("div", { staticClass: "team-item" }, [
                   _c("div", { staticClass: "team-thumb" }, [
-                    _vm._m(2, true),
+                    _c("div", { staticClass: "hover-effect" }, [
+                      _c("ul", [
+                        _c("li", [
+                          _c("a", { attrs: { href: team.fb } }, [
+                            _c("i", { staticClass: "fa fa-facebook" })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: team.tw } }, [
+                            _c("i", { staticClass: "fa fa-twitter" })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: team.skype } }, [
+                            _c("i", { staticClass: "fa fa-skype" })
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: team.linked } }, [
+                            _c("i", { staticClass: "fa fa-linked" })
+                          ])
+                        ])
+                      ])
+                    ]),
                     _vm._v(" "),
                     _c("img", { attrs: { src: team.photo, alt: "#" } })
                   ]),
@@ -41163,7 +41189,7 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(3)
+    _vm._m(2)
   ])
 }
 var staticRenderFns = [
@@ -41195,38 +41221,6 @@ var staticRenderFns = [
         _c("h6", [_vm._v("Our Team")]),
         _vm._v(" "),
         _c("h2", [_vm._v("Meet Our Members")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "hover-effect" }, [
-      _c("ul", [
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fa fa-facebook" })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fa fa-twitter" })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fa fa-behance" })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("i", { staticClass: "fa fa-dribbble" })
-          ])
-        ])
       ])
     ])
   },

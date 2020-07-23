@@ -29,10 +29,10 @@
                    <div class="team-thumb">
                      <div class="hover-effect">
                        <ul>
-                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                         <li><a :href="team.fb"><i class="fa fa-facebook"></i></a></li>
+                         <li><a :href="team.tw"><i class="fa fa-twitter"></i></a></li>
+                         <li><a :href="team.skype"><i class="fa fa-skype"></i></a></li>
+                         <li><a :href="team.linked"><i class="fa fa-linked"></i></a></li>
                        </ul>
                      </div>
                      <img :src="team.photo" alt="#">
