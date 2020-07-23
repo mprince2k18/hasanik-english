@@ -35,7 +35,7 @@
                          <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                        </ul>
                      </div>
-                     <img src="team.photo" alt="#">
+                     <img :src="team.photo" alt="#">
                    </div>
                    <div class="down-content">
                      <h4>{{ team.name }}</h4>
