@@ -99,4 +99,15 @@ class BlogController extends Controller
                     ->with('user')
                     ->paginate(2);
     }
+
+    /**
+     * getBlog
+     * @api call
+     */
+    public function getBlog($id)
+    {
+        return Blog::where('id',$id)->with('category')
+                    ->with('user')
+                    ->first();
+    }
 }

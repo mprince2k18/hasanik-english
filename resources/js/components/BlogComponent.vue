@@ -7,7 +7,7 @@
               <div class="row">
                 <div class="col-lg-12">
                   <h1>Blog Entries</h1>
-                  <span><a href="index.html">Home</a>Blog Entries</span>
+                  <span><a href="index.html">Home</a>Blogs</span>
                 </div>
               </div>
             </div>
@@ -25,7 +25,7 @@
                       <div class="col-lg-12" v-for="blog in blogs.data" :key="blog.id">
                         <div class="blog-post">
                           <div class="blog-thumb">
-                            <router-link to="single-blog">
+                            <router-link :to="`/page/blog/${blog.id}`">
                               <img :src="blog.thumbnail" :alt="blog.title"></router-link>
                           </div>
                           <div class="down-content">
@@ -39,7 +39,7 @@
                             <h4>{{ blog.title }}</h4>
                             <p>{{ blog.description }}</p>
                             <div class="main-purple-button">
-                              <router-link to="single-blog">Continue Reading</router-link>
+                              <router-link :to="`/page/blog/${blog.id}`">Continue Reading</router-link>
                             </div>
                           </div>
                         </div>
@@ -97,42 +97,22 @@
                       <div class="col-lg-12">
                         <div class="blog-widget recent-posts">
                           <div class="blog-heading">
-                            <h4>Recent Posts</h4>
+                            <h4>Posts</h4>
                           </div>
                           <ul>
-                            <li>
+
+                            <li v-for="blog in blogs.data" :key="blog.id">
                               <router-link to="single-blog">
                                 <div class="blog-thumb">
-                                  <img src="https://buttoncreative.agency/html/oxana/images/blog-item-03.jpg" alt="">
+                                  <img :src="blog.thumbnail" :alt="blog.title">
                                 </div>
                                 <div class="right-content">
-                                  <h6>15 SEO Practices Web Architecture</h6>
-                                  <span>Febuary 15, 2020</span>
+                                  <h6>{{ blog.title }}</h6>
+                                  <span><timeago :datetime="blog.created_at" :auto-update="15"></timeago></span>
                                 </div>
                               </router-link>
                             </li>
-                            <li>
-                              <router-link to="single-blog">
-                                <div class="blog-thumb">
-                                  <img src="https://buttoncreative.agency/html/oxana/images/blog-item-03.jpg" alt="">
-                                </div>
-                                <div class="right-content">
-                                  <h6>Few Easy Steps For Huge Audience</h6>
-                                  <span>Febuary 15, 2020</span>
-                                </div>
-                              </router-link>
-                            </li>
-                            <li>
-                              <router-link to="single-blog">
-                                <div class="blog-thumb">
-                                  <img src="https://buttoncreative.agency/html/oxana/images/blog-item-03.jpg" alt="">
-                                </div>
-                                <div class="right-content">
-                                  <h6>Best Resolution For Social Media</h6>
-                                  <span>Febuary 15, 2020</span>
-                                </div>
-                              </router-link>
-                            </li>
+                            
                           </ul>
                         </div>
                       </div>

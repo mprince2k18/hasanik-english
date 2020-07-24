@@ -33,3 +33,4 @@ Route::get('/team','TeamController@getTeam')->name('get.team');
  * BLOG
  */
 Route::get('/blogs','BlogController@getBlogs')->name('get.blogs');
+Route::get('/blog/{id}','BlogController@getBlog')->name('get.blog');

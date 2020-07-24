@@ -2195,26 +2195,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2693,115 +2673,40 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
+  },
+  data: function data() {
+    return {
+      blog: [],
+      recentBlogs: [],
+      id: this.$route.params.id
+    };
+  },
+  methods: {
+    getBlog: function getBlog() {
+      var _this = this;
+
+      // axios.get('http://localhost/hasanik/public/api/blog/' +  this.id) //base_url
+      axios.get('https://app.hasanikenglish.com/api/blog/' + this.id) //base_url
+      .then(function (response) {
+        return _this.blog = response.data;
+      });
+    },
+    getBlogs: function getBlogs() {
+      var _this2 = this;
+
+      // axios.get('http://localhost/hasanik/public/api/blogs') //base_url
+      axios.get('https://app.hasanikenglish.com/api/blogs') //base_url
+      .then(function (response) {
+        return _this2.recentBlogs = response.data;
+      });
+    }
+  },
+  created: function created() {
+    this.getBlog();
+    this.getBlogs();
   }
 });
 
@@ -40714,7 +40619,7 @@ var render = function() {
                             [
                               _c(
                                 "router-link",
-                                { attrs: { to: "single-blog" } },
+                                { attrs: { to: "/page/blog/" + blog.id } },
                                 [
                                   _c("img", {
                                     attrs: {
@@ -40762,7 +40667,7 @@ var render = function() {
                               [
                                 _c(
                                   "router-link",
-                                  { attrs: { to: "single-blog" } },
+                                  { attrs: { to: "/page/blog/" + blog.id } },
                                   [_vm._v("Continue Reading")]
                                 )
                               ],
@@ -40878,85 +40783,50 @@ var render = function() {
                   _c("div", { staticClass: "blog-widget recent-posts" }, [
                     _vm._m(5),
                     _vm._v(" "),
-                    _c("ul", [
-                      _c(
-                        "li",
-                        [
-                          _c("router-link", { attrs: { to: "single-blog" } }, [
-                            _c("div", { staticClass: "blog-thumb" }, [
-                              _c("img", {
-                                attrs: {
-                                  src:
-                                    "https://buttoncreative.agency/html/oxana/images/blog-item-03.jpg",
-                                  alt: ""
-                                }
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "right-content" }, [
-                              _c("h6", [
-                                _vm._v("15 SEO Practices Web Architecture")
-                              ]),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("Febuary 15, 2020")])
-                            ])
-                          ])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        [
-                          _c("router-link", { attrs: { to: "single-blog" } }, [
-                            _c("div", { staticClass: "blog-thumb" }, [
-                              _c("img", {
-                                attrs: {
-                                  src:
-                                    "https://buttoncreative.agency/html/oxana/images/blog-item-03.jpg",
-                                  alt: ""
-                                }
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "right-content" }, [
-                              _c("h6", [
-                                _vm._v("Few Easy Steps For Huge Audience")
-                              ]),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("Febuary 15, 2020")])
-                            ])
-                          ])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        [
-                          _c("router-link", { attrs: { to: "single-blog" } }, [
-                            _c("div", { staticClass: "blog-thumb" }, [
-                              _c("img", {
-                                attrs: {
-                                  src:
-                                    "https://buttoncreative.agency/html/oxana/images/blog-item-03.jpg",
-                                  alt: ""
-                                }
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "right-content" }, [
-                              _c("h6", [
-                                _vm._v("Best Resolution For Social Media")
-                              ]),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("Febuary 15, 2020")])
-                            ])
-                          ])
-                        ],
-                        1
-                      )
-                    ])
+                    _c(
+                      "ul",
+                      _vm._l(_vm.blogs.data, function(blog) {
+                        return _c(
+                          "li",
+                          { key: blog.id },
+                          [
+                            _c(
+                              "router-link",
+                              { attrs: { to: "single-blog" } },
+                              [
+                                _c("div", { staticClass: "blog-thumb" }, [
+                                  _c("img", {
+                                    attrs: {
+                                      src: blog.thumbnail,
+                                      alt: blog.title
+                                    }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "right-content" }, [
+                                  _c("h6", [_vm._v(_vm._s(blog.title))]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    [
+                                      _c("timeago", {
+                                        attrs: {
+                                          datetime: blog.created_at,
+                                          "auto-update": 15
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      }),
+                      0
+                    )
                   ])
                 ])
               ])
@@ -40980,7 +40850,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("span", [
               _c("a", { attrs: { href: "index.html" } }, [_vm._v("Home")]),
-              _vm._v("Blog Entries")
+              _vm._v("Blogs")
             ])
           ])
         ])
@@ -41083,7 +40953,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "blog-heading" }, [
-      _c("h4", [_vm._v("Recent Posts")])
+      _c("h4", [_vm._v("Posts")])
     ])
   }
 ]
@@ -41620,23 +41490,102 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c("div", { staticClass: "page-heading" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-12" }, [
+            _c("h1", [_vm._v("Post Details")]),
+            _vm._v(" "),
+            _c("span", [
+              _c("a", { attrs: { href: "index.html" } }, [_vm._v("Home")]),
+              _vm._v("Post Details " + _vm._s(_vm.blog.title))
+            ])
+          ])
+        ])
+      ])
+    ]),
     _vm._v(" "),
     _c("section", { staticClass: "blog-page" }, [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row" }, [
-          _vm._m(1),
+          _c("div", { staticClass: "col-lg-8" }, [
+            _c("div", { staticClass: "blog-posts" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-lg-12" }, [
+                  _c("div", { staticClass: "blog-post post-details" }, [
+                    _c("div", { staticClass: "blog-thumb" }, [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("img", {
+                          attrs: {
+                            src: _vm.blog.thumbnail,
+                            alt: _vm.blog.title
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "down-content" }, [
+                      _c("ul", [
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v(_vm._s(_vm.blog.user.name))
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "li",
+                          [
+                            _c("timeago", {
+                              attrs: {
+                                datetime: _vm.blog.created_at,
+                                "auto-update": 15
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _vm._m(0)
+                      ]),
+                      _vm._v(" "),
+                      _c("h4", [_vm._v(_vm._s(_vm.blog.title))]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "first-text" }, [
+                        _vm._v(
+                          "\n                        " +
+                            _vm._s(_vm.blog.desc) +
+                            "\n                      "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(1)
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-4" }, [
             _c("div", { staticClass: "blog-sidebar" }, [
               _c("div", { staticClass: "row" }, [
-                _vm._m(2),
+                _c("div", { staticClass: "col-lg-12" }, [
+                  _c("div", { staticClass: "blog-widget about-me" }, [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _c("h4", [_vm._v(_vm._s(_vm.blog.user.name))]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v(_vm._s(_vm.blog.user.position))]),
+                    _vm._v(" "),
+                    _vm._m(3)
+                  ])
+                ]),
                 _vm._v(" "),
-                _vm._m(3),
+                _vm._m(4),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-lg-12" }, [
                   _c("div", { staticClass: "blog-widget categories" }, [
-                    _vm._m(4),
+                    _vm._m(5),
                     _vm._v(" "),
                     _c("ul", [
                       _c(
@@ -41710,88 +41659,56 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "col-lg-12" }, [
                   _c("div", { staticClass: "blog-widget recent-posts" }, [
-                    _vm._m(5),
+                    _vm._m(6),
                     _vm._v(" "),
-                    _c("ul", [
-                      _c(
-                        "li",
-                        [
-                          _c("router-link", { attrs: { to: "single-blog" } }, [
-                            _c("div", { staticClass: "blog-thumb" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "images/blog-thumb-01.jpg",
-                                  alt: ""
-                                }
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "right-content" }, [
-                              _c("h6", [
-                                _vm._v("15 SEO Practices Web Architecture")
-                              ]),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("Febuary 15, 2020")])
-                            ])
-                          ])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        [
-                          _c("router-link", { attrs: { to: "single-blog" } }, [
-                            _c("div", { staticClass: "blog-thumb" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "images/blog-thumb-02.jpg",
-                                  alt: ""
-                                }
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "right-content" }, [
-                              _c("h6", [
-                                _vm._v("Few Easy Steps For Huge Audience")
-                              ]),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("Febuary 15, 2020")])
-                            ])
-                          ])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        [
-                          _c("router-link", { attrs: { to: "single-blog" } }, [
-                            _c("div", { staticClass: "blog-thumb" }, [
-                              _c("img", {
-                                attrs: {
-                                  src: "images/blog-thumb-03.jpg",
-                                  alt: ""
-                                }
-                              })
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "right-content" }, [
-                              _c("h6", [
-                                _vm._v("Best Resolution For Social Media")
-                              ]),
-                              _vm._v(" "),
-                              _c("span", [_vm._v("Febuary 15, 2020")])
-                            ])
-                          ])
-                        ],
-                        1
-                      )
-                    ])
+                    _c(
+                      "ul",
+                      _vm._l(_vm.recentBlogs.data, function(recentBlog) {
+                        return _c(
+                          "li",
+                          { key: recentBlog.id },
+                          [
+                            _c(
+                              "router-link",
+                              { attrs: { to: "single-blog" } },
+                              [
+                                _c("div", { staticClass: "blog-thumb" }, [
+                                  _c("img", {
+                                    attrs: {
+                                      src: recentBlog.thumbnail,
+                                      alt: recentBlog.title
+                                    }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "right-content" }, [
+                                  _c("h6", [_vm._v(_vm._s(recentBlog.title))]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    [
+                                      _c("timeago", {
+                                        attrs: {
+                                          datetime: recentBlog.created_at,
+                                          "auto-update": 15
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      }),
+                      0
+                    )
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(6)
+                _vm._m(7)
               ])
             ])
           ])
@@ -41805,15 +41722,38 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "page-heading" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-12" }, [
-            _c("h1", [_vm._v("Post Details")]),
+    return _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("8 Comments")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "share-tags" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-lg-6" }, [
+          _c("ul", { staticClass: "social-icons" }, [
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("i", { staticClass: "fa fa-facebook" })
+              ])
+            ]),
             _vm._v(" "),
-            _c("span", [
-              _c("a", { attrs: { href: "index.html" } }, [_vm._v("Home")]),
-              _vm._v("Post Details")
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("i", { staticClass: "fa fa-twitter" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("i", { staticClass: "fa fa-behance" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("i", { staticClass: "fa fa-dribbble" })
+              ])
             ])
           ])
         ])
@@ -41824,369 +41764,36 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-8" }, [
-      _c("div", { staticClass: "blog-posts" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-12" }, [
-            _c("div", { staticClass: "blog-post post-details" }, [
-              _c("div", { staticClass: "blog-thumb" }, [
-                _c("a", { attrs: { href: "single-post.html" } }, [
-                  _c("img", {
-                    attrs: { src: "images/blog-item-01.jpg", alt: "" }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "down-content" }, [
-                _c("ul", [
-                  _c("li", [
-                    _c("a", { attrs: { href: "#" } }, [_vm._v("Admin")])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _vm._v("Febuary 15, 2020")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "#" } }, [_vm._v("8 Comments")])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("h4", [
-                  _vm._v("15 SEO Best Practices: Website Architecture")
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "first-text" }, [
-                  _vm._v(
-                    "Craft beer cloud bread photo booth you probably haven't heard of them beard la croix. Microdosing tousled twee viral thun dercats austin. Unicorn chambray tofu meditation hexagon artisan, fingerstache chillwave microdosing. Poke yuccie fingers tache hoodie tumeric wolf, roof party ennui blue bottle. Yuccie typewriter trust fund salvia chillwave 8-bit pour-over sustain able fingerstache biodiesel man bun tattooed."
-                  )
-                ]),
-                _vm._v(" "),
-                _c("blockquote", [
-                  _vm._v(
-                    "“Flexitarian paleo celiac VHS viral. Kale chips subway tile jianbing four banjo gentrify pook heirloom rony flexitarian fixie food truck.“"
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "second-text" }, [
-                  _vm._v(
-                    "Banh mi flannel copper mug meggings, leggings tote bag kombucha cray schlitz actually succulents waistcoat yuccie. Flan nel artisan try-hard, tbh farm-to-table pickled tote chambray mumblecore semiotics green juice adaptogen."
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "Cold-pressed affogato pork belly lomo, leggings butcher hell of keffiyeh ethical austin disrupt. Sartorial tacos intelligentsia knausgaard, unicorn kale chips brooklyn cardigan four dollar toast microdosing bespoke. Mumblecore fanny pack tousled tumeric pop-up yuccie sustainable."
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "share-tags" }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col-lg-6" }, [
-                      _c("ul", { staticClass: "tags" }, [
-                        _c("li", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Branding")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Web Analysis")
-                          ])
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-lg-6" }, [
-                      _c("ul", { staticClass: "social-icons" }, [
-                        _c("li", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _c("i", { staticClass: "fa fa-facebook" })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _c("i", { staticClass: "fa fa-twitter" })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _c("i", { staticClass: "fa fa-behance" })
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _c("i", { staticClass: "fa fa-dribbble" })
-                          ])
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-12" }, [
-            _c("div", { staticClass: "about-author" }, [
-              _c("div", { staticClass: "blog-heading" }, [
-                _c("h4", [_vm._v("About Author")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "about-thumb" }, [
-                _c("img", { attrs: { src: "images/about-me.jpg", alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "right-content" }, [
-                _c("h4", [_vm._v("Donald K. Huff")]),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "Shaman synth retro slow-carb. Vape taxidermy twee, put a bird leggings butcher hell of keffiyeh ethical austin disrupt. Sartorial tacos cardigan intelligentsia knausgaard."
-                  )
-                ]),
-                _vm._v(" "),
-                _c("ul", { staticClass: "social-icons" }, [
-                  _c("li", [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "fa fa-facebook" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "fa fa-twitter" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "fa fa-behance" })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("i", { staticClass: "fa fa-dribbble" })
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-12" }, [
-            _c("div", { staticClass: "comments" }, [
-              _c("div", { staticClass: "blog-heading" }, [
-                _c("h4", [_vm._v("3 comments")])
-              ]),
-              _vm._v(" "),
-              _c("ul", [
-                _c("li", [
-                  _c("div", { staticClass: "comment-thumb" }, [
-                    _c("img", {
-                      attrs: { src: "images/comment-author-01.jpg", alt: "" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "right-content" }, [
-                    _c("div", { staticClass: "reply-button" }, [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _vm._v("Reply "),
-                        _c("i", { staticClass: "fa fa-reply" })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("h4", [
-                      _vm._v("Linda D. Bellows "),
-                      _c("span", [_vm._v("Febuary 15, 2020")])
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Shaman synth retro slow-carb. Vape taxidermy twee, put a bird leggings butcher hell of keffiyeh ethical austin disrupt knausgaard."
-                      )
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", { staticClass: "replied" }, [
-                  _c("div", { staticClass: "comment-thumb" }, [
-                    _c("img", {
-                      attrs: { src: "images/comment-author-02.jpg", alt: "" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "right-content" }, [
-                    _c("div", { staticClass: "reply-button" }, [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _vm._v("Reply "),
-                        _c("i", { staticClass: "fa fa-reply" })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("h4", [
-                      _vm._v("David S. Scott "),
-                      _c("span", [_vm._v("Febuary 15, 2020")])
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Shaman synth retro slow-carb. Vape taxidermy twee, put a bird leggings butcher hell of keffiyeh."
-                      )
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("div", { staticClass: "comment-thumb" }, [
-                    _c("img", {
-                      attrs: { src: "images/comment-author-03.jpg", alt: "" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "right-content" }, [
-                    _c("div", { staticClass: "reply-button" }, [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _vm._v("Reply "),
-                        _c("i", { staticClass: "fa fa-reply" })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("h4", [
-                      _vm._v("Catherine M. Cole "),
-                      _c("span", [_vm._v("Febuary 15, 2020")])
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "Shaman synth retro slow-carb. Vape taxidermy twee, put a bird leggings butcher hell of keffiyeh ethical austin disrupt knausgaard."
-                      )
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-12" }, [
-            _c("div", { staticClass: "leave-comment" }, [
-              _c("div", { staticClass: "blog-heading" }, [
-                _c("h4", [_vm._v("Submit Your Comment")])
-              ]),
-              _vm._v(" "),
-              _c(
-                "form",
-                { attrs: { id: "comment", action: "#", method: "post" } },
-                [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12" }, [
-                      _c("input", {
-                        staticClass: "form-control",
-                        attrs: {
-                          name: "name",
-                          type: "text",
-                          id: "name",
-                          placeholder: "Full Name",
-                          required: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-lg-6 col-md-12 col-sm-12" }, [
-                      _c("input", {
-                        staticClass: "form-control",
-                        attrs: {
-                          name: "email",
-                          type: "text",
-                          id: "email",
-                          pattern: "[^ @]*@[^ @]*",
-                          placeholder: "E-Mail Address",
-                          required: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-lg-12" }, [
-                      _c("textarea", {
-                        staticClass: "form-control",
-                        attrs: {
-                          name: "message",
-                          rows: "6",
-                          id: "message",
-                          placeholder: "Your Message",
-                          required: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-lg-12" }, [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "filled-button",
-                          attrs: { type: "submit", id: "form-submit" }
-                        },
-                        [_vm._v("Submit Comment")]
-                      )
-                    ])
-                  ])
-                ]
-              )
-            ])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "about-thumb" }, [
+      _c("img", { attrs: { src: "images/about-me.jpg", alt: "" } })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-12" }, [
-      _c("div", { staticClass: "blog-widget about-me" }, [
-        _c("div", { staticClass: "about-thumb" }, [
-          _c("img", { attrs: { src: "images/about-me.jpg", alt: "" } })
-        ]),
-        _vm._v(" "),
-        _c("h4", [_vm._v("Donald K. Huff")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Shaman synth retro slow-carb. Vape taxidermy twee, put a bird."
-          )
-        ]),
-        _vm._v(" "),
-        _c("ul", { staticClass: "social-icons" }, [
-          _c("li", [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", { staticClass: "fa fa-facebook" })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", { staticClass: "fa fa-twitter" })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", { staticClass: "fa fa-behance" })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", { staticClass: "fa fa-dribbble" })
-            ])
-          ])
+    return _c("ul", { staticClass: "social-icons" }, [
+      _c("li", [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "fa fa-facebook" })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "fa fa-twitter" })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "fa fa-behance" })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("i", { staticClass: "fa fa-dribbble" })
         ])
       ])
     ])
@@ -60152,7 +59759,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     component: _components_BlogComponent__WEBPACK_IMPORTED_MODULE_5__["default"],
     name: 'blog'
   }, {
-    path: '/page/single-blog',
+    path: '/page/blog/:id',
     component: _components_SingleBlogComponent__WEBPACK_IMPORTED_MODULE_6__["default"],
     name: 'single-blog'
   }, {
