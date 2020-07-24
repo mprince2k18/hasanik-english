@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="logo-box">
-            <a href="index.html" class="logo-text"><span>METEOR</span></a>
+            <a href="index.html" class="logo-text"><span>Hasanik English</span></a>
         </div><!-- Logo Box -->
         <div class="search-button">
             <a href="javascript:void(0);" class="show-search"><i class="icon-magnifier"></i></a>
