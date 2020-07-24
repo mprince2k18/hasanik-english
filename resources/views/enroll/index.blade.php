@@ -157,10 +157,10 @@
 										<div class="styled-select clearfix">
 											<select class="wide required" name="course_id">
 												<option value="">Select Course</option>
-												<option value="1">English two</option>
-												<option value="2">English Three</option>
-												<option value="3">English Four</option>
-												<option value="4">English Five</option>
+												<option value="1">English for HSC</option>
+												<option value="2">New Communicative English</option>
+												<option value="3">English for Buyer Communication</option>
+												<option value="4">English for Job HOlders</option>
 											</select>
 										</div>
 									</div>
@@ -203,8 +203,18 @@
                     </div>
 								</div>
 								<!-- /step-->
+								<!-- /step-->
+								<div class="step">
+									<h3 class="main_question"><strong>5/6</strong>
+                    {{ $questions->question_en_6 ?? ''}} [ {{ $questions->question_bn_6 ?? ''}} ]
+                    </h3>
+                    <div class="form-group">
+										<input type="number" name="guardian_phone" class="form-control required" placeholder="Your Guradian's Contact Number">
+									</div>
+								</div>
+								<!-- /step-->
 								<div class="submit step">
-									<h3 class="main_question"><strong>5/5</strong>Attention!</h3>
+									<h3 class="main_question"><strong>6/6</strong>Attention!</h3>
 									<div class="summary">
 										Before submitting the application please make sure you wrote all the informations correctly.
 									</div>
