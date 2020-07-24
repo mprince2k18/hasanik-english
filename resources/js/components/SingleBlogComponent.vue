@@ -36,7 +36,7 @@
                         </ul>
                         <h4>{{ blog.title }}</h4>
                         <p class="first-text">
-                          {{ blog.desc }}
+                          {{ blog.description }}
                         </p>
                         
                         <div class="share-tags">

@@ -41553,7 +41553,7 @@ var render = function() {
                       _c("p", { staticClass: "first-text" }, [
                         _vm._v(
                           "\n                        " +
-                            _vm._s(_vm.blog.desc) +
+                            _vm._s(_vm.blog.description) +
                             "\n                      "
                         )
                       ]),
