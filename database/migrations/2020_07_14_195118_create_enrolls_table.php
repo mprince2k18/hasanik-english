@@ -16,8 +16,8 @@ class CreateEnrollsTable extends Migration
         Schema::create('enrolls', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->string('email')->unique();
-            $table->string('phone')->unique();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
             $table->unsignedBigInteger('occupation_id')->nullable();
             $table->string('age')->nullable();
             $table->string('gender')->nullable();
@@ -25,6 +25,7 @@ class CreateEnrollsTable extends Migration
             $table->unsignedBigInteger('schedule_id')->nullable();
             $table->unsignedBigInteger('payment_id')->nullable();
             $table->longText('description')->nullable();
+            $table->string('guardian_phone')->nullable();
             $table->timestamps();
         });
     }
