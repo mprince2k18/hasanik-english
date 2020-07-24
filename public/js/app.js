@@ -2044,7 +2044,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       // axios.get('http://localhost/hasanik/public/api/mission') //base_url
-      axios.get('https://app.hasanikenglish.com/api/about') //base_url
+      axios.get('https://app.hasanikenglish.com/api/mission') //base_url
       .then(function (response) {
         return _this2.missions = response.data;
       });
