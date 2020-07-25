@@ -43,10 +43,13 @@
                           <div class="row">
                             <div class="col-lg-6">
                               <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
+                                
+                                <div class="addthis_inline_share_toolbox"></div>
+                            
                               </ul>
                             </div>
                           </div>
