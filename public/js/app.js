@@ -41747,17 +41747,14 @@ var render = function() {
                 _c("div", { staticClass: "col-lg-6" }, [
                   _c("div", { staticClass: "left-image" }, [
                     _c("img", {
-                      attrs: {
-                        src: _vm.course.thumbnail,
-                        alt: _vm.course.title
-                      }
+                      attrs: { src: _vm.course.thumbnail, alt: _vm.course.name }
                     })
                   ])
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-lg-6 align-self-center" }, [
                   _c("div", { staticClass: "right-content" }, [
-                    _c("h2", [_vm._v(_vm._s(_vm.course.title))]),
+                    _c("h2", [_vm._v(_vm._s(_vm.course.name))]),
                     _vm._v(" "),
                     _vm.course.is_discount === 1
                       ? _c("span", [

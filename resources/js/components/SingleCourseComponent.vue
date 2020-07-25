@@ -22,12 +22,12 @@
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="left-image">
-                          <img :src="course.thumbnail" :alt="course.title">
+                          <img :src="course.thumbnail" :alt="course.name">
                         </div>
                       </div>
                       <div class="col-lg-6 align-self-center">
                         <div class="right-content">
-                          <h2>{{ course.title }}</h2>
+                          <h2>{{ course.name }}</h2>
                           <span v-if="course.is_discount === 1">
                                 <em>৳{{ course.discount_price }}</em>
                                 ৳{{ course.price }}
