@@ -2449,8 +2449,8 @@ __webpack_require__.r(__webpack_exports__);
     getCourses: function getCourses() {
       var _this = this;
 
-      axios.get('http://localhost/hasanik/public/api/courses') //base_url
-      // axios.get('https://app.hasanikenglish.com/api/courses') //base_url
+      // axios.get('http://localhost/hasanik/public/api/courses') //base_url
+      axios.get('https://app.hasanikenglish.com/api/courses') //base_url
       .then(function (response) {
         return _this.courses = response.data;
       });
@@ -2460,10 +2460,10 @@ __webpack_require__.r(__webpack_exports__);
 
       if (typeof page === 'undefined') {
         page = 1;
-      }
+      } // axios.get('http://localhost/hasanik/public/api/courses?page=' + page) //base_url
 
-      axios.get('http://localhost/hasanik/public/api/courses?page=' + page) //base_url
-      //  axios.get('https://app.hasanikenglish.com/api/blogs?page=' + page) //base_url
+
+      axios.get('https://app.hasanikenglish.com/api/blogs?page=' + page) //base_url
       .then(function (response) {
         return _this2.courses = response.data;
       });
@@ -2786,8 +2786,8 @@ __webpack_require__.r(__webpack_exports__);
     getBlog: function getBlog() {
       var _this = this;
 
-      axios.get('http://localhost/hasanik/public/api/course/' + this.slug) //base_url
-      // axios.get('https://app.hasanikenglish.com/api/course/' + this.slug ) //base_url
+      // axios.get('http://localhost/hasanik/public/api/course/' +  this.slug) //base_url
+      axios.get('https://app.hasanikenglish.com/api/course/' + this.slug) //base_url
       .then(function (response) {
         return _this.course = response.data;
       });
