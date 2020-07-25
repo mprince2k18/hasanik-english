@@ -8,6 +8,7 @@ use App\Models\Occupation;
 use App\Models\Schedule;
 use App\Models\Payment;
 use App\Models\FormQuestion;
+use App\Models\Course;
 
 class EnrollController extends Controller
 {
@@ -21,8 +22,9 @@ class EnrollController extends Controller
         $occupations = Occupation::all();
         $schedules = Schedule::all();
         $payments = Payment::all();
+        $courses = Course::all();
         $questions = FormQuestion::first();
-        return view('enroll.index',compact('occupations','schedules','payments','questions'));
+        return view('enroll.index',compact('occupations','schedules','payments','questions','courses'));
     }
 
     /**

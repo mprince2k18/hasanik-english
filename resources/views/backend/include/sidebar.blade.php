@@ -8,6 +8,7 @@
             <li class="{{ Route::currentRouteNamed('about') ? 'active' : '' }}"><a href="{{ route('about') }}" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>About</p></a></li>
             <li class="{{ Route::currentRouteNamed('team.index') ? 'active' : '' }}"><a href="{{ route('team.index') }}" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Team</p></a></li>
             <li class="{{ Route::currentRouteNamed('blog.index') ? 'active' : '' }}"><a href="{{ route('blog.index') }}" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Blog</p></a></li>
+            <li class="{{ Route::currentRouteNamed('course.index') ? 'active' : '' }}"><a href="{{ route('course.index') }}" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Course</p></a></li>
         </ul>
     </div><!-- Page Sidebar Inner -->
 </div><!-- Page Sidebar -->

@@ -44,7 +44,7 @@ export default new VueRouter({
       name: 'courses'
     },
     {
-      path:'/page/single-course',
+      path:'/page/course/:slug',
       component: SingleCourseComponent,
       name: 'single-course'
     },

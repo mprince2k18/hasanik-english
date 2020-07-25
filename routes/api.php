@@ -34,3 +34,9 @@ Route::get('/team','TeamController@getTeam')->name('get.team');
  */
 Route::get('/blogs','BlogController@getBlogs')->name('get.blogs');
 Route::get('/blog/{id}','BlogController@getBlog')->name('get.blog');
+
+/**
+ * COURSE
+ */
+Route::get('/courses','CourseController@getCourses')->name('get.courses');
+Route::get('/course/{slug}','CourseController@getCourse')->name('get.course');

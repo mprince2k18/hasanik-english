@@ -21,109 +21,35 @@
                 <div class="col-lg-12">
                   <div class="shop-products">
                     <div class="row">
-                      <div class="col-lg-3">
+
+                      <div class="col-lg-3" v-for="course in courses.data" :key="course.id">
                         <div class="course-item">
-                          <router-link to="single-course">
+                          <router-link :to="`/page/course/${course.slug}`">
                             <div class="course-thumb">
-                              <!-- <div class="ribon">
-                                <h6>sale</h6>
-                              </div> -->
-                              <img src="https://buttoncreative.agency/html/oxana/images/course-item-01.jpg" alt="">
+                              <img :src="course.thumbnail" :alt="course.title">
                             </div>
                             <div class="down-content">
-                              <h4>AI &amp; SEO Analysis e-Book</h4>
-                              <!-- <span><em>$49.99</em>$29.99</span> -->
-                              <p>Shaman synth retro slow-carb vape and dermy twee, put a jean shorts franzen.</p>
+                              <h4>{{ course.title }}</h4>
+
+                              <span v-if="course.is_discount === 1">
+                                <em>৳{{ course.discount_price }}</em>
+                                ৳{{ course.price }}
+                              </span>
+
+                              <span v-else>
+                                ৳{{ course.price }}
+                              </span>
+
+                              <p>{{ course.short_desc }}</p>
                             </div>
                           </router-link>
                         </div>
                       </div>
-                      <div class="col-lg-3">
-                        <div class="course-item">
-                          <a href="single-product.html">
-                            <div class="course-thumb">
-                              <img src="https://buttoncreative.agency/html/oxana/images/course-item-01.jpg" alt="">
-                            </div>
-                            <div class="down-content">
-                              <h4>Best 2020 Keywords Hits</h4>
-                              <!-- <span>$49.99</span> -->
-                              <p>Shaman synth retro slow-carb vape and dermy twee, put a jean shorts franzen.</p>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="col-lg-3">
-                        <div class="course-item">
-                          <a href="single-product.html">
-                            <div class="course-thumb">
-                              <!-- <div class="ribon">
-                                <h6>new</h6>
-                              </div> -->
-                              <img src="https://buttoncreative.agency/html/oxana/images/course-item-01.jpg" alt="">
-                            </div>
-                            <div class="down-content">
-                              <h4>Best &amp; Useful SEO Tricks</h4>
-                              <!-- <span>$39.99</span> -->
-                              <p>Shaman synth retro slow-carb vape and dermy twee, put a jean shorts franzen.</p>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="col-lg-3">
-                        <div class="course-item">
-                          <a href="single-product.html">
-                            <div class="course-thumb">
-                              <!-- <div class="ribon">
-                                <h6>sale</h6>
-                              </div> -->
-                              <img src="https://buttoncreative.agency/html/oxana/images/course-item-01.jpg" alt="">
-                            </div>
-                            <div class="down-content">
-                              <h4>AI &amp; SEO Analysis e-Book</h4>
-                              <!-- <span><em>$49.99</em>$29.99</span> -->
-                              <p>Shaman synth retro slow-carb vape and dermy twee, put a jean shorts franzen.</p>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="col-lg-3">
-                        <div class="course-item">
-                          <a href="single-product.html">
-                            <div class="course-thumb">
-                              <img src="https://buttoncreative.agency/html/oxana/images/course-item-01.jpg" alt="">
-                            </div>
-                            <div class="down-content">
-                              <h4>Best 2020 Keywords Hits</h4>
-                              <!-- <span>$49.99</span> -->
-                              <p>Shaman synth retro slow-carb vape and dermy twee, put a jean shorts franzen.</p>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="col-lg-3">
-                        <div class="course-item">
-                          <a href="single-product.html">
-                            <div class="course-thumb">
-                              <!-- <div class="ribon">
-                                <h6>new</h6>
-                              </div> -->
-                              <img src="https://buttoncreative.agency/html/oxana/images/course-item-01.jpg" alt="">
-                            </div>
-                            <div class="down-content">
-                              <h4>Best &amp; Useful SEO Tricks</h4>
-                              <!-- <span>$39.99</span> -->
-                              <p>Shaman synth retro slow-carb vape and dermy twee, put a jean shorts franzen.</p>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
+                      
                       <div class="col-lg-12">
                         <div class="shop-pagination">
                           <ul>
-                            <li><a href="#">1</a></li>
-                            <li class="active"><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+                            <pagination :data="courses" @pagination-change-page="getResults"></pagination>
                           </ul>
                         </div>
                       </div>
@@ -139,9 +65,34 @@
 </template>
 
 <script>
-    export default {
+     export default {
         mounted() {
             console.log('Component mounted.')
+        },
+        data(){
+          return{
+            courses:[],
+          }
+        },
+        methods:{
+          getCourses(){
+            axios.get('http://localhost/hasanik/public/api/courses') //base_url
+            // axios.get('https://app.hasanikenglish.com/api/courses') //base_url
+            .then(response => this.courses = response.data);
+          },
+          getResults(page) {
+                if (typeof page === 'undefined') {
+                    page = 1;
+                }
+
+                axios.get('http://localhost/hasanik/public/api/courses?page=' + page) //base_url
+            //  axios.get('https://app.hasanikenglish.com/api/blogs?page=' + page) //base_url
+            .then(response => this.courses = response.data);
+            }
+        },
+        created(){
+          this.getCourses();
+          this.getResults();
         }
     }
 </script>

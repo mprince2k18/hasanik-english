@@ -58,6 +58,13 @@ Route::prefix('dashboard')->group(function () {
 
   Route::get('/blog','BlogController@index')->name('blog.index');
   Route::post('/blog/store','BlogController@store')->name('blog.store');
+  
+  /**
+   * Course
+   */
+  
+  Route::get('/course','CourseController@index')->name('course.index');
+  Route::post('/course/store','CourseController@store')->name('course.store');
 
 
 

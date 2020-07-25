@@ -101,29 +101,28 @@
                     {{ $questions->question_en_1 ?? '' }}[ {{ $questions->question_bn_1 ?? '' }} ]
                   </h3>
 									<div class="form-group">
-										<input type="text" name="name" class="form-control required" placeholder="Full Name">
+										<input type="text" name="name" class="form-control required" placeholder="Full Name*">
 									</div>
 									<div class="form-group">
-										<input type="email" name="email" class="form-control required" placeholder="Your Email">
+										<input type="email" name="email" class="form-control required" placeholder="Your Email*">
 									</div>
 									<div class="form-group">
-										<input type="number" name="phone" class="form-control required" placeholder="Contact Number">
+										<input type="number" name="phone" class="form-control required" placeholder="Contact Number*">
 									</div>
 									<div class="form-group">
 										<div class="styled-select clearfix">
 											<select class="wide required" name="occupation_id">
-												<option value="">Your Occupation</option>
-                        @foreach ($occupations as $occupation)
-                          <option value="{{ $occupation->id }}">{{ $occupation->name }}</option>
-                        @endforeach
-
+												<option value="">Your Occupation*</option>
+													@foreach ($occupations as $occupation)
+													<option value="{{ $occupation->id }}">{{ $occupation->name }}</option>
+													@endforeach
 											</select>
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-3">
 											<div class="form-group">
-												<input type="text" name="age" class="form-control" placeholder="Age">
+												<input type="text" name="age" class="form-control" placeholder="Age*">
 											</div>
 										</div>
 										<div class="col-9">
@@ -156,16 +155,16 @@
                   <div class="form-group">
 										<div class="styled-select clearfix">
 											<select class="wide required" name="course_id">
-												<option value="">Select Course</option>
-												<option value="1">English for HSC</option>
-												<option value="2">New Communicative English</option>
-												<option value="3">English for Buyer Communication</option>
-												<option value="4">English for Job HOlders</option>
+												<option value="">Select Course*</option>
+												@foreach ($courses as $course)
+												<option value="{{ $course->id }}">{{ $course->name }}( ৳{{ $course->is_discount === 1 ? $course->discount_price : $course->price }})</option>
+												@endforeach
+												
 											</select>
 										</div>
 									</div>
 									<h3 class="main_question">
-                    {{ $questions->question_en_3 ?? ''}} [ {{ $questions->question_bn_3 ?? ''}} ]
+                    {{ $questions->question_en_3 ?? ''}} [ {{ $questions->question_bn_3 ?? ''}} ]*
                   </h3>
                   @foreach ($schedules as $schedule)
                     <div class="form-group">
@@ -181,7 +180,7 @@
 								<!-- /step-->
 								<div class="step">
 									<h3 class="main_question"><strong>3/5</strong>
-                    {{ $questions->question_en_4 ?? ''}} [ {{ $questions->question_bn_4 ?? ''}} ]
+                    {{ $questions->question_en_4 ?? ''}} [ {{ $questions->question_bn_4 ?? ''}} ]*
                   </h3>
                   @foreach ($payments as $payment)
                     <div class="form-group">
@@ -196,7 +195,7 @@
 								<!-- /step-->
 								<div class="step">
 									<h3 class="main_question"><strong>4/5</strong>
-                    {{ $questions->question_en_5 ?? ''}} [ {{ $questions->question_bn_5 ?? ''}} ]
+                    {{ $questions->question_en_5 ?? ''}} [ {{ $questions->question_bn_5 ?? ''}} ]*
                     </h3>
                     <div class="form-group">
                       <textarea name="description" class="form-control required" rows="10" placeholder="Write about yourself and why you want to do the course?"></textarea>

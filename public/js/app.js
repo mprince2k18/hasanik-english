@@ -2436,83 +2436,42 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
+  },
+  data: function data() {
+    return {
+      courses: []
+    };
+  },
+  methods: {
+    getCourses: function getCourses() {
+      var _this = this;
+
+      axios.get('http://localhost/hasanik/public/api/courses') //base_url
+      // axios.get('https://app.hasanikenglish.com/api/courses') //base_url
+      .then(function (response) {
+        return _this.courses = response.data;
+      });
+    },
+    getResults: function getResults(page) {
+      var _this2 = this;
+
+      if (typeof page === 'undefined') {
+        page = 1;
+      }
+
+      axios.get('http://localhost/hasanik/public/api/courses?page=' + page) //base_url
+      //  axios.get('https://app.hasanikenglish.com/api/blogs?page=' + page) //base_url
+      .then(function (response) {
+        return _this2.courses = response.data;
+      });
+    }
+  },
+  created: function created() {
+    this.getCourses();
+    this.getResults();
   }
 });
 
@@ -2808,9 +2767,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
+  },
+  data: function data() {
+    return {
+      course: [],
+      slug: this.$route.params.slug
+    };
+  },
+  methods: {
+    getBlog: function getBlog() {
+      var _this = this;
+
+      axios.get('http://localhost/hasanik/public/api/course/' + this.slug) //base_url
+      // axios.get('https://app.hasanikenglish.com/api/course/' + this.slug ) //base_url
+      .then(function (response) {
+        return _this.course = response.data;
+      });
+    }
+  },
+  created: function created() {
+    this.getBlog();
   }
 });
 
@@ -41222,50 +41206,84 @@ var render = function() {
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-lg-12" }, [
             _c("div", { staticClass: "shop-products" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-lg-3" }, [
-                  _c(
-                    "div",
-                    { staticClass: "course-item" },
-                    [
-                      _c("router-link", { attrs: { to: "single-course" } }, [
-                        _c("div", { staticClass: "course-thumb" }, [
-                          _c("img", {
-                            attrs: {
-                              src:
-                                "https://buttoncreative.agency/html/oxana/images/course-item-01.jpg",
-                              alt: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "down-content" }, [
-                          _c("h4", [_vm._v("AI & SEO Analysis e-Book")]),
-                          _vm._v(" "),
-                          _c("p", [
-                            _vm._v(
-                              "Shaman synth retro slow-carb vape and dermy twee, put a jean shorts franzen."
+              _c(
+                "div",
+                { staticClass: "row" },
+                [
+                  _vm._l(_vm.courses.data, function(course) {
+                    return _c(
+                      "div",
+                      { key: course.id, staticClass: "col-lg-3" },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "course-item" },
+                          [
+                            _c(
+                              "router-link",
+                              { attrs: { to: "/page/course/" + course.slug } },
+                              [
+                                _c("div", { staticClass: "course-thumb" }, [
+                                  _c("img", {
+                                    attrs: {
+                                      src: course.thumbnail,
+                                      alt: course.title
+                                    }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "down-content" }, [
+                                  _c("h4", [_vm._v(_vm._s(course.title))]),
+                                  _vm._v(" "),
+                                  course.is_discount === 1
+                                    ? _c("span", [
+                                        _c("em", [
+                                          _vm._v(
+                                            "৳" + _vm._s(course.discount_price)
+                                          )
+                                        ]),
+                                        _vm._v(
+                                          "\n                              ৳" +
+                                            _vm._s(course.price) +
+                                            "\n                            "
+                                        )
+                                      ])
+                                    : _c("span", [
+                                        _vm._v(
+                                          "\n                              ৳" +
+                                            _vm._s(course.price) +
+                                            "\n                            "
+                                        )
+                                      ]),
+                                  _vm._v(" "),
+                                  _c("p", [_vm._v(_vm._s(course.short_desc))])
+                                ])
+                              ]
                             )
-                          ])
-                        ])
-                      ])
-                    ],
-                    1
-                  )
-                ]),
-                _vm._v(" "),
-                _vm._m(1),
-                _vm._v(" "),
-                _vm._m(2),
-                _vm._v(" "),
-                _vm._m(3),
-                _vm._v(" "),
-                _vm._m(4),
-                _vm._v(" "),
-                _vm._m(5),
-                _vm._v(" "),
-                _vm._m(6)
-              ])
+                          ],
+                          1
+                        )
+                      ]
+                    )
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-lg-12" }, [
+                    _c("div", { staticClass: "shop-pagination" }, [
+                      _c(
+                        "ul",
+                        [
+                          _c("pagination", {
+                            attrs: { data: _vm.courses },
+                            on: { "pagination-change-page": _vm.getResults }
+                          })
+                        ],
+                        1
+                      )
+                    ])
+                  ])
+                ],
+                2
+              )
             ])
           ])
         ])
@@ -41287,180 +41305,6 @@ var staticRenderFns = [
             _c("span", [
               _c("a", { attrs: { href: "index.html" } }, [_vm._v("Home")]),
               _vm._v("Our Courses")
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-3" }, [
-      _c("div", { staticClass: "course-item" }, [
-        _c("a", { attrs: { href: "single-product.html" } }, [
-          _c("div", { staticClass: "course-thumb" }, [
-            _c("img", {
-              attrs: {
-                src:
-                  "https://buttoncreative.agency/html/oxana/images/course-item-01.jpg",
-                alt: ""
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "down-content" }, [
-            _c("h4", [_vm._v("Best 2020 Keywords Hits")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Shaman synth retro slow-carb vape and dermy twee, put a jean shorts franzen."
-              )
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-3" }, [
-      _c("div", { staticClass: "course-item" }, [
-        _c("a", { attrs: { href: "single-product.html" } }, [
-          _c("div", { staticClass: "course-thumb" }, [
-            _c("img", {
-              attrs: {
-                src:
-                  "https://buttoncreative.agency/html/oxana/images/course-item-01.jpg",
-                alt: ""
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "down-content" }, [
-            _c("h4", [_vm._v("Best & Useful SEO Tricks")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Shaman synth retro slow-carb vape and dermy twee, put a jean shorts franzen."
-              )
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-3" }, [
-      _c("div", { staticClass: "course-item" }, [
-        _c("a", { attrs: { href: "single-product.html" } }, [
-          _c("div", { staticClass: "course-thumb" }, [
-            _c("img", {
-              attrs: {
-                src:
-                  "https://buttoncreative.agency/html/oxana/images/course-item-01.jpg",
-                alt: ""
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "down-content" }, [
-            _c("h4", [_vm._v("AI & SEO Analysis e-Book")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Shaman synth retro slow-carb vape and dermy twee, put a jean shorts franzen."
-              )
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-3" }, [
-      _c("div", { staticClass: "course-item" }, [
-        _c("a", { attrs: { href: "single-product.html" } }, [
-          _c("div", { staticClass: "course-thumb" }, [
-            _c("img", {
-              attrs: {
-                src:
-                  "https://buttoncreative.agency/html/oxana/images/course-item-01.jpg",
-                alt: ""
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "down-content" }, [
-            _c("h4", [_vm._v("Best 2020 Keywords Hits")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Shaman synth retro slow-carb vape and dermy twee, put a jean shorts franzen."
-              )
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-3" }, [
-      _c("div", { staticClass: "course-item" }, [
-        _c("a", { attrs: { href: "single-product.html" } }, [
-          _c("div", { staticClass: "course-thumb" }, [
-            _c("img", {
-              attrs: {
-                src:
-                  "https://buttoncreative.agency/html/oxana/images/course-item-01.jpg",
-                alt: ""
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "down-content" }, [
-            _c("h4", [_vm._v("Best & Useful SEO Tricks")]),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "Shaman synth retro slow-carb vape and dermy twee, put a jean shorts franzen."
-              )
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-12" }, [
-      _c("div", { staticClass: "shop-pagination" }, [
-        _c("ul", [
-          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("1")])]),
-          _vm._v(" "),
-          _c("li", { staticClass: "active" }, [
-            _c("a", { attrs: { href: "#" } }, [_vm._v("2")])
-          ]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("3")])]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("i", { staticClass: "fa fa-angle-double-right" })
             ])
           ])
         ])
@@ -41891,142 +41735,162 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("section", { staticClass: "product-details" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-12" }, [
+            _c("div", { staticClass: "single-product" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-lg-6" }, [
+                  _c("div", { staticClass: "left-image" }, [
+                    _c("img", {
+                      attrs: {
+                        src: _vm.course.thumbnail,
+                        alt: _vm.course.title
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-6 align-self-center" }, [
+                  _c("div", { staticClass: "right-content" }, [
+                    _c("h2", [_vm._v(_vm._s(_vm.course.title))]),
+                    _vm._v(" "),
+                    _vm.course.is_discount === 1
+                      ? _c("span", [
+                          _c("em", [
+                            _vm._v("৳" + _vm._s(_vm.course.discount_price))
+                          ]),
+                          _vm._v(
+                            "\n                              ৳" +
+                              _vm._s(_vm.course.price) +
+                              "\n                            "
+                          )
+                        ])
+                      : _c("span", [
+                          _vm._v(
+                            "\n                              ৳" +
+                              _vm._s(_vm.course.price) +
+                              "\n                            "
+                          )
+                        ]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v(_vm._s(_vm.course.short_desc))]),
+                    _vm._v(" "),
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _vm._m(2)
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("section", { staticClass: "product-info" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-12" }, [
+            _c("div", { attrs: { id: "tabs" } }, [
+              _c("div", { staticClass: "row" }, [
+                _vm._m(3),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-12" }, [
+                  _c("section", { staticClass: "tabs-content" }, [
+                    _c("article", { attrs: { id: "tabs-1" } }, [
+                      _c("p", [_vm._v(_vm._s(_vm.course.big_desc))])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "page-heading" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-12" }, [
-              _c("h1", [_vm._v("Course Details")]),
-              _vm._v(" "),
-              _c("span", [
-                _c("a", { attrs: { href: "index.html" } }, [_vm._v("Home")]),
-                _vm._v("Course Details")
+    return _c("div", { staticClass: "page-heading" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-12" }, [
+            _c("h1", [_vm._v("Course Details")]),
+            _vm._v(" "),
+            _c("span", [
+              _c("a", { attrs: { href: "index.html" } }, [_vm._v("Home")]),
+              _vm._v("Course Details")
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "main-white-button" }, [
+      _c(
+        "a",
+        { attrs: { href: "https://app.hasanikenglish.com/enroll/course" } },
+        [_vm._v("Enroll Now")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "share-tags" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-lg-5" }, [
+          _c("ul", { staticClass: "social-icons" }, [
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("i", { staticClass: "fa fa-facebook" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("i", { staticClass: "fa fa-twitter" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("i", { staticClass: "fa fa-behance" })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("i", { staticClass: "fa fa-dribbble" })
               ])
             ])
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "product-details" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-12" }, [
-              _c("div", { staticClass: "single-product" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-lg-6" }, [
-                    _c("div", { staticClass: "left-image" }, [
-                      _c("img", {
-                        attrs: {
-                          src:
-                            "https://buttoncreative.agency/html/oxana/images/single-product.jpg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-lg-6 align-self-center" }, [
-                    _c("div", { staticClass: "right-content" }, [
-                      _c("h2", [_vm._v("AI & Seo Analysis e-Book")]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "Polaroid fashion axe whatever iceland microdosing. Single-origin coffee artisan occupy, pickled narwhal quinoa next level four loko everyday carry disrupt irony man bun tote bag ugh, occupy vexillologist."
-                        ),
-                        _c("br"),
-                        _c("br"),
-                        _vm._v(
-                          "Freegan irony drinking vinegar retro. Live-edge organic letterpress, master cleanse hell ethical locavore brooklyn food truck literally."
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("form", { attrs: { action: "quantity" } }, [
-                        _c("button", [_vm._v("Enroll")])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "share-tags" }, [
-                        _c("div", { staticClass: "row" }, [
-                          _c("div", { staticClass: "col-lg-5" }, [
-                            _c("ul", { staticClass: "social-icons" }, [
-                              _c("li", [
-                                _c("a", { attrs: { href: "#" } }, [
-                                  _c("i", { staticClass: "fa fa-facebook" })
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("li", [
-                                _c("a", { attrs: { href: "#" } }, [
-                                  _c("i", { staticClass: "fa fa-twitter" })
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("li", [
-                                _c("a", { attrs: { href: "#" } }, [
-                                  _c("i", { staticClass: "fa fa-behance" })
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("li", [
-                                _c("a", { attrs: { href: "#" } }, [
-                                  _c("i", { staticClass: "fa fa-dribbble" })
-                                ])
-                              ])
-                            ])
-                          ])
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "product-info" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-12" }, [
-              _c("div", { attrs: { id: "tabs" } }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-lg-12" }, [
-                    _c("ul", [
-                      _c("li", [
-                        _c("a", { attrs: { href: "#tabs-1" } }, [
-                          _vm._v("Description")
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-lg-12" }, [
-                    _c("section", { staticClass: "tabs-content" }, [
-                      _c("article", { attrs: { id: "tabs-1" } }, [
-                        _c("p", [
-                          _vm._v(
-                            "Art party man bun yr 8-bit craft beer master cleanse. Photo booth green juice pug schlitz edison bulb gluten-free tattooed pabst cardigan shabby chic helvetica art party tumblr. Seitan ugh venmo austin. Tilde pickled mustache, williamsburg enamel pin street art vice cardigan taiyaki chartreuse. Locavore portland schlitz, waistcoat vice coloring book fam tumblr blog."
-                          ),
-                          _c("br"),
-                          _c("br"),
-                          _vm._v(
-                            "Migas thundercats man bun photo booth, truffaut butcher letterpress health goth pok pok vegan fanny pack. Meh deep v green juice brooklyn hoodie fixie twee fingerstache YOLO viral intelligentsia. Pabst pork belly man braid cronut typewriter photo booth. Narwhal dreamcatcher direct trade cliche seitan, gochujang locavore quinoa franzen plaid taiyaki readymade."
-                          )
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ])
-            ])
-          ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-12" }, [
+      _c("ul", [
+        _c("li", [
+          _c("a", { attrs: { href: "#tabs-1" } }, [_vm._v("Description")])
         ])
       ])
     ])
@@ -59767,7 +59631,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     component: _components_CourseComponent__WEBPACK_IMPORTED_MODULE_7__["default"],
     name: 'courses'
   }, {
-    path: '/page/single-course',
+    path: '/page/course/:slug',
     component: _components_SingleCourseComponent__WEBPACK_IMPORTED_MODULE_8__["default"],
     name: 'single-course'
   }],
@@ -59794,8 +59658,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\hasanik-english\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\hasanik-english\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! E:\UXAMPP\htdocs\hasanik\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\UXAMPP\htdocs\hasanik\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ }),
