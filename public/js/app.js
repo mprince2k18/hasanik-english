@@ -40782,7 +40782,7 @@ var render = function() {
                           [
                             _c(
                               "router-link",
-                              { attrs: { to: "single-blog" } },
+                              { attrs: { to: "/page/blog/" + blog.id } },
                               [
                                 _c("div", { staticClass: "blog-thumb" }, [
                                   _c("img", {
@@ -41520,7 +41520,7 @@ var render = function() {
                           [
                             _c(
                               "router-link",
-                              { attrs: { to: "single-blog" } },
+                              { attrs: { to: "/page/blog/" + recentBlog.id } },
                               [
                                 _c("div", { staticClass: "blog-thumb" }, [
                                   _c("img", {

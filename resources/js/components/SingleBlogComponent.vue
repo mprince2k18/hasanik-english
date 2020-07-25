@@ -109,7 +109,7 @@
                       </div>
                       <ul>
                         <li v-for="recentBlog in recentBlogs.data" :key="recentBlog.id">
-                          <router-link to="single-blog">
+                          <router-link :to="`/page/blog/${recentBlog.id}`">
                             <div class="blog-thumb">
                               <img :src="recentBlog.thumbnail" :alt="recentBlog.title">
                             </div>

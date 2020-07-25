@@ -102,7 +102,7 @@
                           <ul>
 
                             <li v-for="blog in blogs.data" :key="blog.id">
-                              <router-link to="single-blog">
+                              <router-link :to="`/page/blog/${blog.id}`">
                                 <div class="blog-thumb">
                                   <img :src="blog.thumbnail" :alt="blog.title">
                                 </div>
