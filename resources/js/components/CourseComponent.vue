@@ -40,7 +40,7 @@
                                 ৳{{ course.price }}
                               </span>
 
-                              <p>{{ course.short_desc }}</p>
+                              <p>{{ course.name }}</p>
                             </div>
                           </router-link>
                         </div>

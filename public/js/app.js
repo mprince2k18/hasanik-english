@@ -41256,7 +41256,7 @@ var render = function() {
                                         )
                                       ]),
                                   _vm._v(" "),
-                                  _c("p", [_vm._v(_vm._s(course.short_desc))])
+                                  _c("p", [_vm._v(_vm._s(course.name))])
                                 ])
                               ]
                             )
