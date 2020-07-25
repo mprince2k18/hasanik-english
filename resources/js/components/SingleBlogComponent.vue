@@ -123,21 +123,7 @@
                       </ul>
                     </div>
                   </div>
-                  <div class="col-lg-12">
-                    <div class="blog-widget tags">
-                      <div class="blog-heading">
-                        <h4>Tag Clouds</h4>
-                      </div>
-                      <ul>
-                        <li><a href="#">Web Analysis</a></li>
-                        <li><a href="#">SEO</a></li>
-                        <li><a href="#">Branding</a></li>
-                        <li><a href="#">Digital Agency</a></li>
-                        <li><a href="#">Optimize</a></li>
-                        <li><a href="#">Marketing</a></li>
-                      </ul>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>

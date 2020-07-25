@@ -2621,20 +2621,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -41556,9 +41542,7 @@ var render = function() {
                       0
                     )
                   ])
-                ]),
-                _vm._v(" "),
-                _vm._m(7)
+                ])
               ])
             ])
           ])
@@ -41665,36 +41649,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "blog-heading" }, [
       _c("h4", [_vm._v("Recent Posts")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-12" }, [
-      _c("div", { staticClass: "blog-widget tags" }, [
-        _c("div", { staticClass: "blog-heading" }, [
-          _c("h4", [_vm._v("Tag Clouds")])
-        ]),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", [
-            _c("a", { attrs: { href: "#" } }, [_vm._v("Web Analysis")])
-          ]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("SEO")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Branding")])]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "#" } }, [_vm._v("Digital Agency")])
-          ]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Optimize")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Marketing")])])
-        ])
-      ])
     ])
   }
 ]
