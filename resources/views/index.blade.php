@@ -17,6 +17,7 @@
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="{{ asset('homepage/images/favicon.ico') }}">
     </head>
+
     <body>
       <div class="loader">
          <div class="tm-loader">
@@ -91,7 +92,6 @@
                          <div class="enter-wrap-holder column-wrap">
                              <div class="enter-wrap">
                                  <h3> Hasanik <br> English <br></h3>
-                                 <a href="{{ url('/page/courses') }}" class="btn anim-button   trans-btn   transition  fl-l"><span>Enter site</span><i class="fa fa-long-arrow-right"></i></a>
                              </div>
                          </div>
                          <!-- enter-wrap end  -->
@@ -109,6 +109,40 @@
          <!--=============== footer ===============-->
 
          <!-- footer end -->
+
+
+         <div class="menu">
+  <nav class="menu__nav">
+    <ul class="menu__list r-list">
+      <li class="menu__group">
+        <a href="{{ url('/') }}" class="menu__link r-link">Home</a>
+      </li>
+      <li class="menu__group">
+        <a href="{{ url('/page/about-us') }}" class="menu__link r-link">About Us</a>
+      </li>
+      <li class="menu__group">
+        <a href="{{ url('/page/contact-us') }}" class="menu__link r-link">Contact Us</a>
+      </li>
+      <li class="menu__group">
+        <a href="{{ url('/page/our-team') }}" class="menu__link r-link">Our Team</a>
+      </li>
+      <li class="menu__group">
+        <a href="{{ url('/page/blog') }}" class="menu__link r-link">Blog</a>
+      </li>
+      <li class="menu__group">
+        <a href="{{ url('/page/courses') }}" class="menu__link r-link">Courses</a>
+      </li>
+    </ul>
+  </nav>
+  <button class="menu__toggle r-button" type="button">
+    <span class="menu__hamburger m-hamburger">
+      <span class="m-hamburger__label">
+        <span class="menu__screen-reader screen-reader">Open menu</span>
+      </span>
+    </span>
+  </button>
+</div>
+
      </div>
         <!-- Main end -->
         <!--=============== google map ===============-->
