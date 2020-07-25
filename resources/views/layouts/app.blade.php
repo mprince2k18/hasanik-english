@@ -202,6 +202,9 @@
     <script src="{{ asset('frontend/scripts/vendors/accordions.js') }}"></script>
     <script src="{{ asset('frontend/scripts/main.js') }}"></script>
 
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1ca813dc314e47"></script>
+
   </body>
 
 </html>
