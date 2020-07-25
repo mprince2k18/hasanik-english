@@ -2463,7 +2463,7 @@ __webpack_require__.r(__webpack_exports__);
       } // axios.get('http://localhost/hasanik/public/api/courses?page=' + page) //base_url
 
 
-      axios.get('https://app.hasanikenglish.com/api/blogs?page=' + page) //base_url
+      axios.get('https://app.hasanikenglish.com/api/blogs?courses=' + page) //base_url
       .then(function (response) {
         return _this2.courses = response.data;
       });

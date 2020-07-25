@@ -86,7 +86,7 @@
                 }
 
                 // axios.get('http://localhost/hasanik/public/api/courses?page=' + page) //base_url
-             axios.get('https://app.hasanikenglish.com/api/blogs?page=' + page) //base_url
+             axios.get('https://app.hasanikenglish.com/api/blogs?courses=' + page) //base_url
             .then(response => this.courses = response.data);
             }
         },
