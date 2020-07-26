@@ -23,6 +23,9 @@
             width: 10%;
             margin: 0 auto;
         }
+        .f-22{
+            font-size: 22px;
+        }
     </style>
 
     <body>
@@ -122,27 +125,27 @@
   <nav class="menu__nav">
     <ul class="menu__list r-list">
       <li class="menu__group">
-        <a href="{{ url('/') }}" class="menu__link r-link">
+        <a href="{{ url('/') }}" class="menu__link r-link f-22">
             <img src="{{ filePath(getSystemSetting('type_logo')->value) }}" class="w-10" alt="">
         </a>
       </li>
       <li class="menu__group">
-        <a href="{{ url('/') }}" class="menu__link r-link">Home</a>
+        <a href="{{ url('/') }}" class="menu__link r-link f-22">Home</a>
       </li>
       <li class="menu__group">
-        <a href="{{ url('/page/about-us') }}" class="menu__link r-link">About Us</a>
+        <a href="{{ url('/page/about-us') }}" class="menu__link r-link f-22">About Us</a>
       </li>
       <li class="menu__group">
-        <a href="{{ url('/page/contact-us') }}" class="menu__link r-link">Contact Us</a>
+        <a href="{{ url('/page/contact-us') }}" class="menu__link r-link f-22">Contact Us</a>
       </li>
       <li class="menu__group">
-        <a href="{{ url('/page/our-team') }}" class="menu__link r-link">Our Team</a>
+        <a href="{{ url('/page/our-team') }}" class="menu__link r-link f-22">Our Team</a>
       </li>
       <li class="menu__group">
-        <a href="{{ url('/page/blog') }}" class="menu__link r-link">Blog</a>
+        <a href="{{ url('/page/blog') }}" class="menu__link r-link f-22">Blog</a>
       </li>
       <li class="menu__group">
-        <a href="{{ url('/page/courses') }}" class="menu__link r-link">Courses</a>
+        <a href="{{ url('/page/courses') }}" class="menu__link r-link f-22">Courses</a>
       </li>
     </ul>
   </nav>
