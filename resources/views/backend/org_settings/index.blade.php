@@ -23,7 +23,7 @@
         <div class="col-md-10 offset-md-1 px-5">
             <div class="card m-2">
                 <div class="card-header">
-                    <h3>Organization Setting)</h3>
+                    <h3>Organization Setting</h3>
                 </div>
                 <div class="card-body mx-5">
                     <form method="post" action="{{route('org.update')}}" enctype="multipart/form-data">

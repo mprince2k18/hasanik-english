@@ -116,7 +116,7 @@
     <ul class="menu__list r-list">
       <li class="menu__group">
         <a href="{{ url('/') }}" class="menu__link r-link">
-            <img src="{{ filePath(getSystemSetting('type_logo')->value) }}" alt="">
+            <img src="{{ filePath(getSystemSetting('type_logo')->value) }}" class="w-50" alt="">
         </a>
       </li>
       <li class="menu__group">
