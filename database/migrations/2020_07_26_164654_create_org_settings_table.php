@@ -16,7 +16,7 @@ class CreateOrgSettingsTable extends Migration
         Schema::create('org_settings', function (Blueprint $table) {
             $table->id();
             $table->string('type');
-            $table->string('value')->nullable();
+            $table->lonText('value')->nullable();
             $table->timestamps();
         });
     }

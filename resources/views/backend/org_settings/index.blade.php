@@ -30,10 +30,11 @@
                     @csrf
 
                     <!--logo-->
-                        <label class="label">Logo)</label>
+                        <label >Logo</label>
                         <input type="hidden" value="type_logo" name="type_logo">
 
                         <div class="avatar-upload">
+                            <label for="imageUpload">Logo</label>
                             <div class="avatar-edit">
                                 <input type='file' name="logo" id="imageUpload" accept=".png, .jpg, .jpeg"/>
                                 <label for="imageUpload"></label>
@@ -47,10 +48,11 @@
                         <!--logo end-->
 
                         <!--footer logo-->
-                        <label class="label">Footer Logo)</label>
+                        <label >Footer Logo</label>
                         <input type="hidden" value="footer_logo" name="footer_logo">
 
                         <div class="avatar-upload">
+                            <label for="imageUpload_f_logo">Footer Logo</label>
                             <div class="avatar-edit">
                                 <input type='file' name="f_logo" id="imageUpload_f_logo" accept=".png, .jpg, .jpeg"/>
                                 <label for="imageUpload_f_logo"></label>
@@ -64,7 +66,7 @@
                         <!--footer logo end-->
 
                         <!--favicon icon-->
-                        <label class="label">Favicon Icon)</label>
+                        <label >Favicon Icon</label>
                         <input type="hidden" value="favicon_icon" name="favicon_icon">
 
 
@@ -82,67 +84,67 @@
                         <!--favicon end-->
 
                         <!--name-->
-                        <label class="label">Name</label>
+                        <label>Name</label>
                         <input type="hidden" value="type_name" name="type_name">
                         <input type="text" value="{{getSystemSetting('type_name')->value}}" name="name"
                                class="form-control mb-2">
 
                         <!--footer-->
-                        <label class="label">Footer</label>
+                        <label >Footer</label>
                         <input type="hidden" value="type_footer" name="type_footer">
                         <input type="text" value="{{getSystemSetting('type_footer')->value}}" name="footer"
                                class="form-control mb-2">
 
                         <!--address-->
-                        <label class="label">Address</label>
+                        <label >Address</label>
                         <input type="hidden" value="type_address" name="type_address">
                         <input type="text" value="{{getSystemSetting('type_address')->value}}" name="address"
                                class="form-control mb-2">
 
                         <!--mail-->
-                        <label class="label">Mail</label>
+                        <label >Mail</label>
                         <input type="hidden" value="type_mail" name="type_mail">
                         <input type="text" value="{{getSystemSetting('type_mail')->value}}" name="mail"
                                class="form-control mb-2">
 
                         <!--fb-->
-                        <label class="label">Facebook Link</label>
+                        <label >Facebook Link</label>
                         <input type="hidden" value="type_fb" name="type_fb">
                         <input type="text" value="{{getSystemSetting('type_fb')->value}}" name="fb"
                                class="form-control mb-2">
 
                         <!--tw-->
-                        <label class="label">Twitter Link</label>
+                        <label >Twitter Link</label>
                         <input type="hidden" value="type_tw" name="type_tw">
                         <input type="text" value="{{getSystemSetting('type_tw')->value}}" name="tw"
                                class="form-control mb-2">
 
                         <!--google-->
-                        <label class="label">Google Link</label>
+                        <label >Google Link</label>
                         <input type="hidden" value="type_google" name="type_google">
                         <input type="text" value="{{getSystemSetting('type_google')->value}}" name="google"
                                class="form-control mb-2">
 
                         <!--google-->
-                        <label class="label">Youtube Link</label>
+                        <label >Youtube Link</label>
                         <input type="hidden" value="type_youtube" name="type_youtube">
                         <input type="text" value="{{getSystemSetting('type_youtube')->value}}" name="youtube"
                                class="form-control mb-2">
 
                         <!--google-->
-                        <label class="label">Linkedin Link</label>
+                        <label >Linkedin Link</label>
                         <input type="hidden" value="type_linked" name="type_linked">
                         <input type="text" value="{{getSystemSetting('type_linked')->value}}" name="linkedin"
                                class="form-control mb-2">
 
                         <!--Number-->
-                        <label class="label">Number</label>
+                        <label >Number</label>
                         <input type="hidden" value="type_number" name="type_number">
                         <input type="text" value="{{getSystemSetting('type_number')->value}}" name="number"
                                class="form-control mb-2">
 
                         <!--Number-->
-                        <label class="label">Map</label>
+                        <label >Map</label>
                         <input type="hidden" value="type_map" name="type_map">
                         <input type="text" value="{{getSystemSetting('type_map')->value}}" name="map"
                                class="form-control mb-2">
