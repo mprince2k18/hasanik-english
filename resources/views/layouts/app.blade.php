@@ -52,10 +52,10 @@
       <div class="container expanded">
         <div class="header-wrap">
           <div class="fixed-header-logo">
-            <a href="{{ url('/') }}"><img src="{{ filePath(getSystemSetting('type_logo')->value) }}" alt=""></router-link>
+            <a href="{{ url('/') }}"><img src="{{ filePath(getSystemSetting('type_logo')->value) }}" class="w-17" alt=""></router-link>
           </div>
           <div class="is-fixed-header-logo">
-            <a href="{{ url('/') }}"><img src="{{ filePath(getSystemSetting('type_logo')->value) }}" alt=""></router-link>
+            <a href="{{ url('/') }}"><img src="{{ filePath(getSystemSetting('type_logo')->value) }}" class="w-17" alt=""></router-link>
           </div>
           <div class="header-nav">
               <ul class="main-menu">

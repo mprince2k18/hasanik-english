@@ -69,3 +69,13 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.w-10{
+    width: 10%;
+    margin: 0 auto;
+}
+
+.w-17{
+    width: 17%;
+    margin: 0 auto;
+}
