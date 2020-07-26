@@ -40411,13 +40411,20 @@ var render = function() {
               _c("h3", { staticClass: "center" }, [_vm._v("Our Mission")]),
               _vm._v(" "),
               _c("div", { staticClass: "item-content" }, [
-                _c("p", { staticClass: "desc" }, [
-                  _vm._v(
-                    "\n                    " +
-                      _vm._s(_vm.missions.desc) +
-                      "\n                  "
-                  )
-                ])
+                _c(
+                  "p",
+                  {
+                    staticClass: "desc",
+                    domProps: { innerHTML: _vm._s(_vm.missions.desc) }
+                  },
+                  [
+                    _vm._v(
+                      "\n                    " +
+                        _vm._s(_vm.missions.desc) +
+                        "\n                  "
+                    )
+                  ]
+                )
               ])
             ])
           ])

@@ -42,7 +42,7 @@
                 <div class="step-item">
                     <h3 class="center">Our Mission</h3>
                   <div class="item-content">
-                    <p class="desc">
+                    <p class="desc" v-html="missions.desc">
                       {{ missions.desc }}
                     </p>
                   </div>
