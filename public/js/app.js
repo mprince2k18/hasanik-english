@@ -2018,8 +2018,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2486,7 +2484,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -40389,13 +40386,10 @@ var render = function() {
           _c("div", { staticClass: "col-lg-12" }, [
             _c("div", { staticClass: "step-item" }, [
               _c("div", { staticClass: "item-content" }, [
-                _c("p", { staticClass: "desc" }, [
-                  _vm._v(
-                    "\n                    " +
-                      _vm._s(_vm.abouts.desc) +
-                      "\n                  "
-                  )
-                ])
+                _c("p", {
+                  staticClass: "desc",
+                  domProps: { innerHTML: _vm._s(_vm.abouts.desc) }
+                })
               ])
             ])
           ])
@@ -40411,20 +40405,10 @@ var render = function() {
               _c("h3", { staticClass: "center" }, [_vm._v("Our Mission")]),
               _vm._v(" "),
               _c("div", { staticClass: "item-content" }, [
-                _c(
-                  "p",
-                  {
-                    staticClass: "desc",
-                    domProps: { innerHTML: _vm._s(_vm.missions.desc) }
-                  },
-                  [
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(_vm.missions.desc) +
-                        "\n                  "
-                    )
-                  ]
-                )
+                _c("p", {
+                  staticClass: "desc",
+                  domProps: { innerHTML: _vm._s(_vm.missions.desc) }
+                })
               ])
             ])
           ])
@@ -40635,14 +40619,14 @@ var render = function() {
                                   })
                                 ],
                                 1
-                              ),
-                              _vm._v(" "),
-                              _vm._m(1, true)
+                              )
                             ]),
                             _vm._v(" "),
                             _c("h4", [_vm._v(_vm._s(blog.title))]),
                             _vm._v(" "),
-                            _c("p", [_vm._v(_vm._s(blog.description))]),
+                            _c("p", {
+                              domProps: { innerHTML: _vm._s(blog.description) }
+                            }),
                             _vm._v(" "),
                             _c(
                               "div",
@@ -40684,13 +40668,13 @@ var render = function() {
           _c("div", { staticClass: "col-lg-4" }, [
             _c("div", { staticClass: "blog-sidebar" }, [
               _c("div", { staticClass: "row" }, [
-                _vm._m(2),
+                _vm._m(1),
                 _vm._v(" "),
-                _vm._m(3),
+                _vm._m(2),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-lg-12" }, [
                   _c("div", { staticClass: "blog-widget categories" }, [
-                    _vm._m(4),
+                    _vm._m(3),
                     _vm._v(" "),
                     _c("ul", [
                       _c(
@@ -40764,7 +40748,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "col-lg-12" }, [
                   _c("div", { staticClass: "blog-widget recent-posts" }, [
-                    _vm._m(5),
+                    _vm._m(4),
                     _vm._v(" "),
                     _c(
                       "ul",
@@ -40839,12 +40823,6 @@ var staticRenderFns = [
         ])
       ])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("8 Comments")])])
   },
   function() {
     var _vm = this
@@ -41386,22 +41364,17 @@ var render = function() {
                             })
                           ],
                           1
-                        ),
-                        _vm._v(" "),
-                        _vm._m(0)
+                        )
                       ]),
                       _vm._v(" "),
                       _c("h4", [_vm._v(_vm._s(_vm.blog.title))]),
                       _vm._v(" "),
-                      _c("p", { staticClass: "first-text" }, [
-                        _vm._v(
-                          "\n                        " +
-                            _vm._s(_vm.blog.description) +
-                            "\n                      "
-                        )
-                      ]),
+                      _c("p", {
+                        staticClass: "first-text",
+                        domProps: { innerHTML: _vm._s(_vm.blog.description) }
+                      }),
                       _vm._v(" "),
-                      _vm._m(1)
+                      _vm._m(0)
                     ])
                   ])
                 ])
@@ -41414,21 +41387,21 @@ var render = function() {
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-lg-12" }, [
                   _c("div", { staticClass: "blog-widget about-me" }, [
-                    _vm._m(2),
+                    _vm._m(1),
                     _vm._v(" "),
                     _c("h4", [_vm._v(_vm._s(_vm.blog.user.name))]),
                     _vm._v(" "),
                     _c("p", [_vm._v(_vm._s(_vm.blog.user.position))]),
                     _vm._v(" "),
-                    _vm._m(3)
+                    _vm._m(2)
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(4),
+                _vm._m(3),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-lg-12" }, [
                   _c("div", { staticClass: "blog-widget categories" }, [
-                    _vm._m(5),
+                    _vm._m(4),
                     _vm._v(" "),
                     _c("ul", [
                       _c(
@@ -41502,7 +41475,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "col-lg-12" }, [
                   _c("div", { staticClass: "blog-widget recent-posts" }, [
-                    _vm._m(6),
+                    _vm._m(5),
                     _vm._v(" "),
                     _c(
                       "ul",
@@ -41559,12 +41532,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("8 Comments")])])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -41720,7 +41687,9 @@ var render = function() {
                           )
                         ]),
                     _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(_vm.course.short_desc))]),
+                    _c("p", {
+                      domProps: { innerHTML: _vm._s(_vm.course.short_desc) }
+                    }),
                     _vm._v(" "),
                     _vm._m(1),
                     _vm._v(" "),
@@ -41745,7 +41714,9 @@ var render = function() {
                 _c("div", { staticClass: "col-lg-12" }, [
                   _c("section", { staticClass: "tabs-content" }, [
                     _c("article", { attrs: { id: "tabs-1" } }, [
-                      _c("p", [_vm._v(_vm._s(_vm.course.big_desc))])
+                      _c("p", {
+                        domProps: { innerHTML: _vm._s(_vm.course.big_desc) }
+                      })
                     ])
                   ])
                 ])

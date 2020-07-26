@@ -36,7 +36,7 @@
                               <span v-else>
                                 ৳{{ course.price }}
                               </span>
-                          <p>{{ course.short_desc }}</p>
+                          <p v-html="course.short_desc"></p>
                           <div class="main-white-button">
                             <!-- <a href="http://localhost/hasanik/public/enroll/course">Enroll Now</a> -->
                             <a href="https://app.hasanikenglish.com/enroll/course">Enroll Now</a>
@@ -80,7 +80,7 @@
                       <div class="col-lg-12">
                         <section class='tabs-content'>
                           <article id='tabs-1'>
-                            <p>{{ course.big_desc }}</p>
+                            <p v-html="course.big_desc"></p>
                           </article>
                         </section>
                       </div>
