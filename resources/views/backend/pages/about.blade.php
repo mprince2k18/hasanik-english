@@ -56,7 +56,7 @@
                               <div class="col-md-12">
                                 <div class="form-group">
                                 <label for="question_en">Description</label>
-                                <textarea name="desc" class="form-control" id="" cols="30" rows="10">{{ page('mission')->desc ?? '' }}</textarea>
+                                <textarea name="desc" class="form-control summernote" id="" cols="30" rows="10">{{ page('mission')->desc ?? '' }}</textarea>
                               </div>
                             </div>
                         </div>
