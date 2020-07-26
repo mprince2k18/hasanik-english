@@ -46,13 +46,13 @@
                          <div class="hero-grid big-column">
                              <div class="hero-slider synkslider owl-carousel" data-attime="3220" data-rtlt="false">
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/2.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png)"></div>
                                  </div>
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/2.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png)"></div>
                                  </div>
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/2.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png)"></div>
                                  </div>
                              </div>
                          </div>
@@ -61,13 +61,13 @@
                          <div class="hero-grid small-column">
                              <div class="hero-slider owl-carousel" data-attime="3220" data-rtlt="false">
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/1.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766609/HASANIK_ENGLISH_4.gif)"></div>
                                  </div>
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/1.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766864/Hasanik_English_1.png)"></div>
                                  </div>
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/1.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766927/Hasanik_English_2.png)"></div>
                                  </div>
                              </div>
                          </div>
@@ -76,24 +76,24 @@
                          <div class="hero-grid small-column">
                              <div class="hero-slider owl-carousel"  data-attime="3220" data-rtlt="true">
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/1.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766927/Hasanik_English_2.png)"></div>
                                  </div>
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/1.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766609/HASANIK_ENGLISH_4.gif)"></div>
                                  </div>
                                  <div class="item">
-                                     <div class="bg" style="background-image:url({{ asset('homepage/images/bg/1.jpg')}})"></div>
+                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766864/Hasanik_English_1.png)"></div>
                                  </div>
                              </div>
                          </div>
                          <!-- 3end -->
-                         <div class="overlay"></div>
+                         {{-- <div class="overlay"></div> --}}
                          <!-- enter-wrap -->
-                         <div class="enter-wrap-holder column-wrap">
+                         {{-- <div class="enter-wrap-holder column-wrap">
                              <div class="enter-wrap">
                                  <h3> Hasanik <br> English <br></h3>
                              </div>
-                         </div>
+                         </div> --}}
                          <!-- enter-wrap end  -->
                      </div>
                      <!-- full-height-wrap end  -->
