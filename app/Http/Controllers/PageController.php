@@ -23,9 +23,12 @@ class PageController extends Controller
 
     public function about_store(Request $request)
     {
-        Page::where('type',$request->type)->update($request->except('_token'));
+        // Page::where('type',$request->type)->update($request->except('_token'));
+        $page = Page::where('type',$request->type)->first();
+        $page->desc = $request->desc;
+        $page->type = $request->type;
+        $page->save();
         return back();
-        // return $request;
     }
     
     /**
@@ -34,9 +37,11 @@ class PageController extends Controller
 
     public function mission_store(Request $request)
     {
-        Page::where('type',$request->type)->update($request->except('_token'));
+        $page = Page::where('type',$request->type)->first();
+        $page->desc = $request->desc;
+        $page->type = $request->type;
+        $page->save();
         return back();
-        // return $request;
     }
 
     /**
