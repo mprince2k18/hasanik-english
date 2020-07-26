@@ -134,7 +134,7 @@ function overWriteEnvFile($type, $val)
 //get system setting data
 function getSystemSetting($key)
 {
-    return \App\Models\SystemSetting::where('type', $key)->first();
+    return \App\Models\OrgSetting::where('type', $key)->first();
 }
 
 //Get file path

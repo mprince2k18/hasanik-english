@@ -65,6 +65,12 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
   
   Route::get('/course','CourseController@index')->name('course.index');
   Route::post('/course/store','CourseController@store')->name('course.store');
+  
+  /**
+   * Organization Settings
+   */
+  Route::get('/organization/settings','OrgSettingsController@index')->name('org.index');
+  Route::post('/organization/settings/update','OrgSettingsController@update')->name('org.update');
 
 
 
