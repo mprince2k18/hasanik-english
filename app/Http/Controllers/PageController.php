@@ -23,7 +23,7 @@ class PageController extends Controller
 
     public function about_store(Request $request)
     {
-        // Page::where('type',$request->type)->update($request->except('_token'));
+        $page = new Page();
         $page = Page::where('type',$request->type)->first();
         $page->desc = $request->desc;
         $page->type = $request->type;
