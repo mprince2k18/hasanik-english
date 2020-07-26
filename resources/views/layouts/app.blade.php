@@ -152,9 +152,9 @@
                 <h4>Get In Touch!</h4>
               </div>
               <ul class="more-info">
-                <li>Email: <a href="#">contact@oxana.com</a></li>
-                <li>Phone: <a href="#">+1 547 6877 534</a></li>
-                <li>Address: <a href="#">342 Better Street Peculiar, KS 64078</a></li>
+                <li>Email: <a href="#">{{ getSystemSetting('type_mail')->value }}</a></li>
+                <li>Phone: <a href="#">{{ getSystemSetting('type_number')->value }}</a></li>
+                <li>Address: <a href="#">{{ getSystemSetting('type_address')->value }}</a></li>
               </ul>
             </div>
             <div class="col-lg-3">
