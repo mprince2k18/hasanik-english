@@ -76,6 +76,6 @@
 }
 
 .w-17{
-    width: 17%;
-    margin: 0 auto;
+    width: 17% !important;
+    margin: 0 auto !important;
 }
