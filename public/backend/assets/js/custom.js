@@ -75,3 +75,9 @@ function imageUploadFLogo(input) {
 $("#imageUpload_f_logo").change(function () {
   imageUploadFLogo(this)
 });
+
+$(document).ready(function () {
+    $('.summernote').summernote({
+      height: 200
+    });
+});

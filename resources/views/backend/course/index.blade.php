@@ -30,12 +30,12 @@
                            
                                 <div class="form-group">
                                 <label for="short_desc">Short Description*</label>
-                                <textarea required name="short_desc" id="short_desc" class="form-control" cols="30" rows="10" placeholder="Short Description"></textarea>
+                                <textarea required name="short_desc" id="short_desc" class="form-control summernote" cols="30" rows="10" placeholder="Short Description"></textarea>
                               </div>
                            
                                 <div class="form-group">
                                 <label for="big_desc">Big Description*</label>
-                                <textarea required name="big_desc" id="big_desc" class="form-control" cols="30" rows="10" placeholder="Big Description"></textarea>
+                                <textarea required name="big_desc" id="big_desc" class="form-control summernote" cols="30" rows="10" placeholder="Big Description"></textarea>
                               </div>
                            
                                 <div class="form-group">
@@ -65,7 +65,7 @@
 
                                 <div class="form-group">
                                 <label for="meta_description">Meta Description</label>
-                                <textarea name="meta_description" id="meta_description" class="form-control" cols="30" rows="6" placeholder="Meta Description"></textarea>
+                                <textarea name="meta_description" id="meta_description" class="form-control summernote" cols="30" rows="6" placeholder="Meta Description"></textarea>
                                 <small>Google standard 200 characters.</small>
                             </div>
                               

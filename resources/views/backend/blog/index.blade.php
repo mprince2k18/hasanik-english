@@ -49,7 +49,7 @@
                            
                                 <div class="form-group">
                                 <label for="description">Blog Description*</label>
-                                <textarea required name="description" id="description" class="form-control" cols="30" rows="10" placeholder="Blog Description"></textarea>
+                                <textarea required name="description" id="description" class="form-control summernote" cols="30" rows="10" placeholder="Blog Description"></textarea>
                               </div>
                            
                                 <div class="form-group">
@@ -74,7 +74,7 @@
 
                                 <div class="form-group">
                                 <label for="meta_description">Meta Description</label>
-                                <textarea name="meta_description" id="meta_description" class="form-control" cols="30" rows="6" placeholder="Meta Description"></textarea>
+                                <textarea name="meta_description" id="meta_description" class="form-control summernote" cols="30" rows="6" placeholder="Meta Description"></textarea>
                                 <small>Google standard 200 characters.</small>
                             </div>
                               
