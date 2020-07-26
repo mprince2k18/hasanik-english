@@ -4,7 +4,7 @@
     <head>
 
         <!-- Title -->
-        <title>{{ env('APP_NAME') }} | Login - Sign in</title>
+        <title>{{ getSystemSetting('type_name')->value }} | Login</title>
 
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta charset="UTF-8">

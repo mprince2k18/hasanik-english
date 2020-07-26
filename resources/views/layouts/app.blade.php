@@ -52,10 +52,10 @@
       <div class="container expanded">
         <div class="header-wrap">
           <div class="fixed-header-logo">
-            <a href="{{ url('/') }}"><img src="https://buttoncreative.agency/html/oxana/images/logo-white.png" alt=""></router-link>
+            <a href="{{ url('/') }}"><img src="{{ filePath(getSystemSetting('type_logo')->value) }}" alt=""></router-link>
           </div>
           <div class="is-fixed-header-logo">
-            <a href="{{ url('/') }}"><img src="https://buttoncreative.agency/html/oxana/images/logo-white.png" alt=""></router-link>
+            <a href="{{ url('/') }}"><img src="{{ filePath(getSystemSetting('type_logo')->value) }}" alt=""></router-link>
           </div>
           <div class="header-nav">
               <ul class="main-menu">
@@ -126,7 +126,7 @@
           <div class="row">
             <div class="col-lg-3">
               <div class="footer-heading">
-                <h4>Oxana</h4>
+                <h4>{{ getSystemSetting('type_name')->value }}</h4>
               </div>
               <p class="about-oxana">Shaman synth retro slow-carb. Vape taxidermy twee, put a bird on it fran xezen celiac unicorn gerstache coloring book.</p>
             </div>
@@ -163,15 +163,16 @@
               </div>
               <p>Shaman synth retro slow-carb. Vape taxidermy twee, put a bird.</p>
               <ul class="social-icons">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a href="{{ getSystemSetting('type_fb')->value }}"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="{{ getSystemSetting('type_tw')->value }}"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="{{ getSystemSetting('type_google')->value }}"><i class="fa fa-google"></i></a></li>
+                <li><a href="{{ getSystemSetting('type_linked')->value }}"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="{{ getSystemSetting('type_youtube')->value }}"><i class="fa fa-youtube"></i></a></li>
               </ul>
             </div>
             <div class="col-lg-12">
               <div class="sub-footer">
-                <p>Copyright © 2020 <a href="#">Robert Imeri</a>. All rights reserved.</p>
+                <p>Copyright © {{ date('Y') }} <a href="#">{{ getSystemSetting('type_name')->value }}</a>. All rights reserved.</p>
               </div>
             </div>
           </div>

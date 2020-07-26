@@ -7,15 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Wilio Survey, Quotation, Review and Register form Wizard by Ansonika.">
-    <meta name="author" content="Ansonika">
-    <title>{{ env('APP_NAME') }}</title>
+    <meta name="author" content="{{ getSystemSetting('type_name')->value }}">
+    <title>{{ getSystemSetting('type_name')->value }}</title>
 
     <!-- Favicons-->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+    <link rel="shortcut icon" href="{{ filePath(getSystemSetting('favicon_icon')->value) }}" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="{{ filePath(getSystemSetting('favicon_icon')->value) }}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="{{ filePath(getSystemSetting('favicon_icon')->value) }}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="{{ filePath(getSystemSetting('favicon_icon')->value) }}">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="{{ filePath(getSystemSetting('favicon_icon')->value) }}">
 
     <!-- GOOGLE WEB FONT -->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
@@ -61,13 +61,14 @@
 		<div class="row row-height">
 			<div class="col-lg-6 content-left">
 				<div class="content-left-wrapper">
-					<a href="{{ url('/') }}" id="logo"><img src="img/logo.png" alt="" width="49" height="35"></a>
+					<a href="{{ url('/') }}" id="logo"><img src="{{ filePath(getSystemSetting('type_logo')->value) }}" alt="" width="49" height="35"></a>
 					<div id="social">
 						<ul>
-							<li><a href="#0"><i class="icon-facebook"></i></a></li>
-							<li><a href="#0"><i class="icon-twitter"></i></a></li>
-							<li><a href="#0"><i class="icon-google"></i></a></li>
-							<li><a href="#0"><i class="icon-linkedin"></i></a></li>
+							<li><a href="{{ getSystemSetting('type_fb')->value }}"><i class="icon-facebook"></i></a></li>
+							<li><a href="{{ getSystemSetting('type_tw')->value }}"><i class="icon-twitter"></i></a></li>
+							<li><a href="{{ getSystemSetting('type_google')->value }}"><i class="icon-google"></i></a></li>
+							<li><a href="{{ getSystemSetting('type_linked')->value }}"><i class="icon-linkedin"></i></a></li>
+							<li><a href="{{ getSystemSetting('type_youtube')->value }}"><i class="icon-youtube"></i></a></li>
 						</ul>
 					</div>
 					<!-- /social -->
@@ -76,10 +77,10 @@
 						<h2>Learn English Through <br> Hasanik Way</h2>
 						<h6 class="text-white">Event Timing: Sunday & Wednesday</h6>
 						<h6 class="text-white">Event Address: Online</h6>
-						<h6 class="text-white">Contact us at 01720305089 & 01913088433</h6>
+						<h6 class="text-white">Contact us at {{ getSystemSetting('type_number')->value }} & 01913088433</h6>
 						<h6 class="text-white">To know more about the course in details please call the above numbers.</h6>
 					</div>
-					<div class="copy">© {{ Carbon\Carbon::now()->year }} {{ env('APP_NAME') }}</div>
+					<div class="copy">© {{ Carbon\Carbon::now()->year }} {{ getSystemSetting('type_name')->value }}</div>
 				</div>
 				<!-- /content-left-wrapper -->
 			</div>

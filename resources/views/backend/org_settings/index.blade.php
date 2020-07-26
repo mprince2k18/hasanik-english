@@ -166,7 +166,7 @@
       </div><!-- Main Wrapper -->
 
       <div class="page-footer">
-          <p class="no-s">Made with <i class="fa fa-heart"></i> {{env('APP_NAME')}}</p>
+          <p class="no-s">Made with <i class="fa fa-heart"></i> {{ getSystemSetting('type_name')->value }}</p>
       </div>
   </div><!-- Page Inner -->
 @endsection
