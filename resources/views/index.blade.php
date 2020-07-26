@@ -4,10 +4,10 @@
     <head>
         <!--=============== basic  ===============-->
         <meta charset="UTF-8">
-        <title> {{ env('APP_NAME') }}</title>
+        <title> {{ getSystemSetting('type_name')->value }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="robots" content="index, follow"/>
-        <meta name="keywords" content=""/>
+        <meta name="keywords" content="{{ getSystemSetting('type_name')->value }}"/>
         <meta name="description" content=""/>
         <!--=============== css  ===============-->
         <link type="text/css" rel="stylesheet" href="{{ asset('homepage/css/reset.css') }}">
@@ -15,7 +15,7 @@
         <link type="text/css" rel="stylesheet" href="{{ asset('homepage/css/style.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('homepage/css/yourstyle.css') }}">
         <!--=============== favicons ===============-->
-        <link rel="shortcut icon" href="{{ asset('homepage/images/favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ filePath(getSystemSetting('favicon_icon')->value) }}">
     </head>
 
     <body>
@@ -114,6 +114,11 @@
          <div class="menu">
   <nav class="menu__nav">
     <ul class="menu__list r-list">
+      <li class="menu__group">
+        <a href="{{ url('/') }}" class="menu__link r-link">
+            <img src="{{ filePath(getSystemSetting('type_logo')->value) }}" alt="">
+        </a>
+      </li>
       <li class="menu__group">
         <a href="{{ url('/') }}" class="menu__link r-link">Home</a>
       </li>
