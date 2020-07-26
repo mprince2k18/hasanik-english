@@ -33,3 +33,13 @@
 .mobile-menu > li > a{
   padding: 0 !important;
 }
+
+.w-10 {
+    width: 10%;
+    margin: 0 auto;
+}
+
+.w-17 {
+    width: 17% !important;
+    margin: 0 auto !important;
+}

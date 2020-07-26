@@ -18,6 +18,13 @@
         <link rel="shortcut icon" href="{{ filePath(getSystemSetting('favicon_icon')->value) }}">
     </head>
 
+    <style>
+        .w-10{
+            width: 10%;
+            margin: 0 auto;
+        }
+    </style>
+
     <body>
       <div class="loader">
          <div class="tm-loader">
