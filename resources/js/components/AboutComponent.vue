@@ -21,12 +21,9 @@
             <div class="row">
               <div class="col-lg-12">
                 <div class="step-item">
-
                   <div class="item-content">
-                    <p class="desc" v-html="abouts.desc">
-                    </p>
+                    <p class="desc" v-html="abouts.desc"></p>
                   </div>
-
                 </div>
               </div>
             </div>

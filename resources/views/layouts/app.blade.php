@@ -19,6 +19,18 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
   </head>
 
+  <style>
+    .js-preloader, section.footer-content .cta-footer, .main-pink-button a, section.footer-content .main-footer ul.social-icons li a:hover, .go-top, section.contact-us .inner-content button:after, .blog-sidebar .search form button, .blog-sidebar .about-me ul.social-icons li a, #search{
+      background-color: {{getSystemSetting('primary_color')->value}} !important;
+    }
+    .main-white-button a, section.footer-content .main-footer ul.social-icons li a, .main-menu > li > a:hover, .page-heading span, section.contact-info .info-item .icon, .section-heading h6, .blog-sidebar .about-me ul.social-icons li a:hover {
+      color: {{getSystemSetting('font_color')->value}} !important;
+    }
+    section.footer-content .main-footer ul.social-icons li a:hover, .header-widgets .right-menu .menu-search a:hover, .blog-sidebar .about-me ul.social-icons li a:hover, .blog-sidebar .search form button:hover{
+      box-shadow: 0 0 20px 0px {{getSystemSetting('primary_color')->value}} !important;
+    }
+  </style>
+
   <body>
 <div id="app">
 

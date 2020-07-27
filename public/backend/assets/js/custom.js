@@ -81,3 +81,5 @@ $(document).ready(function () {
       height: 200
     });
 });
+
+$('#cp2').colorpicker();

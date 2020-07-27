@@ -12,7 +12,6 @@
             </div>
           </div>
 
-
           <!-- Recent Cases -->
           <section class="product-details">
             <div class="container">
@@ -65,7 +64,6 @@
             </div>
           </section>
 
-
           <section class="product-info">
             <div class="container">
               <div class="row">
@@ -90,6 +88,7 @@
               </div>
             </div>
           </section>
+          
       </div>
 </template>
 

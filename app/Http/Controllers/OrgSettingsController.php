@@ -115,9 +115,18 @@ class OrgSettingsController extends Controller
             $system->value =fileUpload($request->f_icon,'site');
             $system->save();
         }
+        if ($request->has('color')) {
+            $system = OrgSetting::where('type', $request->primary_color)->first();
+            $system->value = $request->color;
+            $system->save();
+        }
+        if ($request->has('f_color')) {
+            $system = OrgSetting::where('type', $request->font_color)->first();
+            $system->value = $request->f_color;
+            $system->save();
+        }
 
         return back();
-        return $request;
     }
 
     /**

@@ -149,6 +149,17 @@
                         <input type="text" value="{{getSystemSetting('type_map')->value}}" name="map"
                                class="form-control mb-2">
 
+                        <!--Primary color-->
+                        <label >Primary color</label>
+                        <input type="hidden" value="primary_color" name="primary_color">
+                        <input type="text" value="{{getSystemSetting('primary_color')->value}}" name="color"
+                               class="form-control mb-2">
+
+                        <!--Font color-->
+                        <label >Font color</label>
+                        <input type="hidden" value="font_color" name="font_color">
+                        <input type="text" value="{{getSystemSetting('font_color')->value}}" name="f_color"
+                               class="form-control mb-2">
 
                         <div class="m-2 float-right">
                             <button class="btn btn-primary" type="submit">Save</button>
