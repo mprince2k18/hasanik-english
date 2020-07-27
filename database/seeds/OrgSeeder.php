@@ -69,6 +69,14 @@ class OrgSeeder extends Seeder
               'type'  =>'type_map',
               'value' =>1
           ),
+          array(
+              'type'  =>'primary_color',
+              'value' =>'blue'
+          ),
+          array(
+              'type'  =>'f_color',
+              'value' =>'black'
+          ),
       ]);
 
     }
