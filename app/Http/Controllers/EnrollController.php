@@ -10,7 +10,7 @@ use App\Models\Payment;
 use App\Models\FormQuestion;
 use App\Models\Course;
 use Mail;
-use App\Mail\EnrollMail;
+use App\Mail\Enrollmail;
 
 class EnrollController extends Controller
 {
