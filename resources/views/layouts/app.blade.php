@@ -37,7 +37,10 @@
     .page-heading span, 
     section.contact-info .info-item .icon, 
     .section-heading h6, 
-    .blog-sidebar .about-me ul.social-icons li a:hover {
+    .blog-sidebar .about-me ul.social-icons li a:hover,
+    section.product-details .single-product .right-content span
+    
+     {
       color: {{getSystemSetting('font_color')->value}} !important;
     }
     section.footer-content .main-footer ul.social-icons li a:hover, 
