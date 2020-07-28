@@ -8,5 +8,13 @@ class Category extends Model
 {
     protected $guarded = ['id'];
 
+    /**
+     * POSTS
+     */
+    public function posts()
+    {
+        return $this->belongsTo(Blog::class, 'id', 'category_id');
+    }
+
     //END
 }

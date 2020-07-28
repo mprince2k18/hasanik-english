@@ -40,3 +40,8 @@ Route::get('/blog/{id}','BlogController@getBlog')->name('get.blog');
  */
 Route::get('/courses','CourseController@getCourses')->name('get.courses');
 Route::get('/course/{slug}','CourseController@getCourse')->name('get.course');
+
+/**
+ * CATEGORIES
+ */
+Route::get('/categories','CategoryController@getCategories')->name('get.categories');
