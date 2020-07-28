@@ -67,10 +67,10 @@
         <ul class="mobile-menu">
           <li><a href="{{ url('/') }}">Home</a></li>
           <li><a href="{{ url('/page/about-us') }}">About Us</a></li>
-          <li><router-link :to="{ name: 'contact-us' }">Contact Us</router-link></li>
-          <li><router-link :to="{ name: 'our-team' }">Our Team</router-link></li>
-          <li><router-link :to="{ name: 'blog' }">Blog</router-link></li>
-          <li><router-link :to="{ name: 'courses' }">Courses</router-link></li>
+          <li><a href="{{ url('/page/contact-us') }}">Contact Us</a></li>
+          <li><a href="{{ url('/page/our-team') }}">Our Team</a></li>
+          <li><a href="{{ url('/page/blog') }}">Blog</a></li>
+          <li><a href="{{ url('/page/course') }}">Courses</a></li>
           <li><a href="{{ url('/enroll/course') }}">Enroll Course</a></li>
         </ul>
       </div>
