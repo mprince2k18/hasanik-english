@@ -40,7 +40,7 @@
                         
                         <div class="share-tags">
                           <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-8">
                               <ul class="social-icons">
                                 <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>

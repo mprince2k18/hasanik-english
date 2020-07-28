@@ -43,6 +43,7 @@
      {
       color: {{getSystemSetting('font_color')->value}} !important;
     }
+    
     section.footer-content .main-footer ul.social-icons li a:hover, 
     .header-widgets .right-menu .menu-search a:hover, 
     .blog-sidebar .about-me ul.social-icons li a:hover, 

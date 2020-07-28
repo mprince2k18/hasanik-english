@@ -9,6 +9,8 @@ use App\Models\Schedule;
 use App\Models\Payment;
 use App\Models\FormQuestion;
 use App\Models\Course;
+use Mail;
+use App\Mail\EnrollMail;
 
 class EnrollController extends Controller
 {
@@ -36,6 +38,11 @@ class EnrollController extends Controller
     public function store(Request $request)
     {
         Enroll::create($request->except('_token','website','terms','process'));
+
+        $name = $request->name;
+        $email = $request->email;
+
+        Mail::to($request->email)->send(new EnrollMail($name));
         return back();
     }
 
