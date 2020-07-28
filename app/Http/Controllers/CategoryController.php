@@ -75,17 +75,7 @@ class CategoryController extends Controller
      */
     public function getCategory()
     {
-        return Category::with('posts')->get();
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function getCategoryPostCount()
-    {
         return Category::withCount('posts')->get();
     }
+
 }

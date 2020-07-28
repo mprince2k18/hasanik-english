@@ -46,7 +46,3 @@ Route::get('/course/{slug}','CourseController@getCourse')->name('get.course');
  */
 Route::get('/categories','CategoryController@getCategory')->name('get.categories');
 
-/**
- * CATEGORY POST COUNT
- */
-Route::get('/category/post/count','CategoryController@getCategoryPostCount')->name('get.category.post.count');
