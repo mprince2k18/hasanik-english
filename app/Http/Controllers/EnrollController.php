@@ -42,7 +42,7 @@ class EnrollController extends Controller
         $name = $request->name;
         $email = $request->email;
 
-        Mail::to($request->email)->send(new EnrollMail($name));
+        Mail::to($request->email)->send(new Enrollmail($name));
         return back();
     }
 
