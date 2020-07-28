@@ -174,13 +174,6 @@ function studentDetails($id)
     return \App\Model\Student::where('user_id', $id)->first();
 }
 
-
-/*categories*/
-function categories(){
-
-  return  Category::where('parent_category_id' ,0)->with('child')->Published()->get();
-}
-
 /*page*/
 function page($type){
 

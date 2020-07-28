@@ -53,6 +53,11 @@
                      <!--full-height wrap -->
                      <div class="full-height-wrap">
                          <!-- 1 -->
+                                 @php
+                                     $asides = App\Slider::where('is_active', 1)->where('type', 'aside')->get();
+                                     $tops = App\Slider::where('is_active', 1)->where('type', 'top')->get();
+                                     $bottoms = App\Slider::where('is_active', 1)->where('type', 'bottom')->get();
+                                 @endphp
                          <div class="hero-grid big-column">
                              <div class="hero-slider synkslider owl-carousel" data-attime="3220" data-rtlt="false">
                                  <div class="item">
@@ -70,7 +75,8 @@
                          <!-- 2 -->
                          <div class="hero-grid small-column">
                              <div class="hero-slider owl-carousel" data-attime="3220" data-rtlt="false">
-                                 <div class="item">
+
+                               <div class="item">
                                      <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766609/HASANIK_ENGLISH_4.gif)"></div>
                                  </div>
                                  <div class="item">
@@ -85,7 +91,7 @@
                          <!-- 3 -->
                          <div class="hero-grid small-column">
                              <div class="hero-slider owl-carousel"  data-attime="3220" data-rtlt="true">
-                                 <div class="item">
+                                  <div class="item">
                                      <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766927/Hasanik_English_2.png)"></div>
                                  </div>
                                  <div class="item">

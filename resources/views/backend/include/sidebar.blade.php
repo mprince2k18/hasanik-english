@@ -10,6 +10,7 @@
             <li class="{{ Route::currentRouteNamed('blog.index') ? 'active' : '' }}"><a href="{{ route('blog.index') }}" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Blog</p></a></li>
             <li class="{{ Route::currentRouteNamed('course.index') ? 'active' : '' }}"><a href="{{ route('course.index') }}" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Course</p></a></li>
             <li class="{{ Route::currentRouteNamed('org.index') ? 'active' : '' }}"><a href="{{ route('org.index') }}" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Org Settings</p></a></li>
+            <li class="{{ Route::currentRouteNamed('slider.index') ? 'active' : '' }}"><a href="{{ route('slider.index') }}" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Slider Settings</p></a></li>
         </ul>
     </div><!-- Page Sidebar Inner -->
 </div><!-- Page Sidebar -->

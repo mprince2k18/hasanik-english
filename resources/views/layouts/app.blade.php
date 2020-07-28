@@ -20,13 +20,30 @@
   </head>
 
   <style>
-    .js-preloader, section.footer-content .cta-footer, .main-pink-button a, section.footer-content .main-footer ul.social-icons li a:hover, .go-top, section.contact-us .inner-content button:after, .blog-sidebar .search form button, .blog-sidebar .about-me ul.social-icons li a, #search{
+    .js-preloader,
+     section.footer-content .cta-footer,
+    .main-pink-button a,
+    section.footer-content .main-footer ul.social-icons li a:hover,
+    .go-top,
+    section.contact-us .inner-content button:after, 
+    .blog-sidebar .search form button, 
+    .blog-sidebar .about-me ul.social-icons li a, 
+    #search{
       background-color: {{getSystemSetting('primary_color')->value}} !important;
     }
-    .main-white-button a, section.footer-content .main-footer ul.social-icons li a, .main-menu > li > a:hover, .page-heading span, section.contact-info .info-item .icon, .section-heading h6, .blog-sidebar .about-me ul.social-icons li a:hover {
+    .main-white-button a, 
+    section.footer-content .main-footer ul.social-icons li a, 
+    .main-menu > li > a:hover, 
+    .page-heading span, 
+    section.contact-info .info-item .icon, 
+    .section-heading h6, 
+    .blog-sidebar .about-me ul.social-icons li a:hover {
       color: {{getSystemSetting('font_color')->value}} !important;
     }
-    section.footer-content .main-footer ul.social-icons li a:hover, .header-widgets .right-menu .menu-search a:hover, .blog-sidebar .about-me ul.social-icons li a:hover, .blog-sidebar .search form button:hover{
+    section.footer-content .main-footer ul.social-icons li a:hover, 
+    .header-widgets .right-menu .menu-search a:hover, 
+    .blog-sidebar .about-me ul.social-icons li a:hover, 
+    .blog-sidebar .search form button:hover{
       box-shadow: 0 0 20px 0px {{getSystemSetting('primary_color')->value}} !important;
     }
   </style>
@@ -38,7 +55,7 @@
     <!-- Preloader -->
     <div id="js-preloader" class="js-preloader">
       <div class="content">
-        <img src="images/logo-icon.png" alt="">
+        <img src="{{ filePath(getSystemSetting('type_logo')->value) }}" alt="">
       </div>
       <div class="preloader-inner">
       </div>
@@ -48,13 +65,13 @@
     <div class="mobile-nav-wrapper">
       <div class="mobile-menu-inner">
         <ul class="mobile-menu">
-          <li><a href="{{ url('/') }}">Home</router-link></li>
+          <li><a href="{{ url('/') }}">Home</a></li>
           <li><router-link :to="{ name: 'about-us' }">About Us</router-link></li>
           <li><router-link :to="{ name: 'contact-us' }">Contact Us</router-link></li>
           <li><router-link :to="{ name: 'our-team' }">Our Team</router-link></li>
           <li><router-link :to="{ name: 'blog' }">Blog</router-link></li>
           <li><router-link :to="{ name: 'courses' }">Courses</router-link></li>
-          <li><a href="{{ url('/enroll/course') }}">Enroll Course</router-link></li>
+          <li><a href="{{ url('/enroll/course') }}">Enroll Course</a></li>
         </ul>
       </div>
     </div>

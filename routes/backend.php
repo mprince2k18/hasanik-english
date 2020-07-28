@@ -71,6 +71,15 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
    */
   Route::get('/organization/settings','OrgSettingsController@index')->name('org.index');
   Route::post('/organization/settings/update','OrgSettingsController@update')->name('org.update');
+  
+  /**
+   * Slider Settings
+   */
+  Route::get('/slider/settings','SliderController@index')->name('slider.index');
+  Route::post('/slider/settings/store','SliderController@store')->name('slider.store');
+  Route::get('/slider/activation','SliderController@slider_activation')->name('slider.activation');
+
+
 
 
 
