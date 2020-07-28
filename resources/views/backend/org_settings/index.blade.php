@@ -158,7 +158,7 @@
                         <!--Font color-->
                         <label >Font color</label>
                         <input type="hidden" value="font_color" name="font_color">
-                        <input type="text" value="{{getSystemSetting('font_color')->value}}" name="f_color"
+                        <input type="text" value="{{getSystemSetting('f_color')->value}}" name="f_color"
                                class="form-control mb-2">
 
                         <div class="m-2 float-right">
