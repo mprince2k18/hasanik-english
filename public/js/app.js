@@ -2386,7 +2386,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2414,7 +2413,7 @@ __webpack_require__.r(__webpack_exports__);
       } // axios.get('http://localhost/hasanik/public/api/courses?page=' + page) //base_url
 
 
-      axios.get('https://app.hasanikenglish.com/api/blogs?courses=' + page) //base_url
+      axios.get('https://app.hasanikenglish.com/api/courses?courses=' + page) //base_url
       .then(function (response) {
         return _this2.courses = response.data;
       });
@@ -40940,13 +40939,13 @@ var render = function() {
                                   _c("img", {
                                     attrs: {
                                       src: course.thumbnail,
-                                      alt: course.title
+                                      alt: course.name
                                     }
                                   })
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "down-content" }, [
-                                  _c("h4", [_vm._v(_vm._s(course.title))]),
+                                  _c("h4", [_vm._v(_vm._s(course.name))]),
                                   _vm._v(" "),
                                   course.is_discount === 1
                                     ? _c("span", [
@@ -40967,9 +40966,7 @@ var render = function() {
                                             _vm._s(course.price) +
                                             "\n                            "
                                         )
-                                      ]),
-                                  _vm._v(" "),
-                                  _c("p", [_vm._v(_vm._s(course.name))])
+                                      ])
                                 ])
                               ]
                             )

@@ -26,10 +26,10 @@
                         <div class="course-item">
                           <router-link :to="`/page/course/${course.slug}`">
                             <div class="course-thumb">
-                              <img :src="course.thumbnail" :alt="course.title">
+                              <img :src="course.thumbnail" :alt="course.name">
                             </div>
                             <div class="down-content">
-                              <h4>{{ course.title }}</h4>
+                              <h4>{{ course.name }}</h4>
 
                               <span v-if="course.is_discount === 1">
                                 <em>৳{{ course.discount_price }}</em>
@@ -40,7 +40,6 @@
                                 ৳{{ course.price }}
                               </span>
 
-                              <p>{{ course.name }}</p>
                             </div>
                           </router-link>
                         </div>
@@ -86,7 +85,7 @@
                 }
 
                 // axios.get('http://localhost/hasanik/public/api/courses?page=' + page) //base_url
-             axios.get('https://app.hasanikenglish.com/api/blogs?courses=' + page) //base_url
+             axios.get('https://app.hasanikenglish.com/api/courses?courses=' + page) //base_url
             .then(response => this.courses = response.data);
             }
         },
