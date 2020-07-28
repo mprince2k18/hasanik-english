@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Blog;
 
 class CategoryController extends Controller
 {
@@ -72,8 +73,19 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function getCategories()
+    public function getCategory()
     {
         return Category::with('posts')->get();
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function getCategoryPostCount()
+    {
+        return Category::withCount('posts')->get();
     }
 }

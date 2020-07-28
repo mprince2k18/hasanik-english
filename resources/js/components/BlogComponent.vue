@@ -85,12 +85,11 @@
                             <h4>Categories</h4>
                           </div>
                           <ul>
-                            <li><router-link to="blog">Web Analysis<span>(2)</span></router-link></li>
-                            <li><router-link to="blog">Digital Marketing<span>(5)</span></router-link></li>
-                            <li><router-link to="blog">Creative Agencies<span>(4)</span></router-link></li>
-                            <li><router-link to="blog">Branding Design<span>(8)</span></router-link></li>
-                            <li><router-link to="blog">Graphic Design<span>(9)</span></router-link></li>
-                            <li><router-link to="blog">Web Re-Design<span>(11)</span></router-link></li>
+
+                            <li v-for="category in categories" :key="category.id">
+                              <router-link to="blog">{{ category.name }}<span>({{ category.posts.length }})</span></router-link>
+                            </li>
+                            
                           </ul>
                         </div>
                       </div>
@@ -128,11 +127,13 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+            console.log('Component mounted.');
+            console.log(getCategories());
         },
         data(){
           return{
             blogs:[],
+            categories:[]
           }
         },
         methods:{
@@ -141,6 +142,7 @@
             axios.get('https://app.hasanikenglish.com/api/blogs') //base_url
             .then(response => this.blogs = response.data);
           },
+          
           getResults(page) {
                 if (typeof page === 'undefined') {
                     page = 1;
@@ -149,10 +151,17 @@
                 // axios.get('http://localhost/hasanik/public/api/blogs?page=' + page) //base_url
              axios.get('https://app.hasanikenglish.com/api/blogs?page=' + page) //base_url
             .then(response => this.blogs = response.data);
-            }
+            },
+
+            getCategories(){
+            // axios.get('http://localhost/hasanik/public/api/categories') //base_url
+            axios.get('https://app.hasanikenglish.com/api/categories') //base_url
+            .then(response => this.categories = response.data);
+          }
         },
         created(){
           this.getBlogs();
+          this.getCategories();
           this.getResults();
         }
     }

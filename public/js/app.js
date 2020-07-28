@@ -2189,14 +2189,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
+    console.log(getCategories());
   },
   data: function data() {
     return {
-      blogs: []
+      blogs: [],
+      categories: []
     };
   },
   methods: {
@@ -2221,10 +2222,20 @@ __webpack_require__.r(__webpack_exports__);
       .then(function (response) {
         return _this2.blogs = response.data;
       });
+    },
+    getCategories: function getCategories() {
+      var _this3 = this;
+
+      // axios.get('http://localhost/hasanik/public/api/categories') //base_url
+      axios.get('https://app.hasanikenglish.com/api/categories') //base_url
+      .then(function (response) {
+        return _this3.categories = response.data;
+      });
     }
   },
   created: function created() {
     this.getBlogs();
+    this.getCategories();
     this.getResults();
   }
 });
@@ -40672,73 +40683,27 @@ var render = function() {
                   _c("div", { staticClass: "blog-widget categories" }, [
                     _vm._m(3),
                     _vm._v(" "),
-                    _c("ul", [
-                      _c(
-                        "li",
-                        [
-                          _c("router-link", { attrs: { to: "blog" } }, [
-                            _vm._v("Web Analysis"),
-                            _c("span", [_vm._v("(2)")])
-                          ])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        [
-                          _c("router-link", { attrs: { to: "blog" } }, [
-                            _vm._v("Digital Marketing"),
-                            _c("span", [_vm._v("(5)")])
-                          ])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        [
-                          _c("router-link", { attrs: { to: "blog" } }, [
-                            _vm._v("Creative Agencies"),
-                            _c("span", [_vm._v("(4)")])
-                          ])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        [
-                          _c("router-link", { attrs: { to: "blog" } }, [
-                            _vm._v("Branding Design"),
-                            _c("span", [_vm._v("(8)")])
-                          ])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        [
-                          _c("router-link", { attrs: { to: "blog" } }, [
-                            _vm._v("Graphic Design"),
-                            _c("span", [_vm._v("(9)")])
-                          ])
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        [
-                          _c("router-link", { attrs: { to: "blog" } }, [
-                            _vm._v("Web Re-Design"),
-                            _c("span", [_vm._v("(11)")])
-                          ])
-                        ],
-                        1
-                      )
-                    ])
+                    _c(
+                      "ul",
+                      _vm._l(_vm.categories, function(category) {
+                        return _c(
+                          "li",
+                          { key: category.id },
+                          [
+                            _c("router-link", { attrs: { to: "blog" } }, [
+                              _vm._v(_vm._s(category.name)),
+                              _c("span", [
+                                _vm._v(
+                                  "(" + _vm._s(category.posts.length) + ")"
+                                )
+                              ])
+                            ])
+                          ],
+                          1
+                        )
+                      }),
+                      0
+                    )
                   ])
                 ]),
                 _vm._v(" "),
