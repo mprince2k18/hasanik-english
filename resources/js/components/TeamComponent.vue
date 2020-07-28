@@ -55,26 +55,26 @@
              <div class="row">
                <div class="col-lg-3 col-sm-6">
                  <div class="count-area-content">
-                   <div class="count-digit first-digit">4860</div>
-                   <div class="count-title">Hours Worked</div>
+                   <div class="count-digit first-digit">8</div>
+                   <div class="count-title">Members</div>
                  </div>
                </div>
                <div class="col-lg-3 col-sm-6">
                  <div class="count-area-content">
                    <div class="count-digit second-digit">120</div>
-                   <div class="count-title">Projects completed</div>
+                   <div class="count-title">Students</div>
                  </div>
                </div>
                <div class="col-lg-3 col-sm-6">
                  <div class="count-area-content">
-                   <div class="count-digit third-digit">460</div>
-                   <div class="count-title">happy clients</div>
+                   <div class="count-digit third-digit">6</div>
+                   <div class="count-title">Courses</div>
                  </div>
                </div>
                <div class="col-lg-3 col-sm-6">
                  <div class="count-area-content">
                    <div class="count-digit fourth-digit">11</div>
-                   <div class="count-title">awards won</div>
+                   <div class="count-title">Blogs</div>
                  </div>
                </div>
              </div>

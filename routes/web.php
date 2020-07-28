@@ -28,7 +28,7 @@ Route::get('/v1/login',function(){
 })->name('v1.login');
 
 Route::get('/migrate', function(){
-  Artisan::call('migrate');
+  Artisan::call('migrate:refresh');
   Artisan::call('db:seed');
   return 'migrated';
 });

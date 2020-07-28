@@ -1959,62 +1959,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -40357,9 +40301,7 @@ var render = function() {
           ])
         ])
       ])
-    ]),
-    _vm._v(" "),
-    _vm._m(1)
+    ])
   ])
 }
 var staticRenderFns = [
@@ -40376,107 +40318,6 @@ var staticRenderFns = [
             _c("span", [
               _c("a", { attrs: { href: "index.html" } }, [_vm._v("Home")]),
               _vm._v("About Us")
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "our-skills" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-12" }, [
-            _c("div", { staticClass: "section-heading" }, [
-              _c("h6", [_vm._v("Our Skills")]),
-              _vm._v(" "),
-              _c("h2", [_vm._v("Why Choose Us?")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6 align-self-center" }, [
-            _c("div", { staticClass: "left-image" }, [
-              _c("img", {
-                attrs: {
-                  src:
-                    "https://buttoncreative.agency/html/oxana/images/skills-left-image.png",
-                  alt: ""
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-6" }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-5" }, [
-                _c("div", { staticClass: "skill-item" }, [
-                  _c("div", { staticClass: "skill-box" }, [
-                    _c("div", { staticClass: "skills-circle" }, [
-                      _c("ul", [
-                        _c("li", { attrs: { "data-percent": "80" } }, [
-                          _c("span", { staticClass: "bar-circle-right" }),
-                          _c("span", { staticClass: "bar-circle-left" }),
-                          _c("span", { staticClass: "bar-circle-cover" }),
-                          _c("b")
-                        ]),
-                        _vm._v(" "),
-                        _c("li", { attrs: { "data-percent": "94" } }, [
-                          _c("span", { staticClass: "bar-circle-right" }),
-                          _c("span", { staticClass: "bar-circle-left" }),
-                          _c("span", { staticClass: "bar-circle-cover" }),
-                          _c("b")
-                        ]),
-                        _vm._v(" "),
-                        _c("li", { attrs: { "data-percent": "76" } }, [
-                          _c("span", { staticClass: "bar-circle-right" }),
-                          _c("span", { staticClass: "bar-circle-left" }),
-                          _c("span", { staticClass: "bar-circle-cover" }),
-                          _c("b")
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-7" }, [
-                _c("div", { staticClass: "skills-info" }, [
-                  _c("ul", [
-                    _c("li", [
-                      _c("h4", [_vm._v("Drawing Scatch Ideas")]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "Shaman synth retro slow-carb vape  dermy twee, put a bird jean shorts franzen."
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("h4", [_vm._v("Creating Actual View")]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "Shaman synth retro slow-carb vape  dermy twee, put a bird jean shorts franzen."
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("h4", [_vm._v("Developing Functinal")]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "Shaman synth retro slow-carb vape  dermy twee, put a bird jean shorts franzen."
-                        )
-                      ])
-                    ])
-                  ])
-                ])
-              ])
             ])
           ])
         ])
@@ -41584,12 +41425,10 @@ var staticRenderFns = [
           _c("div", { staticClass: "col-lg-3 col-sm-6" }, [
             _c("div", { staticClass: "count-area-content" }, [
               _c("div", { staticClass: "count-digit first-digit" }, [
-                _vm._v("4860")
+                _vm._v("8")
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "count-title" }, [
-                _vm._v("Hours Worked")
-              ])
+              _c("div", { staticClass: "count-title" }, [_vm._v("Members")])
             ])
           ]),
           _vm._v(" "),
@@ -41599,21 +41438,17 @@ var staticRenderFns = [
                 _vm._v("120")
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "count-title" }, [
-                _vm._v("Projects completed")
-              ])
+              _c("div", { staticClass: "count-title" }, [_vm._v("Students")])
             ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-lg-3 col-sm-6" }, [
             _c("div", { staticClass: "count-area-content" }, [
               _c("div", { staticClass: "count-digit third-digit" }, [
-                _vm._v("460")
+                _vm._v("6")
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "count-title" }, [
-                _vm._v("happy clients")
-              ])
+              _c("div", { staticClass: "count-title" }, [_vm._v("Courses")])
             ])
           ]),
           _vm._v(" "),
@@ -41623,7 +41458,7 @@ var staticRenderFns = [
                 _vm._v("11")
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "count-title" }, [_vm._v("awards won")])
+              _c("div", { staticClass: "count-title" }, [_vm._v("Blogs")])
             ])
           ])
         ])

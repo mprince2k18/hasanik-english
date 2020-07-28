@@ -38,7 +38,7 @@
     section.contact-info .info-item .icon, 
     .section-heading h6, 
     .blog-sidebar .about-me ul.social-icons li a:hover {
-      color: {{getSystemSetting('font_color')->value}} !important;
+      color: {{getSystemSetting('f_color')->value}} !important;
     }
     section.footer-content .main-footer ul.social-icons li a:hover, 
     .header-widgets .right-menu .menu-search a:hover, 
