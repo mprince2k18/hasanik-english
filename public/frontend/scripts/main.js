@@ -540,3 +540,31 @@
     });
   }
 })(jQuery);
+
+
+function PostSearch(element) {
+    var datastr = "post_title=" + element.value;
+    var url = $('#searching').attr('data-url');
+
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+
+    
+    if (element.value != '') {
+        $.ajax({
+            type: "get",
+            url: url,
+            data: datastr,
+            success: function (msg) {
+                $("#show_post").show();
+                $('#show_post').html(msg);
+                console.log(msg);
+            }
+        });
+    } else {
+        $('#show_post').hide();
+    }
+}

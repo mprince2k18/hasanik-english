@@ -123,7 +123,8 @@
     <div id="search">
       <button type="button" class="close">×</button>
         <form>
-            <input type="search" value="" placeholder="Type to search..." required="">
+            <input type="search" value="" data-url="{{ route('searching') }}" id="searching" placeholder="Type to search..." required="" onkeyup="PostSearch(this)">
+            <div style="background: #fff; display: none; width: 80%; max-height: 400px; overflow-y: scroll; margin: 0 auto; border-radius: 10px; margin-top: 28%; padding: 1rem 0;" id="show_post"></div>
             <button type="submit" class="primary-button"><i class="fa fa-search"></i></button>
         </form>
     </div>

@@ -36,3 +36,9 @@ Route::get('/migrate', function(){
 
 Route::get('/enroll/course','EnrollController@index')->name('enroll.index');
 Route::post('/enroll/course/store','EnrollController@store')->name('enroll.store');
+
+/**
+ * SEARCHING
+ */
+Route::get('/searching','SearchController@index')->name('searching');
+
