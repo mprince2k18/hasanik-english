@@ -87,7 +87,7 @@
                           <ul>
 
                             <li v-for="category in categories" :key="category.id">
-                              <router-link to="blog">{{ category.name }}<span>({{ category.posts.length }})</span></router-link>
+                              <router-link to="blog">{{ category.name }}<span>({{ category.posts_count }})</span></router-link>
                             </li>
                             
                           </ul>

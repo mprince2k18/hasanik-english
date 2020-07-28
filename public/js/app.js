@@ -40693,9 +40693,7 @@ var render = function() {
                             _c("router-link", { attrs: { to: "blog" } }, [
                               _vm._v(_vm._s(category.name)),
                               _c("span", [
-                                _vm._v(
-                                  "(" + _vm._s(category.posts.length) + ")"
-                                )
+                                _vm._v("(" + _vm._s(category.posts_count) + ")")
                               ])
                             ])
                           ],
