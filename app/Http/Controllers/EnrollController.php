@@ -35,6 +35,7 @@ class EnrollController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    
     public function store(Request $request)
     {
         Enroll::create($request->except('_token','website','terms','process'));
@@ -43,7 +44,16 @@ class EnrollController extends Controller
         $email = $request->email;
 
         Mail::to($email)->send(new Enrollmail($name));
-        return back();
+        return redirect()->route('enroll.success');
+    }
+
+    /**
+     * SUCCESS
+     */
+
+    public function success()
+    {
+        return view('enroll.success');
     }
 
     /**
