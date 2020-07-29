@@ -39,10 +39,10 @@ class EnrollController extends Controller
     {
         Enroll::create($request->except('_token','website','terms','process'));
 
-        // $name = $request->name;
-        // $email = $request->email;
+        $name = $request->name;
+        $email = $request->email;
 
-        // Mail::to($request->email)->send(new Enrollmail($name));
+        Mail::to($email)->send(new Enrollmail($name));
         return back();
     }
 
