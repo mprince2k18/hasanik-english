@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/styles/main.css')}}" />
     <link rel="stylesheet" href="{{ asset('frontend/styles/custom.css')}}" />
 
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
   </head>
@@ -236,6 +237,8 @@
     <script src="{{ asset('frontend/scripts/vendors/slide-nav.min.js') }}"></script>
     <script src="{{ asset('frontend/scripts/vendors/accordions.js') }}"></script>
     <script src="{{ asset('frontend/scripts/main.js') }}"></script>
+
+    @include('sweetalert::alert')
 
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1ca813dc314e47"></script>

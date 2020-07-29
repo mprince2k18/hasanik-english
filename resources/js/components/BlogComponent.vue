@@ -71,15 +71,7 @@
                           </ul>
                         </div>
                       </div>
-                      <div class="col-lg-12">
-                        <div class="blog-widget search">
-                          <form>
-                              <input type="search" value="" placeholder="Type to search..." required="">
-                              
-                              <button type="submit" class="primary-button"><i class="fa fa-search"></i></button>
-                          </form>
-                        </div>
-                      </div>
+    
                       <div class="col-lg-12">
                         <div class="blog-widget categories">
                           <div class="blog-heading">

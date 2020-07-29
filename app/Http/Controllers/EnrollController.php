@@ -10,6 +10,7 @@ use App\Models\Payment;
 use App\Models\FormQuestion;
 use App\Models\Course;
 use Mail;
+use Alert;
 use App\Mail\Enrollmail;
 
 class EnrollController extends Controller
@@ -44,6 +45,7 @@ class EnrollController extends Controller
         $email = $request->email;
 
         Mail::to($email)->send(new Enrollmail($name));
+        Alert::success('success','DONE');
         return redirect()->route('enroll.success');
     }
 

@@ -14,6 +14,7 @@
         <link type="text/css" rel="stylesheet" href="{{ asset('homepage/css/plugins.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('homepage/css/style.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('homepage/css/yourstyle.css') }}">
+
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="{{ filePath(getSystemSetting('favicon_icon')->value) }}">
     </head>
@@ -173,5 +174,8 @@
         <script type="text/javascript" src="{{ asset('homepage/js/plugins.js') }}"></script>
         <script type="text/javascript" src="{{ asset('homepage/js/core.js') }}"></script>
         <script type="text/javascript" src="{{ asset('homepage/js/scripts.js') }}"></script>
+
+        @include('sweetalert::alert')
+
     </body>
 </html>

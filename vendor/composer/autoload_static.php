@@ -34,7 +34,7 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
-        '38ea50801e981fa2297115e1c44a148b' => __DIR__ . '/..' . '/mckenziearts/laravel-notify/src/helpers.php',
+        '6b34c85f7b1ad6faa15aa12109e030f2' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/functions.php',
         '2678778370ecbdd62f0e4fc70eb072ea' => __DIR__ . '/../..' . '/app/Helper/Helper.php',
     );
 
@@ -92,6 +92,7 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         ),
         'R' => 
         array (
+            'RealRashid\\SweetAlert\\' => 22,
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
         ),
@@ -119,7 +120,6 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         'M' => 
         array (
             'Monolog\\' => 8,
-            'Mckenziearts\\Notify\\' => 20,
         ),
         'L' => 
         array (
@@ -311,6 +311,10 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'RealRashid\\SweetAlert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/realrashid/sweet-alert/src',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -370,10 +374,6 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
-        ),
-        'Mckenziearts\\Notify\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/mckenziearts/laravel-notify/src',
         ),
         'League\\Flysystem\\' => 
         array (
@@ -532,6 +532,7 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Mail\\Enrollmail' => __DIR__ . '/../..' . '/app/Mail/Enrollmail.php',
         'App\\Models\\Blog' => __DIR__ . '/../..' . '/app/Models/Blog.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\Course' => __DIR__ . '/../..' . '/app/Models/Course.php',
@@ -2698,11 +2699,6 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         'League\\Flysystem\\Util\\ContentListingFormatter' => __DIR__ . '/..' . '/league/flysystem/src/Util/ContentListingFormatter.php',
         'League\\Flysystem\\Util\\MimeType' => __DIR__ . '/..' . '/league/flysystem/src/Util/MimeType.php',
         'League\\Flysystem\\Util\\StreamHasher' => __DIR__ . '/..' . '/league/flysystem/src/Util/StreamHasher.php',
-        'Mckenziearts\\Notify\\Exceptions\\MissingPresetNotificationException' => __DIR__ . '/..' . '/mckenziearts/laravel-notify/src/Exceptions/MissingPresetNotificationException.php',
-        'Mckenziearts\\Notify\\Facades\\LaravelNotify' => __DIR__ . '/..' . '/mckenziearts/laravel-notify/src/Facades/LaravelNotify.php',
-        'Mckenziearts\\Notify\\LaravelNotify' => __DIR__ . '/..' . '/mckenziearts/laravel-notify/src/LaravelNotify.php',
-        'Mckenziearts\\Notify\\LaravelNotifyServiceProvider' => __DIR__ . '/..' . '/mckenziearts/laravel-notify/src/LaravelNotifyServiceProvider.php',
-        'Mckenziearts\\Notify\\Storage\\Session' => __DIR__ . '/..' . '/mckenziearts/laravel-notify/src/Storage/Session.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegration.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegrationAssertPostConditions' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegrationAssertPostConditions.php',
@@ -4019,6 +4015,13 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
         'Ramsey\\Uuid\\Validator\\GenericValidator' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/GenericValidator.php',
         'Ramsey\\Uuid\\Validator\\ValidatorInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/ValidatorInterface.php',
+        'RealRashid\\SweetAlert\\Console\\PublishCommand' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/Console/PublishCommand.php',
+        'RealRashid\\SweetAlert\\Facades\\Alert' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/Facades/Alert.php',
+        'RealRashid\\SweetAlert\\Storage\\AlertSessionStore' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/Storage/AlertSessionStore.php',
+        'RealRashid\\SweetAlert\\Storage\\SessionStore' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/Storage/SessionStore.php',
+        'RealRashid\\SweetAlert\\SweetAlertServiceProvider' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/SweetAlertServiceProvider.php',
+        'RealRashid\\SweetAlert\\ToSweetAlert' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/ToSweetAlert.php',
+        'RealRashid\\SweetAlert\\Toaster' => __DIR__ . '/..' . '/realrashid/sweet-alert/src/Toaster.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
         'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Driver/Driver.php',

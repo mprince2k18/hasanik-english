@@ -27,7 +27,8 @@
 	<link href="{{asset('enroll/css/vendors.css')}}" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
-    <link href="{{asset('enroll/css/custom.css')}}" rel="stylesheet">
+	<link href="{{asset('enroll/css/custom.css')}}" rel="stylesheet">
+	
 
 	<!-- MODERNIZR MENU -->
 	<script src="{{asset('enroll/js/modernizr.js')}}"></script>

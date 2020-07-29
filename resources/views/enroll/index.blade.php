@@ -27,7 +27,8 @@
 	<link href="{{asset('enroll/css/vendors.css')}}" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
-    <link href="{{asset('enroll/css/custom.css')}}" rel="stylesheet">
+	<link href="{{asset('enroll/css/custom.css')}}" rel="stylesheet">
+	
 
 	<!-- MODERNIZR MENU -->
 	<script src="{{asset('enroll/js/modernizr.js')}}"></script>
@@ -280,6 +281,7 @@
 	<script src="{{asset('enroll/js/velocity.min.js')}}"></script>
 	<script src="{{asset('enroll/js/functions.js')}}"></script>
 
+	@include('sweetalert::alert')
 	<!-- Wizard script -->
 	<script src="{{asset('enroll/js/survey_func.js')}}"></script>
   <script>
