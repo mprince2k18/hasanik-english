@@ -31,6 +31,6 @@ class Enrollmail extends Mailable
     public function build()
     {
         $name = '';
-        return $this->view('mail.enroll');
+        return $this->view('mail.enroll',compact('name'));
     }
 }
