@@ -1979,8 +1979,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -40297,8 +40295,6 @@ var render = function() {
               }),
               _vm._v(" "),
               _c("div", [
-                _c("h4", [_vm._v("About Us")]),
-                _vm._v(" "),
                 _c("p", { domProps: { innerHTML: _vm._s(_vm.abouts.desc) } })
               ])
             ]),
@@ -40312,9 +40308,7 @@ var render = function() {
                 attrs: { id: "tab2-2", name: "tabs-two", type: "radio" }
               }),
               _vm._v(" "),
-              _c("div", [
-                _c("h4", [_vm._v("Our Mission")]),
-                _vm._v(" "),
+              _c("div", { staticClass: "item-content" }, [
                 _c("p", { domProps: { innerHTML: _vm._s(_vm.missions.desc) } })
               ])
             ])

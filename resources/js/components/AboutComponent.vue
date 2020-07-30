@@ -49,15 +49,13 @@
                 <label for="tab2-1">About Us</label>
                 <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
                 <div>
-                  <h4>About Us</h4>
                   <p  v-html="abouts.desc"></p>
                 </div>
               </div>
               <div class="tab-2">
-                <label for="tab2-2">Our Mission</label>
+                      <label for="tab2-2">Our Mission</label>
                 <input id="tab2-2" name="tabs-two" type="radio">
-                <div>
-                  <h4>Our Mission</h4>
+                <div class="item-content">
                   <p v-html="missions.desc"></p>
                 </div>
               </div>
