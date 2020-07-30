@@ -60,21 +60,13 @@
                                      $bottoms = App\Slider::where('is_active', 1)->where('type', 'bottom')->get();
                                  @endphp
                          <div class="hero-grid big-column">
-                             <div class="hero-slider synkslider owl-carousel" data-attime="3220" data-rtlt="false">
                                  <div class="item">
                                      <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png)"></div>
                                  </div>
-                                 <div class="item">
-                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png)"></div>
-                                 </div>
-                                 <div class="item">
-                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png)"></div>
-                                 </div>
-                             </div>
                          </div>
                          <!-- 1 end -->
                          <!-- 2 -->
-                         <div class="hero-grid small-column">
+                         <div class="hero-grid small-column" style="height: 100%;">
                              <div class="hero-slider owl-carousel" data-attime="3220" data-rtlt="false">
 
                                <div class="item">
@@ -83,14 +75,14 @@
                                  <div class="item">
                                      <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766864/Hasanik_English_1.png)"></div>
                                  </div>
-                                 <div class="item">
+                                 {{-- <div class="item">
                                      <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766927/Hasanik_English_2.png)"></div>
-                                 </div>
+                                 </div> --}}
                              </div>
                          </div>
                          <!-- 2end -->
                          <!-- 3 -->
-                         <div class="hero-grid small-column">
+                         {{-- <div class="hero-grid small-column">
                              <div class="hero-slider owl-carousel"  data-attime="3220" data-rtlt="true">
                                   <div class="item">
                                      <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766927/Hasanik_English_2.png)"></div>
@@ -102,15 +94,16 @@
                                      <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766864/Hasanik_English_1.png)"></div>
                                  </div>
                              </div>
-                         </div>
+                         </div> --}}
                          <!-- 3end -->
                          {{-- <div class="overlay"></div> --}}
                          <!-- enter-wrap -->
-                         {{-- <div class="enter-wrap-holder column-wrap">
+                         <div class="enter-wrap-holder column-wrap">
                              <div class="enter-wrap">
-                                 <h3> Hasanik <br> English <br></h3>
+                                 <a href="" class="btn btn-primary" style="margin-top: 100%;
+    margin-right: 42%;">Enroll Now</a>
                              </div>
-                         </div> --}}
+                         </div>
                          <!-- enter-wrap end  -->
                      </div>
                      <!-- full-height-wrap end  -->

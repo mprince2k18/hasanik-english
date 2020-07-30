@@ -1959,6 +1959,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2007,14 +2026,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -40264,38 +40275,41 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("section", { staticClass: "steps" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-12" }, [
-            _c("div", { staticClass: "step-item" }, [
-              _c("div", { staticClass: "item-content" }, [
-                _c("p", {
-                  staticClass: "desc",
-                  domProps: { innerHTML: _vm._s(_vm.abouts.desc) }
-                })
-              ])
-            ])
-          ])
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c("section", { staticClass: "steps" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-12" }, [
-            _c("div", { staticClass: "step-item" }, [
-              _c("h3", { staticClass: "center" }, [_vm._v("Our Mission")]),
+    _c("div", { staticClass: "row" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-8" }, [
+        _c("div", { staticClass: "tabs" }, [
+          _c("div", { staticClass: "tab-2" }, [
+            _c("label", { attrs: { for: "tab2-1" } }, [_vm._v("About Us")]),
+            _vm._v(" "),
+            _c("input", {
+              attrs: {
+                id: "tab2-1",
+                name: "tabs-two",
+                type: "radio",
+                checked: "checked"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", [
+              _c("h4", [_vm._v("About Us")]),
               _vm._v(" "),
-              _c("div", { staticClass: "item-content" }, [
-                _c("p", {
-                  staticClass: "desc",
-                  domProps: { innerHTML: _vm._s(_vm.missions.desc) }
-                })
-              ])
+              _c("p", { domProps: { innerHTML: _vm._s(_vm.abouts.desc) } })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "tab-2" }, [
+            _c("label", { attrs: { for: "tab2-2" } }, [_vm._v("Our Mission")]),
+            _vm._v(" "),
+            _c("input", {
+              attrs: { id: "tab2-2", name: "tabs-two", type: "radio" }
+            }),
+            _vm._v(" "),
+            _c("div", [
+              _c("h4", [_vm._v("Our Mission")]),
+              _vm._v(" "),
+              _c("p", { domProps: { innerHTML: _vm._s(_vm.missions.desc) } })
             ])
           ])
         ])
@@ -40308,19 +40322,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "page-heading" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-12" }, [
-            _c("h1", [_vm._v("About Us")]),
-            _vm._v(" "),
-            _c("span", [
-              _c("a", { attrs: { href: "index.html" } }, [_vm._v("Home")]),
-              _vm._v("About Us")
-            ])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "col-md-4" }, [
+      _c("img", {
+        attrs: {
+          src:
+            "https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png",
+          alt: ""
+        }
+      })
     ])
   }
 ]
@@ -40453,11 +40462,9 @@ var render = function() {
               _c("div", { staticClass: "row" }, [
                 _vm._m(1),
                 _vm._v(" "),
-                _vm._m(2),
-                _vm._v(" "),
                 _c("div", { staticClass: "col-lg-12" }, [
                   _c("div", { staticClass: "blog-widget categories" }, [
-                    _vm._m(3),
+                    _vm._m(2),
                     _vm._v(" "),
                     _c(
                       "ul",
@@ -40483,7 +40490,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "col-lg-12" }, [
                   _c("div", { staticClass: "blog-widget recent-posts" }, [
-                    _vm._m(4),
+                    _vm._m(3),
                     _vm._v(" "),
                     _c(
                       "ul",
@@ -40607,31 +40614,6 @@ var staticRenderFns = [
               _c("i", { staticClass: "fa fa-dribbble" })
             ])
           ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-12" }, [
-      _c("div", { staticClass: "blog-widget search" }, [
-        _c("form", [
-          _c("input", {
-            attrs: {
-              type: "search",
-              value: "",
-              placeholder: "Type to search...",
-              required: ""
-            }
-          }),
-          _vm._v(" "),
-          _c(
-            "button",
-            { staticClass: "primary-button", attrs: { type: "submit" } },
-            [_c("i", { staticClass: "fa fa-search" })]
-          )
         ])
       ])
     ])

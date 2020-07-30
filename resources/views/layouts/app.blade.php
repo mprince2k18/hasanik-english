@@ -139,86 +139,6 @@
       @yield('content')
       <router-view></router-view>
     </div>
-
-
-    <section class="footer-content">
-      <div class="cta-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8">
-              <h2>Interested to get<br>our full <em>featured</em> services?</h2>
-            </div>
-            <div class="col-lg-4">
-              <div class="main-white-button">
-                <a href="#">Get Started Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="footer-heading">
-                <h4>{{ getSystemSetting('type_name')->value }}</h4>
-              </div>
-              <p class="about-oxana">Shaman synth retro slow-carb. Vape taxidermy twee, put a bird on it fran xezen celiac unicorn gerstache coloring book.</p>
-            </div>
-            <div class="col-lg-3">
-              <div class="footer-heading">
-                <h4>Useful Links</h4>
-              </div>
-              <ul class="useful-links">
-                <li><a href="#">About Oxana</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>
-              <ul class="useful-links">
-                <li><a href="#">Recent Posts</a></li>
-                <li><a href="#">Case Studies</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">FAQ’s</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3">
-              <div class="footer-heading">
-                <h4>Get In Touch!</h4>
-              </div>
-              <ul class="more-info">
-                <li>Email: <a href="#">{{ getSystemSetting('type_mail')->value }}</a></li>
-                <li>Phone: <a href="#">{{ getSystemSetting('type_number')->value }}</a></li>
-                <li>Address: <a href="#">{{ getSystemSetting('type_address')->value }}</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3">
-              <div class="footer-heading">
-                <h4>Find Us</h4>
-              </div>
-              <p>Shaman synth retro slow-carb. Vape taxidermy twee, put a bird.</p>
-              <ul class="social-icons">
-                <li><a href="{{ getSystemSetting('type_fb')->value }}"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="{{ getSystemSetting('type_tw')->value }}"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="{{ getSystemSetting('type_google')->value }}"><i class="fa fa-google"></i></a></li>
-                <li><a href="{{ getSystemSetting('type_linked')->value }}"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="{{ getSystemSetting('type_youtube')->value }}"><i class="fa fa-youtube"></i></a></li>
-              </ul>
-            </div>
-            <div class="col-lg-12">
-              <div class="sub-footer">
-                <p>Copyright © {{ date('Y') }} <a href="#">{{ getSystemSetting('type_name')->value }}</a>. All rights reserved.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Go To Top -->
-    <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
-
 </div>
 
     <!-- Scripts -->
@@ -237,11 +157,7 @@
     <script src="{{ asset('frontend/scripts/vendors/slide-nav.min.js') }}"></script>
     <script src="{{ asset('frontend/scripts/vendors/accordions.js') }}"></script>
     <script src="{{ asset('frontend/scripts/main.js') }}"></script>
-
-    @include('sweetalert::alert')
-
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1ca813dc314e47"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1ca813dc314e47"></script>
 
   </body>
 

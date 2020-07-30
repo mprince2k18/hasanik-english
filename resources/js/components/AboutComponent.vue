@@ -3,19 +3,9 @@
 
 
   <!-- Page Heading -->
-        <div class="page-heading">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <h1>About Us</h1>
-                <span><a href="index.html">Home</a>About Us</span>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <!-- Steps -->
-        <section class="steps">
+        <!-- <section class="steps">
           <div class="container">
             <div class="row">
               <div class="col-lg-12">
@@ -27,10 +17,10 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
 
         <!-- Steps -->
-        <section class="steps">
+        <!-- <section class="steps">
           <div class="container">
             <div class="row">
               <div class="col-lg-12">
@@ -44,7 +34,36 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
+        <!-- -------------------------------------- -->
+        <div class="row">
+          <div class="col-md-4">
+            <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png" alt="">
+          </div>
+          <div class="col-md-8">
+            <!-- tabs -->
+            <div class="tabs">
+              <div class="tab-2">
+                <label for="tab2-1">About Us</label>
+                <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+                <div>
+                  <h4>About Us</h4>
+                  <p  v-html="abouts.desc"></p>
+                </div>
+              </div>
+              <div class="tab-2">
+                <label for="tab2-2">Our Mission</label>
+                <input id="tab2-2" name="tabs-two" type="radio">
+                <div>
+                  <h4>Our Mission</h4>
+                  <p v-html="missions.desc"></p>
+                </div>
+              </div>
+            </div>
+            <!-- tabs::ENd -->
+          </div>
+        </div>
+        <!-- -------------------------------------- -->
       </div>
 
 </template>

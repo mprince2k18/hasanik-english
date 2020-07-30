@@ -568,3 +568,6 @@ function PostSearch(element) {
         $('#show_post').hide();
     }
 }
+
+// about us
+

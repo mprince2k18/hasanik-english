@@ -136,7 +136,8 @@ MENU STYLES
   --uiMenuCircleSize: var(--menuCircleSize, 6.25rem);
   --uiMenuCircleOffset: var(--menuCircleOffset, 1rem);
   --uiMenuCircleHeight: calc(var(--uiMenuCircleSize) / 2);  
-  --uiMenuCircleBackgroundColor: var(--menuCircleBackgroundColor, currentColor);
+  --uiMenuCircleBackgroundColor:rgba(52, 152, 219, 0.8);
+  /* --uiMenuCircleBackgroundColor: background-color:rgba(52, 152, 219, 0.8); */
 
   --uiMenuHamburgerWidth: var(--menuHamburgerWidth, 1.75rem);
   --uiMenuHamburgerHeight: var(--menuHamburgerHeight, 1.25rem);
@@ -246,6 +247,7 @@ MENU STATES
 
 .menu_activated{
   height: 100%;
+  /* background-color:rgba(52, 152, 219, 0.8); */
 }
 
 .menu_activated .menu__nav{
@@ -342,3 +344,8 @@ body{
   font-weight: 700;
   text-transform: uppercase;
 }
+
+/** 
+* MY CSS
+*/
+
