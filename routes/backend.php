@@ -21,7 +21,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
    * Enrollments
    */
   Route::get('/enrollments', 'HomeController@enroll_index')->name('enrollment.index');
-  Route::get('/quick/view/{id}', 'EnrollController@show')->name('quick.view');
+  Route::get('/quick/view/{id}', 'EnrollController@show')->name('enrollment.view');
   Route::get('/form/data', 'EnrollController@form_data')->name('form.data');
   Route::get('/form/questions', 'EnrollController@form_question')->name('form.question');
   Route::post('/form/question/store', 'EnrollController@form_question_store')->name('form.question.store');

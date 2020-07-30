@@ -48,6 +48,8 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapBackendRoutes();
 
+        $this->mapSoyuzRoutes();
+
         //
     }
 
@@ -92,5 +94,13 @@ class RouteServiceProvider extends ServiceProvider
             ->middleware('api')
             ->namespace($this->namespace)
             ->group(base_path('routes/api.php'));
+    }
+
+    /*this is for only admin panel route*/
+    protected function mapSoyuzRoutes()
+    {
+        Route::middleware('web')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/soyuz.php'));
     }
 }

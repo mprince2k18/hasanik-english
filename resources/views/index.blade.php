@@ -154,6 +154,9 @@
       <li class="menu__group">
         <a href="{{ url('/page/courses') }}" class="menu__link r-link f-22">Courses</a>
       </li>
+      <li class="menu__group">
+        <a href="{{ url('/enroll/course') }}" class="menu__link r-link f-22">Enroll</a>
+      </li>
     </ul>
   </nav>
   <button class="menu__toggle r-button" type="button">

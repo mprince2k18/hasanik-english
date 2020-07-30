@@ -17,7 +17,7 @@ class BlogController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('backend.blog.index',compact('categories'));
+        return view('dashboard.backEnd.blogs.create',compact('categories'));
     }
 
     /**

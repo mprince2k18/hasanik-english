@@ -60,16 +60,16 @@ function flagRenameAuto($name)
 }
 
 
-function defaultCurrency(){
-    $sc = session('currency');
-    if($sc != null){
-        $id = $sc;
-    }else{
-        $id = (int)getSystemSetting('default_currencies')->value;
-    }
-    $currency = \App\Model\Currency::find($id);
-    return $currency->code;
-}
+// function defaultCurrency(){
+//     $sc = session('currency');
+//     if($sc != null){
+//         $id = $sc;
+//     }else{
+//         $id = (int)getSystemSetting('default_currencies')->value;
+//     }
+//     $currency = \App\Model\Currency::find($id);
+//     return $currency->code;
+// }
 
 //format the Price
 function formatPrice($price)
@@ -163,48 +163,8 @@ function fileUpload($file, $folder)
     return $file->store('uploads/' . $folder);
 }
 
-//get instructor
-function instructorDetails($id)
-{
-    return \App\Model\Instructor::where('user_id', $id)->first();
-}
-
-function studentDetails($id)
-{
-    return \App\Model\Student::where('user_id', $id)->first();
-}
-
 /*page*/
 function page($type){
 
   return  App\Models\Page::where('type' ,$type)->first();
-}
-
-/*duration*/
-function duration($value){
-    $init = $value;
-    $hours = floor($init / 3600);
-    $minutes = floor(($init / 60) % 60);
-    $seconds = $init % 60;
-    $single_sec =  mb_strlen((string) $seconds);
-    $duration = $hours . ':' . $minutes . ':' . ($single_sec===1 ? '0'.$seconds : $seconds);
-    return date('H:i:s',strtotime($duration));
-}
-
-
-/*best selling tags*/
-function bestSellingTags($id){
-    $start = \Carbon\Carbon::parse(date('y-m-d'))
-        ->startOfMonth()
-        ->toDateTimeString();
-    $end = \Carbon\Carbon::parse(date('y-m-d'))
-        ->endOfMonth()
-        ->toDateTimeString();
-
-     $enroll = \App\Model\Enrollment::where('course_id',$id)->whereBetween('created_at', [$start, $end])->get();
-
-     if($enroll->count() > 5){
-         return true;
-     }
-     return false;
 }

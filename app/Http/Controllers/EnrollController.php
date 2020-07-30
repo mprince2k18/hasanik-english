@@ -67,7 +67,7 @@ class EnrollController extends Controller
     public function show($id)
     {
         $student = Enroll::findOrFail($id);
-        return view('backend.enrollments.show',compact('student'));
+        return view('dashboard.backEnd.enrollment.show',compact('student'));
     }
 
     // form_data
@@ -104,7 +104,7 @@ class EnrollController extends Controller
     public function form_question()
     {
       $questions = FormQuestion::first();
-      return view('backend.form_question.index',compact('questions'));
+      return view('dashboard.backEnd.enrollment.enroll_form',compact('questions'));
     }
 
     // form_question_store

@@ -20,17 +20,17 @@ class HomeController extends Controller
     // index
     public function index()
     {
-        $enroll_count = Enroll::count();
-        $male = Enroll::where('gender','Male')->count();
-        $female = Enroll::where('gender','Female')->count();
-        return view('backend.dashboard.index',compact('enroll_count','male','female'));
+        // $enroll_count = Enroll::count();
+        // $male = Enroll::where('gender','Male')->count();
+        // $female = Enroll::where('gender','Female')->count();
+        return view('dashboard.backEnd.home.index');
     }
 
     // enroll_index
     public function enroll_index()
     {
         $enrolls = Enroll::latest()->get();
-        return view('backend.enrollments.index',compact('enrolls'));
+        return view('dashboard.backEnd.enrollment.index',compact('enrolls'));
     }
     // END
 }

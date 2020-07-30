@@ -12,7 +12,7 @@ class TeamController extends Controller
      */
     public function index()
     {
-        return view('backend.pages.team');
+        return view('dashboard.backEnd.pages.team');
     }
     /**
      * STORE

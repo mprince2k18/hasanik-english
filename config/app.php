@@ -177,6 +177,10 @@ return [
 
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
 
+        Junges\ACL\ACLServiceProvider::class,
+        Junges\ACL\ACLAuthServiceProvider::class,
+        Junges\ACL\ACLEventsServiceProvider::class,
+
     ],
 
     /*

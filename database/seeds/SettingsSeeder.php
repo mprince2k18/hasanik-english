@@ -1,0 +1,65 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class SettingsSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        DB::table('settings')->insert([
+            array(
+                'name'  =>'default_currencies',
+                'value' =>'1'
+            ),
+            array(
+                'name'  =>'type_logo',
+                'value' =>''
+            ),
+            array(
+                'name'  =>'type_name',
+                'value' =>''
+            ),
+            array(
+                'name'  =>'type_footer',
+                'value' =>''
+            ),
+            array(
+                'name'  =>'type_mail',
+                'value' =>''
+            ),
+            array(
+                'name'  =>'type_address',
+                'value' =>''
+            ),
+            array(
+                'name'  =>'type_fb',
+                'value' =>''
+            ),
+            array(
+                'name'  =>'type_tw',
+                'value' =>''
+            ),
+            array(
+                'name'  =>'type_number',
+                'value' =>''
+            ),
+            array(
+                'name'  =>'type_google',
+                'value' =>''
+            ),
+            array(
+                'name'  =>'footer_logo',
+                'value' =>''
+            ),
+            array(
+                'name'  =>'favicon_icon',
+                'value' =>''
+            ),
+        ]);
+    }
+}
