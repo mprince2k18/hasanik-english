@@ -141,4 +141,5 @@
 <script src="{{ asset('auth/js/popper.min.js') }}"></script>
 <script src="{{ asset('auth/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('auth/js/main.js') }}"></script>
-</bod
+</body>
+</html>
