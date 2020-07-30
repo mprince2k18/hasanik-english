@@ -28,7 +28,7 @@ trait CategoriesTraits
     //create category model
     public function categoryCreate()
     {
-        return view('dashboard.backEnd.common.category.create', compact('categories'));
+        return view('dashboard.backEnd.common.category.create');
     }
 
 
