@@ -74,7 +74,7 @@ class OrgSeeder extends Seeder
               'value' =>'blue'
           ),
           array(
-              'type'  =>'f_color',
+              'type'  =>'font_color',
               'value' =>'black'
           ),
       ]);
