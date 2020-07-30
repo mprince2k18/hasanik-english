@@ -14,7 +14,7 @@
         <div class="website-logo">
             <a href="index.html">
                 <div class="logo">
-                    <img class="logo-size" src="{{ filePath(getSystemSetting('type_logo')->value) }}" alt="">
+                    <img class="logo-size" src="{{ filePath(getSystemSetting('type_logo')->value) ?? null }}" alt="">
                 </div>
             </a>
         </div>
