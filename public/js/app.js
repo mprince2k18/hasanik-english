@@ -1978,6 +1978,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -40275,41 +40278,45 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "row" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-8" }, [
-        _c("div", { staticClass: "tabs" }, [
-          _c("div", { staticClass: "tab-2" }, [
-            _c("label", { attrs: { for: "tab2-1" } }, [_vm._v("About Us")]),
-            _vm._v(" "),
-            _c("input", {
-              attrs: {
-                id: "tab2-1",
-                name: "tabs-two",
-                type: "radio",
-                checked: "checked"
-              }
-            }),
-            _vm._v(" "),
-            _c("div", [
-              _c("h4", [_vm._v("About Us")]),
+    _c("div", { staticClass: "container-fluid about-us-cont" }, [
+      _c("div", { staticClass: "row" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "tabs" }, [
+            _c("div", { staticClass: "tab-2" }, [
+              _c("label", { attrs: { for: "tab2-1" } }, [_vm._v("About Us")]),
               _vm._v(" "),
-              _c("p", { domProps: { innerHTML: _vm._s(_vm.abouts.desc) } })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "tab-2" }, [
-            _c("label", { attrs: { for: "tab2-2" } }, [_vm._v("Our Mission")]),
-            _vm._v(" "),
-            _c("input", {
-              attrs: { id: "tab2-2", name: "tabs-two", type: "radio" }
-            }),
-            _vm._v(" "),
-            _c("div", [
-              _c("h4", [_vm._v("Our Mission")]),
+              _c("input", {
+                attrs: {
+                  id: "tab2-1",
+                  name: "tabs-two",
+                  type: "radio",
+                  checked: "checked"
+                }
+              }),
               _vm._v(" "),
-              _c("p", { domProps: { innerHTML: _vm._s(_vm.missions.desc) } })
+              _c("div", [
+                _c("h4", [_vm._v("About Us")]),
+                _vm._v(" "),
+                _c("p", { domProps: { innerHTML: _vm._s(_vm.abouts.desc) } })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "tab-2" }, [
+              _c("label", { attrs: { for: "tab2-2" } }, [
+                _vm._v("Our Mission")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                attrs: { id: "tab2-2", name: "tabs-two", type: "radio" }
+              }),
+              _vm._v(" "),
+              _c("div", [
+                _c("h4", [_vm._v("Our Mission")]),
+                _vm._v(" "),
+                _c("p", { domProps: { innerHTML: _vm._s(_vm.missions.desc) } })
+              ])
             ])
           ])
         ])
@@ -40324,6 +40331,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-4" }, [
       _c("img", {
+        staticClass: "img-fluid about-img",
         attrs: {
           src:
             "https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png",

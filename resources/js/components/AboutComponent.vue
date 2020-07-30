@@ -36,9 +36,11 @@
           </div>
         </section> -->
         <!-- -------------------------------------- -->
+        <div class="container-fluid about-us-cont">
+
         <div class="row">
           <div class="col-md-4">
-            <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png" alt="">
+            <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png" class="img-fluid about-img" alt="">
           </div>
           <div class="col-md-8">
             <!-- tabs -->
@@ -62,6 +64,7 @@
             </div>
             <!-- tabs::ENd -->
           </div>
+        </div>
         </div>
         <!-- -------------------------------------- -->
       </div>
