@@ -16,6 +16,6 @@ class DatabaseSeeder extends Seeder
         // $this->call(AboutSeeder::class);
         // $this->call(OrgSeeder::class);
         // $this->call(SettingsSeeder::class);
-        // $this->call(LanguagesSeeder::class);
+        $this->call(LanguagesSeeder::class);
     }
 }
