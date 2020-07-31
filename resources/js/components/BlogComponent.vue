@@ -213,9 +213,9 @@
   margin-top: 10%;
 }
 
-.blog-post{
+/* .blog-post{
   padding: 30px;
-}
+} */
 
 
 .blog_div::-webkit-scrollbar-track {
