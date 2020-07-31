@@ -1,20 +1,9 @@
 <template>
   <div>
     <!-- Page Heading -->
-         <div class="page-heading">
-           <div class="container">
-             <div class="row">
-               <div class="col-lg-12">
-                 <h1>Say Hello To Us!</h1>
-                 <span><a href="index.html">Home</a>Contact Us</span>
-               </div>
-             </div>
-           </div>
-         </div>
-
 
          <!-- Contact Info -->
-         <section class="contact-info">
+         <!-- <section class="contact-info">
            <div class="container">
              <div class="row">
                <div class="col-lg-4">
@@ -46,11 +35,11 @@
                </div>
              </div>
            </div>
-         </section>
+         </section> -->
 
 
          <!-- Contact Us -->
-         <section class="contact-us">
+         <!-- <section class="contact-us">
            <div class="container">
              <div class="row">
                <div class="col-lg-12">
@@ -81,11 +70,11 @@
                </div>
              </div>
            </div>
-         </section>
+         </section> -->
 
 
          <!-- Find Us On Map -->
-         <section class="map">
+         <!-- <section class="map">
            <div class="container">
              <div class="row">
                <div class="col-lg-12">
@@ -100,7 +89,92 @@
                </div>
              </div>
            </div>
-         </section>
+         </section> -->
+
+
+         <!-- -------------------------------------- -->
+        <div class="container-fluid about-us-cont">
+
+        <div class="row">
+
+          <!-- col-md-4 -->
+          <div class="col-md-4">
+            <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png" class="img-fluid about-img" alt="">
+          </div>
+          <!-- col-md-4:END -->
+
+          <!-- col-md-8 -->
+          <div class="col-md-8">
+            <!-- tabs -->
+            <div class="tabs">
+              <div class="tab-2">
+                <label for="tab2-1">Contact Us</label>
+                <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+                <div>
+                  <!-- content -->
+                    <section class="contact-info">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-lg-4">
+                              <div class="info-item">
+                                <div class="icon">
+                                  <i class="fa fa-envelope"></i>
+                                </div>
+                                <h4>Email Address</h4>
+                                <p><a href="#">contact@oxana.com</a><br><a href="#">info@oxana.com</a></p>
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="info-item">
+                                <div class="icon">
+                                  <i class="fa fa-phone"></i>
+                                </div>
+                                <h4>Phone Number</h4>
+                                <p><a href="#">+1 547 6877 534</a><br><a href="#">001 547 6877 534</a></p>
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="info-item">
+                                <div class="icon">
+                                  <i class="fa fa-map-marker"></i>
+                                </div>
+                                <h4>Street Address</h4>
+                                <p><a href="#">342 Better Street<br>Peculiar, KS 64078</a></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                  <!-- content:END -->
+                </div>
+              </div>
+              <div class="tab-2">
+                      <label for="tab2-2">Location</label>
+                <input id="tab2-2" name="tabs-two" type="radio">
+                <div class="item-content">
+                  <section class="map">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="inner-content">
+                                <div id="map">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29209.879270273177!2d90.4031033!3d23.77464789999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c766d9187295%3A0x1c499b6d790ad78d!2sNakhalpara%20Boro%20Jame%20Mosjid!5e0!3m2!1sen!2sbd!4v1595768259760!5m2!1sen!2sbd" style="border:0; width: 100%; height: 300px; border: none; border-radius: 10px;" allowfullscreen></iframe>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                </div>
+              </div>
+            </div>
+            <!-- tabs::ENd -->
+          </div>
+          <!-- col-md-8:END -->
+
+        </div>
+        </div>
+        <!-- -------------------------------------- -->
 
 
        </div>
@@ -113,3 +187,14 @@
         }
     }
 </script>
+
+<style scoped>
+.contact-info{
+  margin-top: 0 !important;
+}
+
+section.map{
+  margin-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+</style>
