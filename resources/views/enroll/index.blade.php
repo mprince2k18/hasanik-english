@@ -63,15 +63,6 @@
 			<div class="col-lg-6 content-left">
 				<div class="content-left-wrapper">
 					<a href="{{ url('/') }}" id="logo"><img src="{{ filePath(getSystemSetting('type_logo')->value) }}" alt="" width="49" height="35"></a>
-					<div id="social">
-						<ul>
-							<li><a href="{{ getSystemSetting('type_fb')->value }}"><i class="icon-facebook"></i></a></li>
-							<li><a href="{{ getSystemSetting('type_tw')->value }}"><i class="icon-twitter"></i></a></li>
-							<li><a href="{{ getSystemSetting('type_google')->value }}"><i class="icon-google"></i></a></li>
-							<li><a href="{{ getSystemSetting('type_linked')->value }}"><i class="icon-linkedin"></i></a></li>
-							<li><a href="{{ getSystemSetting('type_youtube')->value }}"><i class="icon-youtube"></i></a></li>
-						</ul>
-					</div>
 					<!-- /social -->
 					<div>
 						<figure><img src="img/info_graphic_1.svg" alt="" class="img-fluid"></figure>
@@ -100,8 +91,12 @@
 							<div id="middle-wizard">
 								<div class="step">
 									<h3 class="main_question"><strong>1/5</strong>
-                    {{ $questions->question_en_1 ?? '' }}[ {{ $questions->question_bn_1 ?? '' }} ]
-                  </h3>
+					{{ $questions->question_en_1 ?? '' }}
+					<br>
+					[ {{ $questions->question_bn_1 ?? '' }} ]
+					<a href="#!" data-toggle="tooltip" title="Hooray!"><i class="icon-compass"></i></i></a>
+				  </h3>
+
 									<div class="form-group">
 										<input type="text" name="name" class="form-control required" placeholder="Full Name*">
 									</div>
@@ -152,7 +147,7 @@
 								<div class="step">
 									<h3 class="main_question">
                     <strong>2/5</strong>
-                    {{ $questions->question_en_2 ?? ''}} [ {{ $questions->question_bn_2 ?? ''}} ]
+                    {{ $questions->question_en_2 ?? ''}} <br> [ {{ $questions->question_bn_2 ?? ''}} ] <a href="#!" data-toggle="tooltip" title="Hooray!"><i class="icon-compass"></i></i></a>
                   </h3>
                   <div class="form-group">
 										<div class="styled-select clearfix">
@@ -166,7 +161,7 @@
 										</div>
 									</div>
 									<h3 class="main_question">
-                    {{ $questions->question_en_3 ?? ''}} [ {{ $questions->question_bn_3 ?? ''}} ]*
+                    {{ $questions->question_en_3 ?? ''}} <br> [ {{ $questions->question_bn_3 ?? ''}} ]* <a href="#!" data-toggle="tooltip" title="Hooray!"><i class="icon-compass"></i></i></a>
                   </h3>
                   @foreach ($schedules as $schedule)
                     <div class="form-group">
@@ -182,7 +177,7 @@
 								<!-- /step-->
 								<div class="step">
 									<h3 class="main_question"><strong>3/5</strong>
-                    {{ $questions->question_en_4 ?? ''}} [ {{ $questions->question_bn_4 ?? ''}} ]*
+                    {{ $questions->question_en_4 ?? ''}} <br> [ {{ $questions->question_bn_4 ?? ''}} ]* <a href="#!" data-toggle="tooltip" title="Hooray!"><i class="icon-compass"></i></i></a>
                   </h3>
                   @foreach ($payments as $payment)
                     <div class="form-group">
@@ -197,7 +192,7 @@
 								<!-- /step-->
 								<div class="step">
 									<h3 class="main_question"><strong>4/5</strong>
-                    {{ $questions->question_en_5 ?? ''}} [ {{ $questions->question_bn_5 ?? ''}} ]*
+                    {{ $questions->question_en_5 ?? ''}} <br> [ {{ $questions->question_bn_5 ?? ''}} ]* <a href="#!" data-toggle="tooltip" title="Hooray!"><i class="icon-compass"></i></i></a>
                     </h3>
                     <div class="form-group">
                       <textarea name="description" class="form-control required" rows="10" placeholder="Write about yourself and why you want to do the course?"></textarea>
@@ -207,7 +202,7 @@
 								<!-- /step-->
 								<div class="step">
 									<h3 class="main_question"><strong>5/6</strong>
-                    {{ $questions->question_en_6 ?? ''}} [ {{ $questions->question_bn_6 ?? ''}} ]
+                    {{ $questions->question_en_6 ?? ''}} <br> [ {{ $questions->question_bn_6 ?? ''}} ] <a href="#!" data-toggle="tooltip" title="Hooray!"><i class="icon-compass"></i></i></a>
                     </h3>
                     <div class="form-group">
 										<input type="number" name="guardian_phone" class="form-control required" placeholder="Your Guradian's Contact Number">
@@ -285,7 +280,10 @@
 	<!-- Wizard script -->
 	<script src="{{asset('enroll/js/survey_func.js')}}"></script>
   <script>
-      feather.replace()
+	  feather.replace();
+	  $(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip();
+	  });
     </script>
 
 </body>
