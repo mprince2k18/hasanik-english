@@ -181,15 +181,15 @@
             .then(response => this.blogs = response.data);
           },
           
-          getResults(page) {
-                if (typeof page === 'undefined') {
-                    page = 1;
-                }
+          // getResults(page) {
+          //       if (typeof page === 'undefined') {
+          //           page = 1;
+          //       }
 
-                // axios.get('http://localhost/hasanik/public/api/blogs?page=' + page) //base_url
-             axios.get('https://app.hasanikenglish.com/api/blogs?page=' + page) //base_url
-            .then(response => this.blogs = response.data);
-            },
+          //       // axios.get('http://localhost/hasanik/public/api/blogs?page=' + page) //base_url
+          //    axios.get('https://app.hasanikenglish.com/api/blogs?page=' + page) //base_url
+          //   .then(response => this.blogs = response.data);
+          //   },
 
             getCategories(){
             // axios.get('http://localhost/hasanik/public/api/categories') //base_url
@@ -200,7 +200,7 @@
         created(){
           this.getBlogs();
           this.getCategories();
-          this.getResults();
+          // this.getResults();
         }
     }
 </script>

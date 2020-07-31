@@ -98,6 +98,9 @@ class BlogController extends Controller
         return Blog::latest()->with('category')
                     ->with('user')
                     ->get();
+        // return Blog::latest()->with('category')
+        //             ->with('user')
+        //             ->paginate(10);
     }
 
     /**
