@@ -2186,6 +2186,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -7639,7 +7641,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.blog_div[data-v-66ef69a0]{\r\n  height: 550px;\r\n  overflow-y: scroll;\r\n  overflow-x: hidden;\r\n  margin-top: 10%;\n}\n.blog-post[data-v-66ef69a0]{\r\n  padding: 30px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar-track {\r\n  border: 1px solid #000;\r\n  padding: 2px 0;\r\n  background-color: #404040;\r\n  border-radius: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar {\r\n  width: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar-thumb {\r\n  border-radius: 10px;\r\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\r\n  background-color: #737272;\r\n  border: 1px solid #000;\n}\n.rounded[data-v-66ef69a0]{\r\n  border-radius: 10px;\n}\r\n", ""]);
+exports.push([module.i, "\n.blog_div[data-v-66ef69a0]{\r\n  height: 550px;\r\n  overflow-y: scroll;\r\n  overflow-x: hidden;\r\n  margin-top: 10%;\n}\n.blog-post[data-v-66ef69a0]{\r\n  padding: 30px;\r\n  border: 1px solid #c8d6e5;\r\n  border-radius: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar-track {\r\n  border: 1px solid #000;\r\n  padding: 2px 0;\r\n  background-color: #404040;\r\n  border-radius: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar {\r\n  width: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar-thumb {\r\n  border-radius: 10px;\r\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\r\n  background-color: #737272;\r\n  border: 1px solid #000;\n}\n.rounded[data-v-66ef69a0]{\r\n  border-radius: 10px;\n}\r\n", ""]);
 
 // exports
 
@@ -41694,45 +41696,39 @@ var render = function() {
                       1
                     ),
                     _vm._v(" "),
-                    _c("div", { staticClass: "down-content" }, [
-                      _c("ul", [
-                        _c("li", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v(_vm._s(blog.user.name))
-                          ])
+                    _c(
+                      "div",
+                      { staticClass: "down-content" },
+                      [
+                        _c("ul", [
+                          _c("li", [
+                            _c("a", { attrs: { href: "#" } }, [
+                              _vm._v(_vm._s(blog.user.name))
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            [
+                              _c("timeago", {
+                                attrs: {
+                                  datetime: blog.created_at,
+                                  "auto-update": 15
+                                }
+                              })
+                            ],
+                            1
+                          )
                         ]),
                         _vm._v(" "),
                         _c(
-                          "li",
-                          [
-                            _c("timeago", {
-                              attrs: {
-                                datetime: blog.created_at,
-                                "auto-update": 15
-                              }
-                            })
-                          ],
-                          1
+                          "router-link",
+                          { attrs: { to: "/page/blog/" + blog.id } },
+                          [_c("h5", [_vm._v(_vm._s(blog.title))])]
                         )
-                      ]),
-                      _vm._v(" "),
-                      _c("h5", { staticClass: "text-truncate" }, [
-                        _vm._v(_vm._s(blog.title))
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "main-purple-button" },
-                        [
-                          _c(
-                            "router-link",
-                            { attrs: { to: "/page/blog/" + blog.id } },
-                            [_vm._v("Continue Reading")]
-                          )
-                        ],
-                        1
-                      )
-                    ])
+                      ],
+                      1
+                    )
                   ])
                 ])
               }),

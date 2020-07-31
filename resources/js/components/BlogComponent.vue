@@ -139,10 +139,12 @@
                                   <timeago :datetime="blog.created_at" :auto-update="15"></timeago>
                               </li>
                             </ul>
-                            <h5 class="text-truncate">{{ blog.title }}</h5>
-                            <div class="main-purple-button">
+                            <router-link :to="`/page/blog/${blog.id}`">
+                              <h5>{{ blog.title }}</h5>
+                            </router-link>
+                            <!-- <div class="main-purple-button">
                               <router-link :to="`/page/blog/${blog.id}`">Continue Reading</router-link>
-                            </div>
+                            </div> -->
                           </div>
                         </div>
                       </div>
@@ -210,6 +212,8 @@
 
 .blog-post{
   padding: 30px;
+  border: 1px solid #c8d6e5;
+  border-radius: 10px;
 }
 
 .blog_div::-webkit-scrollbar-track {
