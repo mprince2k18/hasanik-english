@@ -139,7 +139,7 @@
                                   <timeago :datetime="blog.created_at" :auto-update="15"></timeago>
                               </li>
                             </ul>
-                            <h5>{{ blog.title }}</h5>
+                            <h5 class="text-truncate">{{ blog.title }}</h5>
                             <div class="main-purple-button">
                               <router-link :to="`/page/blog/${blog.id}`">Continue Reading</router-link>
                             </div>

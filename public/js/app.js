@@ -41716,7 +41716,9 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _c("h5", [_vm._v(_vm._s(blog.title))]),
+                      _c("h5", { staticClass: "text-truncate" }, [
+                        _vm._v(_vm._s(blog.title))
+                      ]),
                       _vm._v(" "),
                       _c(
                         "div",
