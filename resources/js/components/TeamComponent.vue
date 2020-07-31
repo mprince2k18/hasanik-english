@@ -101,7 +101,7 @@
                   <div class="container">
                     <div class="row">
 
-                      <div class="col-lg-3" v-for="team in teams" :key="team.id">
+                      <div class="col-lg-4" v-for="team in teams" :key="team.id">
                         <div class="team-item">
                           <div class="team-thumb">
                             <div class="hover-effect">

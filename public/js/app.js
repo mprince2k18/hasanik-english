@@ -42426,7 +42426,7 @@ var render = function() {
                   _vm._l(_vm.teams, function(team) {
                     return _c(
                       "div",
-                      { key: team.id, staticClass: "col-lg-3" },
+                      { key: team.id, staticClass: "col-lg-4" },
                       [
                         _c("div", { staticClass: "team-item" }, [
                           _c("div", { staticClass: "team-thumb" }, [
