@@ -139,8 +139,7 @@
                                   <timeago :datetime="blog.created_at" :auto-update="15"></timeago>
                               </li>
                             </ul>
-                            <h4>{{ blog.title }}</h4>
-                            <p v-html="blog.description"></p>
+                            <h5>{{ blog.title }}</h5>
                             <div class="main-purple-button">
                               <router-link :to="`/page/blog/${blog.id}`">Continue Reading</router-link>
                             </div>

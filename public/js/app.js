@@ -2186,7 +2186,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -41717,11 +41716,7 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _c("h4", [_vm._v(_vm._s(blog.title))]),
-                      _vm._v(" "),
-                      _c("p", {
-                        domProps: { innerHTML: _vm._s(blog.description) }
-                      }),
+                      _c("h5", [_vm._v(_vm._s(blog.title))]),
                       _vm._v(" "),
                       _c(
                         "div",
