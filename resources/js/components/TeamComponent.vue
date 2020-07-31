@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Page Heading -->
-         <div class="page-heading">
+         <!-- <div class="page-heading">
            <div class="container">
              <div class="row">
                <div class="col-lg-12">
@@ -10,11 +10,11 @@
                </div>
              </div>
            </div>
-         </div>
+         </div> -->
 
 
          <!-- Our Team -->
-         <section class="our-team">
+         <!-- <section class="our-team">
            <div class="container">
              <div class="row">
                <div class="col-lg-12">
@@ -46,11 +46,11 @@
 
              </div>
            </div>
-         </section>
+         </section> -->
 
 
          <!-- Fun Facts -->
-         <section class="fun-facts">
+         <!-- <section class="fun-facts">
            <div class="container">
              <div class="row">
                <div class="col-lg-3 col-sm-6">
@@ -79,15 +79,99 @@
                </div>
              </div>
            </div>
-         </section>
+         </section> -->
+
+          <!-- -------------------------------------- -->
+        <div class="container-fluid about-us-cont">
+
+        <div class="row">
+
+          <!-- col-md-4 -->
+          <div class="col-md-4">
+            <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png" class="img-fluid about-img" alt="">
+          </div>
+          <!-- col-md-4:END -->
+              <!-- Our Team -->
+          <!-- col-md-8 -->
+          <div class="col-md-8">
+            <!-- tabs -->
+                <section class="our-team">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="section-heading">
+                          <h2>Meet Our Members</h2>
+                        </div>
+                      </div>
+
+                      <!-- <div class="col-lg-3" v-for="team in teams" :key="team.id">
+                        <div class="team-item">
+                          <div class="team-thumb">
+                            <div class="hover-effect">
+                              <ul>
+                                <li><a :href="team.fb"><i class="fa fa-facebook"></i></a></li>
+                                <li><a :href="team.tw"><i class="fa fa-twitter"></i></a></li>
+                                <li><a :href="team.skype"><i class="fa fa-skype"></i></a></li>
+                                <li><a :href="team.linked"><i class="fa fa-linkedin"></i></a></li>
+                              </ul>
+                            </div>
+                            <img :src="team.photo" alt="#">
+                          </div>
+                          <div class="down-content">
+                            <h4>{{ team.name }}</h4>
+                            <span>{{ team.position }}</span>
+                          </div>
+                        </div>
+                      </div> -->
+
+            <carousel>
+
+              <slide v-for="team in teams" :key="team.id">
+                <div class="team-item">
+                          <div class="team-thumb">
+                            <div class="hover-effect">
+                              <ul>
+                                <li><a :href="team.fb"><i class="fa fa-facebook"></i></a></li>
+                                <li><a :href="team.tw"><i class="fa fa-twitter"></i></a></li>
+                                <li><a :href="team.skype"><i class="fa fa-skype"></i></a></li>
+                                <li><a :href="team.linked"><i class="fa fa-linkedin"></i></a></li>
+                              </ul>
+                            </div>
+                            <img :src="team.photo" alt="#">
+                          </div>
+                          <div class="down-content">
+                            <h4>{{ team.name }}</h4>
+                            <span>{{ team.position }}</span>
+                          </div>
+                        </div>
+              </slide>
+              
+            </carousel>
+
+                    </div>
+                  </div>
+                </section>
+            <!-- tabs::ENd -->
+          </div>
+          <!-- col-md-8:END -->
+
+        </div>
+        </div>
+        <!-- -------------------------------------- -->
 
       </div>
 </template>
 
 <script>
+import { Carousel, Slide } from 'vue-carousel';
+
     export default {
         mounted() {
             console.log('Component mounted.');
+        },
+        components: {
+          Carousel,
+          Slide
         },
         data(){
           return{
@@ -107,3 +191,13 @@
         }
     }
 </script>
+
+<style scoped>
+section.our-team {
+    padding: 100px 0px 0px 0px;
+}
+.team-item{
+  width: 75%;
+  margin: 10px;
+}
+</style>
