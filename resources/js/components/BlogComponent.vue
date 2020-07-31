@@ -207,9 +207,9 @@
 
 <style scoped>
 .blog_div{
-  height: 500px;
+  height: 550px;
   overflow-y: scroll;
   overflow-x: hidden;
-  margin-top: 8%;
+  margin-top: 10%;
 }
 </style>
