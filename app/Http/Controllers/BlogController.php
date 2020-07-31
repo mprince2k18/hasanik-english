@@ -97,7 +97,7 @@ class BlogController extends Controller
     {
         return Blog::latest()->with('category')
                     ->with('user')
-                    ->paginate(2);
+                    ->paginate(10);
     }
 
     /**

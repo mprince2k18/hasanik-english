@@ -2,7 +2,7 @@
   <div>
 
     <!-- Page Heading -->
-          <div class="page-heading">
+          <!-- <div class="page-heading">
             <div class="container">
               <div class="row">
                 <div class="col-lg-12">
@@ -11,11 +11,11 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
 
           <!-- Recent Cases -->
-          <section class="blog-page">
+          <!-- <section class="blog-page">
             <div class="container">
               <div class="row">
                 <div class="col-lg-8">
@@ -34,7 +34,6 @@
                               <li>
                                   <timeago :datetime="blog.created_at" :auto-update="15"></timeago>
                               </li>
-                              <!-- <li><a href="#">8 Comments</a></li> -->
                             </ul>
                             <h4>{{ blog.title }}</h4>
                             <p v-html="blog.description"></p>
@@ -113,15 +112,61 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
+
+          <!-- -------------------------------------- -->
+        <div class="container-fluid about-us-cont">
+
+        <div class="row">
+          <div class="col-md-4">
+            <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png" class="img-fluid about-img" alt="">
+          </div>
+          <div class="col-md-8">
+            <!-- tabs -->
+            <div class="blog_div">
+
+          <div class="row">
+            
+            <div class="col-lg-4" v-for="blog in blogs.data" :key="blog.id">
+                        <div class="blog-post">
+                          <div class="blog-thumb">
+                            <router-link :to="`/page/blog/${blog.id}`">
+                              <img :src="blog.thumbnail" :alt="blog.title"></router-link>
+                          </div>
+                          <div class="down-content">
+                            <ul>
+                              <li><a href="#">{{ blog.user.name }}</a></li>
+                              <li>
+                                  <timeago :datetime="blog.created_at" :auto-update="15"></timeago>
+                              </li>
+                            </ul>
+                            <h4>{{ blog.title }}</h4>
+                            <p v-html="blog.description"></p>
+                            <div class="main-purple-button">
+                              <router-link :to="`/page/blog/${blog.id}`">Continue Reading</router-link>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            
+          </div>
+            </div>
+
+
+            <!-- tabs::ENd -->
+          </div>
+        </div>
+        </div>
+        <!-- -------------------------------------- -->
+
       </div>
 </template>
 
 <script>
+
     export default {
         mounted() {
             console.log('Component mounted.');
-            console.log(getCategories());
         },
         data(){
           return{
@@ -159,3 +204,12 @@
         }
     }
 </script>
+
+<style scoped>
+.blog_div{
+  height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-top: 8%;
+}
+</style>

@@ -1,4 +1,6 @@
 require('./bootstrap');
+window.$ = require('jquery')
+window.JQuery = require('jquery')
 
 import Vue from 'vue'
 import router from './router'
