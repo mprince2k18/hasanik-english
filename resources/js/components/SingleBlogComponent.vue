@@ -72,6 +72,10 @@
           <div class="col-md-8">
             <div class="blog_div">
 
+              <div v-if="loading">
+                <img src="https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif" alt="">
+              </div>
+
               <section class="blog-page">
                 <div class="container">
                   <div class="row">
@@ -136,14 +140,17 @@
           return{
             blog:[],
             recentBlogs:[],
-            id: this.$route.params.id
+            id: this.$route.params.id,
+            loading: false
           }
         },
         methods:{
           getBlog(){
+            this.loading = true;
             // axios.get('http://localhost/hasanik/public/api/blog/' +  this.id) //base_url
             axios.get('https://app.hasanikenglish.com/api/blog/' + this.id ) //base_url
-            .then(response => this.blog = response.data);
+            .then(response => this.blog = response.data)
+            .finally(() => (this.loading = false));
           },
           getBlogs(){
             // axios.get('http://localhost/hasanik/public/api/blogs') //base_url

@@ -49,6 +49,9 @@
                 <label for="tab2-1">About Us</label>
                 <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
                 <div>
+                  <div v-if="loading">
+                    <img src="https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif" alt="">
+                  </div>
                   <p  v-html="abouts.desc"></p>
                 </div>
               </div>
@@ -78,13 +81,16 @@
           return{
             abouts:[],
             missions:[],
+            loading: false
           }
         },
         methods:{
           getAbout(){
+            this.loading = true;
             // axios.get('http://localhost/hasanik/public/api/about') //base_url
             axios.get('https://app.hasanikenglish.com/api/about') //base_url
-            .then(response => this.abouts = response.data);
+            .then(response => this.abouts = response.data)
+            .finally(() => (this.loading = false));
           },
           getMission(){
             // axios.get('http://localhost/hasanik/public/api/mission') //base_url

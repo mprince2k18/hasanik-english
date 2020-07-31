@@ -97,6 +97,10 @@
             <!-- tabs -->
                <div class="blog_div">
 
+                 <div v-if="loading">
+                <img src="https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif" alt="">
+              </div>
+
                  <section class="our-team">
                   <div class="container">
                     <div class="row">
@@ -146,14 +150,16 @@
         data(){
           return{
             teams:[],
+            loading: false
           }
         },
         methods:{
           getTeam(){
-            
+            this.loading = true;
             // axios.get('http://localhost/hasanik/public/api/team') //base_url
             axios.get('https://app.hasanikenglish.com/api/team') //base_url
-            .then(response => this.teams = response.data);
+            .then(response => this.teams = response.data)
+            .finally(() => (this.loading = false));
           }
         },
         created(){

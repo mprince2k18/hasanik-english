@@ -94,7 +94,14 @@
           <div class="col-md-8">
             <div class="blog_div">
 
+              
+
               <section class="product-details">
+
+                <div v-if="loading">
+                <img src="https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif" alt="">
+              </div>
+              
                 <div class="container">
                   <div class="row">
                     <div class="col-lg-12">
@@ -182,14 +189,17 @@
         data(){
           return{
             course:[],
-            slug: this.$route.params.slug
+            slug: this.$route.params.slug,
+            loading: false
           }
         },
         methods:{
           getBlog(){
+            this.loading = true;
             // axios.get('http://localhost/hasanik/public/api/course/' +  this.slug) //base_url
             axios.get('https://app.hasanikenglish.com/api/course/' + this.slug ) //base_url
-            .then(response => this.course = response.data);
+            .then(response => this.course = response.data)
+            .finally(() => (this.loading = false));
           },
         },
         created(){

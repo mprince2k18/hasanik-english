@@ -1979,6 +1979,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -1986,17 +1989,21 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       abouts: [],
-      missions: []
+      missions: [],
+      loading: false
     };
   },
   methods: {
     getAbout: function getAbout() {
       var _this = this;
 
-      // axios.get('http://localhost/hasanik/public/api/about') //base_url
+      this.loading = true; // axios.get('http://localhost/hasanik/public/api/about') //base_url
+
       axios.get('https://app.hasanikenglish.com/api/about') //base_url
       .then(function (response) {
         return _this.abouts = response.data;
+      })["finally"](function () {
+        return _this.loading = false;
       });
     },
     getMission: function getMission() {
@@ -2188,6 +2195,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2195,17 +2206,21 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       blogs: [],
-      categories: []
+      categories: [],
+      loading: false
     };
   },
   methods: {
     getBlogs: function getBlogs() {
       var _this = this;
 
-      // axios.get('http://localhost/hasanik/public/api/blogs') //base_url
+      this.loading = true; // axios.get('http://localhost/hasanik/public/api/blogs') //base_url
+
       axios.get('https://app.hasanikenglish.com/api/blogs') //base_url
       .then(function (response) {
         return _this.blogs = response.data;
+      })["finally"](function () {
+        return _this.loading = false;
       });
     },
     getResults: function getResults(page) {
@@ -2249,6 +2264,14 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2574,23 +2597,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
   },
   data: function data() {
     return {
-      courses: []
+      courses: [],
+      loading: false
     };
   },
   methods: {
     getCourses: function getCourses() {
       var _this = this;
 
-      // axios.get('http://localhost/hasanik/public/api/courses') //base_url
+      this.loading = true; // axios.get('http://localhost/hasanik/public/api/courses') //base_url
+
       axios.get('https://app.hasanikenglish.com/api/courses') //base_url
       .then(function (response) {
         return _this.courses = response.data;
+      })["finally"](function () {
+        return _this.loading = false;
       });
     },
     getResults: function getResults(page) {
@@ -2753,6 +2785,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2761,17 +2797,21 @@ __webpack_require__.r(__webpack_exports__);
     return {
       blog: [],
       recentBlogs: [],
-      id: this.$route.params.id
+      id: this.$route.params.id,
+      loading: false
     };
   },
   methods: {
     getBlog: function getBlog() {
       var _this = this;
 
-      // axios.get('http://localhost/hasanik/public/api/blog/' +  this.id) //base_url
+      this.loading = true; // axios.get('http://localhost/hasanik/public/api/blog/' +  this.id) //base_url
+
       axios.get('https://app.hasanikenglish.com/api/blog/' + this.id) //base_url
       .then(function (response) {
         return _this.blog = response.data;
+      })["finally"](function () {
+        return _this.loading = false;
       });
     },
     getBlogs: function getBlogs() {
@@ -2977,6 +3017,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2984,17 +3031,21 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       course: [],
-      slug: this.$route.params.slug
+      slug: this.$route.params.slug,
+      loading: false
     };
   },
   methods: {
     getBlog: function getBlog() {
       var _this = this;
 
-      // axios.get('http://localhost/hasanik/public/api/course/' +  this.slug) //base_url
+      this.loading = true; // axios.get('http://localhost/hasanik/public/api/course/' +  this.slug) //base_url
+
       axios.get('https://app.hasanikenglish.com/api/course/' + this.slug) //base_url
       .then(function (response) {
         return _this.course = response.data;
+      })["finally"](function () {
+        return _this.loading = false;
       });
     }
   },
@@ -3153,23 +3204,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
   },
   data: function data() {
     return {
-      teams: []
+      teams: [],
+      loading: false
     };
   },
   methods: {
     getTeam: function getTeam() {
       var _this = this;
 
-      // axios.get('http://localhost/hasanik/public/api/team') //base_url
+      this.loading = true; // axios.get('http://localhost/hasanik/public/api/team') //base_url
+
       axios.get('https://app.hasanikenglish.com/api/team') //base_url
       .then(function (response) {
         return _this.teams = response.data;
+      })["finally"](function () {
+        return _this.loading = false;
       });
     }
   },
@@ -41605,6 +41664,18 @@ var render = function() {
               }),
               _vm._v(" "),
               _c("div", [
+                _vm.loading
+                  ? _c("div", [
+                      _c("img", {
+                        attrs: {
+                          src:
+                            "https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
                 _c("p", { domProps: { innerHTML: _vm._s(_vm.abouts.desc) } })
               ])
             ]),
@@ -41673,6 +41744,18 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "col-md-8" }, [
           _c("div", { staticClass: "blog_div" }, [
+            _vm.loading
+              ? _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif",
+                      alt: ""
+                    }
+                  })
+                ])
+              : _vm._e(),
+            _vm._v(" "),
             _c(
               "div",
               { staticClass: "row" },
@@ -41778,142 +41861,156 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("div", { staticClass: "container-fluid about-us-cont" }, [
+      _c("div", { staticClass: "row" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "tabs" }, [
+            _c("div", { staticClass: "tab-2" }, [
+              _c("label", { attrs: { for: "tab2-1" } }, [_vm._v("Contact Us")]),
+              _vm._v(" "),
+              _c("input", {
+                attrs: {
+                  id: "tab2-1",
+                  name: "tabs-two",
+                  type: "radio",
+                  checked: "checked"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", [
+                _vm.loading
+                  ? _c("div", [
+                      _c("img", {
+                        attrs: {
+                          src:
+                            "https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm._m(1)
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(2)
+          ])
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "container-fluid about-us-cont" }, [
+    return _c("div", { staticClass: "col-md-4" }, [
+      _c("img", {
+        staticClass: "img-fluid rounded about-img",
+        attrs: {
+          src:
+            "https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png",
+          alt: ""
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("section", { staticClass: "contact-info" }, [
+      _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-4" }, [
-            _c("img", {
-              staticClass: "img-fluid rounded about-img",
-              attrs: {
-                src:
-                  "https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png",
-                alt: ""
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-8" }, [
-            _c("div", { staticClass: "tabs" }, [
-              _c("div", { staticClass: "tab-2" }, [
-                _c("label", { attrs: { for: "tab2-1" } }, [
-                  _vm._v("Contact Us")
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  attrs: {
-                    id: "tab2-1",
-                    name: "tabs-two",
-                    type: "radio",
-                    checked: "checked"
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", [
-                  _c("section", { staticClass: "contact-info" }, [
-                    _c("div", { staticClass: "container" }, [
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-lg-4" }, [
-                          _c("div", { staticClass: "info-item" }, [
-                            _c("div", { staticClass: "icon" }, [
-                              _c("i", { staticClass: "fa fa-envelope" })
-                            ]),
-                            _vm._v(" "),
-                            _c("h4", [_vm._v("Email Address")]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("contact@oxana.com")
-                              ]),
-                              _c("br"),
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("info@oxana.com")
-                              ])
-                            ])
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-lg-4" }, [
-                          _c("div", { staticClass: "info-item" }, [
-                            _c("div", { staticClass: "icon" }, [
-                              _c("i", { staticClass: "fa fa-phone" })
-                            ]),
-                            _vm._v(" "),
-                            _c("h4", [_vm._v("Phone Number")]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("+1 547 6877 534")
-                              ]),
-                              _c("br"),
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("001 547 6877 534")
-                              ])
-                            ])
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-lg-4" }, [
-                          _c("div", { staticClass: "info-item" }, [
-                            _c("div", { staticClass: "icon" }, [
-                              _c("i", { staticClass: "fa fa-map-marker" })
-                            ]),
-                            _vm._v(" "),
-                            _c("h4", [_vm._v("Street Address")]),
-                            _vm._v(" "),
-                            _c("p", [
-                              _c("a", { attrs: { href: "#" } }, [
-                                _vm._v("342 Better Street"),
-                                _c("br"),
-                                _vm._v("Peculiar, KS 64078")
-                              ])
-                            ])
-                          ])
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "info-item" }, [
+              _c("div", { staticClass: "icon" }, [
+                _c("i", { staticClass: "fa fa-envelope" })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "tab-2" }, [
-                _c("label", { attrs: { for: "tab2-2" } }, [_vm._v("Location")]),
-                _vm._v(" "),
-                _c("input", {
-                  attrs: { id: "tab2-2", name: "tabs-two", type: "radio" }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "item-content" }, [
-                  _c("section", { staticClass: "map" }, [
-                    _c("div", { staticClass: "container" }, [
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-lg-12" }, [
-                          _c("div", { staticClass: "inner-content" }, [
-                            _c("div", { attrs: { id: "map" } }, [
-                              _c("iframe", {
-                                staticStyle: {
-                                  border: "none",
-                                  width: "100%",
-                                  height: "350px",
-                                  "border-radius": "10px"
-                                },
-                                attrs: {
-                                  src:
-                                    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29209.879270273177!2d90.4031033!3d23.77464789999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c766d9187295%3A0x1c499b6d790ad78d!2sNakhalpara%20Boro%20Jame%20Mosjid!5e0!3m2!1sen!2sbd!4v1595768259760!5m2!1sen!2sbd",
-                                  allowfullscreen: ""
-                                }
-                              })
-                            ])
-                          ])
-                        ])
-                      ])
-                    ])
+              _c("h4", [_vm._v("Email Address")]),
+              _vm._v(" "),
+              _c("p", [
+                _c("a", { attrs: { href: "#" } }, [
+                  _vm._v("contact@oxana.com")
+                ]),
+                _c("br"),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("info@oxana.com")])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "info-item" }, [
+              _c("div", { staticClass: "icon" }, [
+                _c("i", { staticClass: "fa fa-phone" })
+              ]),
+              _vm._v(" "),
+              _c("h4", [_vm._v("Phone Number")]),
+              _vm._v(" "),
+              _c("p", [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("+1 547 6877 534")]),
+                _c("br"),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("001 547 6877 534")])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-4" }, [
+            _c("div", { staticClass: "info-item" }, [
+              _c("div", { staticClass: "icon" }, [
+                _c("i", { staticClass: "fa fa-map-marker" })
+              ]),
+              _vm._v(" "),
+              _c("h4", [_vm._v("Street Address")]),
+              _vm._v(" "),
+              _c("p", [
+                _c("a", { attrs: { href: "#" } }, [
+                  _vm._v("342 Better Street"),
+                  _c("br"),
+                  _vm._v("Peculiar, KS 64078")
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "tab-2" }, [
+      _c("label", { attrs: { for: "tab2-2" } }, [_vm._v("Location")]),
+      _vm._v(" "),
+      _c("input", { attrs: { id: "tab2-2", name: "tabs-two", type: "radio" } }),
+      _vm._v(" "),
+      _c("div", { staticClass: "item-content" }, [
+        _c("section", { staticClass: "map" }, [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-lg-12" }, [
+                _c("div", { staticClass: "inner-content" }, [
+                  _c("div", { attrs: { id: "map" } }, [
+                    _c("iframe", {
+                      staticStyle: {
+                        border: "none",
+                        width: "100%",
+                        height: "350px",
+                        "border-radius": "10px"
+                      },
+                      attrs: {
+                        src:
+                          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29209.879270273177!2d90.4031033!3d23.77464789999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c766d9187295%3A0x1c499b6d790ad78d!2sNakhalpara%20Boro%20Jame%20Mosjid!5e0!3m2!1sen!2sbd!4v1595768259760!5m2!1sen!2sbd",
+                        allowfullscreen: ""
+                      }
+                    })
                   ])
                 ])
               ])
@@ -41952,6 +42049,18 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "col-md-8" }, [
           _c("div", { staticClass: "blog_div" }, [
+            _vm.loading
+              ? _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif",
+                      alt: ""
+                    }
+                  })
+                ])
+              : _vm._e(),
+            _vm._v(" "),
             _c("section", { staticClass: "shop-page" }, [
               _c("div", { staticClass: "container" }, [
                 _c("div", { staticClass: "row" }, [
@@ -41960,97 +42069,78 @@ var render = function() {
                       _c(
                         "div",
                         { staticClass: "row" },
-                        [
-                          _vm._l(_vm.courses.data, function(course) {
-                            return _c(
-                              "div",
-                              { key: course.id, staticClass: "col-lg-4" },
-                              [
-                                _c(
-                                  "div",
-                                  { staticClass: "course-item" },
-                                  [
-                                    _c(
-                                      "router-link",
-                                      {
-                                        attrs: {
-                                          to: "/page/course/" + course.slug
-                                        }
-                                      },
-                                      [
-                                        _c(
-                                          "div",
-                                          { staticClass: "course-thumb" },
-                                          [
-                                            _c("img", {
-                                              attrs: {
-                                                src: course.thumbnail,
-                                                alt: course.name
-                                              }
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          { staticClass: "down-content" },
-                                          [
-                                            _c("h6", [
-                                              _vm._v(_vm._s(course.name))
-                                            ]),
-                                            _vm._v(" "),
-                                            course.is_discount === 1
-                                              ? _c("span", [
-                                                  _c("em", [
-                                                    _vm._v(
-                                                      "৳" +
-                                                        _vm._s(
-                                                          course.discount_price
-                                                        )
-                                                    )
-                                                  ]),
-                                                  _vm._v(
-                                                    "\n                                    ৳" +
-                                                      _vm._s(course.price) +
-                                                      "\n                                  "
-                                                  )
-                                                ])
-                                              : _c("span", [
-                                                  _vm._v(
-                                                    "\n                                    ৳" +
-                                                      _vm._s(course.price) +
-                                                      "\n                                  "
-                                                  )
-                                                ])
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ],
-                                  1
-                                )
-                              ]
-                            )
-                          }),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "col-lg-12" }, [
-                            _c("div", { staticClass: "shop-pagination" }, [
+                        _vm._l(_vm.courses.data, function(course) {
+                          return _c(
+                            "div",
+                            { key: course.id, staticClass: "col-lg-4" },
+                            [
                               _c(
-                                "ul",
+                                "div",
+                                { staticClass: "course-item" },
                                 [
-                                  _c("pagination", {
-                                    attrs: { data: _vm.courses },
-                                    on: {
-                                      "pagination-change-page": _vm.getResults
-                                    }
-                                  })
+                                  _c(
+                                    "router-link",
+                                    {
+                                      attrs: {
+                                        to: "/page/course/" + course.slug
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "course-thumb" },
+                                        [
+                                          _c("img", {
+                                            attrs: {
+                                              src: course.thumbnail,
+                                              alt: course.name
+                                            }
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "down-content" },
+                                        [
+                                          _c("h6", [
+                                            _vm._v(_vm._s(course.name))
+                                          ]),
+                                          _vm._v(" "),
+                                          course.is_discount === 1
+                                            ? _c("span", [
+                                                _c("em", [
+                                                  _vm._v(
+                                                    "৳" +
+                                                      _vm._s(
+                                                        course.discount_price
+                                                      )
+                                                  )
+                                                ]),
+                                                _vm._v(
+                                                  "\n                                    ৳" +
+                                                    _vm._s(course.price) +
+                                                    "\n                                  "
+                                                )
+                                              ])
+                                            : _c("span", [
+                                                _vm._v(
+                                                  "\n                                    ৳" +
+                                                    _vm._s(course.price) +
+                                                    "\n                                  "
+                                                )
+                                              ])
+                                        ]
+                                      )
+                                    ]
+                                  )
                                 ],
                                 1
                               )
-                            ])
-                          ])
-                        ],
-                        2
+                            ]
+                          )
+                        }),
+                        0
                       )
                     ])
                   ])
@@ -42108,6 +42198,18 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "col-md-8" }, [
           _c("div", { staticClass: "blog_div" }, [
+            _vm.loading
+              ? _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif",
+                      alt: ""
+                    }
+                  })
+                ])
+              : _vm._e(),
+            _vm._v(" "),
             _c("section", { staticClass: "blog-page" }, [
               _c("div", { staticClass: "container" }, [
                 _c("div", { staticClass: "row" }, [
@@ -42234,6 +42336,18 @@ var render = function() {
         _c("div", { staticClass: "col-md-8" }, [
           _c("div", { staticClass: "blog_div" }, [
             _c("section", { staticClass: "product-details" }, [
+              _vm.loading
+                ? _c("div", [
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif",
+                        alt: ""
+                      }
+                    })
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
               _c("div", { staticClass: "container" }, [
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-lg-12" }, [
@@ -42411,6 +42525,18 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "col-md-8" }, [
           _c("div", { staticClass: "blog_div" }, [
+            _vm.loading
+              ? _c("div", [
+                  _c("img", {
+                    attrs: {
+                      src:
+                        "https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif",
+                      alt: ""
+                    }
+                  })
+                ])
+              : _vm._e(),
+            _vm._v(" "),
             _c("section", { staticClass: "our-team" }, [
               _c("div", { staticClass: "container" }, [
                 _c(

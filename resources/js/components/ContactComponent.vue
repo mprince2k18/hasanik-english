@@ -107,10 +107,18 @@
           <div class="col-md-8">
             <!-- tabs -->
             <div class="tabs">
+
+              
+
               <div class="tab-2">
                 <label for="tab2-1">Contact Us</label>
                 <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
                 <div>
+
+                  <div v-if="loading">
+                <img src="https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif" alt="">
+              </div>
+              
                   <!-- content -->
                     <section class="contact-info">
                         <div class="container">

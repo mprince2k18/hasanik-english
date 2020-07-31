@@ -124,6 +124,10 @@
           <div class="col-md-8">
             <div class="blog_div">
 
+              <div v-if="loading">
+                <img src="https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif" alt="">
+              </div>
+
           <div class="row">
             
             <div class="col-lg-4" v-for="blog in blogs" :key="blog.id">
@@ -168,14 +172,17 @@
         data(){
           return{
             blogs:[],
-            categories:[]
+            categories:[],
+            loading: false
           }
         },
         methods:{
           getBlogs(){
+            this.loading = true;
             // axios.get('http://localhost/hasanik/public/api/blogs') //base_url
             axios.get('https://app.hasanikenglish.com/api/blogs') //base_url
-            .then(response => this.blogs = response.data);
+            .then(response => this.blogs = response.data)
+            .finally(() => (this.loading = false));
           },
           
           getResults(page) {

@@ -66,10 +66,13 @@
         <div class="row">
           <div class="col-md-4">
             <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png" class="img-fluid rounded about-img" alt="">
+            
           </div>
           <div class="col-md-8">
             <div class="blog_div">
-
+            <div v-if="loading">
+                <img src="https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif" alt="">
+              </div>
                 <section class="shop-page">
                   <div class="container">
                     <div class="row">
@@ -99,14 +102,16 @@
                                 </router-link>
                               </div>
                             </div>
+
                             
-                            <div class="col-lg-12">
+                            
+                            <!-- <div class="col-lg-12">
                               <div class="shop-pagination">
                                 <ul>
                                   <pagination :data="courses" @pagination-change-page="getResults"></pagination>
                                 </ul>
                               </div>
-                            </div>
+                            </div> -->
                           </div>
                         </div>
                       </div>
@@ -132,13 +137,16 @@
         data(){
           return{
             courses:[],
+            loading: false
           }
         },
         methods:{
           getCourses(){
+            this.loading = true;
             // axios.get('http://localhost/hasanik/public/api/courses') //base_url
             axios.get('https://app.hasanikenglish.com/api/courses') //base_url
-            .then(response => this.courses = response.data);
+            .then(response => this.courses = response.data)
+            .finally(() => (this.loading = false));
           },
           getResults(page) {
                 if (typeof page === 'undefined') {
