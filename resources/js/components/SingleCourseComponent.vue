@@ -200,7 +200,7 @@
 
 <style scoped>
 .blog_div{
-  height: 550px;
+  height: 630px;
   overflow-y: scroll;
   overflow-x: hidden;
 }

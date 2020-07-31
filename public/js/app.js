@@ -7748,7 +7748,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.blog_div[data-v-ff529142]{\n  height: 550px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n}\n.blog-post[data-v-ff529142]{\n  padding: 30px;\n}\n.blog_div[data-v-ff529142]::-webkit-scrollbar-track {\n  border: 1px solid #000;\n  padding: 2px 0;\n  background-color: #404040;\n  border-radius: 10px;\n}\n.blog_div[data-v-ff529142]::-webkit-scrollbar {\n  width: 10px;\n}\n.blog_div[data-v-ff529142]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\n  background-color: #737272;\n  border: 1px solid #000;\n}\n.rounded[data-v-ff529142]{\n  border-radius: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.blog_div[data-v-ff529142]{\n  height: 630px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n}\n.blog-post[data-v-ff529142]{\n  padding: 30px;\n}\n.blog_div[data-v-ff529142]::-webkit-scrollbar-track {\n  border: 1px solid #000;\n  padding: 2px 0;\n  background-color: #404040;\n  border-radius: 10px;\n}\n.blog_div[data-v-ff529142]::-webkit-scrollbar {\n  width: 10px;\n}\n.blog_div[data-v-ff529142]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\n  background-color: #737272;\n  border: 1px solid #000;\n}\n.rounded[data-v-ff529142]{\n  border-radius: 10px;\n}\n", ""]);
 
 // exports
 
