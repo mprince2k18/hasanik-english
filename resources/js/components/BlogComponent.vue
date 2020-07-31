@@ -22,7 +22,7 @@
                   <div class="blog-posts">
                     <div class="row">
 
-                      <div class="col-lg-12" v-for="blog in blogs.data" :key="blog.id">
+                      <div class="col-lg-12" v-for="blog in blogs" :key="blog.id">
                         <div class="blog-post">
                           <div class="blog-thumb">
                             <router-link :to="`/page/blog/${blog.id}`">
@@ -122,12 +122,11 @@
             <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png" class="img-fluid about-img" alt="">
           </div>
           <div class="col-md-8">
-            <!-- tabs -->
             <div class="blog_div">
 
           <div class="row">
             
-            <div class="col-lg-4" v-for="blog in blogs.data" :key="blog.id">
+            <div class="col-lg-4" v-for="blog in blogs" :key="blog.id">
                         <div class="blog-post">
                           <div class="blog-thumb">
                             <router-link :to="`/page/blog/${blog.id}`">
@@ -151,9 +150,6 @@
             
           </div>
             </div>
-
-
-            <!-- tabs::ENd -->
           </div>
         </div>
         </div>
@@ -181,15 +177,15 @@
             .then(response => this.blogs = response.data);
           },
           
-          // getResults(page) {
-          //       if (typeof page === 'undefined') {
-          //           page = 1;
-          //       }
+          getResults(page) {
+                if (typeof page === 'undefined') {
+                    page = 1;
+                }
 
-          //       // axios.get('http://localhost/hasanik/public/api/blogs?page=' + page) //base_url
-          //    axios.get('https://app.hasanikenglish.com/api/blogs?page=' + page) //base_url
-          //   .then(response => this.blogs = response.data);
-          //   },
+                // axios.get('http://localhost/hasanik/public/api/blogs?page=' + page) //base_url
+             axios.get('https://app.hasanikenglish.com/api/blogs?page=' + page) //base_url
+            .then(response => this.blogs = response.data);
+            },
 
             getCategories(){
             // axios.get('http://localhost/hasanik/public/api/categories') //base_url
@@ -200,7 +196,7 @@
         created(){
           this.getBlogs();
           this.getCategories();
-          // this.getResults();
+          this.getResults();
         }
     }
 </script>

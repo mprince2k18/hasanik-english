@@ -2187,10 +2187,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -7454,7 +7450,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.blog_div[data-v-66ef69a0]{\n  height: 550px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n  margin-top: 10%;\n}\n\n/* .blog-post{\n  padding: 30px;\n} */\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar-track {\n  border: 1px solid #000;\n  padding: 2px 0;\n  background-color: #404040;\n  border-radius: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar {\n  width: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\n  background-color: #737272;\n  border: 1px solid #000;\n}\n", ""]);
+exports.push([module.i, "\n.blog_div[data-v-66ef69a0]{\r\n  height: 550px;\r\n  overflow-y: scroll;\r\n  overflow-x: hidden;\r\n  margin-top: 10%;\n}\r\n\r\n/* .blog-post{\r\n  padding: 30px;\r\n} */\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar-track {\r\n  border: 1px solid #000;\r\n  padding: 2px 0;\r\n  background-color: #404040;\r\n  border-radius: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar {\r\n  width: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar-thumb {\r\n  border-radius: 10px;\r\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\r\n  background-color: #737272;\r\n  border: 1px solid #000;\n}\r\n", ""]);
 
 // exports
 
@@ -41328,7 +41324,7 @@ var render = function() {
             _c(
               "div",
               { staticClass: "row" },
-              _vm._l(_vm.blogs.data, function(blog) {
+              _vm._l(_vm.blogs, function(blog) {
                 return _c("div", { key: blog.id, staticClass: "col-lg-4" }, [
                   _c("div", { staticClass: "blog-post" }, [
                     _c(
