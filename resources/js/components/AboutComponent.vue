@@ -40,7 +40,7 @@
 
         <div class="row">
           <div class="col-md-4">
-            <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png" class="img-fluid about-img" alt="">
+            <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png" class="img-fluid rounded about-img" alt="">
           </div>
           <div class="col-md-8">
             <!-- tabs -->
@@ -99,3 +99,10 @@
         // END
     }
 </script>
+
+
+<style scoped>
+.rounded{
+  border-radius: 10px;
+}
+</style>

@@ -119,7 +119,7 @@
 
         <div class="row">
           <div class="col-md-4">
-            <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png" class="img-fluid about-img" alt="">
+            <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png" class="img-fluid rounded about-img" alt="">
           </div>
           <div class="col-md-8">
             <div class="blog_div">
@@ -229,5 +229,9 @@
   box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background-color: #737272;
   border: 1px solid #000;
+}
+
+.rounded{
+  border-radius: 10px;
 }
 </style>

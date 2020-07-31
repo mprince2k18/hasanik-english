@@ -99,7 +99,7 @@
 
           <!-- col-md-4 -->
           <div class="col-md-4">
-            <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png" class="img-fluid about-img" alt="">
+            <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png" class="img-fluid rounded about-img" alt="">
           </div>
           <!-- col-md-4:END -->
 
@@ -196,5 +196,9 @@
 section.map{
   margin-top: 0 !important;
   padding-bottom: 0 !important;
+}
+
+.rounded{
+  border-radius: 10px;
 }
 </style>
