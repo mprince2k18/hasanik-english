@@ -162,6 +162,7 @@
   height: 550px;
   overflow-y: scroll;
   overflow-x: hidden;
+  margin-top: 10%;
 }
 
 .blog-post{
@@ -188,5 +189,9 @@
 
 .rounded{
   border-radius: 10px;
+}
+
+.shop-page{
+  margin-top: 10px;
 }
 </style>
