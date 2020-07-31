@@ -95,16 +95,13 @@
           <!-- col-md-8 -->
           <div class="col-md-8">
             <!-- tabs -->
-                <section class="our-team">
+               <div class="blog_div">
+
+                 <section class="our-team">
                   <div class="container">
                     <div class="row">
-                      <div class="col-lg-12">
-                        <div class="section-heading">
-                          <h2>Meet Our Members</h2>
-                        </div>
-                      </div>
 
-                      <!-- <div class="col-lg-3" v-for="team in teams" :key="team.id">
+                      <div class="col-lg-3" v-for="team in teams" :key="team.id">
                         <div class="team-item">
                           <div class="team-thumb">
                             <div class="hover-effect">
@@ -118,39 +115,17 @@
                             <img :src="team.photo" alt="#">
                           </div>
                           <div class="down-content">
-                            <h4>{{ team.name }}</h4>
+                            <h6>{{ team.name }}</h6>
                             <span>{{ team.position }}</span>
                           </div>
                         </div>
-                      </div> -->
-
-            <carousel>
-
-              <slide v-for="team in teams" :key="team.id">
-                <div class="team-item">
-                          <div class="team-thumb">
-                            <div class="hover-effect">
-                              <ul>
-                                <li><a :href="team.fb"><i class="fa fa-facebook"></i></a></li>
-                                <li><a :href="team.tw"><i class="fa fa-twitter"></i></a></li>
-                                <li><a :href="team.skype"><i class="fa fa-skype"></i></a></li>
-                                <li><a :href="team.linked"><i class="fa fa-linkedin"></i></a></li>
-                              </ul>
-                            </div>
-                            <img :src="team.photo" alt="#">
-                          </div>
-                          <div class="down-content">
-                            <h4>{{ team.name }}</h4>
-                            <span>{{ team.position }}</span>
-                          </div>
-                        </div>
-              </slide>
-              
-            </carousel>
+                      </div>
 
                     </div>
                   </div>
-                </section>
+         </section>
+         
+                </div>
             <!-- tabs::ENd -->
           </div>
           <!-- col-md-8:END -->
@@ -163,15 +138,10 @@
 </template>
 
 <script>
-import { Carousel, Slide } from 'vue-carousel';
 
     export default {
         mounted() {
             console.log('Component mounted.');
-        },
-        components: {
-          Carousel,
-          Slide
         },
         data(){
           return{
@@ -193,15 +163,40 @@ import { Carousel, Slide } from 'vue-carousel';
 </script>
 
 <style scoped>
-section.our-team {
-    padding: 100px 0px 0px 0px;
+.blog_div{
+  height: 550px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-top: 10%;
 }
-.team-item{
-  width: 75%;
-  margin: 10px;
+
+.blog-post{
+  padding: 30px;
+}
+
+.blog_div::-webkit-scrollbar-track {
+  border: 1px solid #000;
+  padding: 2px 0;
+  background-color: #404040;
+  border-radius: 10px;
+}
+
+.blog_div::-webkit-scrollbar {
+  width: 10px;
+}
+
+.blog_div::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #737272;
+  border: 1px solid #000;
 }
 
 .rounded{
   border-radius: 10px;
+}
+
+.our-team{
+  padding-top: 45px;
 }
 </style>
