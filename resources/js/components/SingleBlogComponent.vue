@@ -165,6 +165,10 @@
   overflow-x: hidden;
 }
 
+.blog-page{
+  margin-top: 80px;
+}
+
 .blog-post{
   padding: 30px;
 }
