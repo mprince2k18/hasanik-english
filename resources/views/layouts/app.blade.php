@@ -75,7 +75,7 @@
           <li><a href="{{ url('/page/contact-us') }}">Contact Us</a></li>
           <li><a href="{{ url('/page/our-team') }}">Our Team</a></li>
           <li><a href="{{ url('/page/blog') }}">Blog</a></li>
-          <li><a href="{{ url('/page/course') }}">Courses</a></li>
+          <li><a href="{{ url('/page/courses') }}">Courses</a></li>
           <li><a href="{{ url('/enroll/course') }}">Enroll Course</a></li>
         </ul>
       </div>
