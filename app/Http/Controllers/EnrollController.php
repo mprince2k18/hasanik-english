@@ -8,6 +8,7 @@ use App\Models\Occupation;
 use App\Models\Schedule;
 use App\Models\Payment;
 use App\Models\FormQuestion;
+use App\Models\FormHelp;
 use App\Models\Course;
 use Mail;
 use Alert;
@@ -27,7 +28,8 @@ class EnrollController extends Controller
         $payments = Payment::all();
         $courses = Course::all();
         $questions = FormQuestion::first();
-        return view('enroll.index',compact('occupations','schedules','payments','questions','courses'));
+        $tips = FormHelp::first();
+        return view('enroll.index',compact('occupations','schedules','payments','questions','courses','tips'));
     }
 
     /**
@@ -106,13 +108,27 @@ class EnrollController extends Controller
       $questions = FormQuestion::first();
       return view('dashboard.backEnd.enrollment.enroll_form',compact('questions'));
     }
-
+    
     // form_question_store
     public function form_question_store(Request $request)
     {
       FormQuestion::where('id',$request->id)->update($request->except('_token'));
       return back();
     }
-
+    
+    // form_help
+    public function form_help()
+    {
+      $help_questions = FormHelp::first();
+      $questions = FormQuestion::first();
+      return view('dashboard.backEnd.enrollment.form_help',compact('help_questions','questions'));
+    }
+    
+    // form_help_store
+    public function form_help_store(Request $request)
+    {
+      FormHelp::create($request->except('_token'));
+      return back();
+    }
 
 }

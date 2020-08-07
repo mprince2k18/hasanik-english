@@ -25,6 +25,8 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
   Route::get('/form/data', 'EnrollController@form_data')->name('form.data');
   Route::get('/form/questions', 'EnrollController@form_question')->name('form.question');
   Route::post('/form/question/store', 'EnrollController@form_question_store')->name('form.question.store');
+  Route::get('/form/help', 'EnrollController@form_help')->name('form.help');
+  Route::post('/form/help/store', 'EnrollController@form_help_store')->name('form.help.store');
   
   /**
    * Form Data
