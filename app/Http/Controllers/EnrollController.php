@@ -41,14 +41,24 @@ class EnrollController extends Controller
     
     public function store(Request $request)
     {
-        Enroll::create($request->except('_token','website','terms','process'));
+        
+        $check_exist = Enroll::where('email',$request->email)
+                              ->where('phone',$request->phone)
+                              ->where('course_id',$request->course_id)
+                              ->first();
 
-        $name = $request->name;
-        $email = $request->email;
+        if (isset($check_exist)) {
+          Alert::success('Exist','You Already Enrolled This Course.');
+          return back();
+        }else {
+          Enroll::create($request->except('_token','website','terms','process'));
+          $name = $request->name;
+          $email = $request->email;
+          Mail::to($email)->send(new Enrollmail($name));
+          Alert::success('success','DONE');
+          return redirect()->route('enroll.success');
+        }
 
-        Mail::to($email)->send(new Enrollmail($name));
-        Alert::success('success','DONE');
-        return redirect()->route('enroll.success');
     }
 
     /**
