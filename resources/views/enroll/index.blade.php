@@ -147,7 +147,8 @@
 								<div class="step">
 									<h3 class="main_question">
                     <strong>2/5</strong>
-                    {{ $questions->question_en_2 ?? ''}} <br> [ {{ $questions->question_bn_2 ?? ''}} ] <a href="#!" data-toggle="tooltip" title="{{ $tips->tips2 ?? ''}}"><i class="icon-compass"></i></i></a>
+					{{ $questions->question_en_2 ?? ''}} <br> [ {{ $questions->question_bn_2 ?? ''}} ] 
+					<a href="#!" data-toggle="tooltip" title="{{ $tips->tips2 ?? ''}}"><i class="icon-compass"></i></i></a>
                   </h3>
                   <div class="form-group">
 										<div class="styled-select clearfix">
@@ -161,7 +162,8 @@
 										</div>
 									</div>
 									<h3 class="main_question">
-                    {{ $questions->question_en_3 ?? ''}} <br> [ {{ $questions->question_bn_3 ?? ''}} ]* <a href="#!" data-toggle="tooltip" title="{{ $tips->tips3 ?? ''}}"><i class="icon-compass"></i></i></a>
+					{{ $questions->question_en_3 ?? ''}} <br> [ {{ $questions->question_bn_3 ?? ''}} ]* 
+					<a href="#!" data-toggle="tooltip" title="{{ $tips->tips3 ?? ''}}"><i class="icon-compass"></i></i></a>
                   </h3>
                   @foreach ($schedules as $schedule)
                     <div class="form-group">

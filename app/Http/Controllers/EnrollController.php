@@ -137,7 +137,7 @@ class EnrollController extends Controller
     // form_help_store
     public function form_help_store(Request $request)
     {
-      FormHelp::create($request->except('_token'));
+      FormHelp::where('id',$request->id)->update($request->except('_token'));
       return back();
     }
 
