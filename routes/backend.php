@@ -60,7 +60,10 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
 
   Route::get('/blog','BlogController@index')->name('blog.index');
   Route::post('/blog/store','BlogController@store')->name('blog.store');
-  Route::post('/blog/all','BlogController@blogs')->name('blog.all');
+  Route::get('/all/blog','BlogController@blogs')->name('blog.all');
+  Route::get('/blog/trash/{id}','BlogController@destroy')->name('blog.destroy');
+  Route::get('/blog/edit/{id}','BlogController@edit')->name('blog.show');
+  Route::post('/blog/update/{id}','BlogController@update')->name('blog.update');
   
   /**
    * Course

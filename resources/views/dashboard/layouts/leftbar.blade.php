@@ -106,7 +106,7 @@
                         </a>
                         <ul class="vertical-submenu">
                             <li class="{{request()->is('dashboard/blog*') ? 'active': null}}"><a href="{{route('blog.index')}}">Add New Blog</a></li>
-                            <li class="{{request()->is('dashboard/blog/all*') ? 'active': null}}"><a href="{{ route('blog.all') }}">All Blog</a></li>
+                            <li class="{{request()->is('dashboard/all/blog*') ? 'active': null}}"><a href="{{ route('blog.all') }}">All Blog</a></li>
                             <li class="{{request()->is('dashboard/category*') ? 'active':null}}"><a href="{{route('categories.index')}}"> Categories</a></li>
                         </ul>
                     </li>
