@@ -94,7 +94,7 @@
 					{{ $questions->question_en_1 ?? '' }}
 					<br>
 					[ {{ $questions->question_bn_1 ?? '' }} ]
-					<a href="#!" data-toggle="tooltip" title="{{ $tips->tips1 }}"><i class="icon-compass"></i></i></a>
+					<a href="#!" data-toggle="tooltip" title="{{ $tips->tips1 ?? '' }}"><i class="icon-compass"></i></i></a>
 				  </h3>
 
 									<div class="form-group">
@@ -147,7 +147,7 @@
 								<div class="step">
 									<h3 class="main_question">
                     <strong>2/5</strong>
-                    {{ $questions->question_en_2 ?? ''}} <br> [ {{ $questions->question_bn_2 ?? ''}} ] <a href="#!" data-toggle="tooltip" title="{{ $tips->tips2 }}"><i class="icon-compass"></i></i></a>
+                    {{ $questions->question_en_2 ?? ''}} <br> [ {{ $questions->question_bn_2 ?? ''}} ] <a href="#!" data-toggle="tooltip" title="{{ $tips->tips2 ?? ''}}"><i class="icon-compass"></i></i></a>
                   </h3>
                   <div class="form-group">
 										<div class="styled-select clearfix">
@@ -161,7 +161,7 @@
 										</div>
 									</div>
 									<h3 class="main_question">
-                    {{ $questions->question_en_3 ?? ''}} <br> [ {{ $questions->question_bn_3 ?? ''}} ]* <a href="#!" data-toggle="tooltip" title="Hooray!"><i class="icon-compass"></i></i></a>
+                    {{ $questions->question_en_3 ?? ''}} <br> [ {{ $questions->question_bn_3 ?? ''}} ]* <a href="#!" data-toggle="tooltip" title="{{ $tips->tips3 ?? ''}}"><i class="icon-compass"></i></i></a>
                   </h3>
                   @foreach ($schedules as $schedule)
                     <div class="form-group">
@@ -177,7 +177,7 @@
 								<!-- /step-->
 								<div class="step">
 									<h3 class="main_question"><strong>3/5</strong>
-                    {{ $questions->question_en_4 ?? ''}} <br> [ {{ $questions->question_bn_4 ?? ''}} ]* <a href="#!" data-toggle="tooltip" title="{{ $tips->tips3 }}"><i class="icon-compass"></i></i></a>
+                    {{ $questions->question_en_4 ?? ''}} <br> [ {{ $questions->question_bn_4 ?? ''}} ]* <a href="#!" data-toggle="tooltip" title="{{ $tips->tips4 ?? '' }}"><i class="icon-compass"></i></i></a>
                   </h3>
                   @foreach ($payments as $payment)
                     <div class="form-group">
@@ -192,7 +192,7 @@
 								<!-- /step-->
 								<div class="step">
 									<h3 class="main_question"><strong>4/5</strong>
-                    {{ $questions->question_en_5 ?? ''}} <br> [ {{ $questions->question_bn_5 ?? ''}} ]* <a href="#!" data-toggle="tooltip" title="{{ $tips->tips4 }}"><i class="icon-compass"></i></i></a>
+                    {{ $questions->question_en_5 ?? ''}} <br> [ {{ $questions->question_bn_5 ?? ''}} ]* <a href="#!" data-toggle="tooltip" title="{{ $tips->tips5 ?? '' }}"><i class="icon-compass"></i></i></a>
                     </h3>
                     <div class="form-group">
                       <textarea name="description" class="form-control required" rows="10" placeholder="Write about yourself and why you want to do the course?"></textarea>
@@ -202,7 +202,7 @@
 								<!-- /step-->
 								<div class="step">
 									<h3 class="main_question"><strong>5/6</strong>
-                    {{ $questions->question_en_6 ?? ''}} <br> [ {{ $questions->question_bn_6 ?? ''}} ] <a href="#!" data-toggle="tooltip" title="{{ $tips->tips5 }}"><i class="icon-compass"></i></i></a>
+                    {{ $questions->question_en_6 ?? ''}} <br> [ {{ $questions->question_bn_6 ?? ''}} ] <a href="#!" data-toggle="tooltip" title="{{ $tips->tips6 ?? '' }}"><i class="icon-compass"></i></i></a>
                     </h3>
                     <div class="form-group">
 										<input type="number" name="guardian_phone" class="form-control required" placeholder="Your Guradian's Contact Number">
