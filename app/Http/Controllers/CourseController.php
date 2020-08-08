@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Course;
+use Alert;
 
 class CourseController extends Controller
 {
@@ -49,6 +50,8 @@ class CourseController extends Controller
         $course->meta_description = $request->meta_description;
         $course->save();
 
+        Alert::toast('Published', 'success');
+
         return back();
     
     }
@@ -59,9 +62,10 @@ class CourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function courses()
     {
-        //
+        $courses = Course::latest()->paginate(10);
+        return view('dashboard.backEnd.courses.all',compact('courses'));
     }
 
     /**
@@ -72,7 +76,8 @@ class CourseController extends Controller
      */
     public function edit($id)
     {
-        //
+        $single_course = Course::where('id', $id)->first();
+        return view('dashboard.backEnd.courses.edit', compact('single_course'));
     }
 
     /**
@@ -84,7 +89,34 @@ class CourseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $update_course = Course::findOrFail($id);
+        $update_course->name = $request->name;
+        
+        if ($request->hasFile('thumbnail')) {
+            $update_course->thumbnail = env('APP_URL') . '/' . fileUpload($request->thumbnail,'courses');
+        }else {
+            $update_course->thumbnail = $request->oldThumbnail;
+        }
+        $update_course->short_desc = $request->short_desc;
+        $update_course->big_desc = $request->big_desc;
+        $update_course->price = $request->price;
+        
+        if ($request->is_discount === 'on') {
+            $update_course->is_discount = true;
+            $update_course->discount_price = $request->discount_price;
+        }else{
+            $update_course->is_discount = false;
+            $update_course->discount_price = null;
+        }
+        
+        $update_course->slug = Str::slug($update_course->name);
+        $update_course->meta_title = $request->meta_title;
+        $update_course->meta_description = $request->meta_description;
+        $update_course->save();
+
+        Alert::toast('Updated', 'success');
+
+        return back();
     }
 
     /**
@@ -95,7 +127,9 @@ class CourseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Course::findOrFail($id)->delete();
+        Alert::toast('Trashed', 'success');
+        return back();
     }
 
     /**

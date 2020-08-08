@@ -122,7 +122,7 @@
                         </a>
                         <ul class="vertical-submenu">
                             <li class="{{request()->is('dashboard/course*') ? 'active': null}}"><a href="{{route('course.index')}}">Add New Course</a></li>
-                            <li class="{{request()->is('dashboard/team*') ? 'active': null}}"><a href="#">All Courses</a></li>
+                            <li class="{{request()->is('dashboard/courses*') ? 'active': null}}"><a href="{{route('course.all')}}">All Courses</a></li>
                         </ul>
                     </li>
                     {{-- Blog::END --}}

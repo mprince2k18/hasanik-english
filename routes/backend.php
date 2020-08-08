@@ -71,6 +71,10 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
   
   Route::get('/course','CourseController@index')->name('course.index');
   Route::post('/course/store','CourseController@store')->name('course.store');
+  Route::get('/courses','CourseController@courses')->name('course.all');
+  Route::post('/course/update/{id}','CourseController@update')->name('course.update');
+  Route::get('/course/edit/{id}','CourseController@edit')->name('course.show');
+  Route::get('/course/trash/{id}','CourseController@destroy')->name('course.destroy');
   
   /**
    * Organization Settings
@@ -84,9 +88,5 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
   Route::get('/slider/settings','SliderController@index')->name('slider.index');
   Route::post('/slider/settings/store','SliderController@store')->name('slider.store');
   Route::get('/slider/activation','SliderController@slider_activation')->name('slider.activation');
-
-
-
-
 
 });
