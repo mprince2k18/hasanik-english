@@ -60,6 +60,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
 
   Route::get('/blog','BlogController@index')->name('blog.index');
   Route::post('/blog/store','BlogController@store')->name('blog.store');
+  Route::post('/blog/all','BlogController@blogs')->name('blog.all');
   
   /**
    * Course
