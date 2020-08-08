@@ -27,24 +27,14 @@
         .f-22{
             font-size: 22px;
         }
-
-          	  #global-loader {
-              position:fixed;
-              z-index:50000;
-              background: url('https://res.cloudinary.com/dhe6napl7/image/upload/v1596906775/hasanik-english.gif') no-repeat 50% 50% rgba(255, 255, 255);
-              /* background: url('{{ asset('frontend/preloader.gif') }}') no-repeat 50% 50% rgba(255, 255, 255); */
-              background-repeat: no-repeat;
-              left:0;
-              top:0;
-              right:0;
-              bottom:0;
-              margin:0 auto;
-              z-index: 999999;
-              }
     </style>
 
     <body>
-      <div id="global-loader" ></div>
+      <div class="loader">
+         <div class="tm-loader">
+             {{-- <div id="circle"></div> --}}
+         </div>
+     </div>
      <!--================= main start ================-->
      <div id="main">
          <!--=============== header ===============-->
@@ -182,12 +172,6 @@
         <script type="text/javascript" src="{{ asset('homepage/js/scripts.js') }}"></script>
 
         @include('sweetalert::alert')
-
-        <script type="text/javascript">
-          $(window).on("load", function(e) {
-              $("#global-loader").fadeOut("fast");
-            });
-        </script>
 
     </body>
 </html>

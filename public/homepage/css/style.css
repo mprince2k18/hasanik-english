@@ -107,8 +107,8 @@ blockquote p {
 /* ---------Page preload--------------------------------------*/
 .loader {
 	position:fixed;
-	top:50% !important;
-	left:50%;
+	top:10% !important;
+	left:35%;
 	width:50px;
 	height:50px;
 	z-index:100;
@@ -116,29 +116,28 @@ blockquote p {
 }
 .tm-loader,
 .tm-loader #circle{
-	width: 50px;
-	height: 50px;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-	background: none;
-	-webkit-transform-origin: center center;
+	width: 500px;
+	height: 500px;
+	/* -webkit-border-radius: 50%; */
+	/* -moz-border-radius: 50%; */
+	background: url('https://res.cloudinary.com/dhe6napl7/image/upload/v1596906775/hasanik-english.gif') no-repeat 50% 50% rgba(0, 0, 0, 0);
+	/* -webkit-transform-origin: center center;
 	    -ms-transform-origin: center center;
-	    	transform-origin: center center;
+	    	transform-origin: center center; */
 }
 .tm-loader {
-	width: 50px;
-	height: 50px;
+	width: 500px;
+	height: 500px;
 	margin: -25px 0 0 -25px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-animation:preloader-outer 1.5s ease infinite;
+	/* position: absolute;
+	top: 10%;
+	left: 50%; */
+	/* -webkit-animation:preloader-outer 1.5s ease infinite;
 	   -moz-animation:preloader-outer 1.5s ease infinite;
 	     -o-animation:preloader-outer 1.5s ease infinite;
-	        animation:preloader-outer 1.5s ease infinite;
+	        animation:preloader-outer 1.5s ease infinite; */
 }
-.tm-loader #circle{
+/* .tm-loader #circle{
 	-webkit-animation:preloader 3s ease infinite;
 	   -moz-animation:preloader 3s ease infinite;
 	     -o-animation:preloader 3s ease infinite;
@@ -149,9 +148,9 @@ blockquote p {
 }
 .tm-loader #circle   {
 	border-bottom: 2px solid #000;
-}
+} */
 
-@-webkit-keyframes preloader-outer{
+/* @-webkit-keyframes preloader-outer{
 	from { opacity: 1;	-webkit-transform: rotate( 0deg ); }
 	to	 { opacity: 1;	-webkit-transform: rotate( 360deg ); }
 }
@@ -168,7 +167,7 @@ blockquote p {
 	0% { opacity: 0.3; }
 	50%	 { opacity: 1; }
 	100% { opacity: 0.3; }
-}
+} */
 .l-line {
 	position:fixed;
 	top:0;
