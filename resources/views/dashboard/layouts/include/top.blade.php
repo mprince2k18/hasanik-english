@@ -178,10 +178,7 @@
                                     <div class="userbox">
                                         <ul class="list-unstyled mb-0">
                                             <li class="media dropdown-item">
-                                                <a href="#" class="profile-icon"><img src="{{asset('assets/images')}}/svg-icon/crm.svg" class="img-fluid" alt="user">My Profile</a>
-                                            </li>
-                                            <li class="media dropdown-item">
-                                                <a href="#" class="profile-icon"><img src="{{asset('assets/images')}}/svg-icon/email.svg" class="img-fluid" alt="email">Email</a>
+                                                <a href="{{ route('profile.index') }}" class="profile-icon"><img src="{{asset('assets/images')}}/svg-icon/crm.svg" class="img-fluid" alt="user">My Profile</a>
                                             </li>
                                             <li class="media dropdown-item">
                                                 {{-- Todo::raw logout script code--}}

@@ -90,5 +90,12 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
   Route::get('/slider/settings','SliderController@index')->name('slider.index');
   Route::post('/slider/settings/store','SliderController@store')->name('slider.store');
   Route::get('/slider/activation','SliderController@slider_activation')->name('slider.activation');
-
+  Route::get('/slider/trash/{id}','SliderController@destroy')->name('slider.destroy');
+  
+  /**
+   * PROFILE
+   */
+  Route::get('/profile','ProfileController@index')->name('profile.index');
+  Route::post('/profile/update','ProfileController@update')->name('profile.update');
+  
 });

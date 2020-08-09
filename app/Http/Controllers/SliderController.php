@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Slider;
+use Alert;
 
 class SliderController extends Controller
 {
@@ -39,41 +40,8 @@ class SliderController extends Controller
         }
 
         $slider->save();
+        Alert::toast('Published', 'success');
         return back();
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     /**
@@ -84,7 +52,10 @@ class SliderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Slider::findOrFail($id)->delete();
+        Alert::toast('Trashed', 'success');
+        return back();
+
     }
 
     /**
@@ -96,14 +67,15 @@ class SliderController extends Controller
     public function slider_activation(Request $request)
     {
         $slide = Slider::where('id', $request->id)->first();
+
         if ($slide->is_active == 0) {
         $slide->is_active = 1;
         $slide->save();
         }else {
         $slide->is_active = 0;
-        $slide->type = $request->type;
         $slide->save();
         }
+
         return response(['message' => 'Slider status is changed '], 200);
     }
 }

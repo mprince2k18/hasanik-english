@@ -145,5 +145,28 @@ function imageUploadFLogo(input) {
 
 $("#imageUpload_f_logo").change(function () {
     imageUploadFLogo(this);
-    alert('dsad');
+});
+
+$('.is_active').on('change', function () {
+    var url = this.dataset.url;
+    var id = this.dataset.id;
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    if (url != null && id != null) {
+        $.ajax({
+            url: url,
+            data: {
+                id: id
+            },
+            method: 'get',
+            success: function (result) {
+                console.log('200')
+            },
+        });
+    }
 });
