@@ -32,7 +32,7 @@
     <body>
       <div class="loader">
          <div class="tm-loader">
-             {{-- <div id="circle"></div> --}}
+             <div id="circle"></div>
          </div>
      </div>
      <!--================= main start ================-->
@@ -172,18 +172,6 @@
         <script type="text/javascript" src="{{ asset('homepage/js/scripts.js') }}"></script>
 
         @include('sweetalert::alert')
-
-        <script>
-          (function (window, document) {
-              var loader = function () {
-                  var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
-                  script.src = "https://sandbox.sslcommerz.com/embed.min.js?" + Math.random().toString(36).substring(7);
-                  tag.parentNode.insertBefore(script, tag);
-              };
-
-              window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
-          })(window, document);
-      </script>
 
     </body>
 </html>
