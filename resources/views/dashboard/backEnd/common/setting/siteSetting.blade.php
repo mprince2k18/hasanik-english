@@ -1,5 +1,5 @@
 @extends('dashboard.layouts.main')
-@section('title') Setting)  @endsection
+@section('title') Org Setting  @endsection
 @section('main-content')
     <!-- Start Breadcrumbbar -->
     <div class="breadcrumbbar">
@@ -9,8 +9,8 @@
                 <div class="breadcrumb-list">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Advanced UI</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Image Crop</li>
+                        <li class="breadcrumb-item"><a href="#">Settings</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Org Setting</li>
                     </ol>
                 </div>
             </div>
@@ -127,10 +127,28 @@
                         <input type="text" value="{{getSystemSetting('type_google')->value}}" name="google"
                                class="form-control">
 
+                        <!--youtube-->
+                        <label class="label">Organization Youtube Link</label>
+                        <input type="hidden" value="type_youtube" name="type_youtube">
+                        <input type="text" value="{{getSystemSetting('type_youtube')->value}}" name="youtube"
+                               class="form-control">
+
+                        <!--linkedin-->
+                        <label class="label">Organization Linkedin Link</label>
+                        <input type="hidden" value="type_linked" name="type_linked">
+                        <input type="text" value="{{getSystemSetting('type_linked')->value}}" name="linkedin"
+                               class="form-control">
+
                         <!--Number-->
                         <label class="label">Organization Number</label>
                         <input type="hidden" value="type_number" name="type_number">
                         <input type="text" value="{{getSystemSetting('type_number')->value}}" name="number"
+                               class="form-control">
+
+                        <!--Map-->
+                        <label class="label">Organization Map</label>
+                        <input type="hidden" value="type_map" name="type_map">
+                        <input type="text" value="{{getSystemSetting('type_map')->value}}" name="map"
                                class="form-control">
 
                         <div class="m-2 float-right">

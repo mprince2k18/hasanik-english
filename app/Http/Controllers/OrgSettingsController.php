@@ -85,6 +85,11 @@ class OrgSettingsController extends Controller
             $system->value = $request->youtube;
             $system->save();
         }
+        if ($request->has('linkedin')) {
+            $system = OrgSetting::where('type', $request->type_linked)->first();
+            $system->value = $request->linkedin;
+            $system->save();
+        }
         if ($request->has('map')) {
             $system = OrgSetting::where('type', $request->type_map)->first();
             $system->value = $request->map;
