@@ -34,7 +34,7 @@
                     @csrf
 
                     <!--logo-->
-                        <label class="label">Organization logo)</label>
+                        <label class="label">Organization logo</label>
                         <input type="hidden" value="type_logo" name="type_logo">
 
                         <div class="avatar-upload">
@@ -51,7 +51,7 @@
                         <!--logo end-->
 
                         <!--footer logo-->
-                        <label class="label">Footer Logo)</label>
+                        <label class="label">Footer Logo</label>
                         <input type="hidden" value="footer_logo" name="footer_logo">
 
                         <div class="avatar-upload">
@@ -150,6 +150,22 @@
                         <input type="hidden" value="type_map" name="type_map">
                         <input type="text" value="{{getSystemSetting('type_map')->value}}" name="map"
                                class="form-control">
+
+                        <!--Primary Color-->
+                        <label class="label">Primary Color</label>
+                        <input type="hidden" value="primary_color" name="primary_color">
+                        <input id="default-color" type="text" name="color" class="form-control input-lg colorpicker-element" value="{{getSystemSetting('primary_color')->value ?? ''}}" data-colorpicker-id="1" data-original-title="" title="">
+                        
+                        <!--Font Color-->
+                        <label class="label">Font Color</label>
+                        <input type="hidden" value="font_color" name="f_color">
+                        {{-- <input id="default-color" type="text" name="font_color" class="form-control input-lg colorpicker-element" value="{{getSystemSetting('font_color')->value ?? ''}}" data-colorpicker-id="1" data-original-title="" title=""> --}}
+                        <div id="initial-color" class="input-group colorpicker-element" title="Using input value" data-colorpicker-id="3">
+                                  <input type="text" class="form-control input-lg" value="{{getSystemSetting('font_color')->value ?? ''}}" name="font_color">
+                                  <span class="input-group-append">
+                                    <span class="input-group-text colorpicker-input-addon" data-original-title="" title="" tabindex="0"><i style="background: {{getSystemSetting('font_color')->value}};"></i></span>
+                                  </span>
+                                </div>
 
                         <div class="m-2 float-right">
                             <button class="btn btn-block btn-primary" type="submit">Save</button>

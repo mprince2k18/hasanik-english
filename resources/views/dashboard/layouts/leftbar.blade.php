@@ -7,7 +7,7 @@
             <div class="vertical-menu-detail">
                 <div class="logobar">
                     <a href="{{url('/')}}" class="logo logo-large">
-                        <img src="{{ filePath(getSystemSetting('favicon_icon')->value) ?? asset('assets/images/logo.svg') }}" class="img-fluid" alt="logo">
+                        <img src="{{ filePath(getSystemSetting('type_logo')->value) ?? asset('assets/images/logo.svg') }}" class="img-fluid" alt="logo">
                     </a>
                     
                 </div>

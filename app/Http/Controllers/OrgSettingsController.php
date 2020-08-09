@@ -125,9 +125,9 @@ class OrgSettingsController extends Controller
             $system->value = $request->color;
             $system->save();
         }
-        if ($request->has('f_color')) {
-            $system = OrgSetting::where('type', $request->font_color)->first();
-            $system->value = $request->f_color;
+        if ($request->has('font_color')) {
+            $system = OrgSetting::where('type', $request->f_color)->first();
+            $system->value = $request->font_color;
             $system->save();
         }
 
