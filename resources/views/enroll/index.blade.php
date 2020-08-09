@@ -224,9 +224,17 @@
 								<button type="button" name="backward" class="backward">Prev</button>
 								<button type="button" name="forward" class="forward">Next</button>
 								<button type="submit" name="process" class="submit">Submit</button>
+								
+
 							</div>
 							<!-- /bottom-wizard -->
 						</form>
+
+						<form action="{{ url('/pay') }}" method="POST">
+							@csrf
+							<button type="submit" name="process" class="submit">Pay Now</button>
+						</form>
+
 					</div>
 					<!-- /Wizard container -->
 			</div>
@@ -286,6 +294,18 @@
 	  $(document).ready(function(){
 		$('[data-toggle="tooltip"]').tooltip();
 	  });
+	</script>
+	
+	<script>
+        (function (window, document) {
+            var loader = function () {
+                var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
+                script.src = "https://sandbox.sslcommerz.com/embed.min.js?" + Math.random().toString(36).substring(7);
+                tag.parentNode.insertBefore(script, tag);
+            };
+
+            window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+        })(window, document);
     </script>
 
 </body>

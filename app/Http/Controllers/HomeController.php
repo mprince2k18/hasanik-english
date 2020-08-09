@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Enroll;
+use App\Models\Blog;
+use App\Models\Course;
+use App\Models\Team;
 
 class HomeController extends Controller
 {
@@ -20,10 +23,11 @@ class HomeController extends Controller
     // index
     public function index()
     {
-        // $enroll_count = Enroll::count();
-        // $male = Enroll::where('gender','Male')->count();
-        // $female = Enroll::where('gender','Female')->count();
-        return view('dashboard.backEnd.home.index');
+        $enroll_count = Enroll::count();
+        $blog_count = Blog::count();
+        $course_count = Course::count();
+        $teams = Team::all();
+        return view('dashboard.backEnd.home.index', compact('enroll_count','blog_count','course_count','teams'));
     }
 
     // enroll_index

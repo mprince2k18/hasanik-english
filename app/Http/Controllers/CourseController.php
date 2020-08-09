@@ -147,4 +147,14 @@ class CourseController extends Controller
     {
         return Course::where('slug',$slug)->first();
     }
+
+    /**
+     * countCourse
+     */
+    public function countCourse()
+    {
+        $data = Course::count();
+        $labels = Course::pluck('id');
+        return response()->json(compact('data','labels'));
+    }
 }

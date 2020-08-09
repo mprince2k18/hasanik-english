@@ -75,6 +75,8 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
   Route::post('/course/update/{id}','CourseController@update')->name('course.update');
   Route::get('/course/edit/{id}','CourseController@edit')->name('course.show');
   Route::get('/course/trash/{id}','CourseController@destroy')->name('course.destroy');
+  Route::get('/course/count','CourseController@countCourse')->name('count.course');
+
   
   /**
    * Organization Settings

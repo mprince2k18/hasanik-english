@@ -1,5 +1,5 @@
 @section('title')
-Soyuz - Home
+{{ env('APP_NAME') }} - Dashboard
 @endsection
 @extends('dashboard.layouts.main')
 @section('style')

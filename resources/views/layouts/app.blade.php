@@ -30,7 +30,7 @@
     .blog-sidebar .search form button, 
     .blog-sidebar .about-me ul.social-icons li a, 
     #search{
-      background-color: {{getSystemSetting('primary_color')->value}} !important;
+      /* background-color: {{getSystemSetting('primary_color')->value}} !important; */
     }
     .main-white-button a, 
     section.footer-content .main-footer ul.social-icons li a, 
@@ -42,14 +42,14 @@
     section.product-details .single-product .right-content span
     
      {
-      color: {{getSystemSetting('font_color')->value}} !important;
+      /* color: {{getSystemSetting('font_color')->value}} !important; */
     }
     
     section.footer-content .main-footer ul.social-icons li a:hover, 
     .header-widgets .right-menu .menu-search a:hover, 
     .blog-sidebar .about-me ul.social-icons li a:hover, 
     .blog-sidebar .search form button:hover{
-      box-shadow: 0 0 20px 0px {{getSystemSetting('primary_color')->value}} !important;
+      /* box-shadow: 0 0 20px 0px {{getSystemSetting('primary_color')->value}} !important; */
     }
   </style>
 
@@ -158,6 +158,18 @@
     <script src="{{ asset('frontend/scripts/vendors/accordions.js') }}"></script>
     <script src="{{ asset('frontend/scripts/main.js') }}"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1ca813dc314e47"></script>
+
+    <script>
+        (function (window, document) {
+            var loader = function () {
+                var script = document.createElement("script"), tag = document.getElementsByTagName("script")[0];
+                script.src = "https://sandbox.sslcommerz.com/embed.min.js?" + Math.random().toString(36).substring(7);
+                tag.parentNode.insertBefore(script, tag);
+            };
+
+            window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload", loader);
+        })(window, document);
+    </script>
 
   </body>
 
