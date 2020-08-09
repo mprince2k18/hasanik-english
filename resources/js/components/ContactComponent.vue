@@ -129,7 +129,7 @@
                                   <i class="fa fa-envelope"></i>
                                 </div>
                                 <h4>Email Address</h4>
-                                <p><a href="#">contact@oxana.com</a><br><a href="#">info@oxana.com</a></p>
+                                <p><a href="">{{ org[3].value }}</a></p>
                               </div>
                             </div>
                             <div class="col-lg-4">
@@ -138,7 +138,7 @@
                                   <i class="fa fa-phone"></i>
                                 </div>
                                 <h4>Phone Number</h4>
-                                <p><a href="#">+1 547 6877 534</a><br><a href="#">001 547 6877 534</a></p>
+                                <p><a href="#">{{ org[7].value }}</a></p>
                               </div>
                             </div>
                             <div class="col-lg-4">
@@ -147,7 +147,7 @@
                                   <i class="fa fa-map-marker"></i>
                                 </div>
                                 <h4>Street Address</h4>
-                                <p><a href="#">342 Better Street<br>Peculiar, KS 64078</a></p>
+                                <p><a href="#">{{ org[4].value }}</a></p>
                               </div>
                             </div>
                           </div>
@@ -166,7 +166,7 @@
                             <div class="col-lg-12">
                               <div class="inner-content">
                                 <div id="map">
-                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29209.879270273177!2d90.4031033!3d23.77464789999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c766d9187295%3A0x1c499b6d790ad78d!2sNakhalpara%20Boro%20Jame%20Mosjid!5e0!3m2!1sen!2sbd!4v1595768259760!5m2!1sen!2sbd" style="border:0; width: 100%; height: 350px; border: none; border-radius: 10px;" allowfullscreen></iframe>
+                                  <iframe :src="org[13].value" style="border:0; width: 100%; height: 350px; border: none; border-radius: 10px;" allowfullscreen></iframe>
                                 </div>
                               </div>
                             </div>
@@ -191,8 +191,27 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+            console.log(getOrg());
+        },
+        data(){
+          return{
+            org:[],
+            loading: false
+          }
+        },
+        methods:{
+          getOrg(){
+            this.loading = true;
+            // axios.get('http://localhost/hasanik/public/api/org') //base_url
+            axios.get('https://app.hasanikenglish.com/api/org') //base_url
+            .then(response => this.org = response.data)
+            .finally(() => (this.loading = false));
+          }
+        },
+        created(){
+          this.getOrg();
         }
+        // END
     }
 </script>
 

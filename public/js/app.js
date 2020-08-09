@@ -2456,8 +2456,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    console.log('Component mounted.');
-  }
+    console.log(getOrg());
+  },
+  data: function data() {
+    return {
+      org: [],
+      loading: false
+    };
+  },
+  methods: {
+    getOrg: function getOrg() {
+      var _this = this;
+
+      this.loading = true; // axios.get('http://localhost/hasanik/public/api/org') //base_url
+
+      axios.get('https://app.hasanikenglish.com/api/org') //base_url
+      .then(function (response) {
+        return _this.org = response.data;
+      })["finally"](function () {
+        return _this.loading = false;
+      });
+    }
+  },
+  created: function created() {
+    this.getOrg();
+  } // END
+
 });
 
 /***/ }),
@@ -41893,11 +41917,90 @@ var render = function() {
                     ])
                   : _vm._e(),
                 _vm._v(" "),
-                _vm._m(1)
+                _c("section", { staticClass: "contact-info" }, [
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col-lg-4" }, [
+                        _c("div", { staticClass: "info-item" }, [
+                          _vm._m(1),
+                          _vm._v(" "),
+                          _c("h4", [_vm._v("Email Address")]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _c("a", { attrs: { href: "" } }, [
+                              _vm._v(_vm._s(_vm.org[3].value))
+                            ])
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-lg-4" }, [
+                        _c("div", { staticClass: "info-item" }, [
+                          _vm._m(2),
+                          _vm._v(" "),
+                          _c("h4", [_vm._v("Phone Number")]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _c("a", { attrs: { href: "#" } }, [
+                              _vm._v(_vm._s(_vm.org[7].value))
+                            ])
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-lg-4" }, [
+                        _c("div", { staticClass: "info-item" }, [
+                          _vm._m(3),
+                          _vm._v(" "),
+                          _c("h4", [_vm._v("Street Address")]),
+                          _vm._v(" "),
+                          _c("p", [
+                            _c("a", { attrs: { href: "#" } }, [
+                              _vm._v(_vm._s(_vm.org[4].value))
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
               ])
             ]),
             _vm._v(" "),
-            _vm._m(2)
+            _c("div", { staticClass: "tab-2" }, [
+              _c("label", { attrs: { for: "tab2-2" } }, [_vm._v("Location")]),
+              _vm._v(" "),
+              _c("input", {
+                attrs: { id: "tab2-2", name: "tabs-two", type: "radio" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "item-content" }, [
+                _c("section", { staticClass: "map" }, [
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col-lg-12" }, [
+                        _c("div", { staticClass: "inner-content" }, [
+                          _c("div", { attrs: { id: "map" } }, [
+                            _c("iframe", {
+                              staticStyle: {
+                                border: "none",
+                                width: "100%",
+                                height: "350px",
+                                "border-radius": "10px"
+                              },
+                              attrs: {
+                                src: _vm.org[13].value,
+                                allowfullscreen: ""
+                              }
+                            })
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
           ])
         ])
       ])
@@ -41924,100 +42027,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "contact-info" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c("div", { staticClass: "info-item" }, [
-              _c("div", { staticClass: "icon" }, [
-                _c("i", { staticClass: "fa fa-envelope" })
-              ]),
-              _vm._v(" "),
-              _c("h4", [_vm._v("Email Address")]),
-              _vm._v(" "),
-              _c("p", [
-                _c("a", { attrs: { href: "#" } }, [
-                  _vm._v("contact@oxana.com")
-                ]),
-                _c("br"),
-                _c("a", { attrs: { href: "#" } }, [_vm._v("info@oxana.com")])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c("div", { staticClass: "info-item" }, [
-              _c("div", { staticClass: "icon" }, [
-                _c("i", { staticClass: "fa fa-phone" })
-              ]),
-              _vm._v(" "),
-              _c("h4", [_vm._v("Phone Number")]),
-              _vm._v(" "),
-              _c("p", [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("+1 547 6877 534")]),
-                _c("br"),
-                _c("a", { attrs: { href: "#" } }, [_vm._v("001 547 6877 534")])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-lg-4" }, [
-            _c("div", { staticClass: "info-item" }, [
-              _c("div", { staticClass: "icon" }, [
-                _c("i", { staticClass: "fa fa-map-marker" })
-              ]),
-              _vm._v(" "),
-              _c("h4", [_vm._v("Street Address")]),
-              _vm._v(" "),
-              _c("p", [
-                _c("a", { attrs: { href: "#" } }, [
-                  _vm._v("342 Better Street"),
-                  _c("br"),
-                  _vm._v("Peculiar, KS 64078")
-                ])
-              ])
-            ])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "icon" }, [
+      _c("i", { staticClass: "fa fa-envelope" })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tab-2" }, [
-      _c("label", { attrs: { for: "tab2-2" } }, [_vm._v("Location")]),
-      _vm._v(" "),
-      _c("input", { attrs: { id: "tab2-2", name: "tabs-two", type: "radio" } }),
-      _vm._v(" "),
-      _c("div", { staticClass: "item-content" }, [
-        _c("section", { staticClass: "map" }, [
-          _c("div", { staticClass: "container" }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-lg-12" }, [
-                _c("div", { staticClass: "inner-content" }, [
-                  _c("div", { attrs: { id: "map" } }, [
-                    _c("iframe", {
-                      staticStyle: {
-                        border: "none",
-                        width: "100%",
-                        height: "350px",
-                        "border-radius": "10px"
-                      },
-                      attrs: {
-                        src:
-                          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29209.879270273177!2d90.4031033!3d23.77464789999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c766d9187295%3A0x1c499b6d790ad78d!2sNakhalpara%20Boro%20Jame%20Mosjid!5e0!3m2!1sen!2sbd!4v1595768259760!5m2!1sen!2sbd",
-                        allowfullscreen: ""
-                      }
-                    })
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ])
-      ])
+    return _c("div", { staticClass: "icon" }, [
+      _c("i", { staticClass: "fa fa-phone" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "icon" }, [
+      _c("i", { staticClass: "fa fa-map-marker" })
     ])
   }
 ]

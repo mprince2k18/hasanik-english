@@ -46,3 +46,8 @@ Route::get('/course/{slug}','CourseController@getCourse')->name('get.course');
  */
 Route::get('/categories','CategoryController@getCategory')->name('get.categories');
 
+/**
+ * ORG SETTINGS
+ */
+Route::get('/org','OrgSettingsController@getOrg')->name('get.org');
+
