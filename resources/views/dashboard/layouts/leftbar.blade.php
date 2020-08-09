@@ -60,6 +60,8 @@
                                 <a href="{{route('smtp.create')}}">SMTP Settings</a></li>
                             <li class="{{request()->is('dashboard/setting*') ?'active':null}}">
                                 <a href="{{route('site.setting')}}"> Organization Setup</a></li>
+                            <li class="{{request()->is('dashboard/slider/settings*') ?'active':null}}">
+                                <a href="{{route('slider.index')}}"> Slider Setup</a></li>
                         </ul>
                     </li>
 
