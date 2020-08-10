@@ -65,6 +65,13 @@ class OrgSettingsController extends Controller
             $system->value = $request->footer;
             $system->save();
         }
+
+        if ($request->has('loader')) {
+            $system = OrgSetting::where('type', $request->pre_loader)->first();
+            $system->value = $request->loader;
+            $system->save();
+        }
+
         if ($request->has('fb')) {
             $system = OrgSetting::where('type', $request->type_fb)->first();
             $system->value = $request->fb;

@@ -85,6 +85,12 @@
                         </div>
                         <!--favicon end-->
 
+                        <!--Pre Loader-->
+                        <label class="label">Pre Loader</label>
+                        <input type="hidden" value="pre_loader" name="pre_loader">
+                        <input type="file" value="{{getSystemSetting('pre_loader')->value}}" name="loader"
+                               class="form-control">
+
                         <!--name-->
                         <label class="label">Organization Name</label>
                         <input type="hidden" value="type_name" name="type_name">

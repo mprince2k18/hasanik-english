@@ -103,9 +103,7 @@
                                   <div class="row">
                                     <div class="col-lg-8">
                                       <ul class="social-icons">
-                                        
                                         <div class="addthis_inline_share_toolbox"></div>
-                                    
                                       </ul>
                                     </div>
                                   </div>

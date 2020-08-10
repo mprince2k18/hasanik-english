@@ -55,13 +55,15 @@
                      <div class="full-height-wrap">
                          <!-- 1 -->
                                  @php
-                                     $asides = App\Slider::where('is_active', 1)->where('type', 'aside')->get();
+                                     $asides = App\Slider::where('is_active', 0)->where('type', 'aside')->first();
                                      $tops = App\Slider::where('is_active', 1)->where('type', 'top')->get();
                                      $bottoms = App\Slider::where('is_active', 1)->where('type', 'bottom')->get();
                                  @endphp
                          <div class="hero-grid big-column">
                                  <div class="item">
-                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png)"></div>
+                                     <div class="bg" 
+                                     style="background-image:url({{ filePath($asides->slider ?? '') }})">
+                                    </div>
                                  </div>
                          </div>
                          <!-- 1 end -->
@@ -100,8 +102,8 @@
                          <!-- enter-wrap -->
                          <div class="enter-wrap-holder column-wrap">
                              <div class="enter-wrap">
-                                 <a href="" class="btn btn-primary" style="margin-top: 100%;
-    margin-right: 42%;">Enroll Now</a>
+                                 <a href="" class="btn btn-primary" 
+                                 style="margin-top: 100%; margin-right: 42%;">Enroll Now</a>
                              </div>
                          </div>
                          <!-- enter-wrap end  -->

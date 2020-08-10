@@ -29,6 +29,19 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'category_id' => 'required',
+            'thumbnail' => 'required',
+        ],
+        [
+            'title.required' => 'Title required',
+            'description.required' => 'Description required',
+            'category_id.required' => 'Please select a category',
+            'thumbnail.required' => 'Post thumbnail is required',
+        ]);
+
         $blog = new Blog();
         $blog->user_id = Auth::id();
         $blog->title = $request->title;
