@@ -62,9 +62,11 @@ class EnrollController extends Controller
           return back();
         }else {
           Enroll::create($request->except('_token','website','terms','process'));
+
           $name = $request->name;
           $email = $request->email;
           Mail::to($email)->send(new Enrollmail($name));
+
           Alert::success('success','DONE');
           return redirect()->route('enroll.success');
         }
@@ -149,6 +151,17 @@ class EnrollController extends Controller
     {
       FormHelp::where('id',$request->id)->update($request->except('_token'));
       return back();
+    }
+
+    /**
+     * getCoursePrice
+     */
+
+     public function getCoursePrice(Request $request)
+    {
+        $course_price = Course::where('id', $request->course_id)->first();
+
+        return response()->json($course_price, 200);
     }
 
 }

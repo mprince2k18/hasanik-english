@@ -174,4 +174,8 @@ class CourseController extends Controller
         $labels = Course::pluck('id');
         return response()->json(compact('data','labels'));
     }
+
+    
+
+    //END
 }

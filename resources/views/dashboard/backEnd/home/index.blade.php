@@ -61,6 +61,18 @@
                 <!-- Start col -->
 
                 {{-- TODO::CHART GOES HERE --}}
+                <!-- Start col -->
+        <div class="col-lg-12">
+            <div class="card m-b-30">
+                <div class="card-header">
+                    <h5 class="card-title">Payment Chart</h5>
+                </div>
+                <div class="card-body">
+                    <div id="bar-chart"></div>
+                </div>
+            </div>
+        </div>
+        <!-- End col -->
                 {{-- TODO::CHART GOES HERE --}}
 
                 <!-- End col -->
@@ -114,5 +126,82 @@
 @endsection
 @section('script')
 
+<script>
+    /* -- Apex Bar Chart -- */
+    var options = {
+      series: [{
+      name: 'Payments',
+      data: [{{ $jan }}, {{ $feb }}, {{ $mar }}, {{ $apr }}, {{ $may }}, {{ $june }}, {{ $july }}, {{ $aug }} , {{ $sep }}, {{ $oct }}, {{ $nov }}, {{ $dec }}]
+    }],
+      annotations: {
+      points: [{
+        x: 'Bananas',
+        seriesIndex: 0,
+        label: {
+          borderColor: '#506fe4',
+          offsetY: 0,
+          style: {
+            color: '#fff',
+            background: '#506fe4',
+          },
+          text: 'Bananas are good',
+        }
+      }]
+    },
+    chart: {
+      height: 285,
+      type: 'bar',
+      toolbar: {
+        show: false
+      }
+    },
+    plotOptions: {
+      bar: {
+        columnWidth: '50%',
+        endingShape: 'rounded'  
+      }
+    },
+    colors: ['#506fe4'],
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      width: 2
+    },    
+    grid: {
+      row: {
+        colors: ['#fff', '#fff']
+      }
+    },
+    xaxis: {
+      labels: {
+        rotate: -45
+      },
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      tickPlacement: 'on'
+    },
+    yaxis: {
+      title: {
+        text: 'Payments',
+      },
+    },
+    fill: {
+      type: 'gradient',
+      gradient: {
+        shade: 'light',
+        type: "horizontal",
+        shadeIntensity: 0.25,
+        gradientToColors: undefined,
+        inverseColors: true,
+        opacityFrom: 0.85,
+        opacityTo: 0.85,
+        stops: [50, 0, 100]
+      },
+    }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#bar-chart"), options);
+    chart.render();
+</script>
 
 @endsection

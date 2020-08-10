@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Wilio Survey, Quotation, Review and Register form Wizard by Ansonika.">
-    <meta name="author" content="{{ getSystemSetting('type_name')->value }}">
+	<meta name="author" content="{{ getSystemSetting('type_name')->value }}">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ getSystemSetting('type_name')->value }}</title>
 
     <!-- Favicons-->
@@ -152,7 +153,8 @@
                   </h3>
                   <div class="form-group">
 										<div class="styled-select clearfix">
-											<select class="wide required" name="course_id">
+											<input type="hidden" value="{{ route('get.course.price') }}" id="url" class="form-control">
+											<select class="wide required" name="course_id" id="course_id">
 												<option value="">Select Course*</option>
 												@foreach ($courses as $course)
 												<option value="{{ $course->id }}">{{ $course->name }}( ৳{{ $course->is_discount === 1 ? $course->discount_price : $course->price }})</option>
@@ -161,6 +163,14 @@
 											</select>
 										</div>
 									</div>
+
+
+                  					<div class="form-group">
+										<input type="hidden" value="" id="course_price" name="course_price" class="form-control">
+									</div>
+
+
+
 									<h3 class="main_question">
 					{{ $questions->question_en_3 ?? ''}} <br> [ {{ $questions->question_bn_3 ?? ''}} ]* 
 					<a href="#!" data-toggle="tooltip" title="{{ $tips->tips3 ?? ''}}"><i class="icon-question"></i></i></a>
@@ -294,6 +304,39 @@
 	  $(document).ready(function(){
 		$('[data-toggle="tooltip"]').tooltip();
 	  });
+
+
+$(document).ready(function() {
+	$('#course_id').change(function() {
+	    var url = $('#url').val();
+	    var course_id = $(this).val();
+
+	    // ajax setup
+
+	    $.ajaxSetup({
+		headers: {
+		    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		}
+	    });
+
+	    // ajax setup request start
+
+	    $.ajax({
+		type: 'GET',
+		url: url,
+		data: {
+		    course_id: course_id
+		},
+		success: function(data) {
+		    $("#course_price").val(data.price);
+		}
+	    });
+
+	    // ajax setup request end
+
+	});
+	});
+	
 	</script>
 
 </body>

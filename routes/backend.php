@@ -27,6 +27,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
   Route::post('/form/question/store', 'EnrollController@form_question_store')->name('form.question.store');
   Route::get('/form/help', 'EnrollController@form_help')->name('form.help');
   Route::post('/form/help/store', 'EnrollController@form_help_store')->name('form.help.store');
+  Route::get('get/course/price','EnrollController@getCoursePrice')->name('get.course.price'); //API Ajax
   
   /**
    * Form Data
@@ -76,6 +77,8 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
   Route::get('/course/edit/{id}','CourseController@edit')->name('course.show');
   Route::get('/course/trash/{id}','CourseController@destroy')->name('course.destroy');
   Route::get('/course/count','CourseController@countCourse')->name('count.course');
+
+  
 
   
   /**

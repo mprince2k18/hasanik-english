@@ -1,7 +1,7 @@
 @section('title')
 Soyuz - Apex Chart
 @endsection
-@extends('layouts.main')
+@extends('dashboard.layouts.main')
 @section('style')
 
 @endsection

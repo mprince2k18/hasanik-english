@@ -22,6 +22,7 @@ class CreateEnrollsTable extends Migration
             $table->string('age')->nullable();
             $table->string('gender')->nullable();
             $table->unsignedBigInteger('course_id')->nullable();
+            $table->double('course_price')->nullable();
             $table->unsignedBigInteger('schedule_id')->nullable();
             $table->unsignedBigInteger('payment_id')->nullable();
             $table->longText('description')->nullable();
