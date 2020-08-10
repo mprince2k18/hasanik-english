@@ -41,6 +41,16 @@ class EnrollController extends Controller
     
     public function store(Request $request)
     {
+
+      $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+        ],
+        [
+            'name.required' => 'Name is required',
+            'email.required' => 'Email is required',
+        ]);
+
         
         $check_exist = Enroll::where('email',$request->email)
                               ->where('phone',$request->phone)

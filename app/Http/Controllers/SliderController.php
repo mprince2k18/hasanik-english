@@ -27,6 +27,14 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'slider' => 'required',
+        ],
+        [
+            'slider.required' => 'Slider is required',
+        ]);
+
         $slider = new Slider();
 
         if ($request->hasFile('slider')) {

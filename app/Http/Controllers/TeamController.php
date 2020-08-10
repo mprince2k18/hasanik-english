@@ -19,6 +19,18 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'name' => 'required',
+            'position' => 'required',
+            'photo' => 'required',
+        ],
+        [
+            'slider.required' => 'Slider is required',
+            'position.required' => 'Position is required',
+            'photo.required' => 'Photo is required',
+        ]);
+
         $team  = new Team();
         $team->name = $request->name;
         $team->position = $request->position;
