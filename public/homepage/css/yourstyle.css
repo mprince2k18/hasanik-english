@@ -136,7 +136,7 @@ MENU STYLES
   --uiMenuCircleSize: var(--menuCircleSize, 6.25rem);
   --uiMenuCircleOffset: var(--menuCircleOffset, 1rem);
   --uiMenuCircleHeight: calc(var(--uiMenuCircleSize) / 2);  
-  --uiMenuCircleBackgroundColor:rgba(52, 152, 219, 0.8);
+  --uiMenuCircleBackgroundColor:rgba(52, 152, 219, 0);
   /* --uiMenuCircleBackgroundColor: background-color:rgba(52, 152, 219, 0.8); */
 
   --uiMenuHamburgerWidth: var(--menuHamburgerWidth, 1.75rem);
@@ -343,9 +343,226 @@ body{
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: -webkit-center;
 }
 
 /** 
 * MY CSS
 */
 
+.m-hamburger__label{
+  background: #3498db;
+}
+
+.m-hamburger::before,
+.m-hamburger::after{
+  background: #3498db;
+}
+
+.menu__list .r-list{
+  margin: 1px !important;
+}
+
+.flip {
+    /* position: absolute; */
+    width: 160px;
+    height: 25px;
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    -ms-perspective: 500px;
+    perspective: 500px;
+    margin-left: -150px;
+    /* margin: -24px 0 0 -80px; */
+}
+
+.flip a {
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translateZ(-25px);
+    -moz-transform: translateZ(-25px);
+    -o-transform: translateZ(-25px);
+    -ms-transform: translateZ(-25px);
+    transform: translateZ(-25px);
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    -o-transition: -o-transform 0.3s;
+    -ms-transition: -ms-transform 0.3s;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.flip a .front,
+.flip a .back {
+    margin: 0;
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    text-align: center;
+    letter-spacing: 0.2em;
+    font-size: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.flip a .front {
+    background-color: #3498db;
+    color: #fff;
+    -webkit-transform: rotateY(0) translateZ(24px);
+    -moz-transform: rotateY(0) translateZ(24px);
+    -o-transform: rotateY(0) translateZ(24px);
+    -ms-transform: rotateY(0) translateZ(24px);
+    transform: rotateY(0) translateZ(24px);
+}
+
+.flip a .back {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(34, 34, 34, 0);
+    -webkit-transform: rotateX(90deg) translateZ(24px);
+    -moz-transform: rotateX(90deg) translateZ(24px);
+    -o-transform: rotateX(90deg) translateZ(24px);
+    -ms-transform: rotateX(90deg) translateZ(24px);
+    transform: rotateX(90deg) translateZ(24px);
+    overflow: hidden;
+}
+
+.flip a .back:after {
+    content: '';
+    position: absolute;
+    top: -32%;
+    left: -10%;
+    width: 120%;
+    height: 50%;
+    background: #222;
+    -webkit-transform: rotate(8deg);
+    -moz-transform: rotate(8deg);
+    -o-transform: rotate(8deg);
+    -ms-transform: rotate(8deg);
+    transform: rotate(8deg);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-transition-delay: 0.15s;
+    -moz-transition-delay: 0.15s;
+    -o-transition-delay: 0.15s;
+    -ms-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+
+.flip a:hover {
+    -webkit-transform: translateZ(-24px) rotateX(-90deg);
+    -moz-transform: translateZ(-24px) rotateX(-90deg);
+    -o-transform: translateZ(-24px) rotateX(-90deg);
+    -ms-transform: translateZ(-24px) rotateX(-90deg);
+    transform: translateZ(-24px) rotateX(-90deg);
+}
+
+.flip a:hover .front {
+    background: #000;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+}
+
+.flip a:hover .back {
+    color: #fff;
+    -webkit-transition: color 0.4s linear;
+    -moz-transition: color 0.4s linear;
+    -o-transition: color 0.4s linear;
+    -ms-transition: color 0.4s linear;
+    transition: color 0.4s linear;
+    background: #061a45;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.flip a:hover .back:after {
+    -webkit-transform: rotate(6deg) translate(100px, -18px);
+    -moz-transform: rotate(6deg) translate(100px, -18px);
+    -o-transform: rotate(6deg) translate(100px, -18px);
+    -ms-transform: rotate(6deg) translate(100px, -18px);
+    transform: rotate(6deg) translate(100px, -18px);
+}
+
+/** Enroll */
+.glow-on-hover {
+    width: 220px;
+    height: 35px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #3498db;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}

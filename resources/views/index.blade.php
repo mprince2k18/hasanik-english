@@ -102,8 +102,7 @@
                          <!-- enter-wrap -->
                          <div class="enter-wrap-holder column-wrap">
                              <div class="enter-wrap">
-                                 <a href="" class="btn btn-primary" 
-                                 style="margin-top: 100%; margin-right: 42%;">Enroll Now</a>
+                                 <button class="glow-on-hover" type="button">ENROLL NOW</button>
                              </div>
                          </div>
                          <!-- enter-wrap end  -->
@@ -126,32 +125,54 @@
          <div class="menu">
   <nav class="menu__nav">
     <ul class="menu__list r-list">
+      
       <li class="menu__group">
-        <a href="{{ url('/') }}" class="menu__link r-link f-22">
-            <img src="{{ filePath(getSystemSetting('type_logo')->value) }}" style="width: 45%; margin: auto;" alt="">
-        </a>
+        {{-- <a href="{{ url('/page/about-us') }}" class="menu__link r-link f-22">About Us</a> --}}
+        <div class="flip about">
+          <a href="{{ url('/page/about-us') }}" target="_blank">
+            <div class="front">About Us</div>
+            <div class="back">About Us</div>
+          </a>
+        </div>
       </li>
+
       <li class="menu__group">
-        <a href="{{ url('/') }}" class="menu__link r-link f-22">Home</a>
+        <div class="flip team">
+          <a href="{{ url('/page/our-team') }}" target="_blank">
+            <div class="front">Our Team</div>
+            <div class="back">Our Team</div>
+          </a>
+        </div>
       </li>
+
       <li class="menu__group">
-        <a href="{{ url('/page/about-us') }}" class="menu__link r-link f-22">About Us</a>
+        <div class="flip blog">
+          <a href="{{ url('/page/blog') }}" target="_blank">
+            <div class="front">Our Blogs</div>
+            <div class="back">Our Blogs</div>
+          </a>
+        </div>
       </li>
+
       <li class="menu__group">
-        <a href="{{ url('/page/contact-us') }}" class="menu__link r-link f-22">Contact Us</a>
+        <div class="flip courses">
+          <a href="{{ url('/page/courses') }}" target="_blank">
+            <div class="front">Our Courses</div>
+            <div class="back">Our Courses</div>
+          </a>
+        </div>
       </li>
+
       <li class="menu__group">
-        <a href="{{ url('/page/our-team') }}" class="menu__link r-link f-22">Our Team</a>
+        <div class="flip contact">
+          <a href="{{ url('/page/contact-us') }}" target="_blank">
+            <div class="front">Contact Us</div>
+            <div class="back">Contact Us</div>
+          </a>
+        </div>
       </li>
-      <li class="menu__group">
-        <a href="{{ url('/page/blog') }}" class="menu__link r-link f-22">Blog</a>
-      </li>
-      <li class="menu__group">
-        <a href="{{ url('/page/courses') }}" class="menu__link r-link f-22">Courses</a>
-      </li>
-      <li class="menu__group">
-        <a href="{{ url('/enroll/course') }}" class="menu__link r-link f-22">Enroll</a>
-      </li>
+      
+      
     </ul>
   </nav>
   <button class="menu__toggle r-button" type="button">
