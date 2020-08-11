@@ -86,6 +86,7 @@
                                      $bottoms = App\Slider::where('is_active', 1)->where('type', 'bottom')->get();
                                  @endphp
                          <div class="hero-grid big-column">
+                           
                                  <div class="item">
                                      <div class="bg" 
                                      style="background-image:url({{ filePath($asides->slider ?? '') }})">

@@ -240,10 +240,10 @@
 							<!-- /bottom-wizard -->
 						</form>
 
-						<form action="{{ url('/pay') }}" method="POST">
+						{{-- <form action="{{ url('/pay') }}" method="POST">
 							@csrf
 							<button type="submit" name="process" class="submit">Pay Now</button>
-						</form>
+						</form> --}}
 
 					</div>
 					<!-- /Wizard container -->
