@@ -65,6 +65,13 @@
                                      style="background-image:url({{ filePath($asides->slider ?? '') }})">
                                     </div>
                                  </div>
+
+                                 <div class="enter-wrap-holder column-wrap">
+                               <div class="enter-wrap">
+                                   <button class="glow-on-hover" type="button">ENROLL NOW</button>
+                               </div>
+                           </div>
+                           
                          </div>
                          <!-- 1 end -->
                          <!-- 2 -->
@@ -100,11 +107,7 @@
                          <!-- 3end -->
                          {{-- <div class="overlay"></div> --}}
                          <!-- enter-wrap -->
-                         <div class="enter-wrap-holder column-wrap">
-                             <div class="enter-wrap">
-                                 <button class="glow-on-hover" type="button">ENROLL NOW</button>
-                             </div>
-                         </div>
+                           
                          <!-- enter-wrap end  -->
                      </div>
                      <!-- full-height-wrap end  -->

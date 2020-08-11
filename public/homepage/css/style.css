@@ -619,12 +619,12 @@ header {
 	letter-spacing:2px;
 }
 .column-wrap {
-	width:30%;
+	width:100%;
 	left:0;
 	margin-left:0;
-	padding-left:10%;
+	/* padding-left:10%; */
 	margin-top: 150px !important;
-	margin-left: -100px !important;
+	/* margin-left: -100px !important; */
 }
 .enter-wrap h4:hover {
 	 text-decoration:line-through;

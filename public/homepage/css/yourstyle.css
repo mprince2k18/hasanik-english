@@ -500,7 +500,7 @@ body{
 
 /** Enroll */
 .glow-on-hover {
-    width: 130px;
+    width: 140px;
     height: 35px;
     border: none;
     outline: none;
@@ -508,6 +508,7 @@ body{
     background: #3498db;
     cursor: pointer;
     position: relative;
+    letter-spacing: 3px;
     z-index: 0;
     border-radius: 5px;
 }
