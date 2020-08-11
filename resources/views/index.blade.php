@@ -94,7 +94,7 @@
 
                                  <div class="enter-wrap-holder column-wrap">
                                <div class="enter-wrap">
-                                   <a class="glow-on-hover" type="button">ENROLL NOW</a>
+                                   <a href="{{ route('enroll.index') }}" class="glow-on-hover" type="button">ENROLL NOW</a>
                                </div>
                            </div>
                            
