@@ -67,44 +67,36 @@
             </div> -->
 
 
-<div class="row card-row">
+
+    <div class="container card-container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+    <div class="content-box">
+      <h2>About Us</h2>
+      <a href="#">Read</a>
+    </div>
+  </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card2">
+    <div class="content-box">
+      <h2>Our Missoin</h2>
+      <a href="#">Read</a>
+    </div>
+  </div>
+        </div>
+
   
-                  
-<div class="card">
-  <div class="card__top">
-    <div class="circle"></div>
-    <img class="card__top-img" src="https://res.cloudinary.com/dhe6napl7/image/upload/v1597333758/ZnI9hGUwY3Fc5o16Q9yyeTiebBrVtrHL3CL30qRo_1.png" alt="Nika Gold and Black Shoe">
-  </div>
-  <h1 class="card__title">ABOUT US</h1>
-  <div class="card__bottom product-info">
-    <div class="product-info__top">
-      <div class="product-info__product">
-        <div v-if="loading">
-                    <img src="https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif" alt="">
-                  </div>
-        <span class="product-info__product-text truncate" v-html="abouts.desc"></span>
+
+  
+
+
       </div>
-    </div>
-  </div>
 </div>
-<div class="card card2">
-  <div class="card__top">
-    <div class="circle"></div>
-    <img class="card__top-img" src="https://res.cloudinary.com/dhe6napl7/image/upload/v1597333758/ZnI9hGUwY3Fc5o16Q9yyeTiebBrVtrHL3CL30qRo_1.png" alt="Nika Gold and Black Shoe">
-  </div>
-  <h1 class="card__title">OUR MISSION</h1>
-  <div class="card__bottom product-info">
-    <div class="product-info__top">
-      <div class="product-info__product">
-        <div v-if="loading">
-                    <img src="https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif" alt="">
-                  </div>
-        <span class="product-info__product-text truncate" v-html="missions.desc"></span>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+
+
+
 
 
             <!-- tabs::ENd -->
@@ -160,229 +152,343 @@
   height: 99vh;
 }
 
-.truncate {
-  width: 500px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
-.card {
-display: flex;
-    position: relative;
-    flex-direction: column;
-    height: 585px;
-    width: 452px;
-    margin: 0 auto;
-    border-radius: 2%;
-    overflow: hidden;
-    font-family: "Roboto Condensed", sans-serif;
-    text-transform: uppercase;
-    background: #fff;
-    color: #000;
-    cursor: pointer;
-    top: 10%;
-    
-}
-
-.card:after {
-content: "";
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: 1;
-  background-image: url(https://clickandpress.com/wp-content/uploads/2019/05/m-h-slider-img-2.jpg);
-    background-repeat: no-repeat;
-}
-
-.card2:after {
-content: "";
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: 1;
-  background-image: url(https://productled.com/wp-content/uploads/2019/09/Illustration_Think_Different.png);
-    background-repeat: no-repeat;
-}
-.card:hover .circle {
-  clip-path: circle(220px at 90% 130px);
-}
-.card:hover .card__title {
-  transform: translateY(200px);
-  transition-delay: 0.1s;
-}
-.card:hover .product-info__top {
-  transform: translateY(0);
-  opacity: 1;
-  transition-delay: 0.35s;
-}
-.card:hover .product-info__bottom {
-  transform: translateY(0);
-  opacity: 1;
-  transition-delay: 0.5s;
-}
-
-.card__top {
-  height: 50%;
+.container {
   position: relative;
-  overflow: hidden;
 }
 
-.circle {
-  position: absolute;
-  height: 100%;
+.card-container{
+  top: 20%;
+}
+
+.container .card {
+  position: relative;
   width: 100%;
-  border-top-right-radius: 10%;
-  background: #ffbf01;
-  clip-path: circle(0px at 90% 130px);
-  transition: all 0.5s ease-in-out;
+  height: 450px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.card__top-img {
-    position: absolute;
-    width: 75%;
-    height: auto;
-    z-index: 2;
-    transform: rotate(-19deg) scaleX(1);
-}
 
-.card__title {
+/* circle style */
+.container .card::before {
+  content: '';
   position: absolute;
-  left: 30%;
-  z-index: 1;
-  color: #000;
-  font-size: 36px;
-  transform: translateY(500px);
-  transition: transform 0.5s ease-in-out;
-  transition-delay: 0.5s;
-}
-
-.product-info {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 30px;
-}
-
-.product-info__top {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  opacity: 0;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  transition-delay: 0.35s;
-  transform: translateY(50%);
-}
-
-.product-info__brand {
-  font-size: 16px;
-  text-transform: uppercase;
-}
-
-.product-info__product {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-}
-
-.product-info__product-text {
-  font-size: 24px;
-}
-
-.product-info__product-price {
-  font-size: 24px;
-}
-
-.product-info__sizes-text {
-  font-size: 16px;
-}
-
-.product-info__sizes-inner {
-  display: flex;
-  padding: 10px 0;
-}
-
-.product-info__sizes-size {
-  padding: 10px 15px;
-  margin-right: 15px;
-  border-radius: 10%;
-  background: white;
-  color: #1d1f21;
-  font-weight: bold;
-  transition: background 0.3s ease-in-out;
-}
-.product-info__sizes-size:hover {
-  background: #ffbf01;
-}
-
-.product-info__bottom {
-  display: flex;
-  justify-content: space-between;
-  opacity: 0;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  transition-delay: 0.1s;
-  transform: translateY(50%);
-}
-
-.product-info__colors {
-  display: flex;
-  justify-content: space-between;
-  flex-basis: 20%;
-}
-
-.product-info__colors-color {
-  position: relative;
-}
-
-.product-info__colors-label {
-  position: absolute;
-  left: 0;
   top: 0;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: white;
-  border: 2px solid white;
-  cursor: pointer;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #9bdc28;
+  clip-path: circle(150px at 80% 20%);
+  transition: .5s ease-in-out;
+}
+.container .card:hover::before {
+  clip-path: circle(300px at 80% -20%);
 }
 
-.product-info__colors-color input[type="checkbox"] {
+
+/* watermark */
+.container .card::after {
+  content: 'About';
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.04);
+}
+
+
+/* style product */
+.container .card .image-box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+.container .card:hover .image-box {
+  top: 0;
+  transform: translateY(0);
+}
+.container .card .image-box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  width: 270px;
+}
+
+
+/* style product info */
+.container .card .content-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+.container .card:hover .content-box {
+  height: 210px;
+}
+.container .card .content-box h2 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.container .card .content-box .size, 
+.container .card .content-box .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;
+  opacity: 0;
   visibility: hidden;
 }
-
-.colors-yellow input[type="checkbox"]:checked + .product-info__colors-label {
-  background-color: #ffbf01;
-}
-
-.product-info__colors-color input[type="checkbox"]:checked + .product-info__colors-label:after {
+.container .card:hover .content-box .size {
   opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
 }
-
-.product-info__buy-button {
-  padding: 18px 25px;
-  border-radius: 20%;
-  background: #ffbf01;
-  color: #1d1f21;
-  font-size: 20px;
-  border: 1px solid transparent;
+.container .card:hover .content-box .color {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+.container .card .content-box .size h3,
+.container .card .content-box .color h3 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
   text-transform: uppercase;
-  font-weight: bold;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+.container .card .content-box .size span {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: .5s;
   cursor: pointer;
 }
-.product-info__buy-button:hover {
-  background: #1d1f21;
-  color: white;
-  border: 1px solid #ffbf01;
+.container .card .content-box .size span:hover {
+  background: #9bdc28;
+}
+.container .card .content-box .color span {
+  width: 20px;
+  height: 20px;
+  background: #ff0;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.container .card .content-box .color span:nth-child(2) {
+  background: #9bdc28;
+}
+.container .card .content-box .color span:nth-child(3) {
+  background: #03a9f4;
+}
+.container .card .content-box .color span:nth-child(4) {
+  background: #e91e63;
+}
+.container .card .content-box a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+.container .card:hover .content-box a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
 }
 
-.card-row{
-  padding-top: 8%;
+
+
+
+
+.container .card2 {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
 }
+
+
+/* circle style */
+.container .card2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2980b9;
+  clip-path: circle(150px at 80% 20%);
+  transition: .5s ease-in-out;
+}
+.container .card2:hover::before {
+  clip-path: circle(300px at 80% -20%);
+}
+
+
+/* watermark */
+.container .card2::after {
+  content: 'Our Mission';
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.04);
+}
+
+
+/* style product */
+.container .card2 .image-box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+.container .card2:hover .image-box {
+  top: 0;
+  transform: translateY(0);
+}
+.container .card2 .image-box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  width: 270px;
+}
+
+
+/* style product info */
+.container .card2 .content-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+.container .card2:hover .content-box {
+  height: 210px;
+}
+.container .card2 .content-box h2 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.container .card2 .content-box .size, 
+.container .card2 .content-box .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.container .card2:hover .content-box .size {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.container .card2:hover .content-box .color {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+.container .card2 .content-box .size h3,
+.container .card2 .content-box .color h3 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+.container .card2 .content-box .size span {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: .5s;
+  cursor: pointer;
+}
+.container .card2 .content-box .size span:hover {
+  background: #9bdc28;
+}
+.container .card2 .content-box .color span {
+  width: 20px;
+  height: 20px;
+  background: #ff0;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.container .card2 .content-box .color span:nth-child(2) {
+  background: #9bdc28;
+}
+.container .card2 .content-box .color span:nth-child(3) {
+  background: #03a9f4;
+}
+.container .card2 .content-box .color span:nth-child(4) {
+  background: #e91e63;
+}
+.container .card2 .content-box a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+.container .card2:hover .content-box a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+}
+
 </style>

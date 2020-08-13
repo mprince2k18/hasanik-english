@@ -2018,14 +2018,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -7766,7 +7758,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.rounded[data-v-5049bb1b]{\r\n  border-radius: 10px;\n}\n.about-img[data-v-5049bb1b]{\r\n  height: 99vh;\n}\n.truncate[data-v-5049bb1b] {\r\n  width: 500px;\r\n  white-space: nowrap;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\n}\n.card[data-v-5049bb1b] {\r\ndisplay: flex;\r\n    position: relative;\r\n    flex-direction: column;\r\n    height: 585px;\r\n    width: 452px;\r\n    margin: 0 auto;\r\n    border-radius: 2%;\r\n    overflow: hidden;\r\n    font-family: \"Roboto Condensed\", sans-serif;\r\n    text-transform: uppercase;\r\n    background: #fff;\r\n    color: #000;\r\n    cursor: pointer;\r\n    top: 10%;\n}\n.card[data-v-5049bb1b]:after {\r\ncontent: \"\";\r\n  opacity: 0.1;\r\n  top: 0;\r\n  left: 0;\r\n  bottom: 0;\r\n  right: 0;\r\n  position: absolute;\r\n  z-index: 1;\r\n  background-image: url(https://clickandpress.com/wp-content/uploads/2019/05/m-h-slider-img-2.jpg);\r\n    background-repeat: no-repeat;\n}\n.card2[data-v-5049bb1b]:after {\r\ncontent: \"\";\r\n  opacity: 0.1;\r\n  top: 0;\r\n  left: 0;\r\n  bottom: 0;\r\n  right: 0;\r\n  position: absolute;\r\n  z-index: 1;\r\n  background-image: url(https://productled.com/wp-content/uploads/2019/09/Illustration_Think_Different.png);\r\n    background-repeat: no-repeat;\n}\n.card:hover .circle[data-v-5049bb1b] {\r\n  -webkit-clip-path: circle(220px at 90% 130px);\r\n          clip-path: circle(220px at 90% 130px);\n}\n.card:hover .card__title[data-v-5049bb1b] {\r\n  transform: translateY(200px);\r\n  transition-delay: 0.1s;\n}\n.card:hover .product-info__top[data-v-5049bb1b] {\r\n  transform: translateY(0);\r\n  opacity: 1;\r\n  transition-delay: 0.35s;\n}\n.card:hover .product-info__bottom[data-v-5049bb1b] {\r\n  transform: translateY(0);\r\n  opacity: 1;\r\n  transition-delay: 0.5s;\n}\n.card__top[data-v-5049bb1b] {\r\n  height: 50%;\r\n  position: relative;\r\n  overflow: hidden;\n}\n.circle[data-v-5049bb1b] {\r\n  position: absolute;\r\n  height: 100%;\r\n  width: 100%;\r\n  border-top-right-radius: 10%;\r\n  background: #ffbf01;\r\n  -webkit-clip-path: circle(0px at 90% 130px);\r\n          clip-path: circle(0px at 90% 130px);\r\n  transition: all 0.5s ease-in-out;\n}\n.card__top-img[data-v-5049bb1b] {\r\n    position: absolute;\r\n    width: 75%;\r\n    height: auto;\r\n    z-index: 2;\r\n    transform: rotate(-19deg) scaleX(1);\n}\n.card__title[data-v-5049bb1b] {\r\n  position: absolute;\r\n  left: 30%;\r\n  z-index: 1;\r\n  color: #000;\r\n  font-size: 36px;\r\n  transform: translateY(500px);\r\n  transition: transform 0.5s ease-in-out;\r\n  transition-delay: 0.5s;\n}\n.product-info[data-v-5049bb1b] {\r\n  display: flex;\r\n  flex-direction: column;\r\n  flex: 1;\r\n  padding: 30px;\n}\n.product-info__top[data-v-5049bb1b] {\r\n  display: flex;\r\n  flex-direction: column;\r\n  flex: 1;\r\n  opacity: 0;\r\n  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;\r\n  transition-delay: 0.35s;\r\n  transform: translateY(50%);\n}\n.product-info__brand[data-v-5049bb1b] {\r\n  font-size: 16px;\r\n  text-transform: uppercase;\n}\n.product-info__product[data-v-5049bb1b] {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  padding: 10px 0;\n}\n.product-info__product-text[data-v-5049bb1b] {\r\n  font-size: 24px;\n}\n.product-info__product-price[data-v-5049bb1b] {\r\n  font-size: 24px;\n}\n.product-info__sizes-text[data-v-5049bb1b] {\r\n  font-size: 16px;\n}\n.product-info__sizes-inner[data-v-5049bb1b] {\r\n  display: flex;\r\n  padding: 10px 0;\n}\n.product-info__sizes-size[data-v-5049bb1b] {\r\n  padding: 10px 15px;\r\n  margin-right: 15px;\r\n  border-radius: 10%;\r\n  background: white;\r\n  color: #1d1f21;\r\n  font-weight: bold;\r\n  transition: background 0.3s ease-in-out;\n}\n.product-info__sizes-size[data-v-5049bb1b]:hover {\r\n  background: #ffbf01;\n}\n.product-info__bottom[data-v-5049bb1b] {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  opacity: 0;\r\n  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;\r\n  transition-delay: 0.1s;\r\n  transform: translateY(50%);\n}\n.product-info__colors[data-v-5049bb1b] {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  flex-basis: 20%;\n}\n.product-info__colors-color[data-v-5049bb1b] {\r\n  position: relative;\n}\n.product-info__colors-label[data-v-5049bb1b] {\r\n  position: absolute;\r\n  left: 0;\r\n  top: 0;\r\n  width: 15px;\r\n  height: 15px;\r\n  border-radius: 50%;\r\n  background-color: white;\r\n  border: 2px solid white;\r\n  cursor: pointer;\n}\n.product-info__colors-color input[type=\"checkbox\"][data-v-5049bb1b] {\r\n  visibility: hidden;\n}\n.colors-yellow input[type=\"checkbox\"]:checked + .product-info__colors-label[data-v-5049bb1b] {\r\n  background-color: #ffbf01;\n}\n.product-info__colors-color input[type=\"checkbox\"]:checked + .product-info__colors-label[data-v-5049bb1b]:after {\r\n  opacity: 1;\n}\n.product-info__buy-button[data-v-5049bb1b] {\r\n  padding: 18px 25px;\r\n  border-radius: 20%;\r\n  background: #ffbf01;\r\n  color: #1d1f21;\r\n  font-size: 20px;\r\n  border: 1px solid transparent;\r\n  text-transform: uppercase;\r\n  font-weight: bold;\r\n  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;\r\n  cursor: pointer;\n}\n.product-info__buy-button[data-v-5049bb1b]:hover {\r\n  background: #1d1f21;\r\n  color: white;\r\n  border: 1px solid #ffbf01;\n}\n.card-row[data-v-5049bb1b]{\r\n  padding-top: 8%;\n}\r\n", ""]);
+exports.push([module.i, "\n.rounded[data-v-5049bb1b]{\r\n  border-radius: 10px;\n}\n.about-img[data-v-5049bb1b]{\r\n  height: 99vh;\n}\n.container[data-v-5049bb1b] {\r\n  position: relative;\n}\n.card-container[data-v-5049bb1b]{\r\n  top: 20%;\n}\n.container .card[data-v-5049bb1b] {\r\n  position: relative;\r\n  width: 100%;\r\n  height: 450px;\r\n  background: #232323;\r\n  border-radius: 20px;\r\n  overflow: hidden;\n}\r\n\r\n\r\n/* circle style */\n.container .card[data-v-5049bb1b]::before {\r\n  content: '';\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  background: #9bdc28;\r\n  -webkit-clip-path: circle(150px at 80% 20%);\r\n          clip-path: circle(150px at 80% 20%);\r\n  transition: .5s ease-in-out;\n}\n.container .card[data-v-5049bb1b]:hover::before {\r\n  -webkit-clip-path: circle(300px at 80% -20%);\r\n          clip-path: circle(300px at 80% -20%);\n}\r\n\r\n\r\n/* watermark */\n.container .card[data-v-5049bb1b]::after {\r\n  content: 'About';\r\n  position: absolute;\r\n  top: 30%;\r\n  left: -20%;\r\n  font-size: 12em;\r\n  font-weight: 800;\r\n  font-style: italic;\r\n  color: rgba(255, 255, 255, 0.04);\n}\r\n\r\n\r\n/* style product */\n.container .card .image-box[data-v-5049bb1b] {\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  z-index: 10000;\r\n  width: 100%;\r\n  height: 220px;\r\n  transition: 0.5s;\n}\n.container .card:hover .image-box[data-v-5049bb1b] {\r\n  top: 0;\r\n  transform: translateY(0);\n}\n.container .card .image-box img[data-v-5049bb1b] {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%) rotate(-25deg);\r\n  width: 270px;\n}\r\n\r\n\r\n/* style product info */\n.container .card .content-box[data-v-5049bb1b] {\r\n  position: absolute;\r\n  bottom: 0;\r\n  width: 100%;\r\n  height: 100px;\r\n  text-align: center;\r\n  transition: 1s;\r\n  z-index: 10;\n}\n.container .card:hover .content-box[data-v-5049bb1b] {\r\n  height: 210px;\n}\n.container .card .content-box h2[data-v-5049bb1b] {\r\n  position: relative;\r\n  font-weight: 600;\r\n  letter-spacing: 1px;\r\n  color: #fff;\n}\n.container .card .content-box .size[data-v-5049bb1b], \r\n.container .card .content-box .color[data-v-5049bb1b] {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 8px 20px;\r\n  transition: 0.5s;\r\n  opacity: 0;\r\n  visibility: hidden;\n}\n.container .card:hover .content-box .size[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  visibility: visible;\r\n  transition-delay: 0.5s;\n}\n.container .card:hover .content-box .color[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  visibility: visible;\r\n  transition-delay: 0.6s;\n}\n.container .card .content-box .size h3[data-v-5049bb1b],\r\n.container .card .content-box .color h3[data-v-5049bb1b] {\r\n  color: #fff;\r\n  font-weight: 300;\r\n  font-size: 14px;\r\n  text-transform: uppercase;\r\n  letter-spacing: 2px;\r\n  margin-right: 10px;\n}\n.container .card .content-box .size span[data-v-5049bb1b] {\r\n  width: 26px;\r\n  height: 26px;\r\n  text-align: center;\r\n  line-height: 26px;\r\n  font-size: 14px;\r\n  display: inline-block;\r\n  color: #111;\r\n  background: #fff;\r\n  margin: 0 5px;\r\n  transition: .5s;\r\n  cursor: pointer;\n}\n.container .card .content-box .size span[data-v-5049bb1b]:hover {\r\n  background: #9bdc28;\n}\n.container .card .content-box .color span[data-v-5049bb1b] {\r\n  width: 20px;\r\n  height: 20px;\r\n  background: #ff0;\r\n  border-radius: 50%;\r\n  margin: 0 5px;\r\n  cursor: pointer;\n}\n.container .card .content-box .color span[data-v-5049bb1b]:nth-child(2) {\r\n  background: #9bdc28;\n}\n.container .card .content-box .color span[data-v-5049bb1b]:nth-child(3) {\r\n  background: #03a9f4;\n}\n.container .card .content-box .color span[data-v-5049bb1b]:nth-child(4) {\r\n  background: #e91e63;\n}\n.container .card .content-box a[data-v-5049bb1b] {\r\n  display: inline-block;\r\n  padding: 10px 20px;\r\n  background: #fff;\r\n  border-radius: 4px;\r\n  margin-top: 10px;\r\n  text-decoration: none;\r\n  font-weight: 600;\r\n  color: #111;\r\n  opacity: 0;\r\n  transform: translateY(50px);\r\n  transition: 0.5s;\n}\n.container .card:hover .content-box a[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  transform: translateY(0px);\r\n  transition-delay: 0.75s;\n}\n.container .card2[data-v-5049bb1b] {\r\n  position: relative;\r\n  width: 100%;\r\n  height: 450px;\r\n  background: #232323;\r\n  border-radius: 20px;\r\n  overflow: hidden;\n}\r\n\r\n\r\n/* circle style */\n.container .card2[data-v-5049bb1b]::before {\r\n  content: '';\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  background: #2980b9;\r\n  -webkit-clip-path: circle(150px at 80% 20%);\r\n          clip-path: circle(150px at 80% 20%);\r\n  transition: .5s ease-in-out;\n}\n.container .card2[data-v-5049bb1b]:hover::before {\r\n  -webkit-clip-path: circle(300px at 80% -20%);\r\n          clip-path: circle(300px at 80% -20%);\n}\r\n\r\n\r\n/* watermark */\n.container .card2[data-v-5049bb1b]::after {\r\n  content: 'Our Mission';\r\n  position: absolute;\r\n  top: 30%;\r\n  left: -20%;\r\n  font-size: 12em;\r\n  font-weight: 800;\r\n  font-style: italic;\r\n  color: rgba(255, 255, 255, 0.04);\n}\r\n\r\n\r\n/* style product */\n.container .card2 .image-box[data-v-5049bb1b] {\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  z-index: 10000;\r\n  width: 100%;\r\n  height: 220px;\r\n  transition: 0.5s;\n}\n.container .card2:hover .image-box[data-v-5049bb1b] {\r\n  top: 0;\r\n  transform: translateY(0);\n}\n.container .card2 .image-box img[data-v-5049bb1b] {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%) rotate(-25deg);\r\n  width: 270px;\n}\r\n\r\n\r\n/* style product info */\n.container .card2 .content-box[data-v-5049bb1b] {\r\n  position: absolute;\r\n  bottom: 0;\r\n  width: 100%;\r\n  height: 100px;\r\n  text-align: center;\r\n  transition: 1s;\r\n  z-index: 10;\n}\n.container .card2:hover .content-box[data-v-5049bb1b] {\r\n  height: 210px;\n}\n.container .card2 .content-box h2[data-v-5049bb1b] {\r\n  position: relative;\r\n  font-weight: 600;\r\n  letter-spacing: 1px;\r\n  color: #fff;\n}\n.container .card2 .content-box .size[data-v-5049bb1b], \r\n.container .card2 .content-box .color[data-v-5049bb1b] {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 8px 20px;\r\n  transition: 0.5s;\r\n  opacity: 0;\r\n  visibility: hidden;\n}\n.container .card2:hover .content-box .size[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  visibility: visible;\r\n  transition-delay: 0.5s;\n}\n.container .card2:hover .content-box .color[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  visibility: visible;\r\n  transition-delay: 0.6s;\n}\n.container .card2 .content-box .size h3[data-v-5049bb1b],\r\n.container .card2 .content-box .color h3[data-v-5049bb1b] {\r\n  color: #fff;\r\n  font-weight: 300;\r\n  font-size: 14px;\r\n  text-transform: uppercase;\r\n  letter-spacing: 2px;\r\n  margin-right: 10px;\n}\n.container .card2 .content-box .size span[data-v-5049bb1b] {\r\n  width: 26px;\r\n  height: 26px;\r\n  text-align: center;\r\n  line-height: 26px;\r\n  font-size: 14px;\r\n  display: inline-block;\r\n  color: #111;\r\n  background: #fff;\r\n  margin: 0 5px;\r\n  transition: .5s;\r\n  cursor: pointer;\n}\n.container .card2 .content-box .size span[data-v-5049bb1b]:hover {\r\n  background: #9bdc28;\n}\n.container .card2 .content-box .color span[data-v-5049bb1b] {\r\n  width: 20px;\r\n  height: 20px;\r\n  background: #ff0;\r\n  border-radius: 50%;\r\n  margin: 0 5px;\r\n  cursor: pointer;\n}\n.container .card2 .content-box .color span[data-v-5049bb1b]:nth-child(2) {\r\n  background: #9bdc28;\n}\n.container .card2 .content-box .color span[data-v-5049bb1b]:nth-child(3) {\r\n  background: #03a9f4;\n}\n.container .card2 .content-box .color span[data-v-5049bb1b]:nth-child(4) {\r\n  background: #e91e63;\n}\n.container .card2 .content-box a[data-v-5049bb1b] {\r\n  display: inline-block;\r\n  padding: 10px 20px;\r\n  background: #fff;\r\n  border-radius: 4px;\r\n  margin-top: 10px;\r\n  text-decoration: none;\r\n  font-weight: 600;\r\n  color: #111;\r\n  opacity: 0;\r\n  transform: translateY(50px);\r\n  transition: 0.5s;\n}\n.container .card2:hover .content-box a[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  transform: translateY(0px);\r\n  transition-delay: 0.75s;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -41729,66 +41721,47 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "container-fluid about-us-cont" }, [
-      _c("div", { staticClass: "row" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "row card-row" }, [
-            _c("div", { staticClass: "card" }, [
-              _vm._m(1),
-              _vm._v(" "),
-              _c("h1", { staticClass: "card__title" }, [_vm._v("ABOUT US")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card__bottom product-info" }, [
-                _c("div", { staticClass: "product-info__top" }, [
-                  _c("div", { staticClass: "product-info__product" }, [
-                    _vm.loading
-                      ? _c("div", [
-                          _c("img", {
-                            attrs: {
-                              src:
-                                "https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _c("span", {
-                      staticClass: "product-info__product-text truncate",
-                      domProps: { innerHTML: _vm._s(_vm.abouts.desc) }
-                    })
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", { staticClass: "container-fluid about-us-cont" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-4" }, [
+            _c("img", {
+              staticClass: "img-fluid rounded about-img",
+              attrs: {
+                src:
+                  "https://res.cloudinary.com/dhe6napl7/image/upload/v1597257755/WuakuhbmvxWrGbO5smgosmNBZtDufDxSAv3WEHbp.gif",
+                alt: ""
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-8" }, [
+            _c("div", { staticClass: "container card-container" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "card" }, [
+                    _c("div", { staticClass: "content-box" }, [
+                      _c("h2", [_vm._v("About Us")]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "#" } }, [_vm._v("Read")])
+                    ])
                   ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card card2" }, [
-              _vm._m(2),
-              _vm._v(" "),
-              _c("h1", { staticClass: "card__title" }, [_vm._v("OUR MISSION")]),
-              _vm._v(" "),
-              _c("div", { staticClass: "card__bottom product-info" }, [
-                _c("div", { staticClass: "product-info__top" }, [
-                  _c("div", { staticClass: "product-info__product" }, [
-                    _vm.loading
-                      ? _c("div", [
-                          _c("img", {
-                            attrs: {
-                              src:
-                                "https://www.jqueryscript.net/images/collective/Placeholder%20loading.gif",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _c("span", {
-                      staticClass: "product-info__product-text truncate",
-                      domProps: { innerHTML: _vm._s(_vm.missions.desc) }
-                    })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-6" }, [
+                  _c("div", { staticClass: "card2" }, [
+                    _c("div", { staticClass: "content-box" }, [
+                      _c("h2", [_vm._v("Our Missoin")]),
+                      _vm._v(" "),
+                      _c("a", { attrs: { href: "#" } }, [_vm._v("Read")])
+                    ])
                   ])
                 ])
               ])
@@ -41796,57 +41769,6 @@ var render = function() {
           ])
         ])
       ])
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4" }, [
-      _c("img", {
-        staticClass: "img-fluid rounded about-img",
-        attrs: {
-          src:
-            "https://res.cloudinary.com/dhe6napl7/image/upload/v1597257755/WuakuhbmvxWrGbO5smgosmNBZtDufDxSAv3WEHbp.gif",
-          alt: ""
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card__top" }, [
-      _c("div", { staticClass: "circle" }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "card__top-img",
-        attrs: {
-          src:
-            "https://res.cloudinary.com/dhe6napl7/image/upload/v1597333758/ZnI9hGUwY3Fc5o16Q9yyeTiebBrVtrHL3CL30qRo_1.png",
-          alt: "Nika Gold and Black Shoe"
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card__top" }, [
-      _c("div", { staticClass: "circle" }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "card__top-img",
-        attrs: {
-          src:
-            "https://res.cloudinary.com/dhe6napl7/image/upload/v1597333758/ZnI9hGUwY3Fc5o16Q9yyeTiebBrVtrHL3CL30qRo_1.png",
-          alt: "Nika Gold and Black Shoe"
-        }
-      })
     ])
   }
 ]
