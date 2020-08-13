@@ -176,8 +176,8 @@ MENU STYLES
 .menu__list{
   width: 100%;
   max-height: 100%;
-
   overflow-y: auto;
+  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 

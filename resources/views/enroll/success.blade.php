@@ -65,7 +65,21 @@
                 <!-- /content--wrapper -->
                 <div class="success_photo text-center">
                     <img src="{{ asset('frontend/success.png') }}" class="img-fluid" style="height: 80vh" alt="#success">
-                </div>
+					<div class="row">
+
+						<div class="col-md-6 text-right">
+							<form action="{{ url('/pay') }}" method="POST">
+								@csrf
+								<button type="submit" name="process" class="submit">Pay Now</button>
+							</form>
+						</div>
+
+						<div class="col-md-6 text-left">
+							<a href="{{ route('homepage') }}" class="btn btn-primary">Pay Later</a>
+						</div>
+
+					</div>
+				</div>
 				<!-- /content--wrapper::END -->
 			</div>
 			<!-- /content-left -->
