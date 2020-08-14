@@ -81,7 +81,7 @@
         <div class="col-md-6">
           <div class="card2">
             <div class="content-box">
-              <h2>Our Missoin</h2>
+              <h2>Our Mission</h2>
               <a href="#" @click="missionModal = true">Read</a>
             </div>
           </div>
@@ -175,13 +175,13 @@
 }
 
 .card-container{
-  top: 20%;
+  top: 11%;
 }
 
 .container .card {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 88vh;
   background: #232323;
   border-radius: 20px;
   overflow: hidden;
@@ -348,7 +348,7 @@
 .container .card2 {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 88vh;
   background: #232323;
   border-radius: 20px;
   overflow: hidden;
