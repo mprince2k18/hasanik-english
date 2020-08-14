@@ -41761,7 +41761,7 @@ var render = function() {
                           }
                         }
                       },
-                      [_vm._v("Read More")]
+                      [_vm._v("Know More")]
                     )
                   ])
                 ])
@@ -41782,7 +41782,7 @@ var render = function() {
                           }
                         }
                       },
-                      [_vm._v("Read More")]
+                      [_vm._v("Know More")]
                     )
                   ])
                 ])
