@@ -454,14 +454,19 @@ CUSTOM
 
     <header class="site-header fixed-header">
       <div class="container expanded">
+        
         <div class="header-wrap">
-          <div class="fixed-header-logo">
+          <div class="row">
+          <div class="col-md-2">
+            <div class="fixed-header-logo">
             <a href="{{ url('/') }}"><img src="{{ filePath(getSystemSetting('type_logo')->value) }}" class="w-17" alt=""></router-link>
           </div>
           <div class="is-fixed-header-logo">
             <a href="{{ url('/') }}"><img src="{{ filePath(getSystemSetting('type_logo')->value) }}" class="w-17" alt=""></router-link>
           </div>
-          <div class="header-nav">
+          </div>
+          <div class="col-md-6 offset-md-4">
+            <div class="header-nav">
               <ul class="main-menu">
                 <li><a href="{{ url('/') }}" class="click_button" data-hover="Home"><div>Home</div></a></li>
                 <li><router-link :to="{ name : 'about-us' }" class="click_button" data-hover="About Us"><div>About Us</div></a></li>
@@ -471,6 +476,10 @@ CUSTOM
                 <li><router-link :to="{ name : 'courses' }" class="click_button" data-hover="Courses"><div>Courses</div></a></li>
               </ul>
           </div>
+          </div>
+        </div>
+          
+          
           <div class="header-widgets">
             <ul class="right-menu">
               {{-- <li class="menu-item menu-search">
