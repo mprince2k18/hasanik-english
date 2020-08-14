@@ -91,11 +91,15 @@
       <!-- -------------------- POP UP -->
       <div class="about-modal" v-if="aboutModal">
         <p class="p-content" v-html="abouts.desc"></p>
-        <a href="#" class="go-back" @click="aboutModal = false">Go back</a>
+        <div class="text-center">
+          <a href="#" class="go-back" @click="aboutModal = false">Go back</a>
+        </div>
       </div>
       <div class="about-modal" v-if="missionModal">
         <p class="p-content" v-html="missions.desc"></p>
-        <a href="#" class="go-back" @click="missionModal = false">Go back</a>
+        <div class="text-center">
+          <a href="#" class="go-back" @click="missionModal = false">Go back</a>
+        </div>
         
       </div>
       <!-- -------------------- POP UP:END -->
@@ -154,6 +158,10 @@
 <style scoped>
 .rounded{
   border-radius: 10px;
+}
+
+.text-center{
+  text-align: center;
 }
 
 /** Enroll */
