@@ -344,6 +344,7 @@
   transition: all 0.3s ease;
   transform-origin: bottom right;
   transform: scale(0);
+  top: -16rem;
 }
 
 .fab-checkbox:checked ~ .fab-wheel {
