@@ -428,7 +428,7 @@
   position: relative;
   width: 100%;
   height: 88vh;
-  background: #192a56;
+  background: #3498db;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -442,7 +442,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #3498db;
+  background: #192a56;
   clip-path: circle(150px at 80% 20%);
   transition: .5s ease-in-out;
 }
