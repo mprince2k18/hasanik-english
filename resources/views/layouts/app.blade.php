@@ -233,6 +233,7 @@
   position: fixed;
   bottom: 3rem;
   right: 3rem;
+  z-index: 9;
 }
 .fab-checkbox {
   display: none;
@@ -478,7 +479,7 @@ CUSTOM
 
     {{-- FLoating button --}}
 
-    <div class="fab-wrapper">
+    {{-- <div class="fab-wrapper">
   <input id="fabCheckbox" type="checkbox" class="fab-checkbox" />
   <label class="fab" for="fabCheckbox">
     <span class="fab-dots fab-dots-1"></span>
@@ -499,7 +500,7 @@ CUSTOM
       <i class="fas fa-info"></i>
     </a>
   </div>
-</div>
+</div> --}}
 
 
     <div class="main-content">
