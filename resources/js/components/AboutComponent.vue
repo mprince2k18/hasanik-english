@@ -290,14 +290,15 @@
 
 /* watermark */
 .container .card::after {
-  content: 'About';
-  position: absolute;
-  top: 30%;
-  left: -20%;
-  font-size: 12em;
-  font-weight: 800;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.04);
+    content: 'About Us';
+    position: absolute;
+    top: 43%;
+    left: -2%;
+    font-size: 8em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.05);
+    line-height: 127px;
 }
 
 
@@ -454,13 +455,14 @@
 /* watermark */
 .container .card2::after {
   content: 'Our Mission';
-  position: absolute;
-  top: 30%;
-  left: -20%;
-  font-size: 12em;
-  font-weight: 800;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.04);
+    position: absolute;
+    top: 33%;
+    left: 0%;
+    font-size: 6em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.3);
+    line-height: 95px;
 }
 
 
