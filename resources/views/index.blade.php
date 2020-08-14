@@ -155,7 +155,7 @@
       <li class="menu__group">
         {{-- <a href="{{ url('/page/about-us') }}" class="menu__link r-link f-22">About Us</a> --}}
         <div class="flip about">
-          <a href="{{ url('/page/about-us') }}" target="_blank">
+          <a href="{{ url('/page/about-us') }}" >
             <div class="front">About Us</div>
             <div class="back">About Us</div>
           </a>
@@ -164,7 +164,7 @@
 
       <li class="menu__group">
         <div class="flip team">
-          <a href="{{ url('/page/our-team') }}" target="_blank">
+          <a href="{{ url('/page/our-team') }}" >
             <div class="front">Our Team</div>
             <div class="back">Our Team</div>
           </a>
@@ -173,7 +173,7 @@
 
       <li class="menu__group">
         <div class="flip blog">
-          <a href="{{ url('/page/blog') }}" target="_blank">
+          <a href="{{ url('/page/blog') }}" >
             <div class="front">Our Blogs</div>
             <div class="back">Our Blogs</div>
           </a>
@@ -182,7 +182,7 @@
 
       <li class="menu__group">
         <div class="flip courses">
-          <a href="{{ url('/page/courses') }}" target="_blank">
+          <a href="{{ url('/page/courses') }}" >
             <div class="front">Our Courses</div>
             <div class="back">Our Courses</div>
           </a>
@@ -191,7 +191,7 @@
 
       <li class="menu__group">
         <div class="flip contact">
-          <a href="{{ url('/page/contact-us') }}" target="_blank">
+          <a href="{{ url('/page/contact-us') }}" >
             <div class="front">Contact Us</div>
             <div class="back">Contact Us</div>
           </a>
