@@ -164,7 +164,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 89vh;
   z-index: 10;
   border-radius: 2%;
   background: #fff;
