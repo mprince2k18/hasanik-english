@@ -2022,6 +2022,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -2076,6 +2078,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -2306,6 +2309,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -2853,6 +2857,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -3088,6 +3093,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -3129,6 +3135,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -7764,7 +7771,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.rounded[data-v-5049bb1b]{\r\n  border-radius: 10px;\n}\n.about-img[data-v-5049bb1b]{\r\n  height: 99vh;\n}\r\n\r\n/**.about-modal */\n.about-modal[data-v-5049bb1b]{\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 89vh;\r\n  z-index: 10;\r\n  border-radius: 2%;\r\n  background: #fff;\n}\r\n/**.about-modal:END */\n.container[data-v-5049bb1b] {\r\n  position: relative;\n}\n.card-container[data-v-5049bb1b]{\r\n  top: 11%;\n}\n.container .card[data-v-5049bb1b] {\r\n  position: relative;\r\n  width: 100%;\r\n  height: 88vh;\r\n  background: #232323;\r\n  border-radius: 20px;\r\n  overflow: hidden;\n}\r\n\r\n\r\n/* circle style */\n.container .card[data-v-5049bb1b]::before {\r\n  content: '';\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  background: #9bdc28;\r\n  -webkit-clip-path: circle(150px at 80% 20%);\r\n          clip-path: circle(150px at 80% 20%);\r\n  transition: .5s ease-in-out;\n}\n.container .card[data-v-5049bb1b]:hover::before {\r\n  -webkit-clip-path: circle(300px at 80% -20%);\r\n          clip-path: circle(300px at 80% -20%);\n}\r\n\r\n\r\n/* watermark */\n.container .card[data-v-5049bb1b]::after {\r\n  content: 'About';\r\n  position: absolute;\r\n  top: 30%;\r\n  left: -20%;\r\n  font-size: 12em;\r\n  font-weight: 800;\r\n  font-style: italic;\r\n  color: rgba(255, 255, 255, 0.04);\n}\r\n\r\n\r\n/* style product */\n.container .card .image-box[data-v-5049bb1b] {\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  z-index: 10000;\r\n  width: 100%;\r\n  height: 220px;\r\n  transition: 0.5s;\n}\n.container .card:hover .image-box[data-v-5049bb1b] {\r\n  top: 0;\r\n  transform: translateY(0);\n}\n.container .card .image-box img[data-v-5049bb1b] {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%) rotate(-25deg);\r\n  width: 270px;\n}\r\n\r\n\r\n/* style product info */\n.container .card .content-box[data-v-5049bb1b] {\r\n  position: absolute;\r\n  bottom: 0;\r\n  width: 100%;\r\n  height: 100px;\r\n  text-align: center;\r\n  transition: 1s;\r\n  z-index: 10;\n}\n.container .card:hover .content-box[data-v-5049bb1b] {\r\n  height: 210px;\n}\n.container .card .content-box h2[data-v-5049bb1b] {\r\n  position: relative;\r\n  font-weight: 600;\r\n  letter-spacing: 1px;\r\n  color: #fff;\n}\n.container .card .content-box .size[data-v-5049bb1b], \r\n.container .card .content-box .color[data-v-5049bb1b] {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 8px 20px;\r\n  transition: 0.5s;\r\n  opacity: 0;\r\n  visibility: hidden;\n}\n.container .card:hover .content-box .size[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  visibility: visible;\r\n  transition-delay: 0.5s;\n}\n.container .card:hover .content-box .color[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  visibility: visible;\r\n  transition-delay: 0.6s;\n}\n.container .card .content-box .size h3[data-v-5049bb1b],\r\n.container .card .content-box .color h3[data-v-5049bb1b] {\r\n  color: #fff;\r\n  font-weight: 300;\r\n  font-size: 14px;\r\n  text-transform: uppercase;\r\n  letter-spacing: 2px;\r\n  margin-right: 10px;\n}\n.container .card .content-box .size span[data-v-5049bb1b] {\r\n  width: 26px;\r\n  height: 26px;\r\n  text-align: center;\r\n  line-height: 26px;\r\n  font-size: 14px;\r\n  display: inline-block;\r\n  color: #111;\r\n  background: #fff;\r\n  margin: 0 5px;\r\n  transition: .5s;\r\n  cursor: pointer;\n}\n.container .card .content-box .size span[data-v-5049bb1b]:hover {\r\n  background: #9bdc28;\n}\n.container .card .content-box .color span[data-v-5049bb1b] {\r\n  width: 20px;\r\n  height: 20px;\r\n  background: #ff0;\r\n  border-radius: 50%;\r\n  margin: 0 5px;\r\n  cursor: pointer;\n}\n.container .card .content-box .color span[data-v-5049bb1b]:nth-child(2) {\r\n  background: #9bdc28;\n}\n.container .card .content-box .color span[data-v-5049bb1b]:nth-child(3) {\r\n  background: #03a9f4;\n}\n.container .card .content-box .color span[data-v-5049bb1b]:nth-child(4) {\r\n  background: #e91e63;\n}\n.container .card .content-box a[data-v-5049bb1b] {\r\n  display: inline-block;\r\n  padding: 10px 20px;\r\n  background: #fff;\r\n  border-radius: 4px;\r\n  margin-top: 10px;\r\n  text-decoration: none;\r\n  font-weight: 600;\r\n  color: #111;\r\n  opacity: 0;\r\n  transform: translateY(50px);\r\n  transition: 0.5s;\n}\n.container .card:hover .content-box a[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  transform: translateY(0px);\r\n  transition-delay: 0.75s;\n}\n.container .card2[data-v-5049bb1b] {\r\n  position: relative;\r\n  width: 100%;\r\n  height: 88vh;\r\n  background: #232323;\r\n  border-radius: 20px;\r\n  overflow: hidden;\n}\r\n\r\n\r\n/* circle style */\n.container .card2[data-v-5049bb1b]::before {\r\n  content: '';\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  background: #2980b9;\r\n  -webkit-clip-path: circle(150px at 80% 20%);\r\n          clip-path: circle(150px at 80% 20%);\r\n  transition: .5s ease-in-out;\n}\n.container .card2[data-v-5049bb1b]:hover::before {\r\n  -webkit-clip-path: circle(300px at 80% -20%);\r\n          clip-path: circle(300px at 80% -20%);\n}\r\n\r\n\r\n/* watermark */\n.container .card2[data-v-5049bb1b]::after {\r\n  content: 'Our Mission';\r\n  position: absolute;\r\n  top: 30%;\r\n  left: -20%;\r\n  font-size: 12em;\r\n  font-weight: 800;\r\n  font-style: italic;\r\n  color: rgba(255, 255, 255, 0.04);\n}\r\n\r\n\r\n/* style product */\n.container .card2 .image-box[data-v-5049bb1b] {\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  z-index: 10000;\r\n  width: 100%;\r\n  height: 220px;\r\n  transition: 0.5s;\n}\n.container .card2:hover .image-box[data-v-5049bb1b] {\r\n  top: 0;\r\n  transform: translateY(0);\n}\n.container .card2 .image-box img[data-v-5049bb1b] {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%) rotate(-25deg);\r\n  width: 270px;\n}\r\n\r\n\r\n/* style product info */\n.container .card2 .content-box[data-v-5049bb1b] {\r\n  position: absolute;\r\n  bottom: 0;\r\n  width: 100%;\r\n  height: 100px;\r\n  text-align: center;\r\n  transition: 1s;\r\n  z-index: 10;\n}\n.container .card2:hover .content-box[data-v-5049bb1b] {\r\n  height: 210px;\n}\n.container .card2 .content-box h2[data-v-5049bb1b] {\r\n  position: relative;\r\n  font-weight: 600;\r\n  letter-spacing: 1px;\r\n  color: #fff;\n}\n.container .card2 .content-box .size[data-v-5049bb1b], \r\n.container .card2 .content-box .color[data-v-5049bb1b] {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 8px 20px;\r\n  transition: 0.5s;\r\n  opacity: 0;\r\n  visibility: hidden;\n}\n.container .card2:hover .content-box .size[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  visibility: visible;\r\n  transition-delay: 0.5s;\n}\n.container .card2:hover .content-box .color[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  visibility: visible;\r\n  transition-delay: 0.6s;\n}\n.container .card2 .content-box .size h3[data-v-5049bb1b],\r\n.container .card2 .content-box .color h3[data-v-5049bb1b] {\r\n  color: #fff;\r\n  font-weight: 300;\r\n  font-size: 14px;\r\n  text-transform: uppercase;\r\n  letter-spacing: 2px;\r\n  margin-right: 10px;\n}\n.container .card2 .content-box .size span[data-v-5049bb1b] {\r\n  width: 26px;\r\n  height: 26px;\r\n  text-align: center;\r\n  line-height: 26px;\r\n  font-size: 14px;\r\n  display: inline-block;\r\n  color: #111;\r\n  background: #fff;\r\n  margin: 0 5px;\r\n  transition: .5s;\r\n  cursor: pointer;\n}\n.container .card2 .content-box .size span[data-v-5049bb1b]:hover {\r\n  background: #9bdc28;\n}\n.container .card2 .content-box .color span[data-v-5049bb1b] {\r\n  width: 20px;\r\n  height: 20px;\r\n  background: #ff0;\r\n  border-radius: 50%;\r\n  margin: 0 5px;\r\n  cursor: pointer;\n}\n.container .card2 .content-box .color span[data-v-5049bb1b]:nth-child(2) {\r\n  background: #9bdc28;\n}\n.container .card2 .content-box .color span[data-v-5049bb1b]:nth-child(3) {\r\n  background: #03a9f4;\n}\n.container .card2 .content-box .color span[data-v-5049bb1b]:nth-child(4) {\r\n  background: #e91e63;\n}\n.container .card2 .content-box a[data-v-5049bb1b] {\r\n  display: inline-block;\r\n  padding: 10px 20px;\r\n  background: #fff;\r\n  border-radius: 4px;\r\n  margin-top: 10px;\r\n  text-decoration: none;\r\n  font-weight: 600;\r\n  color: #111;\r\n  opacity: 0;\r\n  transform: translateY(50px);\r\n  transition: 0.5s;\n}\n.container .card2:hover .content-box a[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  transform: translateY(0px);\r\n  transition-delay: 0.75s;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.rounded[data-v-5049bb1b]{\r\n  border-radius: 10px;\n}\r\n\r\n/** Enroll */\n.glow-on-hover[data-v-5049bb1b] {\r\n    width: 150px;\r\n    height: 40px;\r\n    border: none;\r\n    outline: none;\r\n    color: #fff;\r\n    background: #192a56;\r\n    cursor: pointer;\r\n    position: absolute;\r\n    letter-spacing: 3px;\r\n    z-index: 0;\r\n    border-radius: 5px;\r\n    padding: 8px;\r\n    top: 60%;\r\n    left: 35%\n}\n.glow-on-hover[data-v-5049bb1b]:before {\r\n    content: '';\r\n    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);\r\n    position: absolute;\r\n    top: -2px;\r\n    left: -2px;\r\n    background-size: 400%;\r\n    z-index: -1;\r\n    -webkit-filter: blur(5px);\r\n            filter: blur(5px);\r\n    width: calc(100% + 4px);\r\n    height: calc(100% + 4px);\r\n    -webkit-animation: glowing-data-v-5049bb1b 20s linear infinite;\r\n            animation: glowing-data-v-5049bb1b 20s linear infinite;\r\n    opacity: 0;\r\n    transition: opacity .3s ease-in-out;\r\n    border-radius: 5px;\n}\n.glow-on-hover[data-v-5049bb1b]:active {\r\n    color: #000\n}\n.glow-on-hover[data-v-5049bb1b]:active:after {\r\n    background: transparent;\n}\n.glow-on-hover[data-v-5049bb1b]:hover:before {\r\n    opacity: 1;\n}\n.glow-on-hover[data-v-5049bb1b]:after {\r\n    z-index: -1;\r\n    content: '';\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: #192a56;\r\n    left: 0;\r\n    top: 0;\r\n    border-radius: 5px;\n}\n@-webkit-keyframes glowing-data-v-5049bb1b {\n0% {\r\n        background-position: 0 0;\n}\n50% {\r\n        background-position: 400% 0;\n}\n100% {\r\n        background-position: 0 0;\n}\n}\n@keyframes glowing-data-v-5049bb1b {\n0% {\r\n        background-position: 0 0;\n}\n50% {\r\n        background-position: 400% 0;\n}\n100% {\r\n        background-position: 0 0;\n}\n}\n.about-img[data-v-5049bb1b]{\r\n  height: 99vh;\n}\r\n\r\n/**.about-modal */\n.about-modal[data-v-5049bb1b]{\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 89vh;\r\n  z-index: 10;\r\n  border-radius: 2%;\r\n  background: #fff;\n}\r\n/**.about-modal:END */\n.container[data-v-5049bb1b] {\r\n  position: relative;\n}\n.card-container[data-v-5049bb1b]{\r\n  top: 11%;\n}\n.container .card[data-v-5049bb1b] {\r\n  position: relative;\r\n  width: 100%;\r\n  height: 88vh;\r\n  background: #232323;\r\n  border-radius: 20px;\r\n  overflow: hidden;\n}\r\n\r\n\r\n/* circle style */\n.container .card[data-v-5049bb1b]::before {\r\n  content: '';\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  background: #9bdc28;\r\n  -webkit-clip-path: circle(150px at 80% 20%);\r\n          clip-path: circle(150px at 80% 20%);\r\n  transition: .5s ease-in-out;\n}\n.container .card[data-v-5049bb1b]:hover::before {\r\n  -webkit-clip-path: circle(300px at 80% -20%);\r\n          clip-path: circle(300px at 80% -20%);\n}\r\n\r\n\r\n/* watermark */\n.container .card[data-v-5049bb1b]::after {\r\n  content: 'About';\r\n  position: absolute;\r\n  top: 30%;\r\n  left: -20%;\r\n  font-size: 12em;\r\n  font-weight: 800;\r\n  font-style: italic;\r\n  color: rgba(255, 255, 255, 0.04);\n}\r\n\r\n\r\n/* style product */\n.container .card .image-box[data-v-5049bb1b] {\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  z-index: 10000;\r\n  width: 100%;\r\n  height: 220px;\r\n  transition: 0.5s;\n}\n.container .card:hover .image-box[data-v-5049bb1b] {\r\n  top: 0;\r\n  transform: translateY(0);\n}\n.container .card .image-box img[data-v-5049bb1b] {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%) rotate(-25deg);\r\n  width: 270px;\n}\r\n\r\n\r\n/* style product info */\n.container .card .content-box[data-v-5049bb1b] {\r\n  position: absolute;\r\n  bottom: 0;\r\n  width: 100%;\r\n  height: 100px;\r\n  text-align: center;\r\n  transition: 1s;\r\n  z-index: 10;\n}\n.container .card:hover .content-box[data-v-5049bb1b] {\r\n  height: 210px;\n}\n.container .card .content-box h2[data-v-5049bb1b] {\r\n  position: relative;\r\n  font-weight: 600;\r\n  letter-spacing: 1px;\r\n  color: #fff;\n}\n.container .card .content-box .size[data-v-5049bb1b], \r\n.container .card .content-box .color[data-v-5049bb1b] {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 8px 20px;\r\n  transition: 0.5s;\r\n  opacity: 0;\r\n  visibility: hidden;\n}\n.container .card:hover .content-box .size[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  visibility: visible;\r\n  transition-delay: 0.5s;\n}\n.container .card:hover .content-box .color[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  visibility: visible;\r\n  transition-delay: 0.6s;\n}\n.container .card .content-box .size h3[data-v-5049bb1b],\r\n.container .card .content-box .color h3[data-v-5049bb1b] {\r\n  color: #fff;\r\n  font-weight: 300;\r\n  font-size: 14px;\r\n  text-transform: uppercase;\r\n  letter-spacing: 2px;\r\n  margin-right: 10px;\n}\n.container .card .content-box .size span[data-v-5049bb1b] {\r\n  width: 26px;\r\n  height: 26px;\r\n  text-align: center;\r\n  line-height: 26px;\r\n  font-size: 14px;\r\n  display: inline-block;\r\n  color: #111;\r\n  background: #fff;\r\n  margin: 0 5px;\r\n  transition: .5s;\r\n  cursor: pointer;\n}\n.container .card .content-box .size span[data-v-5049bb1b]:hover {\r\n  background: #9bdc28;\n}\n.container .card .content-box .color span[data-v-5049bb1b] {\r\n  width: 20px;\r\n  height: 20px;\r\n  background: #ff0;\r\n  border-radius: 50%;\r\n  margin: 0 5px;\r\n  cursor: pointer;\n}\n.container .card .content-box .color span[data-v-5049bb1b]:nth-child(2) {\r\n  background: #9bdc28;\n}\n.container .card .content-box .color span[data-v-5049bb1b]:nth-child(3) {\r\n  background: #03a9f4;\n}\n.container .card .content-box .color span[data-v-5049bb1b]:nth-child(4) {\r\n  background: #e91e63;\n}\n.container .card .content-box a[data-v-5049bb1b] {\r\n  display: inline-block;\r\n  padding: 10px 20px;\r\n  background: #fff;\r\n  border-radius: 4px;\r\n  margin-top: 10px;\r\n  text-decoration: none;\r\n  font-weight: 600;\r\n  color: #111;\r\n  opacity: 0;\r\n  transform: translateY(50px);\r\n  transition: 0.5s;\n}\n.container .card:hover .content-box a[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  transform: translateY(0px);\r\n  transition-delay: 0.75s;\n}\n.container .card2[data-v-5049bb1b] {\r\n  position: relative;\r\n  width: 100%;\r\n  height: 88vh;\r\n  background: #232323;\r\n  border-radius: 20px;\r\n  overflow: hidden;\n}\r\n\r\n\r\n/* circle style */\n.container .card2[data-v-5049bb1b]::before {\r\n  content: '';\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  background: #2980b9;\r\n  -webkit-clip-path: circle(150px at 80% 20%);\r\n          clip-path: circle(150px at 80% 20%);\r\n  transition: .5s ease-in-out;\n}\n.container .card2[data-v-5049bb1b]:hover::before {\r\n  -webkit-clip-path: circle(300px at 80% -20%);\r\n          clip-path: circle(300px at 80% -20%);\n}\r\n\r\n\r\n/* watermark */\n.container .card2[data-v-5049bb1b]::after {\r\n  content: 'Our Mission';\r\n  position: absolute;\r\n  top: 30%;\r\n  left: -20%;\r\n  font-size: 12em;\r\n  font-weight: 800;\r\n  font-style: italic;\r\n  color: rgba(255, 255, 255, 0.04);\n}\r\n\r\n\r\n/* style product */\n.container .card2 .image-box[data-v-5049bb1b] {\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  z-index: 10000;\r\n  width: 100%;\r\n  height: 220px;\r\n  transition: 0.5s;\n}\n.container .card2:hover .image-box[data-v-5049bb1b] {\r\n  top: 0;\r\n  transform: translateY(0);\n}\n.container .card2 .image-box img[data-v-5049bb1b] {\r\n  position: absolute;\r\n  top: 50%;\r\n  left: 50%;\r\n  transform: translate(-50%, -50%) rotate(-25deg);\r\n  width: 270px;\n}\r\n\r\n\r\n/* style product info */\n.container .card2 .content-box[data-v-5049bb1b] {\r\n  position: absolute;\r\n  bottom: 0;\r\n  width: 100%;\r\n  height: 100px;\r\n  text-align: center;\r\n  transition: 1s;\r\n  z-index: 10;\n}\n.container .card2:hover .content-box[data-v-5049bb1b] {\r\n  height: 210px;\n}\n.container .card2 .content-box h2[data-v-5049bb1b] {\r\n  position: relative;\r\n  font-weight: 600;\r\n  letter-spacing: 1px;\r\n  color: #fff;\n}\n.container .card2 .content-box .size[data-v-5049bb1b], \r\n.container .card2 .content-box .color[data-v-5049bb1b] {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 8px 20px;\r\n  transition: 0.5s;\r\n  opacity: 0;\r\n  visibility: hidden;\n}\n.container .card2:hover .content-box .size[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  visibility: visible;\r\n  transition-delay: 0.5s;\n}\n.container .card2:hover .content-box .color[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  visibility: visible;\r\n  transition-delay: 0.6s;\n}\n.container .card2 .content-box .size h3[data-v-5049bb1b],\r\n.container .card2 .content-box .color h3[data-v-5049bb1b] {\r\n  color: #fff;\r\n  font-weight: 300;\r\n  font-size: 14px;\r\n  text-transform: uppercase;\r\n  letter-spacing: 2px;\r\n  margin-right: 10px;\n}\n.container .card2 .content-box .size span[data-v-5049bb1b] {\r\n  width: 26px;\r\n  height: 26px;\r\n  text-align: center;\r\n  line-height: 26px;\r\n  font-size: 14px;\r\n  display: inline-block;\r\n  color: #111;\r\n  background: #fff;\r\n  margin: 0 5px;\r\n  transition: .5s;\r\n  cursor: pointer;\n}\n.container .card2 .content-box .size span[data-v-5049bb1b]:hover {\r\n  background: #9bdc28;\n}\n.container .card2 .content-box .color span[data-v-5049bb1b] {\r\n  width: 20px;\r\n  height: 20px;\r\n  background: #ff0;\r\n  border-radius: 50%;\r\n  margin: 0 5px;\r\n  cursor: pointer;\n}\n.container .card2 .content-box .color span[data-v-5049bb1b]:nth-child(2) {\r\n  background: #9bdc28;\n}\n.container .card2 .content-box .color span[data-v-5049bb1b]:nth-child(3) {\r\n  background: #03a9f4;\n}\n.container .card2 .content-box .color span[data-v-5049bb1b]:nth-child(4) {\r\n  background: #e91e63;\n}\n.container .card2 .content-box a[data-v-5049bb1b] {\r\n  display: inline-block;\r\n  padding: 10px 20px;\r\n  background: #fff;\r\n  border-radius: 4px;\r\n  margin-top: 10px;\r\n  text-decoration: none;\r\n  font-weight: 600;\r\n  color: #111;\r\n  opacity: 0;\r\n  transform: translateY(50px);\r\n  transition: 0.5s;\n}\n.container .card2:hover .content-box a[data-v-5049bb1b] {\r\n  opacity: 1;\r\n  transform: translateY(0px);\r\n  transition-delay: 0.75s;\n}\r\n\r\n/**\r\n  GO BACK BUTTON\r\n*/\n.go-back[data-v-5049bb1b] {\r\n  -webkit-appearance: none;\r\n  background: -webkit-gradient(to right, #3498db 0%, #fceeb5 50%, #3498db 100%);\r\n  background: linear-gradient(to right, #3498db 0%, #fceeb5 50%, #3498db 100%);\r\n  background-size: 500%;\r\n  border: none;\r\n  border-radius: 5rem;\r\n  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);\r\n  color: #fff;\r\n  cursor: pointer;\r\n  font: 14px Raleway, sans-serif;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  height: 5rem;\r\n  letter-spacing: 0.05em;\r\n  outline: none;\r\n  -webkit-tap-highlight-color: transparent;\r\n  -webkit-user-select: none;\r\n  -moz-user-select: none;\r\n  -ms-user-select: none;\r\n  user-select: none;\r\n  width: 20rem;\r\n  padding: 7px;\n}\n.go-back[data-v-5049bb1b]:hover {\r\n  animation-name: gradient-data-v-5049bb1b;\r\n  -webkit-animation-name: gradient-data-v-5049bb1b;\r\n  animation-duration: 2s;\r\n  -webkit-animation-duration: s;\r\n  animation-iteration-count: 1;\r\n  -webkit-animation-iteration-count: 1;\r\n  animation-fill-mode: forwards;\r\n  -webkit-animation-fill-mode: forwards;\n}\n@-webkit-keyframes gradient-data-v-5049bb1b {\n0% {\r\n    background-position: 0% 50%;\n}\n100% {\r\n    background-position: 100%;\n}\n}\n@keyframes gradient-data-v-5049bb1b {\n0% {\r\n    background-position: 0% 50%;\n}\n100% {\r\n    background-position: 100%;\n}\n}\n.p-content[data-v-5049bb1b]{\r\n  padding: 8px;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -7783,7 +7790,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.blog_div[data-v-66ef69a0]{\r\n  height: 550px;\r\n  overflow-y: scroll;\r\n  overflow-x: hidden;\r\n  margin-top: 10%;\n}\n.blog-post[data-v-66ef69a0]{\r\n  padding: 30px;\r\n  border: 1px solid #c8d6e5;\r\n  border-radius: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar-track {\r\n  border: 1px solid #000;\r\n  padding: 2px 0;\r\n  background-color: #404040;\r\n  border-radius: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar {\r\n  width: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar-thumb {\r\n  border-radius: 10px;\r\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\r\n  background-color: #737272;\r\n  border: 1px solid #000;\n}\n.rounded[data-v-66ef69a0]{\r\n  border-radius: 10px;\n}\r\n", ""]);
+exports.push([module.i, "\n.blog_div[data-v-66ef69a0]{\r\n  height: 550px;\r\n  overflow-y: scroll;\r\n  overflow-x: hidden;\r\n  margin-top: 10%;\n}\n.blog-post[data-v-66ef69a0]{\r\n  padding: 30px;\r\n  border: 1px solid #c8d6e5;\r\n  border-radius: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar-track {\r\n  border: 1px solid #000;\r\n  padding: 2px 0;\r\n  background-color: #404040;\r\n  border-radius: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar {\r\n  width: 10px;\n}\n.blog_div[data-v-66ef69a0]::-webkit-scrollbar-thumb {\r\n  border-radius: 10px;\r\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\r\n  background-color: #737272;\r\n  border: 1px solid #000;\n}\n.rounded[data-v-66ef69a0]{\r\n  border-radius: 10px;\n}\r\n\r\n/** Enroll */\n.glow-on-hover[data-v-66ef69a0] {\r\n    width: 150px;\r\n    height: 40px;\r\n    border: none;\r\n    outline: none;\r\n    color: #fff;\r\n    background: #192a56;\r\n    cursor: pointer;\r\n    position: absolute;\r\n    letter-spacing: 3px;\r\n    z-index: 0;\r\n    border-radius: 5px;\r\n    padding: 8px;\r\n    top: 60%;\r\n    left: 35%\n}\n.glow-on-hover[data-v-66ef69a0]:before {\r\n    content: '';\r\n    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);\r\n    position: absolute;\r\n    top: -2px;\r\n    left: -2px;\r\n    background-size: 400%;\r\n    z-index: -1;\r\n    -webkit-filter: blur(5px);\r\n            filter: blur(5px);\r\n    width: calc(100% + 4px);\r\n    height: calc(100% + 4px);\r\n    -webkit-animation: glowing-data-v-66ef69a0 20s linear infinite;\r\n            animation: glowing-data-v-66ef69a0 20s linear infinite;\r\n    opacity: 0;\r\n    transition: opacity .3s ease-in-out;\r\n    border-radius: 5px;\n}\n.glow-on-hover[data-v-66ef69a0]:active {\r\n    color: #000\n}\n.glow-on-hover[data-v-66ef69a0]:active:after {\r\n    background: transparent;\n}\n.glow-on-hover[data-v-66ef69a0]:hover:before {\r\n    opacity: 1;\n}\n.glow-on-hover[data-v-66ef69a0]:after {\r\n    z-index: -1;\r\n    content: '';\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: #192a56;\r\n    left: 0;\r\n    top: 0;\r\n    border-radius: 5px;\n}\n@-webkit-keyframes glowing-data-v-66ef69a0 {\n0% {\r\n        background-position: 0 0;\n}\n50% {\r\n        background-position: 400% 0;\n}\n100% {\r\n        background-position: 0 0;\n}\n}\n@keyframes glowing-data-v-66ef69a0 {\n0% {\r\n        background-position: 0 0;\n}\n50% {\r\n        background-position: 400% 0;\n}\n100% {\r\n        background-position: 0 0;\n}\n}\r\n", ""]);
 
 // exports
 
@@ -7802,7 +7809,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.contact-info[data-v-2b26a8a8]{\n  margin-top: 0 !important;\n}\nsection.map[data-v-2b26a8a8]{\n  margin-top: 0 !important;\n  padding-bottom: 0 !important;\n}\n.rounded[data-v-2b26a8a8]{\n  border-radius: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.contact-info[data-v-2b26a8a8]{\n  margin-top: 0 !important;\n}\nsection.map[data-v-2b26a8a8]{\n  margin-top: 0 !important;\n  padding-bottom: 0 !important;\n}\n.rounded[data-v-2b26a8a8]{\n  border-radius: 10px;\n}\n\n/** Enroll */\n.glow-on-hover[data-v-2b26a8a8] {\n    width: 150px;\n    height: 40px;\n    border: none;\n    outline: none;\n    color: #fff;\n    background: #192a56;\n    cursor: pointer;\n    position: absolute;\n    letter-spacing: 3px;\n    z-index: 0;\n    border-radius: 5px;\n    padding: 8px;\n    top: 60%;\n    left: 35%\n}\n.glow-on-hover[data-v-2b26a8a8]:before {\n    content: '';\n    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    background-size: 400%;\n    z-index: -1;\n    -webkit-filter: blur(5px);\n            filter: blur(5px);\n    width: calc(100% + 4px);\n    height: calc(100% + 4px);\n    -webkit-animation: glowing-data-v-2b26a8a8 20s linear infinite;\n            animation: glowing-data-v-2b26a8a8 20s linear infinite;\n    opacity: 0;\n    transition: opacity .3s ease-in-out;\n    border-radius: 5px;\n}\n.glow-on-hover[data-v-2b26a8a8]:active {\n    color: #000\n}\n.glow-on-hover[data-v-2b26a8a8]:active:after {\n    background: transparent;\n}\n.glow-on-hover[data-v-2b26a8a8]:hover:before {\n    opacity: 1;\n}\n.glow-on-hover[data-v-2b26a8a8]:after {\n    z-index: -1;\n    content: '';\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    background: #192a56;\n    left: 0;\n    top: 0;\n    border-radius: 5px;\n}\n@-webkit-keyframes glowing-data-v-2b26a8a8 {\n0% {\n        background-position: 0 0;\n}\n50% {\n        background-position: 400% 0;\n}\n100% {\n        background-position: 0 0;\n}\n}\n@keyframes glowing-data-v-2b26a8a8 {\n0% {\n        background-position: 0 0;\n}\n50% {\n        background-position: 400% 0;\n}\n100% {\n        background-position: 0 0;\n}\n}\n", ""]);
 
 // exports
 
@@ -7821,7 +7828,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.blog_div[data-v-58d212f2]{\n  height: 550px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n  margin-top: 10%;\n}\n.blog-post[data-v-58d212f2]{\n  padding: 30px;\n}\n.blog_div[data-v-58d212f2]::-webkit-scrollbar-track {\n  border: 1px solid #000;\n  padding: 2px 0;\n  background-color: #404040;\n  border-radius: 10px;\n}\n.blog_div[data-v-58d212f2]::-webkit-scrollbar {\n  width: 10px;\n}\n.blog_div[data-v-58d212f2]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\n  background-color: #737272;\n  border: 1px solid #000;\n}\n.rounded[data-v-58d212f2]{\n  border-radius: 10px;\n}\n.shop-page[data-v-58d212f2]{\n  margin-top: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.blog_div[data-v-58d212f2]{\n  height: 550px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n  margin-top: 10%;\n}\n.blog-post[data-v-58d212f2]{\n  padding: 30px;\n}\n.blog_div[data-v-58d212f2]::-webkit-scrollbar-track {\n  border: 1px solid #000;\n  padding: 2px 0;\n  background-color: #404040;\n  border-radius: 10px;\n}\n.blog_div[data-v-58d212f2]::-webkit-scrollbar {\n  width: 10px;\n}\n.blog_div[data-v-58d212f2]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\n  background-color: #737272;\n  border: 1px solid #000;\n}\n.rounded[data-v-58d212f2]{\n  border-radius: 10px;\n}\n.shop-page[data-v-58d212f2]{\n  margin-top: 10px;\n}\n\n/** Enroll */\n.glow-on-hover[data-v-58d212f2] {\n    width: 150px;\n    height: 40px;\n    border: none;\n    outline: none;\n    color: #fff;\n    background: #192a56;\n    cursor: pointer;\n    position: absolute;\n    letter-spacing: 3px;\n    z-index: 0;\n    border-radius: 5px;\n    padding: 8px;\n    top: 60%;\n    left: 35%\n}\n.glow-on-hover[data-v-58d212f2]:before {\n    content: '';\n    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    background-size: 400%;\n    z-index: -1;\n    -webkit-filter: blur(5px);\n            filter: blur(5px);\n    width: calc(100% + 4px);\n    height: calc(100% + 4px);\n    -webkit-animation: glowing-data-v-58d212f2 20s linear infinite;\n            animation: glowing-data-v-58d212f2 20s linear infinite;\n    opacity: 0;\n    transition: opacity .3s ease-in-out;\n    border-radius: 5px;\n}\n.glow-on-hover[data-v-58d212f2]:active {\n    color: #000\n}\n.glow-on-hover[data-v-58d212f2]:active:after {\n    background: transparent;\n}\n.glow-on-hover[data-v-58d212f2]:hover:before {\n    opacity: 1;\n}\n.glow-on-hover[data-v-58d212f2]:after {\n    z-index: -1;\n    content: '';\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    background: #192a56;\n    left: 0;\n    top: 0;\n    border-radius: 5px;\n}\n@-webkit-keyframes glowing-data-v-58d212f2 {\n0% {\n        background-position: 0 0;\n}\n50% {\n        background-position: 400% 0;\n}\n100% {\n        background-position: 0 0;\n}\n}\n@keyframes glowing-data-v-58d212f2 {\n0% {\n        background-position: 0 0;\n}\n50% {\n        background-position: 400% 0;\n}\n100% {\n        background-position: 0 0;\n}\n}\n", ""]);
 
 // exports
 
@@ -7840,7 +7847,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.blog_div[data-v-25d98078]{\n  height: 630px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n}\n.blog-page[data-v-25d98078]{\n  margin-top: 80px;\n}\n.blog-post[data-v-25d98078]{\n  padding: 30px;\n}\n.blog_div[data-v-25d98078]::-webkit-scrollbar-track {\n  border: 1px solid #000;\n  padding: 2px 0;\n  background-color: #404040;\n  border-radius: 10px;\n}\n.blog_div[data-v-25d98078]::-webkit-scrollbar {\n  width: 10px;\n}\n.blog_div[data-v-25d98078]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\n  background-color: #737272;\n  border: 1px solid #000;\n}\n.rounded[data-v-25d98078]{\n  border-radius: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.blog_div[data-v-25d98078]{\n  height: 630px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n}\n.blog-page[data-v-25d98078]{\n  margin-top: 80px;\n}\n.blog-post[data-v-25d98078]{\n  padding: 30px;\n}\n.blog_div[data-v-25d98078]::-webkit-scrollbar-track {\n  border: 1px solid #000;\n  padding: 2px 0;\n  background-color: #404040;\n  border-radius: 10px;\n}\n.blog_div[data-v-25d98078]::-webkit-scrollbar {\n  width: 10px;\n}\n.blog_div[data-v-25d98078]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\n  background-color: #737272;\n  border: 1px solid #000;\n}\n.rounded[data-v-25d98078]{\n  border-radius: 10px;\n}\n\n/** Enroll */\n.glow-on-hover[data-v-25d98078] {\n    width: 150px;\n    height: 40px;\n    border: none;\n    outline: none;\n    color: #fff;\n    background: #192a56;\n    cursor: pointer;\n    position: absolute;\n    letter-spacing: 3px;\n    z-index: 0;\n    border-radius: 5px;\n    padding: 8px;\n    top: 60%;\n    left: 35%\n}\n.glow-on-hover[data-v-25d98078]:before {\n    content: '';\n    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    background-size: 400%;\n    z-index: -1;\n    -webkit-filter: blur(5px);\n            filter: blur(5px);\n    width: calc(100% + 4px);\n    height: calc(100% + 4px);\n    -webkit-animation: glowing-data-v-25d98078 20s linear infinite;\n            animation: glowing-data-v-25d98078 20s linear infinite;\n    opacity: 0;\n    transition: opacity .3s ease-in-out;\n    border-radius: 5px;\n}\n.glow-on-hover[data-v-25d98078]:active {\n    color: #000\n}\n.glow-on-hover[data-v-25d98078]:active:after {\n    background: transparent;\n}\n.glow-on-hover[data-v-25d98078]:hover:before {\n    opacity: 1;\n}\n.glow-on-hover[data-v-25d98078]:after {\n    z-index: -1;\n    content: '';\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    background: #192a56;\n    left: 0;\n    top: 0;\n    border-radius: 5px;\n}\n@-webkit-keyframes glowing-data-v-25d98078 {\n0% {\n        background-position: 0 0;\n}\n50% {\n        background-position: 400% 0;\n}\n100% {\n        background-position: 0 0;\n}\n}\n@keyframes glowing-data-v-25d98078 {\n0% {\n        background-position: 0 0;\n}\n50% {\n        background-position: 400% 0;\n}\n100% {\n        background-position: 0 0;\n}\n}\n", ""]);
 
 // exports
 
@@ -7859,7 +7866,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.blog_div[data-v-ff529142]{\n  height: 630px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n}\n.blog-post[data-v-ff529142]{\n  padding: 30px;\n}\n.blog_div[data-v-ff529142]::-webkit-scrollbar-track {\n  border: 1px solid #000;\n  padding: 2px 0;\n  background-color: #404040;\n  border-radius: 10px;\n}\n.blog_div[data-v-ff529142]::-webkit-scrollbar {\n  width: 10px;\n}\n.blog_div[data-v-ff529142]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\n  background-color: #737272;\n  border: 1px solid #000;\n}\n.rounded[data-v-ff529142]{\n  border-radius: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.blog_div[data-v-ff529142]{\n  height: 630px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n}\n.blog-post[data-v-ff529142]{\n  padding: 30px;\n}\n.blog_div[data-v-ff529142]::-webkit-scrollbar-track {\n  border: 1px solid #000;\n  padding: 2px 0;\n  background-color: #404040;\n  border-radius: 10px;\n}\n.blog_div[data-v-ff529142]::-webkit-scrollbar {\n  width: 10px;\n}\n.blog_div[data-v-ff529142]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\n  background-color: #737272;\n  border: 1px solid #000;\n}\n.rounded[data-v-ff529142]{\n  border-radius: 10px;\n}\n\n/** Enroll */\n.glow-on-hover[data-v-ff529142] {\n    width: 150px;\n    height: 40px;\n    border: none;\n    outline: none;\n    color: #fff;\n    background: #192a56;\n    cursor: pointer;\n    position: absolute;\n    letter-spacing: 3px;\n    z-index: 0;\n    border-radius: 5px;\n    padding: 8px;\n    top: 60%;\n    left: 35%\n}\n.glow-on-hover[data-v-ff529142]:before {\n    content: '';\n    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    background-size: 400%;\n    z-index: -1;\n    -webkit-filter: blur(5px);\n            filter: blur(5px);\n    width: calc(100% + 4px);\n    height: calc(100% + 4px);\n    -webkit-animation: glowing-data-v-ff529142 20s linear infinite;\n            animation: glowing-data-v-ff529142 20s linear infinite;\n    opacity: 0;\n    transition: opacity .3s ease-in-out;\n    border-radius: 5px;\n}\n.glow-on-hover[data-v-ff529142]:active {\n    color: #000\n}\n.glow-on-hover[data-v-ff529142]:active:after {\n    background: transparent;\n}\n.glow-on-hover[data-v-ff529142]:hover:before {\n    opacity: 1;\n}\n.glow-on-hover[data-v-ff529142]:after {\n    z-index: -1;\n    content: '';\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    background: #192a56;\n    left: 0;\n    top: 0;\n    border-radius: 5px;\n}\n@-webkit-keyframes glowing-data-v-ff529142 {\n0% {\n        background-position: 0 0;\n}\n50% {\n        background-position: 400% 0;\n}\n100% {\n        background-position: 0 0;\n}\n}\n@keyframes glowing-data-v-ff529142 {\n0% {\n        background-position: 0 0;\n}\n50% {\n        background-position: 400% 0;\n}\n100% {\n        background-position: 0 0;\n}\n}\n", ""]);
 
 // exports
 
@@ -7878,7 +7885,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.blog_div[data-v-4916dec5]{\n  height: 550px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n  margin-top: 10%;\n}\n.blog-post[data-v-4916dec5]{\n  padding: 30px;\n}\n.blog_div[data-v-4916dec5]::-webkit-scrollbar-track {\n  border: 1px solid #000;\n  padding: 2px 0;\n  background-color: #404040;\n  border-radius: 10px;\n}\n.blog_div[data-v-4916dec5]::-webkit-scrollbar {\n  width: 10px;\n}\n.blog_div[data-v-4916dec5]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\n  background-color: #737272;\n  border: 1px solid #000;\n}\n.rounded[data-v-4916dec5]{\n  border-radius: 10px;\n}\n.our-team[data-v-4916dec5]{\n  padding-top: 45px;\n}\n", ""]);
+exports.push([module.i, "\n.blog_div[data-v-4916dec5]{\n  height: 550px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n  margin-top: 10%;\n}\n.blog-post[data-v-4916dec5]{\n  padding: 30px;\n}\n.blog_div[data-v-4916dec5]::-webkit-scrollbar-track {\n  border: 1px solid #000;\n  padding: 2px 0;\n  background-color: #404040;\n  border-radius: 10px;\n}\n.blog_div[data-v-4916dec5]::-webkit-scrollbar {\n  width: 10px;\n}\n.blog_div[data-v-4916dec5]::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  box-shadow: inset 0 0 6px rgba(0,0,0,.3);\n  background-color: #737272;\n  border: 1px solid #000;\n}\n.rounded[data-v-4916dec5]{\n  border-radius: 10px;\n}\n.our-team[data-v-4916dec5]{\n  padding-top: 45px;\n}\n\n/** Enroll */\n.glow-on-hover[data-v-4916dec5] {\n    width: 150px;\n    height: 40px;\n    border: none;\n    outline: none;\n    color: #fff;\n    background: #192a56;\n    cursor: pointer;\n    position: absolute;\n    letter-spacing: 3px;\n    z-index: 0;\n    border-radius: 5px;\n    padding: 8px;\n    top: 60%;\n    left: 35%\n}\n.glow-on-hover[data-v-4916dec5]:before {\n    content: '';\n    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    background-size: 400%;\n    z-index: -1;\n    -webkit-filter: blur(5px);\n            filter: blur(5px);\n    width: calc(100% + 4px);\n    height: calc(100% + 4px);\n    -webkit-animation: glowing-data-v-4916dec5 20s linear infinite;\n            animation: glowing-data-v-4916dec5 20s linear infinite;\n    opacity: 0;\n    transition: opacity .3s ease-in-out;\n    border-radius: 5px;\n}\n.glow-on-hover[data-v-4916dec5]:active {\n    color: #000\n}\n.glow-on-hover[data-v-4916dec5]:active:after {\n    background: transparent;\n}\n.glow-on-hover[data-v-4916dec5]:hover:before {\n    opacity: 1;\n}\n.glow-on-hover[data-v-4916dec5]:after {\n    z-index: -1;\n    content: '';\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    background: #192a56;\n    left: 0;\n    top: 0;\n    border-radius: 5px;\n}\n@-webkit-keyframes glowing-data-v-4916dec5 {\n0% {\n        background-position: 0 0;\n}\n50% {\n        background-position: 400% 0;\n}\n100% {\n        background-position: 0 0;\n}\n}\n@keyframes glowing-data-v-4916dec5 {\n0% {\n        background-position: 0 0;\n}\n50% {\n        background-position: 400% 0;\n}\n100% {\n        background-position: 0 0;\n}\n}\n", ""]);
 
 // exports
 
@@ -41780,11 +41787,15 @@ var render = function() {
             _vm._v(" "),
             _vm.aboutModal
               ? _c("div", { staticClass: "about-modal" }, [
-                  _c("p", { domProps: { innerHTML: _vm._s(_vm.abouts.desc) } }),
+                  _c("p", {
+                    staticClass: "p-content",
+                    domProps: { innerHTML: _vm._s(_vm.abouts.desc) }
+                  }),
                   _vm._v(" "),
                   _c(
                     "a",
                     {
+                      staticClass: "go-back",
                       attrs: { href: "#" },
                       on: {
                         click: function($event) {
@@ -41800,12 +41811,14 @@ var render = function() {
             _vm.missionModal
               ? _c("div", { staticClass: "about-modal" }, [
                   _c("p", {
+                    staticClass: "p-content",
                     domProps: { innerHTML: _vm._s(_vm.missions.desc) }
                   }),
                   _vm._v(" "),
                   _c(
                     "a",
                     {
+                      staticClass: "go-back",
                       attrs: { href: "#" },
                       on: {
                         click: function($event) {
@@ -41836,7 +41849,16 @@ var staticRenderFns = [
             "https://res.cloudinary.com/dhe6napl7/image/upload/v1597257755/WuakuhbmvxWrGbO5smgosmNBZtDufDxSAv3WEHbp.gif",
           alt: ""
         }
-      })
+      }),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "glow-on-hover",
+          attrs: { href: "/enroll/course", type: "button" }
+        },
+        [_vm._v("ENROLL NOW")]
+      )
     ])
   }
 ]
@@ -41957,10 +41979,19 @@ var staticRenderFns = [
         staticClass: "img-fluid rounded about-img",
         attrs: {
           src:
-            "https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png",
+            "https://res.cloudinary.com/dhe6napl7/image/upload/v1597257755/WuakuhbmvxWrGbO5smgosmNBZtDufDxSAv3WEHbp.gif",
           alt: ""
         }
-      })
+      }),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "glow-on-hover",
+          attrs: { href: "/enroll/course", type: "button" }
+        },
+        [_vm._v("ENROLL NOW")]
+      )
     ])
   }
 ]
@@ -42117,10 +42148,19 @@ var staticRenderFns = [
         staticClass: "img-fluid rounded about-img",
         attrs: {
           src:
-            "https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png",
+            "https://res.cloudinary.com/dhe6napl7/image/upload/v1597257755/WuakuhbmvxWrGbO5smgosmNBZtDufDxSAv3WEHbp.gif",
           alt: ""
         }
-      })
+      }),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "glow-on-hover",
+          attrs: { href: "/enroll/course", type: "button" }
+        },
+        [_vm._v("ENROLL NOW")]
+      )
     ])
   },
   function() {
@@ -42245,16 +42285,16 @@ var render = function() {
                                                   )
                                                 ]),
                                                 _vm._v(
-                                                  "\n                                    ৳" +
+                                                  "\n                                      ৳" +
                                                     _vm._s(course.price) +
-                                                    "\n                                  "
+                                                    "\n                                    "
                                                 )
                                               ])
                                             : _c("span", [
                                                 _vm._v(
-                                                  "\n                                    ৳" +
+                                                  "\n                                      ৳" +
                                                     _vm._s(course.price) +
-                                                    "\n                                  "
+                                                    "\n                                    "
                                                 )
                                               ])
                                         ]
@@ -42290,10 +42330,19 @@ var staticRenderFns = [
         staticClass: "img-fluid rounded about-img",
         attrs: {
           src:
-            "https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png",
+            "https://res.cloudinary.com/dhe6napl7/image/upload/v1597257755/WuakuhbmvxWrGbO5smgosmNBZtDufDxSAv3WEHbp.gif",
           alt: ""
         }
-      })
+      }),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "glow-on-hover",
+          attrs: { href: "/enroll/course", type: "button" }
+        },
+        [_vm._v("ENROLL NOW")]
+      )
     ])
   }
 ]
@@ -42413,10 +42462,19 @@ var staticRenderFns = [
         staticClass: "img-fluid rounded about-img",
         attrs: {
           src:
-            "https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png",
+            "https://res.cloudinary.com/dhe6napl7/image/upload/v1597257755/WuakuhbmvxWrGbO5smgosmNBZtDufDxSAv3WEHbp.gif",
           alt: ""
         }
-      })
+      }),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "glow-on-hover",
+          attrs: { href: "/enroll/course", type: "button" }
+        },
+        [_vm._v("ENROLL NOW")]
+      )
     ])
   },
   function() {
@@ -42506,16 +42564,16 @@ var render = function() {
                                       )
                                     ]),
                                     _vm._v(
-                                      "\n                                  ৳" +
+                                      "\n                                    ৳" +
                                         _vm._s(_vm.course.price) +
-                                        "\n                                "
+                                        "\n                                  "
                                     )
                                   ])
                                 : _c("span", [
                                     _vm._v(
-                                      "\n                                  ৳" +
+                                      "\n                                    ৳" +
                                         _vm._s(_vm.course.price) +
-                                        "\n                                "
+                                        "\n                                  "
                                     )
                                   ]),
                               _vm._v(" "),
@@ -42579,10 +42637,19 @@ var staticRenderFns = [
         staticClass: "img-fluid rounded about-img",
         attrs: {
           src:
-            "https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png",
+            "https://res.cloudinary.com/dhe6napl7/image/upload/v1597257755/WuakuhbmvxWrGbO5smgosmNBZtDufDxSAv3WEHbp.gif",
           alt: ""
         }
-      })
+      }),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "glow-on-hover",
+          attrs: { href: "/enroll/course", type: "button" }
+        },
+        [_vm._v("ENROLL NOW")]
+      )
     ])
   },
   function() {
@@ -42736,10 +42803,19 @@ var staticRenderFns = [
         staticClass: "img-fluid rounded about-img",
         attrs: {
           src:
-            "https://res.cloudinary.com/dhe6napl7/image/upload/v1595766017/heist.png",
+            "https://res.cloudinary.com/dhe6napl7/image/upload/v1597257755/WuakuhbmvxWrGbO5smgosmNBZtDufDxSAv3WEHbp.gif",
           alt: ""
         }
-      })
+      }),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "glow-on-hover",
+          attrs: { href: "/enroll/course", type: "button" }
+        },
+        [_vm._v("ENROLL NOW")]
+      )
     ])
   }
 ]

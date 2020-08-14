@@ -69,7 +69,7 @@
          <!--=============== wrapper ===============-->
          <div id="wrapper">
              <!--=============== content-holder ===============-->
-             <div class="content-holder elem scale-bg2   no-padding">
+             <div class="content-holder elem scale-bg2 no-padding">
                  <!-- Page title -->
 
                  <!-- Page title  end-->

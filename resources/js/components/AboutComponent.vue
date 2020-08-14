@@ -41,6 +41,7 @@
         <div class="row">
           <div class="col-md-4">
               <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1597257755/WuakuhbmvxWrGbO5smgosmNBZtDufDxSAv3WEHbp.gif" class="img-fluid rounded about-img" alt="">
+              <a href="/enroll/course" class="glow-on-hover" type="button">ENROLL NOW</a>
           </div>
           <div class="col-md-8">
             <!-- tabs -->
@@ -89,12 +90,13 @@
       </div>
       <!-- -------------------- POP UP -->
       <div class="about-modal" v-if="aboutModal">
-        <p  v-html="abouts.desc"></p>
-        <a href="#" @click="aboutModal = false">Go back</a>
+        <p class="p-content" v-html="abouts.desc"></p>
+        <a href="#" class="go-back" @click="aboutModal = false">Go back</a>
       </div>
       <div class="about-modal" v-if="missionModal">
-        <p  v-html="missions.desc"></p>
-        <a href="#" @click="missionModal = false">Go back</a>
+        <p class="p-content" v-html="missions.desc"></p>
+        <a href="#" class="go-back" @click="missionModal = false">Go back</a>
+        
       </div>
       <!-- -------------------- POP UP:END -->
     </div>
@@ -152,6 +154,79 @@
 <style scoped>
 .rounded{
   border-radius: 10px;
+}
+
+/** Enroll */
+.glow-on-hover {
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #192a56;
+    cursor: pointer;
+    position: absolute;
+    letter-spacing: 3px;
+    z-index: 0;
+    border-radius: 5px;
+    padding: 8px;
+    top: 60%;
+    left: 35%
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 5px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #192a56;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 }
 
 .about-img{
@@ -341,10 +416,6 @@
   transition-delay: 0.75s;
 }
 
-
-
-
-
 .container .card2 {
   position: relative;
   width: 100%;
@@ -506,6 +577,58 @@
   opacity: 1;
   transform: translateY(0px);
   transition-delay: 0.75s;
+}
+
+/**
+  GO BACK BUTTON
+*/
+.go-back {
+  -webkit-appearance: none;
+  background: -webkit-gradient(to right, #3498db 0%, #fceeb5 50%, #3498db 100%);
+  background: linear-gradient(to right, #3498db 0%, #fceeb5 50%, #3498db 100%);
+  background-size: 500%;
+  border: none;
+  border-radius: 5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  color: #fff;
+  cursor: pointer;
+  font: 14px Raleway, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 5rem;
+  letter-spacing: 0.05em;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 20rem;
+  padding: 7px;;
+}
+
+.go-back:hover {
+  animation-name: gradient;
+  -webkit-animation-name: gradient;
+  animation-duration: 2s;
+  -webkit-animation-duration: s;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.p-content{
+  padding: 8px;
 }
 
 </style>
