@@ -118,7 +118,9 @@ $('.is_active').on('change', function () {
             },
             method: 'get',
             success: function (result) {
-                alert('Status changed');
+                // alert('Status changed');
+                // alert(result);
+                console.log(result);
             },
         });
     }

@@ -88,6 +88,7 @@ class SliderController extends Controller
         $slide->save();
         }
 
+
         return response(['message' => 'Slider status is changed '], 200);
     }
 }
