@@ -41750,7 +41750,7 @@ var render = function() {
                           }
                         }
                       },
-                      [_vm._v("Read")]
+                      [_vm._v("Know More")]
                     )
                   ])
                 ])
@@ -41771,7 +41771,7 @@ var render = function() {
                           }
                         }
                       },
-                      [_vm._v("Read")]
+                      [_vm._v("Know More")]
                     )
                   ])
                 ])

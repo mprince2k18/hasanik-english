@@ -74,7 +74,7 @@
           <div class="card">
             <div class="content-box">
               <h2>About Us</h2>
-              <a href="#" @click="aboutModal = true">Read</a>
+              <a href="#" @click="aboutModal = true">Know More</a>
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@
           <div class="card2">
             <div class="content-box">
               <h2>Our Mission</h2>
-              <a href="#" @click="missionModal = true">Read</a>
+              <a href="#" @click="missionModal = true">Know More</a>
             </div>
           </div>
         </div>
