@@ -72,28 +72,32 @@
       <div class="row">
         <div class="col-md-6">
           <div class="card">
-    <div class="content-box">
-      <h2>About Us</h2>
-      <a href="#">Read</a>
-    </div>
-  </div>
+            <div class="content-box">
+              <h2>About Us</h2>
+              <a href="#" @click="aboutModal = true">Read</a>
+            </div>
+          </div>
         </div>
         <div class="col-md-6">
           <div class="card2">
-    <div class="content-box">
-      <h2>Our Missoin</h2>
-      <a href="#">Read</a>
-    </div>
-  </div>
+            <div class="content-box">
+              <h2>Our Missoin</h2>
+              <a href="#" @click="missionModal = true">Read</a>
+            </div>
+          </div>
         </div>
-
-  
-
-  
-
-
       </div>
-</div>
+      <!-- -------------------- POP UP -->
+      <div class="about-modal" v-if="aboutModal">
+        <p  v-html="abouts.desc"></p>
+        <a href="#" @click="aboutModal = false">Go back</a>
+      </div>
+      <div class="about-modal" v-if="missionModal">
+        <p  v-html="missions.desc"></p>
+        <a href="#" @click="missionModal = false">Go back</a>
+      </div>
+      <!-- -------------------- POP UP:END -->
+    </div>
 
 
 
@@ -117,7 +121,9 @@
           return{
             abouts:[],
             missions:[],
-            loading: false
+            loading: false,
+            aboutModal: false,
+            missionModal: false,
           }
         },
         methods:{
@@ -152,7 +158,18 @@
   height: 99vh;
 }
 
-
+/**.about-modal */
+.about-modal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  z-index: 10;
+  border-radius: 2%;
+  background: #fff;
+}
+/**.about-modal:END */
 .container {
   position: relative;
 }
