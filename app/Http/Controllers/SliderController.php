@@ -15,8 +15,10 @@ class SliderController extends Controller
      */
     public function index()
     {
-        $sliders = Slider::latest()->paginate(10);
-        return view('dashboard.backEnd.slider.index',compact('sliders'));
+        $top_sliders = Slider::latest()->where('type','top')->paginate(10);
+        $aside_sliders = Slider::latest()->where('type','aside')->paginate(10);
+        $bottom_sliders = Slider::latest()->where('type','bottom')->paginate(10);
+        return view('dashboard.backEnd.slider.index',compact('top_sliders','aside_sliders','bottom_sliders'));
     }
 
     /**
@@ -40,6 +42,8 @@ class SliderController extends Controller
         if ($request->hasFile('slider')) {
             $slider->slider = fileUpload($request->slider, 'sliders');
         }
+
+        $slider->type = $request->type;
         
         if ($slider->is_active == 'on') {
             $slider->is_active = true;

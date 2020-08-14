@@ -63,7 +63,7 @@ html, body {
 
 .website-logo .logo {
     display: inline-block;
-    background-image: url("../images/logo-light.svg");
+    /* background-image: url("../images/logo-light.svg"); */
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -73,7 +73,7 @@ html, body {
 }
 
 .website-logo .logo img.logo-size {
-    opacity: 0 !important;
+    opacity: 1 !important;
 }
 
 .website-logo-inside {
@@ -90,7 +90,7 @@ html, body {
 
 .website-logo-inside .logo {
     display: inline-block;
-    background-image: url("../images/logo-light.svg");
+    /* background-image: url("../images/logo-light.svg"); */
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -1386,7 +1386,7 @@ input.sm-content {
 .form-body.without-side .website-logo {
     top: 70px;
     left: 50%;
-    margin-left: -50px;
+    margin-left: -90px;
     right: initial;
     bottom: initial;
     display: inline-block;

@@ -82,8 +82,8 @@
                          <!-- 1 -->
                                  @php
                                      $asides = App\Slider::where('is_active', 0)->where('type', 'aside')->first();
-                                     $tops = App\Slider::where('is_active', 1)->where('type', 'top')->get();
-                                     $bottoms = App\Slider::where('is_active', 1)->where('type', 'bottom')->get();
+                                     $tops = App\Slider::where('is_active', 0)->where('type', 'top')->get();
+                                     $bottoms = App\Slider::where('is_active', 0)->where('type', 'bottom')->get();
                                  @endphp
                          <div class="hero-grid big-column">
                            
@@ -104,16 +104,12 @@
                          <!-- 2 -->
                          <div class="hero-grid small-column" style="height: 100%;">
                              <div class="hero-slider owl-carousel" data-attime="3220" data-rtlt="false">
-
-                               <div class="item">
-                                     <div class="bg w-100" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766609/HASANIK_ENGLISH_4.gif)"></div>
-                                 </div>
-                                 <div class="item">
-                                     <div class="bg w-100" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766864/Hasanik_English_1.png)"></div>
-                                 </div>
-                                 {{-- <div class="item">
-                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766927/Hasanik_English_2.png)"></div>
-                                 </div> --}}
+                              @foreach ($tops as $top)
+                              <div class="item">
+                                    <div class="bg w-100" style="background-image:url({{ filePath($top->slider ?? '') }})"></div>
+                                </div>
+                              @endforeach
+                             
                              </div>
                          </div>
                          <!-- 2end -->

@@ -31,11 +31,11 @@
 }
 
 .website-logo .logo {
-    background-image: url("../images/logo-light.svg");
+    /* background-image: url("../images/logo-light.svg"); */
 }
 
 .website-logo .logo img {
-    width: 100px;
+    width: 170px;
 }
 
 .website-logo-inside img {
@@ -43,7 +43,7 @@
 }
 
 .website-logo-inside .logo {
-    background-image: url("../images/logo-light.svg");
+    /* background-image: url("../images/logo-light.svg"); */
 }
 
 .website-logo-inside .logo img {
