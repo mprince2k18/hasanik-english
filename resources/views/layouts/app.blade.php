@@ -52,6 +52,184 @@
     {
       /* box-shadow: 0 0 20px 0px {{getSystemSetting('primary_color')->value}} !important; */
     }
+
+    
+/* Nav button */
+.button.type1 {
+    color: #566473;
+}
+
+.button.type1.type1::after,
+.button.type1.type1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+}
+
+.button.type1.type1::after {
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: #566473;
+    border-right-color: #566473;
+}
+
+.button.type1.type1::before {
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: #566473;
+    border-left-color: #566473;
+}
+
+.button.type1.type1:hover:after,
+.button.type1.type1:hover:before {
+    width: 100%;
+    height: 100%;
+}
+
+.button.type2 {
+    color: #16a085;
+}
+
+.button.type2.type2:after,
+.button.type2.type2:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #16a085;
+    transition: all 0.3s ease;
+    transform: scale(0.85);
+}
+
+.button.type2.type2:hover:before {
+    top: 0;
+    transform: scale(1);
+}
+
+.button.type2.type2:hover:after {
+    transform: scale(1);
+}
+
+.button.type3 {
+    color: #435a6b;
+}
+
+.button.type3.type3::after,
+.button.type3.type3::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+}
+
+.button.type3.type3::after {
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: #435a6b;
+    border-right-color: #435a6b;
+}
+
+.button.type3.type3::before {
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: #435a6b;
+    border-left-color: #435a6b;
+}
+
+.button.type3.type3:hover:after,
+.button.type3.type3:hover:before {
+    border-bottom-color: #435a6b;
+    border-right-color: #435a6b;
+    border-top-color: #435a6b;
+    border-left-color: #435a6b;
+    width: 100%;
+    height: 100%;
+}
+
+.button.type4 {
+    color: red;
+}
+
+.button.type4::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    background-color: red;
+    transition: width 0.3s ease-in-out;
+}
+
+.button.type4::after {
+    bottom: 0;
+}
+
+.button.type4:hover::after {
+    width: 50px;
+}
+
+/* New nav */
+.click_button:hover{cursor: pointer}
+    .click_button {
+      background: transparent; outline: none;
+      position: relative;
+      border: 2px solid #111;
+      padding: 15px 50px;
+      overflow: hidden;
+    }
+
+    /*button:before (attr data-hover)*/
+    .click_button:hover:before{opacity: 1; transform: translate(0,0);}
+    .click_button:before{
+      content: attr(data-hover);
+      position: absolute;
+      /* top: 1.1em;  */
+      left: 7%;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 800;
+      font-size: .8em;
+      opacity: 0;
+      transform: translate(-100%,0);
+      transition: all .3s ease-in-out;
+    }
+      /*button div (button text before hover)*/
+      .click_button:hover div{opacity: 0; transform: translate(100%,0)}
+      .click_button div{
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 800;
+        font-size: .8em;
+        transition: all .3s ease-in-out;
+      }
+/**
+CUSTOM
+*/
+.site-header.fixed-header .main-menu li a{
+  padding: 5px !important;
+}
   </style>
 
   <body>
@@ -77,7 +255,6 @@
           <li><a href="{{ url('/page/our-team') }}">Our Team</a></li>
           <li><a href="{{ url('/page/blog') }}">Blog</a></li>
           <li><a href="{{ url('/page/courses') }}">Courses</a></li>
-          <li><a href="{{ url('/enroll/course') }}">Enroll Course</a></li>
         </ul>
       </div>
     </div>
@@ -94,12 +271,12 @@
           </div>
           <div class="header-nav">
               <ul class="main-menu">
-                <li><a href="{{ url('/') }}">Home</a></li>
-                <li><router-link :to="{ name : 'about-us' }">About Us</a></li>
-                <li><router-link :to="{ name : 'contact-us' }">Contact Us</a></li>
-                <li><router-link :to="{ name : 'our-team' }">Our Team</a></li>
-                <li><router-link :to="{ name : 'blog' }">Blog</a></li>
-                <li><router-link :to="{ name : 'courses' }">Courses</a></li>
+                <li><a href="{{ url('/') }}" class="click_button" data-hover="Home"><div>Home</div></a></li>
+                <li><router-link :to="{ name : 'about-us' }" class="click_button" data-hover="About Us"><div>About Us</div></a></li>
+                <li><router-link :to="{ name : 'contact-us' }" class="click_button" data-hover="Contact Us"><div>Contact Us</div></a></li>
+                <li><router-link :to="{ name : 'our-team' }" class="click_button" data-hover="Our Team"><div>Our Team</div></a></li>
+                <li><router-link :to="{ name : 'blog' }" class="click_button" data-hover="Blog"><div>Blog</div></a></li>
+                <li><router-link :to="{ name : 'courses' }" class="click_button" data-hover="Courses"><div>Courses</div></a></li>
               </ul>
           </div>
           <div class="header-widgets">
@@ -109,11 +286,7 @@
                   <i class="fa fa-search"></i>
                 </a>
               </li>
-              <li class="menu-item free-quote">
-                <div class="main-pink-button">
-                  <a href="{{route('enroll.index')}}">Enroll Course</a>
-                </div>
-              </li>
+              
               <li class="menu-item menu-mobile-nav">
                 <a href="#" class="menu-bar" id="menu-show-mobile-nav">
                   <span class="hamburger"></span>
