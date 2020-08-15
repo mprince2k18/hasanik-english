@@ -57,9 +57,9 @@
 
 
       <div class="loader">
-         {{-- <div class="tm-loader">
+         <div class="tm-loader">
              <div id="circle"></div>
-         </div> --}}
+         </div>
      </div>
      <!--================= main start ================-->
      <div id="main">
