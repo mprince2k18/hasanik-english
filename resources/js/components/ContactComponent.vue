@@ -309,5 +309,11 @@ section.map{
     .mobile-aside{
       display: none;
     }
+
+    .col-md-8 {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
 }
 </style>
