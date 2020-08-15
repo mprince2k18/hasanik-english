@@ -66,11 +66,11 @@
       <div class="container-fluid about-us-cont">
 
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 mobile-aside">
 <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1597257755/WuakuhbmvxWrGbO5smgosmNBZtDufDxSAv3WEHbp.gif" class="img-fluid rounded about-img" alt="">
           <a href="/enroll/course" class="glow-on-hover" type="button">ENROLL NOW</a>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-8 mobile-right">
             <div class="blog_div">
 
               <div v-if="loading">
@@ -272,5 +272,20 @@
     100% {
         background-position: 0 0;
     }
+}
+
+/** RESPONSIVE */
+/* 768px*/
+
+@media only screen and (max-width: 768px) {
+    .mobile-aside{
+      display: none;
+    }
+
+    .col-md-8 {
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
 }
 </style>
