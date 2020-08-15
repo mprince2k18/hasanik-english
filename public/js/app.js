@@ -7813,7 +7813,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.contact-info[data-v-2b26a8a8]{\n  margin-top: 0 !important;\n}\nsection.map[data-v-2b26a8a8]{\n  margin-top: 0 !important;\n  padding-bottom: 0 !important;\n}\n.rounded[data-v-2b26a8a8]{\n  border-radius: 10px;\n}\n\n/** Enroll */\n.glow-on-hover[data-v-2b26a8a8] {\n    width: 150px;\n    height: 40px;\n    border: none;\n    outline: none;\n    color: #fff;\n    background: #192a56;\n    cursor: pointer;\n    position: absolute;\n    letter-spacing: 3px;\n    z-index: 0;\n    border-radius: 5px;\n    padding: 8px;\n    top: 60%;\n    left: 35%\n}\n.glow-on-hover[data-v-2b26a8a8]:before {\n    content: '';\n    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    background-size: 400%;\n    z-index: -1;\n    -webkit-filter: blur(5px);\n            filter: blur(5px);\n    width: calc(100% + 4px);\n    height: calc(100% + 4px);\n    -webkit-animation: glowing-data-v-2b26a8a8 20s linear infinite;\n            animation: glowing-data-v-2b26a8a8 20s linear infinite;\n    opacity: 0;\n    transition: opacity .3s ease-in-out;\n    border-radius: 5px;\n}\n.glow-on-hover[data-v-2b26a8a8]:active {\n    color: #000\n}\n.glow-on-hover[data-v-2b26a8a8]:active:after {\n    background: transparent;\n}\n.glow-on-hover[data-v-2b26a8a8]:hover:before {\n    opacity: 1;\n}\n.glow-on-hover[data-v-2b26a8a8]:after {\n    z-index: -1;\n    content: '';\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    background: #192a56;\n    left: 0;\n    top: 0;\n    border-radius: 5px;\n}\n@-webkit-keyframes glowing-data-v-2b26a8a8 {\n0% {\n        background-position: 0 0;\n}\n50% {\n        background-position: 400% 0;\n}\n100% {\n        background-position: 0 0;\n}\n}\n@keyframes glowing-data-v-2b26a8a8 {\n0% {\n        background-position: 0 0;\n}\n50% {\n        background-position: 400% 0;\n}\n100% {\n        background-position: 0 0;\n}\n}\n", ""]);
+exports.push([module.i, "\n.contact-info[data-v-2b26a8a8]{\n  margin-top: 0 !important;\n}\nsection.map[data-v-2b26a8a8]{\n  margin-top: 0 !important;\n  padding-bottom: 0 !important;\n}\n.rounded[data-v-2b26a8a8]{\n  border-radius: 10px;\n}\n\n/** Enroll */\n.glow-on-hover[data-v-2b26a8a8] {\n    width: 150px;\n    height: 40px;\n    border: none;\n    outline: none;\n    color: #fff;\n    background: #192a56;\n    cursor: pointer;\n    position: absolute;\n    letter-spacing: 3px;\n    z-index: 0;\n    border-radius: 5px;\n    padding: 8px;\n    top: 60%;\n    left: 35%\n}\n.glow-on-hover[data-v-2b26a8a8]:before {\n    content: '';\n    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);\n    position: absolute;\n    top: -2px;\n    left: -2px;\n    background-size: 400%;\n    z-index: -1;\n    -webkit-filter: blur(5px);\n            filter: blur(5px);\n    width: calc(100% + 4px);\n    height: calc(100% + 4px);\n    -webkit-animation: glowing-data-v-2b26a8a8 20s linear infinite;\n            animation: glowing-data-v-2b26a8a8 20s linear infinite;\n    opacity: 0;\n    transition: opacity .3s ease-in-out;\n    border-radius: 5px;\n}\n.glow-on-hover[data-v-2b26a8a8]:active {\n    color: #000\n}\n.glow-on-hover[data-v-2b26a8a8]:active:after {\n    background: transparent;\n}\n.glow-on-hover[data-v-2b26a8a8]:hover:before {\n    opacity: 1;\n}\n.glow-on-hover[data-v-2b26a8a8]:after {\n    z-index: -1;\n    content: '';\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    background: #192a56;\n    left: 0;\n    top: 0;\n    border-radius: 5px;\n}\n@-webkit-keyframes glowing-data-v-2b26a8a8 {\n0% {\n        background-position: 0 0;\n}\n50% {\n        background-position: 400% 0;\n}\n100% {\n        background-position: 0 0;\n}\n}\n@keyframes glowing-data-v-2b26a8a8 {\n0% {\n        background-position: 0 0;\n}\n50% {\n        background-position: 400% 0;\n}\n100% {\n        background-position: 0 0;\n}\n}\n/** RESPONSIVE */\n/* 768px*/\n@media only screen and (max-width: 768px) {\n.mobile-aside[data-v-2b26a8a8]{\n      display: none;\n}\n}\n", ""]);
 
 // exports
 
@@ -42029,7 +42029,7 @@ var render = function() {
       _c("div", { staticClass: "row" }, [
         _vm._m(0),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-8" }, [
+        _c("div", { staticClass: "col-md-8 mobile-right" }, [
           _c("div", { staticClass: "tabs" }, [
             _c("div", { staticClass: "tab-2" }, [
               _c("label", { attrs: { for: "tab2-1" } }, [_vm._v("Contact Us")]),
@@ -42151,7 +42151,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4" }, [
+    return _c("div", { staticClass: "col-md-4 mobile-aside" }, [
       _c("img", {
         staticClass: "img-fluid rounded about-img",
         attrs: {
