@@ -613,6 +613,20 @@ Responsive
     .small-column {
         display: none;
     }
+    
+}
+
+/* 584px*/
+
+@media only screen and (max-width: 584px) {
+    .big-column {
+        width: 100%;
+    }
+    
+    .column-wrap {
+    left: -5%;
+    top: 45%;
+}
 }
 
 /* 411px*/
