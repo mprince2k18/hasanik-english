@@ -41743,7 +41743,7 @@ var render = function() {
       _c("div", { staticClass: "row" }, [
         _vm._m(0),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-8 mobile-right" }, [
+        _c("div", { staticClass: "col-md-8 col-sm-12 mobile-right" }, [
           _c("div", { staticClass: "container card-container" }, [
             _c("div", { staticClass: "row" }, [
               _c("div", { staticClass: "col-md-6" }, [
