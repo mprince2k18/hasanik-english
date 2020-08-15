@@ -655,4 +655,11 @@
     max-width: 100%;
 }
 }
+/* 411px*/
+
+@media only screen and (max-width: 411px) {
+    .container .card2{
+    margin-top: 10%;
+}
+}
 </style>
