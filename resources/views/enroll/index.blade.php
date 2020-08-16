@@ -136,13 +136,7 @@
 											</div>
 										</div>
 									</div>
-									<!-- /row -->
-									<div class="form-group terms">
-										<label class="container_check">Please accept our <a href="#" data-toggle="modal" data-target="#terms-txt">Terms and conditions</a>
-											<input type="checkbox" name="terms" value="Yes" class="required">
-											<span class="checkmark"></span>
-										</label>
-									</div>
+									
 								</div>
 								<!-- /step-->
 								<div class="step">
@@ -227,6 +221,14 @@
 										Before submitting the application please make sure you wrote all the informations correctly.
 									</div>
 								</div>
+
+								<!-- /row -->
+									<div class="form-group terms">
+										<label class="container_check">Please accept our <a href="#" data-toggle="modal" data-target="#terms-txt">Terms and conditions</a>
+											<input type="checkbox" name="terms" value="Yes" class="required">
+											<span class="checkmark"></span>
+										</label>
+									</div>
 								<!-- /step-->
 							</div>
 							<!-- /middle-wizard -->

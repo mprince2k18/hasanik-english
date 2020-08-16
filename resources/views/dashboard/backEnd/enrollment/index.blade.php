@@ -62,6 +62,7 @@
                                             <td>{{ $enroll->created_at->diffForHumans() }}</td>
                                             <td>
                                               <a href="#!"  onclick="forModal('{{route('enrollment.view', $enroll->id) }}','View')">VIEW</a>
+                                              <a href="{{ route('enrollment.destroy') }}" class="btn-sm btn-danger">Trash</a>
                                             </td>
                                         </tr>
                                     @empty

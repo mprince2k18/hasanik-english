@@ -75,5 +75,13 @@ class HomeController extends Controller
         $enrolls = Enroll::latest()->get();
         return view('dashboard.backEnd.enrollment.index',compact('enrolls'));
     }
+
+    // enrollment.destroy
+    public function destroy($id)
+    {
+        Enroll::findOrFail($id);
+        Alert::toast('Trashed','success');
+        return back();
+    }
     // END
 }
