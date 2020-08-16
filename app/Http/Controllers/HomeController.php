@@ -7,6 +7,7 @@ use App\Models\Enroll;
 use App\Models\Blog;
 use App\Models\Course;
 use App\Models\Team;
+use Alert;
 
 class HomeController extends Controller
 {
