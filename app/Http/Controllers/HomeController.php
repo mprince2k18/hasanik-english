@@ -80,7 +80,7 @@ class HomeController extends Controller
     // enrollment.destroy
     public function destroy($id)
     {
-        Enroll::findOrFail($id);
+        Enroll::findOrFail($id)->delete();
         Alert::toast('Trashed','success');
         return back();
     }
