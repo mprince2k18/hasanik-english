@@ -19,35 +19,35 @@ class OrgSeeder extends Seeder
           ),
           array(
             'type'  =>'type_name',
-            'value' =>1
+            'value' =>'Hasanik English'
           ),
           array(
             'type'  =>'type_footer',
-            'value' =>1
+            'value' =>'Hasanik English'
           ),
           array(
             'type'  =>'type_mail',
-            'value' =>1
+            'value' =>'admin@hasanik.com'
           ),
           array(
             'type'  =>'type_address',
-            'value' =>1
+            'value' =>'Daka'
           ),
           array(
             'type'  =>'type_fb',
-            'value' =>1
+            'value' =>'facebook.com'
           ),
           array(
             'type'  =>'type_tw',
-            'value' =>1
+            'value' =>'twitter.com'
           ),
           array(
             'type'  =>'type_number',
-            'value' =>1
+            'value' =>'01825731327'
           ),
           array(
             'type'  =>'type_google',
-            'value' =>1
+            'value' =>'google.com'
           ),
           array(
               'type'  =>'footer_logo',
@@ -71,10 +71,14 @@ class OrgSeeder extends Seeder
           ),
           array(
               'type'  =>'primary_color',
-              'value' =>'blue'
+              'value' =>'#282D56'
           ),
           array(
               'type'  =>'font_color',
+              'value' =>'#1D1C1C'
+          ),
+          array(
+              'type'  =>'pre_loader',
               'value' =>'black'
           ),
       ]);

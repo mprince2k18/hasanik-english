@@ -21,7 +21,6 @@
   </head>
 
   <style>
-    .js-preloader,
      section.footer-content .cta-footer,
     .main-pink-button a,
     section.footer-content .main-footer ul.social-icons li a:hover,
@@ -431,9 +430,7 @@ CUSTOM
     <!-- Preloader -->
     <div id="js-preloader" class="js-preloader">
       <div class="content">
-        <img src="{{ filePath(getSystemSetting('type_logo')->value) }}" alt="">
-      </div>
-      <div class="preloader-inner">
+        <img src="{{ filePath(getSystemSetting('pre_loader')->value) }}" alt="">
       </div>
     </div>
 

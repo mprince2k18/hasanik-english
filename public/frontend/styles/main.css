@@ -4881,7 +4881,7 @@ section.fun-facts {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fd658f;
+  background-color: #1F6CC7;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -4933,15 +4933,16 @@ section.fun-facts {
 .js-preloader .content img {
   width: 100px;
   position: absolute;
-  left: 25px;
+  /* left: 25px; */
   top: 73px;
-  -webkit-animation: loader-logo 5s infinite linear;
-          animation: loader-logo 5s infinite linear; }
+  /* -webkit-animation: loader-logo 5s infinite linear;
+          animation: loader-logo 5s infinite linear;  */
+        }
   @media (min-width: 992px) {
     .js-preloader .content img {
       top: 46px; } }
 
-@-webkit-keyframes loader-logo {
+/* @-webkit-keyframes loader-logo {
   0% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); }
@@ -4971,7 +4972,7 @@ section.fun-facts {
             transform: rotate(0deg); }
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
+            transform: rotate(360deg); } } */
 
 section.pricing-plans {
   padding-bottom: 50px; }
