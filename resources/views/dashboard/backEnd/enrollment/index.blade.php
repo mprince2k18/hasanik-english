@@ -48,7 +48,7 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                    @forelse ($enrolls as $enroll)
+                                    @foreach ($enrolls as $enroll)
                                         <tr>
                                             <td>{{ $loop->index++ + 1 }}</td>
                                             <td>{{ $enroll->name }}</td>
@@ -65,9 +65,7 @@
                                               <a href="{{ route('enrollment.destroy') }}" class="btn-sm btn-danger">Trash</a>
                                             </td>
                                         </tr>
-                                    @empty
-                                        NO DATA FOUND
-                                    @endforelse
+                                    @endforeach
                                         
                                         </tbody>
                                     </table>
