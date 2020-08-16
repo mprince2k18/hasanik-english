@@ -69,8 +69,14 @@
                                  </div>
 
                                  <div class="enter-wrap-holder column-wrap">
-                               <div class="enter-wrap btn-enroll">
-                                   <a href="{{ route('enroll.index') }}" class="glow-on-hover btn-enroll2" type="button">ENROLL NOW</a>
+                               <div class="enter-wrap">
+                                 <a href="{{ route('enroll.index') }}" class="glow-on-hover" type="button">
+                                <div class="btn-enroll">
+                                  ENROLL NOW
+                                  <div class="btn2"></div>
+                                </div> 
+                                </a>  
+                                {{-- <a href="{{ route('enroll.index') }}" class="glow-on-hover" type="button">ENROLL NOW</a> --}}
                                </div>
                            </div>
                            

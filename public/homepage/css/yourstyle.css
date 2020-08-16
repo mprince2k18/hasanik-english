@@ -577,17 +577,18 @@ body{
 
 .btn-enroll,
 .btn2 {
-    width: 300px;
-    height: 100px;
-    font-size: 30px;
+    width: 40%;
+    height: 50px;
+    font-size: 17px;
     text-align: center;
-    line-height: 100px;
+    line-height: 50px;
     color: rgba(255, 255, 255, 0.9);
     border-radius: 50px;
-    background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
+    background: linear-gradient(-45deg, #341f97, #32ff7e, #2C3A47, #338aff, #3cf0c5);
     background-size: 600%;
     -webkit-animation: anime 16s linear infinite;
     animation: anime 16s linear infinite;
+    margin: 0 auto;
 }
 
 .btn2 {

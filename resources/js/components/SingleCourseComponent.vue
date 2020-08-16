@@ -90,7 +90,12 @@
         <div class="row">
           <div class="col-md-4 mobile-aside">
 <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1597257755/WuakuhbmvxWrGbO5smgosmNBZtDufDxSAv3WEHbp.gif" class="img-fluid rounded about-img" alt="">
-          <a href="/enroll/course" class="glow-on-hover" type="button">ENROLL NOW</a>
+          <a href="/enroll/course" class="glow-on-hover" type="button">
+                                <div class="btn-enroll">
+                                  ENROLL NOW
+                                  <div class="btn2"></div>
+                                </div> 
+                                </a> 
           </div>
           <div class="col-md-8 mobile-right">
             <div class="blog_div">
@@ -243,78 +248,62 @@
 }
 
 /** Enroll */
-.glow-on-hover {
-    width: 150px;
-    height: 40px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #192a56;
-    cursor: pointer;
+.btn-enroll,
+.btn2 {
+    width: 40%;
+    height: 50px;
+    font-size: 17px;
+    text-align: center;
+    line-height: 50px;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    background: linear-gradient(-45deg, #341f97, #32ff7e, #2C3A47, #338aff, #3cf0c5);
+    background-size: 600%;
+    -webkit-animation: anime 16s linear infinite;
+    animation: anime 16s linear infinite;
+    margin: 0 auto;
+    top: 70%;
+    left: 30%;
     position: absolute;
-    letter-spacing: 3px;
-    z-index: 0;
-    border-radius: 5px;
-    padding: 8px;
-    top: 60%;
-    left: 35%
 }
 
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
+.btn2 {
+    margin-top: -70px;
     z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 5px;
+    -webkit-filter: blur(30px);
+    filter: blur(30px);
+    opacity: 0.8;
+    
 }
 
-.glow-on-hover:active {
-    color: #000
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
-}
-
-.glow-on-hover:hover:before {
-    opacity: 1;
-}
-
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #192a56;
-    left: 0;
-    top: 0;
-    border-radius: 5px;
-}
-
-@keyframes glowing {
+@-webkit-keyframes anime {
     0% {
-        background-position: 0 0;
+        background-position: 0% 50%;
     }
 
     50% {
-        background-position: 400% 0;
+        background-position: 100% 50%;
     }
 
     100% {
-        background-position: 0 0;
+        background-position: 0% 50%;
     }
 }
 
+@keyframes anime {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* ------------ */
 /** RESPONSIVE */
 /* 768px*/
 
