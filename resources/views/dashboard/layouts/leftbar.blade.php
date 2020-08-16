@@ -78,6 +78,7 @@
                         <ul class="vertical-submenu">
                             <li class="{{request()->is('dashboard/enrollments*') ? 'active': null}}"><a href="{{route('enrollment.index')}}">Enroll List</a></li>
                             <li class="{{request()->is('dashboard/form/questions*') ? 'active': null}}"><a href="{{route('form.question')}}">Enroll Form</a></li>
+                            <li class="{{request()->is('dashboard/form/data*') ? 'active': null}}"><a href="{{route('form.data')}}">Form Data</a></li>
                             <li class="{{request()->is('dashboard/form/help*') ? 'active': null}}"><a href="{{route('form.help')}}">Form Tips</a></li>
                         </ul>
                     </li>

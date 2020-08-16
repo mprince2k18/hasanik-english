@@ -103,7 +103,7 @@
                          <!-- 1 end -->
                          <!-- 2 -->
                          <div class="hero-grid small-column" style="height: 100%;">
-                             <div class="hero-slider owl-carousel" data-attime="3220" data-rtlt="false">
+                             <div class="hero-slider owl-carousel" data-attime="5220" data-rtlt="false">
                               @foreach ($tops as $top)
                               <div class="item">
                                     <div class="bg w-100" style="background-image:url({{ filePath($top->slider ?? '') }})"></div>

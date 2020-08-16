@@ -100,13 +100,14 @@ class EnrollController extends Controller
         $occupations = Occupation::all();
         $schedules = Schedule::all();
         $payments = Payment::all();
-        return view('backend.form_data.index',compact('occupations','schedules','payments'));
+        return view('dashboard.backEnd.enrollment.form_data',compact('occupations','schedules','payments'));
     }
 
     // occupation_store
     public function occupation_store(Request $request)
     {
       Occupation::create($request->except('_token'));
+      Alert::success('success','DONE');
       return back();
     }
 
@@ -114,6 +115,7 @@ class EnrollController extends Controller
     public function schedule_store(Request $request)
     {
       Schedule::create($request->except('_token'));
+      Alert::success('success','DONE');
       return back();
     }
 
@@ -121,6 +123,7 @@ class EnrollController extends Controller
     public function payment_store(Request $request)
     {
       Payment::create($request->except('_token'));
+      Alert::success('success','DONE');
       return back();
     }
 

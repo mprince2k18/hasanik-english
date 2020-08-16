@@ -1,15 +1,15 @@
 @extends('dashboard.layouts.main')
-@section('title') Slider Setup @endsection
+@section('title') Form Data @endsection
 @section('main-content')
     <!-- Start Breadcrumbbar -->
     <div class="breadcrumbbar">
         <div class="row align-items-center">
             <div class="col-md-8 col-lg-8">
-                <h4 class="page-title">Slider Setup</h4>
+                <h4 class="page-title">Form Data</h4>
                 <div class="breadcrumb-list">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Slider Setup</li>
+                        <li class="breadcrumb-item active" aria-current="page">Form Data</li>
                     </ol>
                 </div>
             </div>
@@ -29,56 +29,21 @@
                     <!-- Start col -->
                     <div class="col-lg-12">
                         <div class="card m-b-30">
-                            <div class="card-body">
-                                {{-- --------------------- --}}
-                                <div class="col-lg-12">
-            <div class="card m-b-30">
-                <div class="card-body">
-                     <form action="{{ route('slider.store') }}" method="post" enctype="multipart/form-data">
-                            @csrf
-
-                            <div class="form-group">
-                                <label for="Upload">Upload Slider</label>
-                                <input type="file" name="slider" id="Upload" class="form-control" required>
-                              </div>
-
-                            <div class="form-group">
-                                <label for="slider">Slider Position</label>
-                                <select name="type" required class="form-control">
-                                    <option value="">Select Position</option>
-                                    <option value="aside">Aside</option>
-                                    <option value="top">Top</option>
-                                    <option value="bottom">bottom</option>
-                                </select>
-                            </div>
-
-                        <div class="form-group">
-                            <input type="checkbox" id="is_active" name="is_active">
-                            <label for="is_active">Active now?</label>
-                        </div>
-
-
-                        <button class="btn btn-primary" type="submit">SUBMIT</button>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-                                {{-- --------------------- --}}
+                            <div class="card-header">
+                                <h5 class="card-title">Form Data</h5>
                             </div>
                             <div class="card-body">
-                                {{-- --------------------- --}}
                                 
 
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Aside</a>
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Occupation</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Top</a>
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Class Time</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Bottom</a>
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Payment Type</a>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -87,36 +52,51 @@
       <div class="col-lg-12">
                                     <div class="card m-b-30">
                                         <div class="card-body">
+
+                                            {{-- --------------------- --}}
+                          <form action="{{ route('occupation.store') }}" method="post">
+                            @csrf
+                            <div class="row">
+                              <div class="col-md-12">
+                                  
+                                <div class="form-group">
+                                <label for="occupation" class="col-form-label text-md-right">Occupation</label>
+                                <input type="text" value="{{ old('name') }}" name="name" class="form-control" id="occupation" aria-describedby="emailHelp" placeholder="Write Occupation">
+                                <small id="emailHelp" class="form-text text-muted">Ex: Student</small>
+                              </div>
+                              </div>
+                              
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">SAVE</button>
+
+                            </form>
+                          {{-- --------------------- --}}
+
                                             <table class="table">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Activation</th>
-                                                                    <th>Slider</th>
-                                                                    <th>Action</th>
+                                                                    <th>SL.</th>
+                                                                    <th>Occupation</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
 
-                                                                @forelse ($aside_sliders as $aside_slider)
+                                                                @forelse ($occupations as $occupation)
                                                                     <tr>
-                                                                            <td scope="row">
-                                                                                <div class="form-group">
-                                                                                    <input type="checkbox"  data-id="{{ $aside_slider->id }}" data-url="{{ route('slider.activation') }}" id="is_active" class="is_active" name="is_active" {{ $aside_slider->is_active == '0' ? 'checked' : null }}>
-                                                                                </div>
+                                                                            
+                                                                           
+                                                                            <td>
+                                                                                {{ $loop->index++ + 1 }}
                                                                             </td>
                                                                             <td>
-                                                                                <img src="{{ filePath($aside_slider->slider) }}" style="width: 50%" alt="">
-                                                                            </td>
-                                                                            <td>
-                                                                                <a href="{{ route('slider.destroy', $aside_slider->id) }}" class="btn-sm btn-primary">
-                                                                                    Remove
-                                                                                </a>
+                                                                                {{ $occupation->name }}
                                                                             </td>
                                                                     </tr>
                                                                     @empty
                                                                     <tr class="text-center">
                                                                             <td colspan="3">
-                                                                                No Slider Found
+                                                                                No Occupation Found
                                                                             </td>
                                                                         </tr>
                                                                 @endforelse
@@ -132,36 +112,50 @@
       <div class="col-lg-12">
                                     <div class="card m-b-30">
                                         <div class="card-body">
+
+                                            {{-- --------------------- --}}
+                          <form action="{{ route('schedule.store') }}" method="post">
+                            @csrf
+                            <div class="row">
+                              <div class="col-md-12">
+                                  
+                                <div class="form-group">
+                                <label for="occupation" class="col-form-label text-md-right">Class Schedule</label>
+                                <input type="text" value="{{ old('name') }}" name="name" class="form-control" id="occupation" aria-describedby="emailHelp" placeholder="Write Class Schedule">
+                                <small id="emailHelp" class="form-text text-muted">Ex: Morning 9 'o' clock</small>
+                              </div>
+                              </div>
+                              
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">SAVE</button>
+
+                            </form>
+                          {{-- --------------------- --}}
+
                                             <table class="table">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Activation</th>
-                                                                    <th>Slider</th>
-                                                                    <th>Action</th>
+                                                                    <th>SL.</th>
+                                                                    <th>Class Schedule</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
 
-                                                                @forelse ($top_sliders as $top_slider)
+                                                                @forelse ($schedules as $schedule)
                                                                     <tr>
-                                                                            <td scope="row">
-                                                                                <div class="form-group">
-                                                                                    <input type="checkbox"  data-id="{{ $top_slider->id }}" data-url="{{ route('slider.activation') }}" id="is_active" class="is_active" name="is_active" {{ $top_slider->is_active == '0' ? 'checked' : null }}>
-                                                                                </div>
+                                                                            
+                                                                            <td>
+                                                                                {{ $loop->index++ + 1 }}
                                                                             </td>
                                                                             <td>
-                                                                                <img src="{{ filePath($top_slider->slider) }}" style="width: 50%" alt="">
-                                                                            </td>
-                                                                            <td>
-                                                                                <a href="{{ route('slider.destroy', $top_slider->id) }}" class="btn-sm btn-primary">
-                                                                                    Remove
-                                                                                </a>
+                                                                                {{ $schedule->name }}
                                                                             </td>
                                                                     </tr>
                                                                     @empty
                                                                     <tr class="text-center">
                                                                             <td colspan="3">
-                                                                                No Slider Found
+                                                                                No Class Schedule Found
                                                                             </td>
                                                                         </tr>
                                                                 @endforelse
@@ -176,30 +170,44 @@
       <div class="col-lg-12">
                                     <div class="card m-b-30">
                                         <div class="card-body">
+
+                                            {{-- --------------------- --}}
+                          <form action="{{ route('payment.store') }}" method="post">
+                            @csrf
+                            <div class="row">
+                              <div class="col-md-12">
+                                  
+                                <div class="form-group">
+                                <label for="occupation" class="col-form-label text-md-right">Payment Type</label>
+                                <input type="text" value="{{ old('name') }}" name="name" class="form-control" id="occupation" aria-describedby="emailHelp" placeholder="Write Payment Type">
+                                <small id="emailHelp" class="form-text text-muted">Ex: bKash</small>
+                              </div>
+                              </div>
+                              
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">SAVE</button>
+
+                            </form>
+                          {{-- --------------------- --}}
+
                                             <table class="table">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Activation</th>
-                                                                    <th>Slider</th>
-                                                                    <th>Action</th>
+                                                                    <th>SL.</th>
+                                                                    <th>Payment Type</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
 
-                                                                @forelse ($bottom_sliders as $bottom_slider)
+                                                                @forelse ($payments as $payment)
                                                                     <tr>
-                                                                            <td scope="row">
-                                                                                <div class="form-group">
-                                                                                    <input type="checkbox"  data-id="{{ $bottom_slider->id }}" data-url="{{ route('slider.activation') }}" id="is_active" class="is_active" name="is_active" {{ $bottom_slider->is_active == '0' ? 'checked' : null }}>
-                                                                                </div>
+                                                                           
+                                                                            <td>
+                                                                                {{ $loop->index++ + 1 }}
                                                                             </td>
                                                                             <td>
-                                                                                <img src="{{ filePath($bottom_slider->slider) }}" style="width: 50%" alt="">
-                                                                            </td>
-                                                                            <td>
-                                                                                <a href="{{ route('slider.destroy', $bottom_slider->id) }}" class="btn-sm btn-primary">
-                                                                                    Remove
-                                                                                </a>
+                                                                                {{ $payment->name }}
                                                                             </td>
                                                                     </tr>
                                                                     @empty
@@ -218,6 +226,7 @@
   </div>
 </div>
                                 {{-- --------------------- --}}
+
                             </div>
                         </div>
                     </div>
