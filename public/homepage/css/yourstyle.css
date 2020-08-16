@@ -505,7 +505,7 @@ body{
 }
 
 /** Enroll */
-.glow-on-hover {
+/* .glow-on-hover {
     width: 140px;
     height: 35px;
     border: none;
@@ -573,7 +573,7 @@ body{
     100% {
         background-position: 0 0;
     }
-}
+} */
 
 
 
