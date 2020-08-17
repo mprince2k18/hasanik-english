@@ -42,6 +42,19 @@ class PageController extends Controller
         $page->save();
         return back();
     }
+    
+    /**
+     * mission_store
+     */
+
+    public function terms_store(Request $request)
+    {
+        $page = Page::where('type',$request->type)->first();
+        $page->desc = $request->desc;
+        $page->type = $request->type;
+        $page->save();
+        return back();
+    }
 
     /**
      * API

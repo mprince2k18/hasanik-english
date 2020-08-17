@@ -74,6 +74,25 @@
                                 </div>
                             </div>
                             <!-- End col -->
+                          <!-- Start col -->
+                            <div class="col-lg-12">
+                                <div class="card m-b-30">
+                                    <div class="card-header">
+                                        <h5 class="card-title">{{ env('APP_NAME') }}'s Terms & Conditions</h5>
+                                    </div>
+                                    <div class="card-body">
+                                    <form action="{{ route('terms.store') }}" method="post">
+                                        @csrf
+                                        <input type="hidden" value="terms" name="type">
+                                        <textarea name="desc" class="form-control summernote" id="" cols="30" rows="10">{{ page('terms')->desc ?? '' }}</textarea>
+                                        <div class="text-right">
+                                            <button class="btn btn-primary" type="submit">Save Change</button>
+                                        </div>
+                                    </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End col -->
                           {{-- --------------------- --}}
                             </div>
                         </div>

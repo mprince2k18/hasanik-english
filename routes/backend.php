@@ -43,6 +43,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
   Route::get('/about', 'PageController@about')->name('about');
   Route::post('/about/store', 'PageController@about_store')->name('about.store');
   Route::post('/mission/store', 'PageController@mission_store')->name('mission.store');
+  Route::post('/terms/store', 'PageController@terms_store')->name('terms.store');
 
   /**
    * Team
@@ -78,9 +79,6 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
   Route::get('/course/edit/{id}','CourseController@edit')->name('course.show');
   Route::get('/course/trash/{id}','CourseController@destroy')->name('course.destroy');
   Route::get('/course/count','CourseController@countCourse')->name('count.course');
-
-  
-
   
   /**
    * Organization Settings
@@ -91,6 +89,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
   /**
    * Slider Settings
    */
+
   Route::get('/slider/settings','SliderController@index')->name('slider.index');
   Route::post('/slider/settings/store','SliderController@store')->name('slider.store');
   Route::get('/slider/activation','SliderController@slider_activation')->name('slider.activation');
@@ -99,6 +98,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
   /**
    * PROFILE
    */
+
   Route::get('/profile','ProfileController@index')->name('profile.index');
   Route::post('/profile/update','ProfileController@update')->name('profile.update');
   
