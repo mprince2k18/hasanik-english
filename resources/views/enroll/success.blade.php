@@ -64,18 +64,18 @@
                 <h4 class="text-center mt-5">Hi, You Successfully Submitted The Form.</h4>
                 <!-- /content--wrapper -->
                 <div class="success_photo text-center">
-                    <img src="{{ asset('frontend/success.png') }}" class="img-fluid" style="height: 80vh" alt="#success">
+                    <img src="{{ asset('frontend/success.png') }}" class="img-fluid" style="height: 65vh" alt="#success">
 					<div class="row">
 
-						<div class="col-md-6 text-right">
+						<div class="col-md-1 offset-md-5">
 							<form action="{{ url('/pay') }}" method="POST">
 								@csrf
-								<button type="submit" name="process" class="submit">Pay Now</button>
+								<button type="submit" name="process" class="btn btn-success mt-2">Pay Now</button>
 							</form>
 						</div>
 
-						<div class="col-md-6 text-left">
-							<a href="{{ route('homepage') }}" class="btn btn-primary">Pay Later</a>
+						<div class="col-md-1">
+							<a href="{{ route('homepage') }}" class="btn btn-primary mt-2">Pay Later</a>
 						</div>
 
 					</div>
