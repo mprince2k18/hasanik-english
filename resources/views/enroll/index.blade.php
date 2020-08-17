@@ -219,16 +219,18 @@
 									<h3 class="main_question"><strong>6/6</strong>Attention!</h3>
 									<div class="summary">
 										Before submitting the application please make sure you wrote all the informations correctly.
-									</div>
-								</div>
-
-								<!-- /row -->
+										
+										<!-- /row -->
 									<div class="form-group terms">
 										<label class="container_check">Please accept our <a href="#" data-toggle="modal" data-target="#terms-txt">Terms and conditions</a>
 											<input type="checkbox" name="terms" value="Yes" class="required">
 											<span class="checkmark"></span>
 										</label>
 									</div>
+									</div>
+								</div>
+
+								
 								<!-- /step-->
 							</div>
 							<!-- /middle-wizard -->
