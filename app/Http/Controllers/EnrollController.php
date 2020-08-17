@@ -13,6 +13,7 @@ use App\Models\Course;
 use Mail;
 use Alert;
 use App\Mail\Enrollmail;
+use App\Mail\AdminNotifyMail;
 
 class EnrollController extends Controller
 {
@@ -65,7 +66,12 @@ class EnrollController extends Controller
 
           $name = $request->name;
           $email = $request->email;
+          $phone = $request->phone;
           Mail::to($email)->send(new Enrollmail($name));
+
+          Mail::to('hasanikenglish@gmail.com')->send(new AdminNotifyMail($name, $phone));
+
+          
 
           Alert::success('success','DONE');
           return redirect()->route('enroll.success');
