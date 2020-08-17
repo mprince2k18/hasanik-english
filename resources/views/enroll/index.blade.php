@@ -211,7 +211,7 @@
                     {{ $questions->question_en_6 ?? ''}} <br> [ {{ $questions->question_bn_6 ?? ''}} ] <a href="#!" data-toggle="tooltip" title="{{ $tips->tips6 ?? '' }}"><i class="icon-question"></i></i></a>
                     </h3>
                     <div class="form-group">
-										<input type="number" name="guardian_phone" class="form-control required" placeholder="{{ $questions->question_en_6 ?? ''}}">
+										<textarea name="guardian_phone" class="form-control required" rows="10" placeholder="{{ $questions->question_en_6 ?? ''}}"></textarea>
 									</div>
 								</div>
 								<!-- /step-->
