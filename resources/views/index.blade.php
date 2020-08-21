@@ -10,9 +10,9 @@
         <meta name="keywords" content="{{ getSystemSetting('type_name')->value }}"/>
         <meta name="description" content=""/>
         <!--=============== css  ===============-->
-        <link type="text/css" rel="stylesheet" href="{{ asset('homepage/css/reset.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('homepage/css/plugins.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('homepage/css/style.css') }}">
+        <link type="text/css" rel="stylesheet" href="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037860/hasanik/homepage/css/reset.css">
+        <link type="text/css" rel="stylesheet" href="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037861/hasanik/homepage/css/plugins.css">
+        <link type="text/css" rel="stylesheet" href="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037861/hasanik/homepage/css/style.css">
         <link type="text/css" rel="stylesheet" href="{{ asset('homepage/css/yourstyle.css') }}">
 
         <!--=============== favicons ===============-->
@@ -196,10 +196,10 @@
         <!--=============== google map ===============-->
         <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" type="text/javascript"></script>
         <!--=============== scripts  ===============-->
-        <script type="text/javascript" src="{{ asset('homepage/js/jquery.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('homepage/js/plugins.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('homepage/js/core.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('homepage/js/scripts.js') }}"></script>
+        <script type="text/javascript" src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037867/hasanik/homepage/js/jquery.min.js"></script>
+        <script type="text/javascript" src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037867/hasanik/homepage/js/plugins.js"></script>
+        <script type="text/javascript" src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037866/hasanik/homepage/js/core.js"></script>
+        <script type="text/javascript" src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037867/hasanik/homepage/js/scripts.js"></script>
 
         @include('sweetalert::alert')
 

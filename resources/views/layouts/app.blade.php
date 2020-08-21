@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('frontend/fonts/font-awesome/css/font-awesome.min.css')}}">
 
-    <link rel="stylesheet" href="{{ asset('frontend/styles/bootstrap.css')}}" />
-    <link rel="stylesheet" href="{{ asset('frontend/styles/main.css')}}" />
+    <link rel="stylesheet" href="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037993/hasanik/frontend/styles/bootstrap.css" />
+    <link rel="stylesheet" href="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037994/hasanik/frontend/styles/main.css" />
     <link rel="stylesheet" href="{{ asset('frontend/styles/custom.css')}}" />
 
 
@@ -25,34 +25,34 @@
     .main-pink-button a,
     section.footer-content .main-footer ul.social-icons li a:hover,
     .go-top,
-    section.contact-us .inner-content button:after, 
-    .blog-sidebar .search form button, 
-    .blog-sidebar .about-me ul.social-icons li a, 
+    section.contact-us .inner-content button:after,
+    .blog-sidebar .search form button,
+    .blog-sidebar .about-me ul.social-icons li a,
     #search{
       background-color: {{getSystemSetting('primary_color')->value}} !important;
     }
-    .main-white-button a, 
-    section.footer-content .main-footer ul.social-icons li a, 
-    .main-menu > li > a:hover, 
-    .page-heading span, 
-    section.contact-info .info-item .icon, 
-    .section-heading h6, 
+    .main-white-button a,
+    section.footer-content .main-footer ul.social-icons li a,
+    .main-menu > li > a:hover,
+    .page-heading span,
+    section.contact-info .info-item .icon,
+    .section-heading h6,
     .blog-sidebar .about-me ul.social-icons li a:hover,
     section.product-details .single-product .right-content span
-    
+
      {
       color: {{getSystemSetting('font_color')->value}} !important;
      }
-    
-    section.footer-content .main-footer ul.social-icons li a:hover, 
-    .header-widgets .right-menu .menu-search a:hover, 
-    .blog-sidebar .about-me ul.social-icons li a:hover, 
+
+    section.footer-content .main-footer ul.social-icons li a:hover,
+    .header-widgets .right-menu .menu-search a:hover,
+    .blog-sidebar .about-me ul.social-icons li a:hover,
     .blog-sidebar .search form button:hover
     {
       /* box-shadow: 0 0 20px 0px {{getSystemSetting('primary_color')->value}} !important; */
     }
 
-    
+
 /* Nav button */
 .button.type1 {
     color: #566473;
@@ -224,7 +224,7 @@
         transition: all .3s ease-in-out;
       }
 
-      /** 
+      /**
         Floting button
       */
 
@@ -451,7 +451,7 @@ CUSTOM
 
     <header class="site-header fixed-header">
       <div class="container expanded">
-        
+
         <div class="header-wrap">
           <div class="row">
           <div class="col-md-2">
@@ -475,8 +475,8 @@ CUSTOM
           </div>
           </div>
         </div>
-          
-          
+
+
           <div class="header-widgets">
             <ul class="right-menu">
               {{-- <li class="menu-item menu-search">
@@ -484,7 +484,7 @@ CUSTOM
                   <i class="fa fa-search"></i>
                 </a>
               </li> --}}
-              
+
               <li class="menu-item menu-mobile-nav">
                 <a href="#" class="menu-bar" id="menu-show-mobile-nav">
                   <span class="hamburger"></span>
@@ -536,23 +536,20 @@ CUSTOM
       @yield('content')
       <router-view></router-view>
     </div>
+    
 </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('frontend/scripts/vendors/jquery-3.4.1.min.js') }}"></script>
-    <script src="{{ asset('frontend/scripts/vendors/jquery.hoverIntent.min.js') }}"></script>
-    <script src="{{ asset('frontend/scripts/vendors/perfect-scrollbar.min.js') }}"></script>
-    <script src="{{ asset('frontend/scripts/vendors/jquery.easing.min.js') }}"></script>
-    <script src="{{ asset('frontend/scripts/vendors/wow.min.js') }}"></script>
-    <script src="{{ asset('frontend/scripts/vendors/parallax.min.js') }}"></script>
-    <script src="{{ asset('frontend/scripts/vendors/isotope.min.js') }}"></script>
-    <script src="{{ asset('frontend/scripts/vendors/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ asset('frontend/scripts/vendors/packery-mode.pkgd.min.js') }}"></script>
-    <script src="{{ asset('frontend/scripts/vendors/owl-carousel.min.js') }}"></script>
-    <script src="{{ asset('frontend/scripts/vendors/jquery.appear.js') }}"></script>
-    <script src="{{ asset('frontend/scripts/vendors/jquery.countTo.js') }}"></script>
-    <script src="{{ asset('frontend/scripts/vendors/slide-nav.min.js') }}"></script>
-    <script src="{{ asset('frontend/scripts/vendors/accordions.js') }}"></script>
+    <script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037991/hasanik/frontend/scripts/vendors/jquery-3.4.1.min.js"></script>
+    <script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037992/hasanik/frontend/scripts/vendors/jquery.hoverIntent.min.js"></script>
+    <script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037992/hasanik/frontend/scripts/vendors/jquery.easing.min.js"></script>
+    <script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037993/hasanik/frontend/scripts/vendors/parallax.min.js"></script>
+    <script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037991/hasanik/frontend/scripts/vendors/isotope.min.js"></script>
+    <script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037990/hasanik/frontend/scripts/vendors/imagesloaded.pkgd.min.js"></script>
+    <script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037992/hasanik/frontend/scripts/vendors/packery-mode.pkgd.min.js"></script>
+    <script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037992/hasanik/frontend/scripts/vendors/owl-carousel.min.js"></script>
+    <script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037991/hasanik/frontend/scripts/vendors/jquery.appear.js"></script>
+    <script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037993/hasanik/frontend/scripts/vendors/slide-nav.min.js"></script>
     <script src="{{ asset('frontend/scripts/main.js') }}"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1ca813dc314e47"></script>
   </body>

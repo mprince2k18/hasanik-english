@@ -22,10 +22,10 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
 
     <!-- BASE CSS -->
-    <link href="{{asset('enroll/css/bootstrap.min.css')}}" rel="stylesheet">
-	<link href="{{asset('enroll/css/menu.css')}}" rel="stylesheet">
-    <link href="{{asset('enroll/css/style.css')}}" rel="stylesheet">
-	<link href="{{asset('enroll/css/vendors.css')}}" rel="stylesheet">
+    <link href="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598038592/hasanik/enroll/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598038591/hasanik/enroll/css/menu.css" rel="stylesheet">
+    <link href="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598038591/hasanik/enroll/css/style.css" rel="stylesheet">
+	<link href="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598038591/hasanik/enroll/css/vendors.css" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
 	<link href="{{asset('enroll/css/custom.css')}}" rel="stylesheet">
@@ -293,14 +293,14 @@
 	<!-- /.modal -->
 
 	<!-- COMMON SCRIPTS -->
-	<script src="{{asset('enroll/js/jquery-3.2.1.min.js')}}"></script>
-    <script src="{{asset('enroll/js/common_scripts.min.js')}}"></script>
-	<script src="{{asset('enroll/js/velocity.min.js')}}"></script>
-	<script src="{{asset('enroll/js/functions.js')}}"></script>
+	<script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598038705/hasanik/enroll/js/jquery-3.2.1.min.js"></script>
+    <script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598038706/hasanik/enroll/js/common_scripts.js"></script>
+	<script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598038702/hasanik/enroll/js/velocity.min.js"></script>
+	<script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598038703/hasanik/enroll/js/functions.js"></script>
 
 	@include('sweetalert::alert')
 	<!-- Wizard script -->
-	<script src="{{asset('enroll/js/survey_func.js')}}"></script>
+	<script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598038702/hasanik/enroll/js/survey_func.js"></script>
   <script>
 	  feather.replace();
 	  $(document).ready(function(){
