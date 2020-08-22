@@ -45,7 +45,7 @@
                                             <th>Gender</th>
                                             <th>Study Level</th>
                                             <th>About</th>
-                                            <th>guardian_phone?</th>
+                                            <th>Why English?</th>
                                             <th>Created At</th>
                                             <th>Action</th>
                                         </tr>
@@ -64,7 +64,7 @@
                                             <td>{{ $enroll->gender }}</td>
                                             <td>{{ $enroll->study_level }}</td>
                                             <td>{{ $enroll->study_level }}</td>
-                                            <td>{{ $enroll->study_level }}</td>
+                                            <td>{{ $enroll->guardian_phone }}</td>
                                             <td>{{ $enroll->created_at->diffForHumans() }}</td>
                                             <td>
                                               <a href="#!" class="btn-sm btn-primary" onclick="forModal('{{route('enrollment.view', $enroll->id) }}','View')">VIEW</a>
