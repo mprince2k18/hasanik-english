@@ -152,11 +152,11 @@
 											<select class="wide required" name="study_level">
 												<option value="">Select level*</option>
 												<option value="PSC">PSC</option>
-												<option value="JSC">JSC*</option>
-												<option value="SSC">SSC*</option>
-												<option value="HSC">HSC*</option>
-												<option value="HONORS">HONORS*</option>
-												<option value="MASTERS">MASTERS*</option>
+												<option value="JSC">JSC</option>
+												<option value="SSC">SSC</option>
+												<option value="HSC">HSC</option>
+												<option value="HONORS">HONORS</option>
+												<option value="MASTERS">MASTERS</option>
 												
 												
 											</select>
