@@ -163,6 +163,11 @@
 										</div>
 									</div>
 
+									<h3 class="main_question">
+                   
+					{{ $questions->question_en_6 ?? ''}} <br> [ {{ $questions->question_bn_6 ?? ''}} ] 
+					<a href="#!" data-toggle="tooltip" title="{{ $tips->tips6 ?? ''}}"><i class="icon-question"></i></i></a>
+				  </h3>
 
                   <div class="form-group">
 										<div class="styled-select clearfix">
