@@ -143,7 +143,12 @@ class EnrollController extends Controller
     // form_question_store
     public function form_question_store(Request $request)
     {
-      FormQuestion::where('id',$request->id)->update($request->except('_token'));
+      $check = FormQuestion::count();
+      if($check > 0){
+        FormQuestion::where('id',$request->id)->update($request->except('_token'));
+      }else{
+        FormQuestion::create($request->except('_token'));;
+      }
       return back();
     }
     

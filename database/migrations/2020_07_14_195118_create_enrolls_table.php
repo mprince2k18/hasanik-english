@@ -27,6 +27,7 @@ class CreateEnrollsTable extends Migration
             $table->unsignedBigInteger('payment_id')->nullable();
             $table->longText('description')->nullable();
             $table->string('guardian_phone')->nullable();
+            $table->enum('study_level',['SSC','HSC','JSC','PSC','HONORS','MASTERS'])->nullable();
             $table->timestamps();
         });
     }

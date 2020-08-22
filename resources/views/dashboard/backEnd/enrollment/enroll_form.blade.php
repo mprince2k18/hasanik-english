@@ -146,6 +146,23 @@
                               </div>
                             </div>
 
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                <label for="question_en_6">Q: {{ $questions->question_en_7 ?? ''}}</label>
+                                <input type="text" value="{{ $questions->question_en_7 ?? ''}}" name="question_en_7" class="form-control" id="question_en_7" aria-describedby="emailHelp" placeholder="Enter Question (EN)">
+                                <small id="emailHelp" class="form-text text-muted">Question (EN)</small>
+                              </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                <label for="question_bn_6">Q: {{ $questions->question_bn_7 ?? ''}}</label>
+                                <input type="text" value="{{ $questions->question_bn_7 ?? ''}}" name="question_bn_7" class="form-control" id="question_bn_7" aria-describedby="emailHelp" placeholder="Enter Question (BN)">
+                                <small id="emailHelp" class="form-text text-muted">Question (BN)</small>
+                              </div>
+                              </div>
+                            </div>
+
                             <button type="submit" class="btn btn-primary">Update</button>
 
                             </form>

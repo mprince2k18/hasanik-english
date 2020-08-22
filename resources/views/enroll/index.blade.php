@@ -142,9 +142,28 @@
 								<div class="step">
 									<h3 class="main_question">
                     <strong>2/5</strong>
-					{{ $questions->question_en_2 ?? ''}} <br> [ {{ $questions->question_bn_2 ?? ''}} ] 
-					<a href="#!" data-toggle="tooltip" title="{{ $tips->tips2 ?? ''}}"><i class="icon-question"></i></i></a>
-                  </h3>
+					{{ $questions->question_en_7 ?? ''}} <br> [ {{ $questions->question_bn_7 ?? ''}} ] 
+					<a href="#!" data-toggle="tooltip" title="{{ $tips->tips7 ?? ''}}"><i class="icon-question"></i></i></a>
+				  </h3>
+				  
+				    <div class="form-group">
+										<div class="styled-select clearfix">
+											
+											<select class="wide required" name="study_level">
+												<option value="">Select level*</option>
+												<option value="PSC">PSC</option>
+												<option value="JSC">JSC*</option>
+												<option value="SSC">SSC*</option>
+												<option value="HSC">HSC*</option>
+												<option value="HONORS">HONORS*</option>
+												<option value="MASTERS">MASTERS*</option>
+												
+												
+											</select>
+										</div>
+									</div>
+
+
                   <div class="form-group">
 										<div class="styled-select clearfix">
 											<input type="hidden" value="{{ route('get.course.price') }}" id="url" class="form-control">

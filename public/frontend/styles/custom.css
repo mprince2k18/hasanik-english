@@ -1,41 +1,49 @@
-.main-menu > li > a{
-  padding: 0 !important;
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+.main-menu>li>a {
+    padding: 0 !important;
 }
 
-.header-nav{
+.header-nav {
     padding: 10px;
 }
 
-.site-header.fixed-header .main-menu li a{
-  padding: 5px !important;
-  color: #000;
+.site-header.fixed-header .main-menu li a {
+    padding: 5px !important;
+    color: #000;
 }
 
 .site-header.fixed-header {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 .header-widgets .right-menu .menu-search a {
-  background-color: #000;
-  color: #fff;
+    background-color: #000;
+    color: #fff;
 }
 
-.desc{
-  font-size: 18px;
-  line-height: 30px;
-  text-align: justify;
-}
-.center{
-  text-align: center;
+.desc {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
 }
 
-.mobile-menu li a{
-  margin: 0 30px !important;
-  color: #36334c !important;
+.center {
+    text-align: center;
 }
 
-.mobile-menu > li > a{
-  padding: 0 !important;
+.mobile-menu li a {
+    margin: 0 30px !important;
+    color: #36334c !important;
+}
+
+.mobile-menu>li>a {
+    padding: 0 !important;
 }
 
 .w-10 {
@@ -49,10 +57,12 @@
 }
 
 body::-webkit-scrollbar {
-    width: 10px;;
+    width: 10px;
+    ;
 }
 
 body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -61,18 +71,19 @@ body::-webkit-scrollbar-thumb {
     outline: 1px solid slategrey;
 }
 
-.contact-info{
+.contact-info {
     margin-top: 0 !important;
 }
+
 /* about us */
 
 .tabs {
     display: block;
-    display: -webkit-flex;
     display: -moz-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 0;
     overflow: hidden;
@@ -100,7 +111,6 @@ body::-webkit-scrollbar-thumb {
     display: block;
     width: 100%;
     -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -129,7 +139,6 @@ body::-webkit-scrollbar-thumb {
     padding: 2rem 0;
     width: 90%;
     -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }

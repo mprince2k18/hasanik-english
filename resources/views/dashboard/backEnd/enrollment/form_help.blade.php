@@ -115,6 +115,19 @@
                               
                             </div>
 
+
+                            <div class="row">
+
+                              <div class="col-md-12">
+                                <div class="form-group">
+                                <label for="question_en_6">Q: {{ $questions->question_en_7 ?? ''}}</label>
+                                <input type="text" value="{{ $help_questions->tips7 ?? ''}}" name="tips7" class="form-control" id="question_en_7" aria-describedby="emailHelp" placeholder="Enter Tips (EN)">
+                                <small id="emailHelp" class="form-text text-muted">Tips (EN)</small>
+                              </div>
+                              </div>
+                              
+                            </div>
+
                             <button type="submit" class="btn btn-primary">Update</button>
 
                             </form>

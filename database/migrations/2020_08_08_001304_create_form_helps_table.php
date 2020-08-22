@@ -21,6 +21,10 @@ class CreateFormHelpsTable extends Migration
             $table->longText('tips4');
             $table->longText('tips5');
             $table->longText('tips6');
+            $table->longText('tips7');
+            $table->longText('tips8');
+            $table->longText('tips9');
+            $table->longText('tips10');
             $table->timestamps();
         });
     }
