@@ -1,5 +1,6 @@
 
 /public/hot
+/public/page-cache
 /public/storage
 /storage/*.key
 

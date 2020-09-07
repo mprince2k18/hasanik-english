@@ -180,6 +180,7 @@ return [
         Junges\ACL\ACLServiceProvider::class,
         Junges\ACL\ACLAuthServiceProvider::class,
         Junges\ACL\ACLEventsServiceProvider::class,
+        Silber\PageCache\LaravelServiceProvider::class
 
     ],
 

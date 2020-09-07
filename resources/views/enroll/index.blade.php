@@ -29,7 +29,7 @@
 
     <!-- YOUR CUSTOM CSS -->
 	<link href="{{asset('enroll/css/custom.css')}}" rel="stylesheet">
-	
+
 
 	<!-- MODERNIZR MENU -->
 	<script src="{{asset('enroll/js/modernizr.js')}}"></script>
@@ -95,7 +95,7 @@
 					{{ $questions->question_en_1 ?? '' }}
 					<br>
 					[ {{ $questions->question_bn_1 ?? '' }} ]
-					<a href="#!" data-toggle="tooltip" title="{{ $tips->tips1 ?? '' }}"><i class="icon-question"></i></i></a>
+					<a href="#!" data-toggle="tooltip" title="{{ $tips->tips1 ?? '' }}"><i class="icon-question"></i></a>
 				  </h3>
 
 									<div class="form-group">
@@ -136,19 +136,19 @@
 											</div>
 										</div>
 									</div>
-									
+
 								</div>
 								<!-- /step-->
 								<div class="step">
 									<h3 class="main_question">
                     <strong>2/5</strong>
-					{{ $questions->question_en_7 ?? ''}} <br> [ {{ $questions->question_bn_7 ?? ''}} ] 
+					{{ $questions->question_en_7 ?? ''}} <br> [ {{ $questions->question_bn_7 ?? ''}} ]
 					<a href="#!" data-toggle="tooltip" title="{{ $tips->tips7 ?? ''}}"><i class="icon-question"></i></i></a>
 				  </h3>
-				  
+
 				    <div class="form-group">
 										<div class="styled-select clearfix">
-											
+
 											<select class="wide required" name="study_level">
 												<option value="">Select level*</option>
 												<option value="PSC">PSC</option>
@@ -157,15 +157,15 @@
 												<option value="HSC">HSC</option>
 												<option value="HONORS">HONORS</option>
 												<option value="MASTERS">MASTERS</option>
-												
-												
+
+
 											</select>
 										</div>
 									</div>
 
 									<h3 class="main_question">
-                   
-					{{ $questions->question_en_6 ?? ''}} <br> [ {{ $questions->question_bn_6 ?? ''}} ] 
+
+					{{ $questions->question_en_6 ?? ''}} <br> [ {{ $questions->question_bn_6 ?? ''}} ]
 					<a href="#!" data-toggle="tooltip" title="{{ $tips->tips6 ?? ''}}"><i class="icon-question"></i></i></a>
 				  </h3>
 
@@ -177,7 +177,7 @@
 												@foreach ($courses as $course)
 												<option value="{{ $course->id }}">{{ $course->name }}( ৳{{ $course->is_discount === 1 ? $course->discount_price : $course->price }})</option>
 												@endforeach
-												
+
 											</select>
 										</div>
 									</div>
@@ -190,7 +190,7 @@
 
 
 									<h3 class="main_question">
-					{{ $questions->question_en_3 ?? ''}} <br> [ {{ $questions->question_bn_3 ?? ''}} ]* 
+					{{ $questions->question_en_3 ?? ''}} <br> [ {{ $questions->question_bn_3 ?? ''}} ]*
 					<a href="#!" data-toggle="tooltip" title="{{ $tips->tips3 ?? ''}}"><i class="icon-question"></i></i></a>
                   </h3>
                   @foreach ($schedules as $schedule)
@@ -243,7 +243,7 @@
 									<h3 class="main_question"><strong>6/6</strong>Attention!</h3>
 									<div class="summary">
 										Before submitting the application please make sure you wrote all the informations correctly.
-										
+
 										<!-- /row -->
 									<div class="form-group terms">
 										<label class="container_check">Please accept our <a href="#" data-toggle="modal" data-target="#terms-txt">Terms and conditions</a>
@@ -254,7 +254,7 @@
 									</div>
 								</div>
 
-								
+
 								<!-- /step-->
 							</div>
 							<!-- /middle-wizard -->
@@ -262,7 +262,7 @@
 								<button type="button" name="backward" class="backward">Prev</button>
 								<button type="button" name="forward" class="forward">Next</button>
 								<button type="submit" name="process" class="submit">Submit</button>
-								
+
 
 							</div>
 							<!-- /bottom-wizard -->
@@ -362,7 +362,7 @@ $(document).ready(function() {
 
 	});
 	});
-	
+
 	</script>
 
 </body>

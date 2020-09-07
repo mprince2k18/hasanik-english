@@ -89,6 +89,7 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
             'Symfony\\Component\\ErrorHandler\\' => 31,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Silber\\PageCache\\' => 17,
         ),
         'R' => 
         array (
@@ -314,6 +315,10 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Silber\\PageCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/silber/page-cache/src',
         ),
         'RealRashid\\SweetAlert\\' => 
         array (
@@ -555,6 +560,7 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         'App\\Library\\SslCommerz\\AbstractSslCommerz' => __DIR__ . '/../..' . '/app/Library/sslcommerz/AbstractSslCommerz.php',
         'App\\Library\\SslCommerz\\SslCommerzInterface' => __DIR__ . '/../..' . '/app/Library/sslcommerz/SslCommerzInterface.php',
         'App\\Library\\SslCommerz\\SslCommerzNotification' => __DIR__ . '/../..' . '/app/Library/sslcommerz/SslCommerzNotification.php',
+        'App\\Mail\\AdminNotifyMail' => __DIR__ . '/../..' . '/app/Mail/AdminNotifyMail.php',
         'App\\Mail\\Enrollmail' => __DIR__ . '/../..' . '/app/Mail/Enrollmail.php',
         'App\\Models\\Blog' => __DIR__ . '/../..' . '/app/Models/Blog.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
@@ -4215,6 +4221,10 @@ class ComposerStaticInit21110808bb24f80a801d7c448a83f82c
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
+        'Silber\\PageCache\\Cache' => __DIR__ . '/..' . '/silber/page-cache/src/Cache.php',
+        'Silber\\PageCache\\Console\\ClearCache' => __DIR__ . '/..' . '/silber/page-cache/src/Console/ClearCache.php',
+        'Silber\\PageCache\\LaravelServiceProvider' => __DIR__ . '/..' . '/silber/page-cache/src/LaravelServiceProvider.php',
+        'Silber\\PageCache\\Middleware\\CacheResponse' => __DIR__ . '/..' . '/silber/page-cache/src/Middleware/CacheResponse.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',

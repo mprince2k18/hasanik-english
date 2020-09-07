@@ -194,7 +194,7 @@
      </div>
         <!-- Main end -->
         <!--=============== google map ===============-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" type="text/javascript"></script>
+        {{-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" type="text/javascript"></script> --}}
         <!--=============== scripts  ===============-->
         <script type="text/javascript" src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037867/hasanik/homepage/js/jquery.min.js"></script>
         <script type="text/javascript" src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037867/hasanik/homepage/js/plugins.js"></script>

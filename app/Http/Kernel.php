@@ -38,6 +38,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\Language::class,
+            \Silber\PageCache\Middleware\CacheResponse::class
         ],
 
         'api' => [
@@ -66,5 +67,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'installed'=>\App\Http\Middleware\Installed::class,
         'install.check'=>\App\Http\Middleware\InstallCheck::class,
+        'page-cache' => \Silber\PageCache\Middleware\CacheResponse::class
     ];
 }
