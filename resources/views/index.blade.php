@@ -29,6 +29,20 @@
         }
     </style>
 
+    <script>
+            function detectmob() {
+            if(window.innerWidth <= 801) {
+                return true;
+            } else {
+                return false;
+            }
+            }
+
+            if (detectmob()){
+            top.location.href="http://m.hasanikenglish.com";
+            }
+        </script>
+
     <body>
 
       <div class="loader">
