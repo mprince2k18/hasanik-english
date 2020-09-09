@@ -27,12 +27,11 @@ Route::get('/v1/login',function(){
     return view('dashboard.auth.login');
 })->name('v1.login');
 
-Route::get('/migrate', function(){
-  Artisan::call('migrate');
-//   Artisan::call('migrate:refresh');
-  Artisan::call('db:seed');
-  return 'migrated';
-});
+// Route::get('/migrate', function(){
+//   Artisan::call('migrate');
+//   Artisan::call('db:seed');
+//   return 'migrated';
+// });
 
 
 Route::get('/enroll/course','EnrollController@index')->name('enroll.index');

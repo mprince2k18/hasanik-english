@@ -76,41 +76,20 @@
                                   <div class="btn2"></div>
                                 </div> 
                                 </a>  
-                                {{-- <a href="{{ route('enroll.index') }}" class="glow-on-hover" type="button">ENROLL NOW</a> --}}
                                </div>
                            </div>
-                           
                          </div>
                          <!-- 1 end -->
                          <!-- 2 -->
                          <div class="hero-grid small-column" style="height: 100%;">
-                             <div class="hero-slider owl-carousel" data-attime="5220" data-rtlt="false">
+                             <div class="hero-slider owl-carousel" data-attime="3220" data-rtlt="false">
                               @foreach ($tops as $top)
                               <div class="item">
-                                    <div class="bg w-100" style="background-image:url({{ filePath($top->slider ?? '') }})"></div>
+                                    <img src="{{ filePath($top->slider ?? '') }}" alt="" class="img-fluid">
                                 </div>
                               @endforeach
-                             
                              </div>
                          </div>
-                         <!-- 2end -->
-                         <!-- 3 -->
-                         {{-- <div class="hero-grid small-column">
-                             <div class="hero-slider owl-carousel"  data-attime="3220" data-rtlt="true">
-                                  <div class="item">
-                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766927/Hasanik_English_2.png)"></div>
-                                 </div>
-                                 <div class="item">
-                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766609/HASANIK_ENGLISH_4.gif)"></div>
-                                 </div>
-                                 <div class="item">
-                                     <div class="bg" style="background-image:url(https://res.cloudinary.com/dhe6napl7/image/upload/v1595766864/Hasanik_English_1.png)"></div>
-                                 </div>
-                             </div>
-                         </div> --}}
-                         <!-- 3end -->
-                         {{-- <div class="overlay"></div> --}}
-                         <!-- enter-wrap -->
                            
                          <!-- enter-wrap end  -->
                      </div>
@@ -118,7 +97,6 @@
                  </div>
                  <!-- Content   end -->
                  <!-- share  -->
-
                  <!-- share end -->
              </div>
              <!-- Content holder  end -->
@@ -127,8 +105,6 @@
          <!--=============== footer ===============-->
 
          <!-- footer end -->
-
-
          <div class="menu">
   <nav class="menu__nav">
     <ul class="menu__list r-list">
