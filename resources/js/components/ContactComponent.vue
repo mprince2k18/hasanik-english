@@ -209,7 +209,7 @@
           getOrg(){
             this.loading = true;
             // axios.get('http://localhost/hasanik/public/api/org') //base_url
-            axios.get('https://app.hasanikenglish.com/api/org') //base_url
+            axios.get('https://hasanikenglish.com/api/org') //base_url
             .then(response => this.org = response.data)
             .finally(() => (this.loading = false));
           }

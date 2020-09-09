@@ -163,7 +163,7 @@
           getTeam(){
             this.loading = true;
             // axios.get('http://localhost/hasanik/public/api/team') //base_url
-            axios.get('https://app.hasanikenglish.com/api/team') //base_url
+            axios.get('https://hasanikenglish.com/api/team') //base_url
             .then(response => this.teams = response.data)
             .finally(() => (this.loading = false));
           }

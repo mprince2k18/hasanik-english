@@ -149,7 +149,7 @@
           getCourses(){
             this.loading = true;
             // axios.get('http://localhost/hasanik/public/api/courses') //base_url
-            axios.get('https://app.hasanikenglish.com/api/courses') //base_url
+            axios.get('https://hasanikenglish.com/api/courses') //base_url
             .then(response => this.courses = response.data)
             .finally(() => (this.loading = false));
           },
@@ -159,7 +159,7 @@
                 }
 
                 // axios.get('http://localhost/hasanik/public/api/courses?page=' + page) //base_url
-             axios.get('https://app.hasanikenglish.com/api/courses?courses=' + page) //base_url
+             axios.get('https://hasanikenglish.com/api/courses?courses=' + page) //base_url
             .then(response => this.courses = response.data);
             }
         },

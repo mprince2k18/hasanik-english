@@ -203,7 +203,7 @@
           getBlog(){
             this.loading = true;
             // axios.get('http://localhost/hasanik/public/api/course/' +  this.slug) //base_url
-            axios.get('https://app.hasanikenglish.com/api/course/' + this.slug ) //base_url
+            axios.get('https://hasanikenglish.com/api/course/' + this.slug ) //base_url
             .then(response => this.course = response.data)
             .finally(() => (this.loading = false));
           },

@@ -144,13 +144,13 @@
           getAbout(){
             this.loading = true;
             // axios.get('http://localhost/hasanik/public/api/about') //base_url
-            axios.get('https://app.hasanikenglish.com/api/about') //base_url
+            axios.get('https://hasanikenglish.com/api/about') //base_url
             .then(response => this.abouts = response.data)
             .finally(() => (this.loading = false));
           },
           getMission(){
             // axios.get('http://localhost/hasanik/public/api/mission') //base_url
-            axios.get('https://app.hasanikenglish.com/api/mission') //base_url
+            axios.get('https://hasanikenglish.com/api/mission') //base_url
             .then(response => this.missions = response.data);
           }
         },

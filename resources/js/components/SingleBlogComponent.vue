@@ -152,13 +152,13 @@
           getBlog(){
             this.loading = true;
             // axios.get('http://localhost/hasanik/public/api/blog/' +  this.id) //base_url
-            axios.get('https://app.hasanikenglish.com/api/blog/' + this.id ) //base_url
+            axios.get('https://hasanikenglish.com/api/blog/' + this.id ) //base_url
             .then(response => this.blog = response.data)
             .finally(() => (this.loading = false));
           },
           getBlogs(){
             // axios.get('http://localhost/hasanik/public/api/blogs') //base_url
-            axios.get('https://app.hasanikenglish.com/api/blogs') //base_url
+            axios.get('https://hasanikenglish.com/api/blogs') //base_url
             .then(response => this.recentBlogs = response.data);
           }
         },
