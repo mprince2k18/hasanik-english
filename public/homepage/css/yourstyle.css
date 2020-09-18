@@ -193,7 +193,7 @@ MENU STYLES
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
-    z-index: 2;
+    z-index: 0;
 }
 
 .menu__list {
