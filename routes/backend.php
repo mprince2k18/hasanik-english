@@ -50,6 +50,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
    */
   Route::get('/team','TeamController@index')->name('team.index');
   Route::post('/team/store','TeamController@store')->name('team.store');
+  Route::get('/team/destroy/{id}','TeamController@destroy')->name('team.destroy');
 
   /**
    * Category

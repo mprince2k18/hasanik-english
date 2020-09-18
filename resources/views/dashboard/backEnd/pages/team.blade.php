@@ -136,8 +136,8 @@
                                             <p class="card-text">
                                                 {{ $team->position }}
                                             </p>
-                                            {{-- <a href="{{ route('course.show', $course->id) }}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
-                                            <a href="{{ route('course.destroy', $course->id) }}" class="btn btn-danger"><i class="fa fa-trash-o"></i></a> --}}
+                                            {{-- <a href="{{ route('course.show', $course->id) }}" class="btn btn-primary"><i class="fa fa-edit"></i></a> --}}
+                                            <a href="{{ route('team.destroy', $team->id) }}" class="btn btn-danger"><i class="fa fa-trash-o"></i></a>
                                         </div>
                                         </div>
                                     </div>

@@ -55,5 +55,14 @@ class TeamController extends Controller
     {
         return Team::all();
     }
+
+    /**
+     * Destroy TEAM
+     */
+    public function destroy($id)
+    {
+        Team::findOrFail($id)->delete();
+        return back();
+    }
     //END
 }
