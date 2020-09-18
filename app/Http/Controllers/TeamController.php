@@ -12,7 +12,8 @@ class TeamController extends Controller
      */
     public function index()
     {
-        return view('dashboard.backEnd.pages.team');
+        $teams = Team::all();
+        return view('dashboard.backEnd.pages.team', compact('teams'));
     }
     /**
      * STORE

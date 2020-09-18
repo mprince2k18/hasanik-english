@@ -110,4 +110,48 @@
 
             </div>
     </div>
+
+
+
+     <div class="contentbar">
+            <div class="card">
+                
+                <!-- /.card-header -->
+                <div class="card-body p-2">
+                    <!-- Start col -->
+                    <div class="col-lg-12">
+                        <div class="card m-b-30">
+                            <div class="card-body">
+                                {{-- --------------------- --}}
+                                @foreach ($teams as $team)
+                                <div class="col-md-12 col-lg-12 col-xl-12">
+                                    <div class="card m-b-30">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-7">
+                                        <img src="{{ filePath($team->photo) }}" class="card-img w-50" alt="{{  $team->name }} }}">
+                                        </div>
+                                        <div class="col-md-5">
+                                        <div class="card-body">
+                                            <h5 class="card-title font-18">{{ $team->name }}</h5>
+                                            <p class="card-text">
+                                                {{ $team->position }}
+                                            </p>
+                                            {{-- <a href="{{ route('course.show', $course->id) }}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                                            <a href="{{ route('course.destroy', $course->id) }}" class="btn btn-danger"><i class="fa fa-trash-o"></i></a> --}}
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                                {{-- --------------------- --}}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                </div>
+
+            </div>
+    </div>
+
 @endsection

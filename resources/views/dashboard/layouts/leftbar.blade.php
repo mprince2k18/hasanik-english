@@ -27,9 +27,9 @@
                         </a>
                         <ul class="vertical-submenu {{request()->is('dashboard/user*') || request()->is('dashboard/module*') || request()->is('dashboard/permission*') || request()->is('dashboard/group*') ? 'menu-open' : null}}">
                             <li  class="{{request()->is('dashboard/user*') ? 'active':null}}">
-                                <a href="{{route('users.index')}}">User)</a></li>
+                                <a href="{{route('users.index')}}">User</a></li>
                             <li class="{{request()->is('dashboard/group*') ? 'active':null}}">
-                                <a href="{{route('groups.index')}}">Group)</a></li>
+                                <a href="{{route('groups.index')}}">Group</a></li>
                             <li class="{{request()->is('dashboard/module*') ? 'active':null}}">
                                 <a href="{{route('modules.index')}}">Permission Module</a></li>
                             <li  class="{{request()->is('dashboard/permission*') ? 'active':null}}">
