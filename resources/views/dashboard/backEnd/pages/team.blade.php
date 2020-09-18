@@ -128,7 +128,7 @@
                                     <div class="card m-b-30">
                                     <div class="row no-gutters">
                                         <div class="col-md-7">
-                                        <img src="{{ filePath($team->photo) }}" class="card-img w-50" alt="{{  $team->name }} }}">
+                                        <img src="{{ filePath($team->photo) }}" class="card-img w-50" alt="{{  $team->name }}">
                                         </div>
                                         <div class="col-md-5">
                                         <div class="card-body">
