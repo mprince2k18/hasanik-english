@@ -18,10 +18,10 @@ class CreateTeamsTable extends Migration
             $table->string('photo');
             $table->string('name');
             $table->string('position');
-            $table->string('fb');
-            $table->string('tw');
-            $table->string('linked');
-            $table->string('skype');
+            $table->string('fb')->nullable();
+            $table->string('tw')->nullable();
+            $table->string('linked')->nullable();
+            $table->string('skype')->nullable();
             $table->timestamps();
         });
     }

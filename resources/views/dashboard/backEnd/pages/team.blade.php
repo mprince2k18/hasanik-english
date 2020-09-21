@@ -45,22 +45,22 @@
                           <label for="validationTooltip01">Name</label>
                           <input type="text" class="form-control" name="name" id="validationTooltip01" placeholder="Name" value="{{ old('name') }}" required>
                           <div class="invalid-tooltip">
-                              Please choose a unique and valid username.
+                              Please write your name.
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                           <label for="validationTooltip02">Position</label>
-                          <input type="text" class="form-control" name="position" id="validationTooltip02" placeholder="Position" value="{{ old('name') }}" required>
+                          <input type="text" class="form-control" name="position" id="validationTooltip02" placeholder="Position" value="{{ old('position') }}" required>
                           <div class="invalid-tooltip">
-                              Please choose a unique and valid username.
+                              Please write your position.
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                           <label for="validationTooltipPhoto">Photo</label>
                           <div class="input-group">
-                            <input type="file" class="form-control" name="photo" id="validationTooltipPhoto" placeholder="Photo" value="{{ old('name') }}" aria-describedby="validationTooltipPhoto" required>
+                            <input type="file" class="form-control" name="photo" id="validationTooltipPhoto" placeholder="Photo" value="{{ old('photo') }}" aria-describedby="validationTooltipPhoto" required>
                             <div class="invalid-tooltip">
-                              Please choose a unique and valid username.
+                              Please upload your photo.
                             </div>
                           </div>
                         </div>
@@ -68,31 +68,23 @@
                       <div class="form-row">
                         <div class="col-md-3 mb-3">
                           <label for="validationTooltip03">Facebook Link</label>
-                          <input type="text" class="form-control" name="fb"  id="validationTooltip03" value="{{ old('name') }}" placeholder="facebook.com/hasaniklearning" required>
-                          <div class="invalid-tooltip">
-                            Please provide a valid city.
-                          </div>
+                          <input type="text" class="form-control" name="fb"  id="validationTooltip03" value="{{ old('fb') }}" placeholder="facebook.com/hasaniklearning">
+                       
                         </div>
                         <div class="col-md-3 mb-3">
                           <label for="validationTooltip04">Twitter Link</label>
-                          <input type="text" class="form-control" name="tw" id="validationTooltip04" value="{{ old('name') }}" placeholder="twitter.com/hasaniklearning" required>
-                          <div class="invalid-tooltip">
-                            Please provide a valid state.
-                          </div>
+                          <input type="text" class="form-control" name="tw" id="validationTooltip04" value="{{ old('tw') }}" placeholder="twitter.com/hasaniklearning">
+                          
                         </div>
                         <div class="col-md-3 mb-3">
                           <label for="validationTooltip05">Skype Link</label>
-                          <input type="text" class="form-control" name="skype" id="validationTooltip05" value="{{ old('name') }}" placeholder=skype.com/hasaniklearning" required>
-                          <div class="invalid-tooltip">
-                            Please provide a valid zip.
-                          </div>
+                          <input type="text" class="form-control" name="skype" id="validationTooltip05" value="{{ old('skype') }}" placeholder=skype.com/hasaniklearning">
+                        
                         </div>
                         <div class="col-md-3 mb-3">
                           <label for="validationTooltip05">Linkedin Link</label>
-                          <input type="text" class="form-control" name="linked" id="validationTooltip05" value="{{ old('name') }}" placeholder="linkedin.com/hasaniklearning" required>
-                          <div class="invalid-tooltip">
-                            Please provide a valid zip.
-                          </div>
+                          <input type="text" class="form-control" name="linked" id="validationTooltip05" value="{{ old('linked') }}" placeholder="linkedin.com/hasaniklearning">
+                        
                         </div>
                       </div>
                       <button class="btn btn-primary" type="submit">Send Data</button>

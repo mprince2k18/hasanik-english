@@ -40,10 +40,30 @@ class TeamController extends Controller
             $team->photo = env('APP_URL') . '/' . fileUpload($request->photo,'teams');
         }
 
-        $team->fb = $request->fb;
-        $team->tw = $request->tw;
-        $team->skype = $request->skype;
-        $team->linked = $request->linked;
+        if ($request->has('fb')) {
+            $team->fb = $request->fb;
+        }else{
+            $team->fb = null;
+        }
+
+        if ($request->has('tw')) {
+            $team->tw = $request->tw;
+        }else{
+            $team->tw = null;
+        }
+
+        if ($request->has('skype')) {
+            $team->skype = $request->skype;
+        }else{
+            $team->skype = null;
+        }
+
+        if ($request->has('linked')) {
+            $team->linked = $request->linked;
+        }else{
+            $team->linked = null;
+        }
+
         $team->save();
         return back();
     }

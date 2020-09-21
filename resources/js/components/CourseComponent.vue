@@ -1,66 +1,6 @@
 <template>
   <div>
-
-    <!-- Page Heading -->
-          <!-- <div class="page-heading">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <h1>Our Courses</h1>
-                  <span><a href="index.html">Home</a>Our Courses</span>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-
-          <!-- Recent Cases -->
-          <!-- <section class="shop-page">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="shop-products">
-                    <div class="row">
-
-                      <div class="col-lg-3" v-for="course in courses.data" :key="course.id">
-                        <div class="course-item">
-                          <router-link :to="`/page/course/${course.slug}`">
-                            <div class="course-thumb">
-                              <img :src="course.thumbnail" :alt="course.name">
-                            </div>
-                            <div class="down-content">
-                              <h4>{{ course.name }}</h4>
-
-                              <span v-if="course.is_discount === 1">
-                                <em>৳{{ course.discount_price }}</em>
-                                ৳{{ course.price }}
-                              </span>
-
-                              <span v-else>
-                                ৳{{ course.price }}
-                              </span>
-
-                            </div>
-                          </router-link>
-                        </div>
-                      </div>
-                      
-                      <div class="col-lg-12">
-                        <div class="shop-pagination">
-                          <ul>
-                            <pagination :data="courses" @pagination-change-page="getResults"></pagination>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> -->
-
-
-          <!-- -------------------------------------- -->
+       <!-- -------------------------------------- -->
         <div class="container-fluid about-us-cont">
 
         <div class="row">

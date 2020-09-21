@@ -1,88 +1,6 @@
 <template>
   <div>
-    <!-- Page Heading -->
-          <!-- <div class="page-heading">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <h1>Course Details</h1>
-                  <span><a href="index.html">Home</a>Course Details</span>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- Recent Cases -->
-          <!-- <section class="product-details">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="single-product">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="left-image">
-                          <img :src="course.thumbnail" :alt="course.name">
-                        </div>
-                      </div>
-                      <div class="col-lg-6 align-self-center">
-                        <div class="right-content">
-                          <h2>{{ course.name }}</h2>
-                          <span v-if="course.is_discount === 1">
-                                <em>৳{{ course.discount_price }}</em>
-                                ৳{{ course.price }}
-                              </span>
-
-                              <span v-else>
-                                ৳{{ course.price }}
-                              </span>
-                          <p v-html="course.short_desc"></p>
-                          <div class="main-white-button">
-                            <a href="https://app.hasanikenglish.com/enroll/course">Enroll Now</a>
-                          </div>
-                          <div class="share-tags">
-                            <div class="row">
-                              <div class="col-lg-5">
-                                <ul class="social-icons">
-                                  
-                                  <div class="addthis_inline_share_toolbox"></div>
-                              
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> -->
-
-          <!-- <section class="product-info">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div id="tabs">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <ul>
-                          <li><a href='#tabs-1'>Description</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-lg-12">
-                        <section class='tabs-content'>
-                          <article id='tabs-1'>
-                            <p v-html="course.big_desc"></p>
-                          </article>
-                        </section>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> -->
+ 
 
           <!-- -------------------------------------- -->
         <div class="container-fluid about-us-cont">
@@ -131,7 +49,7 @@
                                   </span>
                               <p v-html="course.short_desc"></p>
                               <div class="main-white-button">
-                                <a href="https://app.hasanikenglish.com/enroll/course">Enroll Now</a>
+                                <a href="https://hasanikenglish.com/enroll/course">Enroll Now</a>
                               </div>
                               <div class="share-tags">
                                 <div class="row">
