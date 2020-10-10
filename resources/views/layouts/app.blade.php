@@ -427,6 +427,20 @@ CUSTOM
         page_id="264398960274353">
       </div>
 
+
+      <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "1949dbd4-b5e1-4333-8558-2b3d7a0bd6f1",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
+
     <!-- Preloader -->
     <div id="js-preloader" class="js-preloader">
       <div class="content">
@@ -552,6 +566,7 @@ CUSTOM
     <script src="https://res.cloudinary.com/dhe6napl7/raw/upload/v1598037993/hasanik/frontend/scripts/vendors/slide-nav.min.js"></script>
     <script src="{{ asset('frontend/scripts/main.js') }}"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1ca813dc314e47"></script>
+
   </body>
 
 </html>
