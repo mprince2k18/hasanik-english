@@ -18,6 +18,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script charset="UTF-8" src="//web.webpushs.com/js/push/be55ae4307a3b2bc0e7ef658a9dff2c0_1.js" async></script>
   </head>
 
   <style>
