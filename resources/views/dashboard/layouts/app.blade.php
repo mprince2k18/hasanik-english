@@ -72,5 +72,4 @@
     </div>
 </body>
 @include('layouts.include.script')
-
 </html>
